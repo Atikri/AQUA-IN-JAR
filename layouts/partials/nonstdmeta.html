@@ -1,0 +1,7 @@
+{{ with site.Params.author.email }}
+<meta name="email" content="{{ . }}">
+{{ end }}
+{{ with site.Params.author.twitter }}
+<meta name="twitter" content="{{ . }}">
+{{ end }}
+

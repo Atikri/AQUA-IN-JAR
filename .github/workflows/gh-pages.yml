@@ -1,0 +1,53 @@
+name: Deploy Hugo site to Pages
+
+on:
+  push:
+    branches:
+      - master # 你的默认分支名
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # 确保拉取主题（如果使用 git submodule）
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build with Hugo
+        env:
+          HUGO_ENV: production
+          HUGO_BASEURL: "https://Atikri.github.io/AQUA-IN-JAR/" # 你的 GitHub Pages URL
+        run: |
+          hugo --minify
+          # 如果你使用的是 Hugo Module，并且你的 theme 目录不在根目录下，可能需要额外步骤。
+          # 如果你的 `config.yaml` 中 theme 配置是 `theme = "dario"` 并且 dario 在 themes/dario 目录下， Hugo 应该能自动找到。
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./public # Hugo 生成的静态文件目录
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

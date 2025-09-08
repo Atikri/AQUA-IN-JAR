@@ -1,0 +1,34 @@
+{{- $src := .Get "src" -}}
+{{- $srcRel := $src | relURL -}}
+{{- $type := .Get "type" -}}
+{{- $preload := .Get "preload" | default "metadata" -}}
+{{- $loop := .Get "loop" -}}
+{{- $autoplay := .Get "autoplay" -}}
+{{- $muted := .Get "muted" -}}
+{{- $nodownload := .Get "nodownload" -}}
+
+{{- if not $src -}}
+<p style="opacity:0.7">Audio source missing: use {{ "{{< audio src=\"/audio/file.mp3\" >}}" }}</p>
+{{- else -}}
+<audio
+  controls
+  preload="{{ $preload }}"
+  style="width:100%; display:block; margin:12px 0;"
+  {{- if $loop }} loop{{ end -}}
+  {{- if $autoplay }} autoplay{{ end -}}
+  {{- if $muted }} muted{{ end -}}
+  {{- if $nodownload }} controlslist="nodownload"{{ end -}}
+>
+  {{- /* Try to auto-detect MIME type by extension if not provided */ -}}
+  {{- $ext := lower (delimit (last 1 (split $src ".")) "") -}}
+  {{- $mime := cond (eq $type "") (cond (eq $ext "mp3") "audio/mpeg" (cond (eq $ext "m4a") "audio/mp4" (cond (eq $ext "ogg") "audio/ogg" "audio/mpeg"))) $type -}}
+  <source src="{{ $srcRel }}" type="{{ $mime }}">
+  {{- /* Add a secondary source without type as a fallback */ -}}
+  <source src="{{ $srcRel }}">
+  Your browser does not support the audio element.
+  <a href="{{ $srcRel }}">Download</a>
+  (fallback link)
+</audio>
+{{- end -}}
+
+

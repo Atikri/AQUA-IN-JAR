@@ -641,6 +641,15 @@ center {
   color: var(--text-color);
   opacity: 0.8;
   line-height: 1.4;
+  margin: 5px 0;
+}
+
+.search-result-section {
+  font-size: 0.8em;
+  color: var(--text-color);
+  opacity: 0.6;
+  font-style: italic;
+  margin-top: 5px;
 }
 
 .search-highlight {

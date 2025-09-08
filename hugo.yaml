@@ -6,7 +6,7 @@ params:
   colorScheme: toggle
 
 # Main sections for navigation
-mainSections: ['posts', 'notification-jar', 'aqua-inspiration']
+mainSections: ['posts', 'notification-jar', 'aqua-inspiration', 'podcast-music']
 
 # Enable Table of Contents
 markup:
@@ -29,6 +29,10 @@ markup:
 
 # Enable emoji support
 enableEmoji: true
+
+# Output formats for search
+outputs:
+  home: ["HTML", "JSON"]
 
 # Development settings
 disablePathToLower: true

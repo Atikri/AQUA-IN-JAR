@@ -6,6 +6,17 @@
 
 **最终成果**：网站地址 - https://Atikri.github.io/AQUA-IN-JAR/
 
+## 📋 更新日志
+
+详细的更新记录请查看：[CHANGELOG.md](./CHANGELOG.md)
+
+**最新更新** (2025-01-09)：
+- ✅ 添加分类系统（Notification Jar, AQUA Inspiration）
+- ✅ 实现实时搜索功能
+- ✅ 添加文章目录（TOC）
+- ✅ 启用表情符号支持
+- ✅ 优化响应式设计
+
 ---
 
 ## 第一部分：问题诊断与修复

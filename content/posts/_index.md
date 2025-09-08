@@ -1,5 +1,5 @@
 ---
-title: "所有文章"
+title: "All Posts"
 description: "查看所有发布的文章"
 weight: 3
 ---

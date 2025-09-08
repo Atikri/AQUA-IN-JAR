@@ -11,11 +11,37 @@ document.addEventListener("DOMContentLoaded", function() {
     let debounceTimer;
     
     // Load search data from all pages
-    function loadSearchData() {
-        // This would normally be populated from Hugo's search index
-        // For now, we'll create a simple search based on page titles and content
+    async function loadSearchData() {
         searchData = [];
         
+        try {
+            // Build base-aware URL for index.json (works under subpaths)
+            const baseHref = (document.querySelector('base') && document.querySelector('base').href) || document.baseURI || '/';
+            const jsonUrl = new URL('index.json', baseHref).toString();
+            // Fetch all pages to get their content
+            const response = await fetch(jsonUrl);
+            if (response.ok) {
+                const data = await response.json();
+                searchData = data.map(page => ({
+                    title: page.title || '',
+                    url: page.permalink || page.url || '',
+                    content: page.content || '',
+                    excerpt: page.summary || page.description || '',
+                    date: page.date || '',
+                    section: page.section || ''
+                }));
+            } else {
+                // Fallback: collect data from current page
+                collectDataFromPage();
+            }
+        } catch (error) {
+            console.log('Using fallback search data collection');
+            collectDataFromPage();
+        }
+    }
+    
+    // Fallback method to collect data from current page
+    function collectDataFromPage() {
         // Get all page links and their titles
         const pageLinks = document.querySelectorAll('a[href*="/posts/"], a[href*="/notification-jar/"], a[href*="/aqua-inspiration/"]');
         pageLinks.forEach(link => {
@@ -23,7 +49,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 searchData.push({
                     title: link.textContent.trim(),
                     url: link.href,
-                    excerpt: link.getAttribute('data-excerpt') || ''
+                    content: '',
+                    excerpt: link.getAttribute('data-excerpt') || '',
+                    date: '',
+                    section: ''
                 });
             }
         });
@@ -43,11 +72,39 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
         
+        const queryLower = query.toLowerCase();
         const results = searchData.filter(item => {
-            const titleMatch = item.title.toLowerCase().includes(query.toLowerCase());
-            const excerptMatch = item.excerpt.toLowerCase().includes(query.toLowerCase());
-            return titleMatch || excerptMatch;
-        });
+            const titleMatch = item.title.toLowerCase().includes(queryLower);
+            const excerptMatch = item.excerpt.toLowerCase().includes(queryLower);
+            const contentMatch = item.content.toLowerCase().includes(queryLower);
+            return titleMatch || excerptMatch || contentMatch;
+        }).map(item => {
+            // Calculate relevance score
+            let score = 0;
+            if (item.title.toLowerCase().includes(queryLower)) score += 10;
+            if (item.excerpt.toLowerCase().includes(queryLower)) score += 5;
+            if (item.content.toLowerCase().includes(queryLower)) score += 1;
+            
+            // Find content snippet around the match
+            let snippet = item.excerpt;
+            if (item.content) {
+                const contentLower = item.content.toLowerCase();
+                const matchIndex = contentLower.indexOf(queryLower);
+                if (matchIndex !== -1) {
+                    const start = Math.max(0, matchIndex - 100);
+                    const end = Math.min(item.content.length, matchIndex + 100);
+                    snippet = item.content.substring(start, end);
+                    if (start > 0) snippet = '...' + snippet;
+                    if (end < item.content.length) snippet = snippet + '...';
+                }
+            }
+            
+            return {
+                ...item,
+                score: score,
+                snippet: snippet
+            };
+        }).sort((a, b) => b.score - a.score); // Sort by relevance
         
         displayResults(results, query);
     }
@@ -60,10 +117,11 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
         
-        const html = results.map(item => `
+        const html = results.slice(0, 10).map(item => `
             <div class="search-result-item" onclick="window.location.href='${item.url}'">
                 <div class="search-result-title">${highlightText(item.title, query)}</div>
-                ${item.excerpt ? `<div class="search-result-excerpt">${highlightText(item.excerpt, query)}</div>` : ''}
+                ${item.snippet ? `<div class="search-result-excerpt">${highlightText(item.snippet, query)}</div>` : ''}
+                ${item.section ? `<div class="search-result-section">分类: ${item.section}</div>` : ''}
             </div>
         `).join('');
         

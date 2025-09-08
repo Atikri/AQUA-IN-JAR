@@ -1,0 +1,4 @@
+{{- $href := .Get "href" -}}
+{{- $text := .Get "text" -}}
+<a href="{{ $href | relURL }}">{{ $text }}</a>
+

@@ -222,6 +222,28 @@ p.intro {
   margin-top: 0.5em;
 }
 
+/* Blockquote Styles */
+blockquote {
+  margin: 1.5em 0;
+  padding-left: 1.5em;
+  border-left: 4px solid var(--border-color);
+  color: var(--text-color);
+  font-style: italic;
+  opacity: 0.9;
+}
+
+blockquote p {
+  margin: 0.5em 0;
+}
+
+blockquote p:first-child {
+  margin-top: 0;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
 /* Layout */
 .content-wrapper,
 header > div {

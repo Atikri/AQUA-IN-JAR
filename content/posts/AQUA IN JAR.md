@@ -4,9 +4,6 @@ draft: 'false'
 title: 'AQUA IN JAR'
 ---
 
-
-# AQUA IN JAR
-
 Hi :smiley: ,我是A滔tikri！:cowboy_hat_face: 
 ---
 ### 背景介绍：

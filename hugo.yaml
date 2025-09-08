@@ -2,3 +2,5 @@ baseURL: https://Atikri.github.io/AQUA-IN-JAR/
 languageCode: en-us 
 title: AQUA IN JAR 
 theme: dario
+params:
+  colorScheme: light

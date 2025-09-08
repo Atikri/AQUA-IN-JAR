@@ -301,12 +301,12 @@ header h1 a {
 }
 
 /* Brand with logo */
-.site-brand { display: flex; align-items: center; gap: 10px; }
-.site-brand a { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.site-brand { display: flex; align-items: center; gap: 10px; flex: 1 1 auto; min-width: 0; }
+.site-brand a { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; min-width: 0; }
 .site-brand .site-title { color: inherit; }
 .site-logo { height: 28px; width: auto; display: inline-block; object-fit: contain; }
 .site-inline-logo { height: 56px; width: auto; display: inline-block; object-fit: contain; margin-left: 10px; }
-.site-inline-logo { mix-blend-mode: multiply; opacity: 0.96; }
+.site-inline-logo { mix-blend-mode: normal; opacity: 1; }
 
 header h1 a {
   text-decoration: none;
@@ -329,6 +329,7 @@ p a:hover {
   opacity: 1;
   pointer-events: auto;
   transition: opacity 0.2s ease;
+  flex: 0 0 auto;
 }
 
 /* Mobile TOC toggle button */
@@ -1080,7 +1081,13 @@ footer {
   .fixed-img { width: 80px; }
   .fixed-img-left { left: 8px; bottom: 8px; }
   .fixed-img-right { right: 8px; bottom: 8px; }
-  .site-inline-logo { height: 44px; }
+  .site-inline-logo {
+    height: 44px;
+    mix-blend-mode: normal !important;
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 1px rgba(0,0,0,0.25));
+    background: transparent !important;
+  }
 }
 
 /* Blend adjustments for dark mode */

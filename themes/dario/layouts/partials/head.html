@@ -45,6 +45,11 @@
     {{- $footnotesJS := resources.Get "js/footnotes.js" | minify | fingerprint }}
     <script src="{{ $footnotesJS.RelPermalink }}" integrity="{{ $footnotesJS.Data.Integrity }}" defer></script>
 
+    {{- if .IsHome }}
+    {{- $searchJS := resources.Get "js/search.js" | minify | fingerprint }}
+    <script src="{{ $searchJS.RelPermalink }}" integrity="{{ $searchJS.Data.Integrity }}" defer></script>
+    {{- end }}
+
     {{- if templates.Exists "partials/nonstdmeta.html" }}
 {{ partial "nonstdmeta.html" . }}
     {{- end }}

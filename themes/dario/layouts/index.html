@@ -25,6 +25,34 @@
         {{- end }}
     {{- end }}
 
+    <!-- Search Section -->
+    <section class="search-section">
+        <h2>搜索文章</h2>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="输入关键词搜索..." class="search-input">
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <h2>分类浏览</h2>
+        <div class="categories-grid">
+            <div class="category-card">
+                <h3><a href="{{ "notification-jar/" | relURL }}">📢 Notification Jar</a></h3>
+                <p>通知罐子 - 记录重要的通知和提醒</p>
+            </div>
+            <div class="category-card">
+                <h3><a href="{{ "aqua-inspiration/" | relURL }}">💧 AQUA Inspiration</a></h3>
+                <p>水之灵感 - 创意和灵感的源泉</p>
+            </div>
+            <div class="category-card">
+                <h3><a href="{{ "posts/" | relURL }}">📝 所有文章</a></h3>
+                <p>查看所有发布的文章</p>
+            </div>
+        </div>
+    </section>
+
     {{- range sort (where .Site.Sections "Section" "in" .Site.MainSections) "Weight" }}
     <section>
     <h2>{{ .Title }}</h2>

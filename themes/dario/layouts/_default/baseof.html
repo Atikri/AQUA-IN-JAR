@@ -6,8 +6,15 @@
 
 {{ partial "head.html" . }}
 
-<body>
+<body{{ if .TableOfContents }} class="has-toc"{{ end }}>
 {{ partial "header.html" . }}
+
+    {{- if .TableOfContents }}
+    <div class="toc-container">
+        <h2>目录</h2>
+        {{ .TableOfContents }}
+    </div>
+    {{- end }}
 
     <main class="content-wrapper">
         <article class="content-container">

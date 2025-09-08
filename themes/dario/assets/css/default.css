@@ -323,6 +323,43 @@ p a:hover {
   transition: opacity 0.2s ease;
 }
 
+/* Mobile TOC toggle button */
+.toc-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 24px;
+  border: 1px solid var(--text-color);
+  border-radius: 16px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  cursor: pointer;
+}
+.toc-toggle .toc-icon { line-height: 0; font-size: 16px; }
+@media (min-width: 1076px) { .toc-toggle { display: none; } }
+
+/* Mobile TOC overlay */
+.toc-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(2px);
+  display: none;
+  z-index: 1000;
+}
+.toc-panel {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  max-height: 70vh;
+  background: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+  border-radius: 12px 12px 0 0;
+  padding: 16px;
+  overflow-y: auto;
+}
+.toc-overlay.open { display: block; }
+
 /* Toggle Switch Styles */
 .toggle-switch {
   visibility: hidden;
@@ -657,6 +694,13 @@ center {
   padding: 2px 4px;
   border-radius: 3px;
   font-weight: 600;
+}
+
+/* Inline mark shortcode */
+mark.mark {
+  background-color: var(--highlight-color);
+  padding: 0 .2em;
+  border-radius: 3px;
 }
 
 /* Categories Styles */

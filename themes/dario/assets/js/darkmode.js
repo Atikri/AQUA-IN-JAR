@@ -62,6 +62,18 @@ function initDarkMode() {
     if (toggleSwitch)
       toggleSwitch.classList.add("visible");
   });
+
+  // TOC overlay toggle (mobile)
+  const tocToggle = document.querySelector('.toc-toggle');
+  const tocOverlay = document.getElementById('tocOverlay');
+  if (tocToggle && tocOverlay) {
+    tocToggle.addEventListener('click', () => {
+      tocOverlay.classList.toggle('open');
+    });
+    tocOverlay.addEventListener('click', (e) => {
+      if (e.target === tocOverlay) tocOverlay.classList.remove('open');
+    });
+  }
 }
 
 // Use immediate listener setup

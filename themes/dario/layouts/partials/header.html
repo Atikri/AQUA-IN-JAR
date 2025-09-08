@@ -1,7 +1,10 @@
 <header>
     <div>
-        <h1>
-            <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        <h1 class="site-brand">
+            <a href="{{ .Site.BaseURL }}">
+                <span class="site-title">{{ .Site.Title }}</span>
+                <img class="site-inline-logo" src="{{ "images/logo.png" | relURL }}" alt="{{ .Site.Title }} inline logo" loading="eager" />
+            </a>
         </h1>
         <div class="header-controls">
             <button class="toc-toggle" aria-label="Toggle table of contents" title="目录">
@@ -16,3 +19,6 @@
         </div>
     </div>
 </header>
+<div class="fixed-images">
+    <img class="fixed-img fixed-img-right" src="{{ "images/logo right.png" | relURL }}" alt="fixed right" loading="lazy" />
+</div>

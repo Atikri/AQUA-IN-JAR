@@ -1091,11 +1091,15 @@ footer {
   }
 }
 
-/* Light theme blending (only on light background) */
+/* Light theme blending (make white areas merge with off-white bg) */
 @media (prefers-color-scheme: light) {
-  .site-inline-logo { mix-blend-mode: soft-light !important; opacity: 0.95 !important; }
-  .fixed-img-right { mix-blend-mode: soft-light; opacity: 0.92; }
+  .site-inline-logo { mix-blend-mode: multiply !important; opacity: 1 !important; }
+  .fixed-img-right { mix-blend-mode: multiply; opacity: 1; }
 }
+
+/* Light mode when site uses manual toggle classes */
+.dark-mode-off .site-inline-logo { mix-blend-mode: multiply !important; opacity: 1 !important; }
+.dark-mode-off .fixed-img-right { mix-blend-mode: multiply !important; opacity: 1 !important; }
 
 /* Blend adjustments for dark mode */
 @media (prefers-color-scheme: dark) {

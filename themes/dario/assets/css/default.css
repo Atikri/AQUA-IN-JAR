@@ -1087,8 +1087,9 @@ footer {
     opacity: 1 !important;
     filter: drop-shadow(0 0 1px rgba(0,0,0,0.25));
     background: transparent !important;
-    margin-left: 6px;
+    margin-left: 0;
   }
+  .site-brand a { flex-direction: column; align-items: flex-start; gap: 6px; }
 }
 
 /* Light theme blending (make white areas merge with off-white bg) */

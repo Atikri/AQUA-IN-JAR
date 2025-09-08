@@ -3,7 +3,8 @@
         <h1 class="site-brand">
             <a href="{{ .Site.BaseURL }}">
                 <span class="site-title">{{ .Site.Title }}</span>
-                <img class="site-inline-logo" src="{{ "images/logo.png" | relURL }}" alt="{{ .Site.Title }} inline logo" loading="eager" />
+                <img class="site-inline-logo site-logo-light" src="{{ "images/logo.png" | relURL }}" alt="{{ .Site.Title }} logo light" loading="eager" />
+                <img class="site-inline-logo site-logo-dark" src="{{ "images/logo-right.png" | relURL }}" alt="{{ .Site.Title }} logo dark" loading="eager" />
             </a>
         </h1>
         <div class="header-controls">
@@ -19,6 +20,3 @@
         </div>
     </div>
 </header>
-<div class="fixed-images">
-    <img class="fixed-img fixed-img-right" src="{{ "images/logo-right.png" | relURL }}?v=2" alt="fixed right" loading="lazy" />
-</div>

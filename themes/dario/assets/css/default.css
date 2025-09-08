@@ -307,6 +307,7 @@ header h1 a {
 .site-logo { height: 28px; width: auto; display: inline-block; object-fit: contain; }
 .site-inline-logo { height: 56px; width: auto; display: inline-block; object-fit: contain; margin-left: 10px; }
 .site-inline-logo { mix-blend-mode: normal; opacity: 1; }
+.site-logo-dark { display: none; }
 
 header h1 a {
   text-decoration: none;
@@ -1056,31 +1057,9 @@ footer {
   margin: 1em auto;
 }
 
-/* Fixed images (site-wide) */
-.fixed-images {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1101;
-}
-
-.fixed-img {
-  position: absolute;
-  width: 120px;
-  height: auto;
-  opacity: 0.92;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
-}
-.fixed-img { mix-blend-mode: normal; }
-
-.fixed-img-left { left: 12px; bottom: 12px; }
-.fixed-img-right { right: 12px; bottom: 12px; }
-.fixed-img-right { mix-blend-mode: normal; opacity: 1; }
+/* removed fixed corner logo */
 
 @media (max-width: 768px) {
-  .fixed-img { width: 80px; }
-  .fixed-img-left { left: 8px; bottom: 8px; }
-  .fixed-img-right { right: 8px; bottom: 8px; }
   .site-inline-logo {
     height: 44px;
     mix-blend-mode: normal !important;
@@ -1095,16 +1074,20 @@ footer {
 /* Light theme blending (make white areas merge with off-white bg) */
 @media (prefers-color-scheme: light) {
   .site-inline-logo { mix-blend-mode: multiply !important; opacity: 1 !important; }
-  .fixed-img-right { mix-blend-mode: multiply; opacity: 1; }
+  .site-logo-light { display: inline-block; }
+  .site-logo-dark { display: none; }
 }
 
 /* Light mode when site uses manual toggle classes */
 .dark-mode-off .site-inline-logo { mix-blend-mode: multiply !important; opacity: 1 !important; }
-.dark-mode-off .fixed-img-right { mix-blend-mode: multiply !important; opacity: 1 !important; }
+.dark-mode-off .site-logo-light { display: inline-block; }
+.dark-mode-off .site-logo-dark { display: none; }
 
 /* Blend adjustments for dark mode */
 @media (prefers-color-scheme: dark) {
-  .site-inline-logo { mix-blend-mode: screen; opacity: 0.96; }
-  .fixed-img { mix-blend-mode: normal; opacity: 1; }
-  .fixed-img-right { mix-blend-mode: normal; opacity: 1; }
+  .site-inline-logo { mix-blend-mode: normal; opacity: 1; }
+  .site-logo-light { display: none; }
+  .site-logo-dark { display: inline-block; mix-blend-mode: normal; opacity: 1; }
 }
+.dark-mode-on .site-logo-light { display: none; }
+.dark-mode-on .site-logo-dark { display: inline-block; mix-blend-mode: normal; opacity: 1; }

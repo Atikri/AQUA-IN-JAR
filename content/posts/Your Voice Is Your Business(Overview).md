@@ -6,6 +6,7 @@ title: 'Your Voice Is Your Business'
 
 最近想看一本书：《Your Voice Is Your Business》
 我先上传给了notebookLM，生成了如下简介以及思维导图，后续我会借助这些资料并且结合原文进行研读分析~
+
 ---
 ## 簡報文件：聲音是您的事業：溝通的科學與藝術
 ### 概覽

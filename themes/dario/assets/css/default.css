@@ -1087,7 +1087,14 @@ footer {
     opacity: 1 !important;
     filter: drop-shadow(0 0 1px rgba(0,0,0,0.25));
     background: transparent !important;
+    margin-left: 6px;
   }
+}
+
+/* Light theme blending (only on light background) */
+@media (prefers-color-scheme: light) {
+  .site-inline-logo { mix-blend-mode: soft-light !important; opacity: 0.95 !important; }
+  .fixed-img-right { mix-blend-mode: soft-light; opacity: 0.92; }
 }
 
 /* Blend adjustments for dark mode */

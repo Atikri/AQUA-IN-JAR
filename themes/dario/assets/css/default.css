@@ -1091,3 +1091,109 @@ footer {
 }
 .dark-mode-on .site-logo-light { display: none; }
 .dark-mode-on .site-logo-dark { display: inline-block; mix-blend-mode: normal; opacity: 1; }
+
+/* Article Navigation Styles */
+.article-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0 1rem 0;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  width: 80px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.nav-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-color);
+  position: relative;
+}
+
+.nav-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  /* 使用 mix-blend-mode 来去除白色背景 */
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+}
+
+/* Light mode: 使用 multiply 模式去除白色背景 */
+@media (prefers-color-scheme: light) {
+  .nav-image img {
+    mix-blend-mode: multiply;
+    opacity: 0.9;
+  }
+}
+
+/* Dark mode: 使用 screen 模式适配深色背景 */
+@media (prefers-color-scheme: dark) {
+  .nav-image img {
+    mix-blend-mode: screen;
+    opacity: 0.8;
+  }
+}
+
+.dark-mode-on .nav-image img {
+  mix-blend-mode: screen;
+  opacity: 0.8;
+}
+
+/* Hover effects for navigation buttons */
+.nav-button:hover .nav-image img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.nav-button.disabled {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .article-navigation {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0 0.75rem 0;
+    padding: 0.5rem 0;
+  }
+  
+  .nav-button {
+    width: 60px;
+    height: 40px;
+    padding: 0;
+  }
+  
+  .nav-image img {
+    width: 100%;
+    height: 100%;
+  }
+}

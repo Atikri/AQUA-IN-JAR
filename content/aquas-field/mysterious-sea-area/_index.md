@@ -1,7 +1,7 @@
 ---
 title: "Mysterious Sea Area"
-description: "神秘海域 - 未知的探索领域"
+description: "神秘海域 - 未知的？"
 weight: 5
 ---
 
-这里是神秘海域，探索未知的领域和深层的思考。
+我们开进了未知的领域！这里是神秘海域，里面有什么东西？天知道！

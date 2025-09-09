@@ -1,7 +1,7 @@
 ---
 date: '2025-09-05T17:38:31+08:00'
 draft: 'false'
-title: 'AQUA IN JAR'
+title: 'AQUA IN JAR活动报名'
 ---
 
 Hi :smiley: ,我是A滔tikri！:cowboy_hat_face: 

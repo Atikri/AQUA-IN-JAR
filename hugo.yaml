@@ -6,7 +6,7 @@ params:
   colorScheme: toggle
 
 # Main sections for navigation
-mainSections: ['posts', 'notification-jar', 'aqua-inspiration', 'podcast-music']
+mainSections: ['notification-jar', 'aquas-field', 'podcast-music']
 
 # Enable Table of Contents
 markup:

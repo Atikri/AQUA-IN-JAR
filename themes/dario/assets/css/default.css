@@ -551,17 +551,11 @@ center {
   line-height: 1.4;
   opacity: 0.8;
   transition: opacity 0.2s ease;
-  border: 1px solid transparent;
-  padding: 4px 8px;
-  border-radius: 4px;
-  display: inline-block;
 }
 
 .toc-container a:hover {
   opacity: 1;
-  text-decoration: none;
-  border-color: var(--text-color);
-  background-color: var(--footnote-bg-color);
+  text-decoration: underline;
 }
 
 .toc-container ul ul {
@@ -609,17 +603,11 @@ center {
   line-height: 1.4;
   opacity: 0.8;
   transition: opacity 0.2s ease;
-  border: 1px solid transparent;
-  padding: 4px 8px;
-  border-radius: 4px;
-  display: inline-block;
 }
 
 .mobile-toc-link a:hover {
   opacity: 1;
-  text-decoration: none;
-  border-color: var(--text-color);
-  background-color: var(--footnote-bg-color);
+  text-decoration: underline;
 }
 
 .mobile-toc-link ul ul {

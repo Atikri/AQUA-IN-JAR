@@ -18,7 +18,7 @@
             {{- $subtitle := .Params.subtitle }}
             {{- with .Content }}
     <section>
-    <h1 class="smaller">{{ $subtitle }}</h1>
+    <h1 class="smaller">{{ $subtitle | emojify }}</h1>
 {{ . }}
     </section>
             {{- end }}

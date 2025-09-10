@@ -14,7 +14,7 @@
         <h2>Outline</h2>
         {{- if eq .Kind "home" }}
         <ul>
-            <li><a href="#search-section">搜索文章</a></li>
+            <li><a href="#search-section">Search Articles</a></li>
             <li><a href="#categories-section">分类浏览</a></li>
             {{- range .Site.MainSections }}
             {{- $section := $.Site.GetPage "section" . }}
@@ -47,7 +47,7 @@
             <h2>Outline</h2>
             {{- if eq .Kind "home" }}
             <ul>
-                <li><a href="#search-section">搜索文章</a></li>
+                <li><a href="#search-section">Search Articles</a></li>
                 <li><a href="#categories-section">分类浏览</a></li>
                 {{- range .Site.MainSections }}
                 {{- $section := $.Site.GetPage "section" . }}

@@ -1,25 +1,35 @@
 /* Bigger, clickable task list checkboxes */
-ul.task-list {
+.task-list,
+ul.task-list,
+ul.contains-task-list {
   padding-left: 1.25rem;
   margin-left: 0.25rem;
 }
 
 /* Remove bullets from any task list item (even if theme adds circle/inside) */
+.task-list > li,
 ul.task-list > li,
+ul.contains-task-list > li,
 ul ul.task-list > li,
-li.task-list-item {
+li.task-list-item,
+li.contains-task-list__item {
   list-style: none !important;
 }
 
 /* Some browsers render a ::marker even with list-style none on parents */
+.task-list > li::marker,
 ul.task-list > li::marker,
+ul.contains-task-list > li::marker,
 ul ul.task-list > li::marker,
-li.task-list-item::marker {
+li.task-list-item::marker,
+li.contains-task-list__item::marker {
   content: '' !important;
 }
 
 /* Enlarge the checkbox */
 li.task-list-item > input[type="checkbox"],
+.task-list input[type="checkbox"],
+ul.contains-task-list input[type="checkbox"],
 ul.task-list input[type="checkbox"] {
   transform: scale(1.6);
   width: 1.2rem;

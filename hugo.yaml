@@ -4,6 +4,8 @@ title: AQUA IN JAR
 theme: dario
 params:
   colorScheme: toggle
+  # Google Analytics 4
+  googleAnalytics: "G-JLYX55NFNN"  # 你的GA4测量ID
 
 # Main sections for navigation
 mainSections: ['notification-jar', 'aquas-field', 'podcast-music']

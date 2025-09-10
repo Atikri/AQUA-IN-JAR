@@ -5,3 +5,13 @@
 <meta name="twitter" content="{{ . }}">
 {{ end }}
 
+{{ if site.Params.googleAnalytics }}
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.googleAnalytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.Params.googleAnalytics }}');
+</script>
+{{ end }}

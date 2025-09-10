@@ -4,13 +4,24 @@ ul.task-list {
   margin-left: 0.25rem;
 }
 
+/* Remove bullets from any task list item (even if theme adds circle/inside) */
+ul.task-list > li,
+ul ul.task-list > li,
 li.task-list-item {
-  list-style: none; /* remove bullets for task items */
-  margin: 0.4rem 0;
+  list-style: none !important;
 }
 
-li.task-list-item > input[type="checkbox"] {
-  transform: scale(1.6); /* enlarge checkbox */
+/* Some browsers render a ::marker even with list-style none on parents */
+ul.task-list > li::marker,
+ul ul.task-list > li::marker,
+li.task-list-item::marker {
+  content: '' !important;
+}
+
+/* Enlarge the checkbox */
+li.task-list-item > input[type="checkbox"],
+ul.task-list input[type="checkbox"] {
+  transform: scale(1.6);
   width: 1.2rem;
   height: 1.2rem;
   margin-right: 0.6rem;
@@ -23,10 +34,9 @@ li input[type="checkbox"] {
   margin-right: 0.5rem;
 }
 
-/* Optional: align text better with larger checkboxes */
-li.task-list-item label,
-li.task-list-item span,
-li.task-list-item {
+/* Align text better with larger boxes */
+li.task-list-item,
+li.task-list-item > * {
   line-height: 1.8;
 }
 

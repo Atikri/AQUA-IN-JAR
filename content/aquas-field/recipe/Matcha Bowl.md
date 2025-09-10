@@ -1,10 +1,10 @@
 ---
 date: "2025-09-10"
-draft: "false"
+draft: false
 title: "Matcha Bowl"
 ---
 
-注：本菜品为[AQUA IN JAR活动]({{relref "notification-jar\AQUA IN JAR.md"}})可选菜品  
+注：本菜品为[AQUA IN JAR活动]({{< relref "notification-jar/AQUA IN JAR.md" >}})可选菜品  
 
 ## 1.Matcha Bowl
 ### Ingredients:

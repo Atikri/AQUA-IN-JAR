@@ -26,13 +26,13 @@ Hi :smiley: ,我是A滔tikri！:cowboy_hat_face:
 ### :moneybag: 活动费用：58 
 
 ### :laughing: 我们可以选择一些活动：
-- 卡片对抗焦虑
-- 500张拼图:card_file_box: / 飞行棋／Duel 52:crossed_swords: /打电动:video_game: 
-- 描绘时尚插画的基础姿势:jeans: 
-- 阅读书籍/食谱书刊:newspaper: 
-- 身体拉伸:runner: 
-- 芳香制作:leaves: 
-- [享用食物](https://my.supernotes.app/?preview=2c98bb0b-862d-40ec-85f5-14d62b942697)（具体可提供清单请见另一张卡片！）
+- [ ] 片对抗焦虑
+- [ ] 500张拼图:card_file_box: / 飞行棋／Duel 52:crossed_swords: /打电动:video_game: 
+- [ ] 描绘时尚插画的基础姿势:jeans: 
+- [ ] 阅读书籍/食谱书刊:newspaper: 
+- [ ] 身体拉伸:runner: 
+- [ ] 芳香制作:leaves: 
+- [ ] [享用食物](^2c98bb0b-862d-40ec-85f5-14d62b942697)（具体可提供清单请见另一张卡片！）
 - 等等ddddd~~~~~:rofl: 
 ### 必备活动：
 - **录制一首你想唱的歌**:microphone: 

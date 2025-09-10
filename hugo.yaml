@@ -19,6 +19,8 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    extensions:
+      taskList: true
   highlight:
     style: github
     codeFences: true

@@ -15,3 +15,26 @@
   gtag('config', '{{ site.Params.googleAnalytics }}');
 </script>
 {{ end }}
+
+<!-- Enable interactive task list checkboxes and persist state in localStorage -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var checkboxes = document.querySelectorAll('li input[type="checkbox"]');
+    checkboxes.forEach(function (cb, idx) {
+      var key = 'tasklist:' + (cb.id || cb.name || idx) + ':' + location.pathname;
+      try {
+        var saved = localStorage.getItem(key);
+        if (saved !== null) cb.checked = saved === '1';
+        cb.addEventListener('change', function () {
+          localStorage.setItem(key, cb.checked ? '1' : '0');
+        });
+      } catch (e) {}
+    });
+  });
+  // Make sure Markdown-rendered checkboxes are interactive
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.matches('li input[type="checkbox"]')) {
+      e.target.checked = !e.target.checked;
+    }
+  });
+</script>

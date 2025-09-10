@@ -1,8 +1,8 @@
 ---
-subtitle: "Hi! 欢迎来我的瓶子里做客"
+subtitle: "Hi! 欢迎来我的瓶子里做客:hugs: "
 description: "A minimal web log."
 ---
-我是Tikri，在2025年9月份，我初步搭建了《AQUA IN JAR》这个网站，最近还在完善中~
+我是Tikri，2025年9月份我初步搭建了《AQUA IN JAR》这个网站，最近还在完善中~
 
 我会在这个网站分享一些我阅读过的文章，一些食谱，好玩有趣的事以及日常~
 

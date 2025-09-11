@@ -32,7 +32,7 @@ Hi :smiley: ,我是A滔tikri！:cowboy_hat_face:
 - [ ] 阅读书籍/食谱书刊:newspaper: 
 - [ ] 身体拉伸:runner: 
 - [ ] 芳香制作:leaves: 
-- [ ] 享用食物（具体食谱请见[recipe]({{< relref "aquas-field/recipe" >}})中标注可供AQUA IN JAR活动的菜品！）
+- [ ] 享用食物（具体食谱请见[recipe]({{< relref "aquas-field/recipe/_index.md" >}})中标注可供AQUA IN JAR活动的菜品！）
 - 等等ddddd~~~~~:rofl: 
 ### 必备活动：
 - **录制一首你想唱的歌**:microphone: 

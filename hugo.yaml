@@ -40,3 +40,6 @@ outputs:
 
 # Development settings
 disablePathToLower: true
+
+# Build settings
+buildFuture: true

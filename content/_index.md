@@ -1,5 +1,5 @@
 ---
-subtitle: "Hi! 欢迎来我的瓶子里做客:hugs: "
+subtitle: "Hi! 欢迎来我的瓶子里做客:rowing_man:  "
 description: "A minimal web log."
 ---
 我是Tikri，2025年9月份我初步搭建了《AQUA IN JAR》这个网站，最近还在完善中~

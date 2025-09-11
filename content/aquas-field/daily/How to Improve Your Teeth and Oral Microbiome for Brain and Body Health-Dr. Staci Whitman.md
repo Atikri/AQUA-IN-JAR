@@ -1,6 +1,6 @@
 ---
 date: "2025-09-11"
-title :"How to Improve Your Teeth & Oral Microbiome for Brain & Body Health | Dr. Staci Whitman"
+title: "How to Improve Your Teeth & Oral Microbiome for Brain & Body Health | Dr. Staci Whitman"
 ---
 
 [How to Improve Your Teeth & Oral Microbiome for Brain & Body Health | Dr. Staci Whitman - YouTube](https://youtu.be/_oOEKKiwdDE?si=SxpSbaf6f9Lar8_e)

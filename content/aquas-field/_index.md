@@ -11,5 +11,4 @@ weight: 2
 - [Reading Notes](reading-notes/) - 阅读笔记和思考
 - [Recipe](recipe/) - 食谱和烹饪心得  
 - [Daily](daily/) - 日常记录和生活感悟
-- [Aqua's Laboratory](aquas-laboratory/) - 水之实验室
 - [Mysterious Sea Area](mysterious-sea-area/) - 神秘海域

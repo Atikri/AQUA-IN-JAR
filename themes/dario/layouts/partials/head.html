@@ -34,8 +34,8 @@
         {{- end }}
     {{- end }}
 
-    <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
-    <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
+    <link rel="icon" type="image/x-icon" href="{{ (print "favicon.ico?v=2") | relURL }}">
+    <link rel="apple-touch-icon" href="{{ (print "apple-touch-icon.png?v=2") | relURL }}">
 
     {{- if or (not .Site.Params.colorScheme) (eq .Site.Params.colorScheme "toggle") }}
     {{- $darkmodeJS := resources.Get "js/darkmode.js" | minify | fingerprint }}

@@ -38,22 +38,30 @@
     <section id="categories-section" class="categories-section">
         <h2>分类浏览</h2>
         <div class="categories-grid">
-            <div class="category-card">
-                <h3><a href="{{ "notification-jar/" | relURL }}">📢 Notification Jar</a></h3>
-                <p>通知罐子 - 记录重要的通知和提醒</p>
-            </div>
-            <div class="category-card">
-                <h3><a href="{{ "aquas-field/" | relURL }}">🌾 Aqua's Field</a></h3>
-                <p>水之田野 - 创意和灵感的源泉</p>
-            </div>
-            <div class="category-card">
-                <h3><a href="{{ "podcast-music/" | relURL }}">🎧 Podcast & Music</a></h3>
-                <p>播客与音乐：收录音频节目与乐曲</p>
-            </div>
-            <div class="category-card">
-                <h3><a href="#" onclick="randomArticle()">🎲 Random Aqua</a></h3>
-                <p>随机跳转到一篇文章</p>
-            </div>
+            <a class="category-card-link" href="{{ "notification-jar/" | relURL }}">
+                <div class="category-card">
+                    <h3>📢 Notification Jar</h3>
+                    <p>通知罐子 - 记录重要的通知和提醒</p>
+                </div>
+            </a>
+            <a class="category-card-link" href="{{ "aquas-field/" | relURL }}">
+                <div class="category-card">
+                    <h3>🌾 Aqua's Field</h3>
+                    <p>水之田野 - 创意和灵感的源泉</p>
+                </div>
+            </a>
+            <a class="category-card-link" href="{{ "podcast-music/" | relURL }}">
+                <div class="category-card">
+                    <h3>🎧 Podcast & Music</h3>
+                    <p>播客与音乐：收录音频节目与乐曲</p>
+                </div>
+            </a>
+            <a class="category-card-link" href="javascript:void(0)" onclick="randomArticle()">
+                <div class="category-card">
+                    <h3>🎲 Random Aqua</h3>
+                    <p>随机跳转到一篇文章</p>
+                </div>
+            </a>
         </div>
     </section>
 
@@ -68,34 +76,23 @@
     </section>
     {{- end }}
 
+    {{/* Precompute random-article list as JSON to avoid templating inside JS */}}
+    {{- $s := newScratch -}}
+    {{- $s.Set "articles" (slice) -}}
+    {{- $types := slice "posts" "aquas-field" "notification-jar" "podcast-music" -}}
+    {{- range where .Site.RegularPages "Type" "in" $types -}}
+    {{- $s.Add "articles" (slice .Permalink) -}}
+    {{- end -}}
+    {{- $articlesJSON := ($s.Get "articles") | jsonify -}}
+
     <!-- Random Article JavaScript -->
     <script>
+        const __randomArticles = JSON.parse('{{ $articlesJSON | safeJS }}');
         function randomArticle() {
-            // 获取所有文章的URL
-            const articles = [
-                {{- range where .Site.RegularPages "Type" "posts" }}
-                "{{ .Permalink }}",
-                {{- end }}
-                {{- range where .Site.RegularPages "Type" "aquas-field" }}
-                "{{ .Permalink }}",
-                {{- end }}
-                {{- range where .Site.RegularPages "Type" "notification-jar" }}
-                "{{ .Permalink }}",
-                {{- end }}
-                {{- range where .Site.RegularPages "Type" "podcast-music" }}
-                "{{ .Permalink }}",
-                {{- end }}
-            ];
-            
-            // 过滤掉空值
-            const validArticles = articles.filter(url => url && url.trim() !== '');
-            
+            const validArticles = __randomArticles.filter(url => url && url.trim() !== '');
             if (validArticles.length > 0) {
-                // 随机选择一个文章
                 const randomIndex = Math.floor(Math.random() * validArticles.length);
                 const randomUrl = validArticles[randomIndex];
-                
-                // 跳转到随机文章
                 window.location.href = randomUrl;
             } else {
                 alert('暂时没有可用的文章');

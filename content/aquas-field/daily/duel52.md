@@ -13,7 +13,7 @@ title: "Duel 52"
 
 这个是官方网站
 https://www.juddmadden.com/duel52/
-以及[游玩指导]({{< relURL "file/duel52/1_duel52-instructions.pdf" >}})
+以及[游玩指导](/AQUA-IN-JAR/file/duel52/1_duel52-instructions.pdf)
 
 
 这个是汉化网站

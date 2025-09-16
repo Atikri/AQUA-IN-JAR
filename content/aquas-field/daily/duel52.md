@@ -19,11 +19,3 @@ https://www.juddmadden.com/duel52/
 这个是汉化网站
 https://cn-duel52.mysxl.cn/
 
-
-## 相关图片
-下面这张图会从 `static/file/duel52/duel52-cover.jpg` 加载。请将图片放到该位置后再构建发布。
-
-![Duel 52 封面](/AQUA-IN-JAR/file/duel52/duel52-cover.jpg)
-
-[查看原图](/AQUA-IN-JAR/file/duel52/duel52-cover.jpg)
-

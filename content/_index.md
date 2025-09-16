@@ -15,4 +15,4 @@ description: "A minimal web log."
 
 前往收听最新podcast：
 
-{{< link href="podcast-music/red-and-white-instrumental/" text="Red & White (Instrumental)" >}}
+[墙纸](https://atikri.github.io/AQUA-IN-JAR/podcast-music/%E5%A2%99%E7%BA%B8/)

@@ -18,8 +18,6 @@ Hi :smiley: ,我是A滔tikri！:cowboy_hat_face:
 ---
 很高兴开展**AQUA IN JAR**的活动，我也很希望邀请你来到我的瓶子中。:sunglasses: 
 活动长期进行（一个月一期，一期仅邀请**1~2位**成员）
-想了解**具体信息**请敲一下我的瓶子:blush: 
-:mailbox: aqutikri@gmail.com
 
 ### :timer_clock: 时间：15：00~~~~~~~~~~20：00（可协商）
 

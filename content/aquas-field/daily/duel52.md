@@ -12,11 +12,18 @@ title: "Duel 52"
 看完之后感觉超级有意思，规则相对来说一开始上手可能会相对复杂，但是花一点点时间上手几把就能很快明白里面的精髓。聚会最佳游戏，所以我把这个Duel 52也加在了我的[AQUA IN JAR活动](https://atikri.github.io/AQUA-IN-JAR/notification-jar/AQUA-IN-JAR/)的可选清单中。
 
 这个是官方网站
-https://www.juddmadden.com/duel52/
+https://www.juddmadden.com/duel52/  
 以及[游玩指导](/AQUA-IN-JAR/file/duel52/1_duel52-instructions.pdf)
 
 
 这个是汉化网站
 https://cn-duel52.mysxl.cn/
 
+
+## 相关图片
+下面这张图会从 `static/file/duel52/duel52-cover.jpg` 加载。请将图片放到该位置后再构建发布。
+
+![Duel 52 封面](/AQUA-IN-JAR/file/duel52/duel52-cover.jpg)
+
+[查看原图](/AQUA-IN-JAR/file/duel52/duel52-cover.jpg)
 

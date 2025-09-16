@@ -80,3 +80,40 @@ li.task-list-item > * {
   margin: 0 0 6px 0;
 }
 
+
+/* Simple responsive image gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 12px 0 6px 0;
+}
+
+.gallery a,
+.gallery figure {
+  display: block;
+  margin: 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Rotate utility: counter-clockwise 90deg */
+.rotate-90-ccw {
+  transform: rotate(-90deg);
+  transform-origin: center center;
+  display: block;
+}
+
+/* Desktop: force two columns and allow featured to span */
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery .featured {
+    grid-column: span 2;
+  }
+}

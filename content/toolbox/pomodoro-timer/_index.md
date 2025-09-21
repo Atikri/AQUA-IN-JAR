@@ -125,6 +125,10 @@ description: "专注工作，高效休息。使用番茄工作法提升你的生
     cursor: pointer;
     transition: all 0.3s ease;
     min-width: 80px;
+    min-height: 44px; /* 确保触摸目标足够大 */
+    touch-action: manipulation; /* 优化触摸响应 */
+    -webkit-tap-highlight-color: transparent; /* 移除点击高亮 */
+    user-select: none; /* 防止文本选择 */
 }
 
 .control-btn.primary {
@@ -222,7 +226,8 @@ description: "专注工作，高效休息。使用番茄工作法提升你的生
 
 @media (max-width: 768px) {
     .pomodoro-container {
-        padding: 15px;
+        padding: 10px;
+        max-width: 100%;
     }
     
     .timer-display {
@@ -230,48 +235,114 @@ description: "专注工作，高效休息。使用番茄工作法提升你的生
         margin-bottom: 15px;
     }
     
+    .mode-indicator {
+        margin-bottom: 10px;
+    }
+    
+    .mode-indicator span {
+        font-size: 16px;
+        margin-bottom: 3px;
+    }
+    
+    #current-mode {
+        font-size: 20px;
+    }
+    
+    #cycle-info {
+        font-size: 14px;
+    }
+    
     .progress-ring {
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
     }
     
     .progress-circle {
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
     }
     
     #time-text {
-        font-size: 36px;
+        font-size: 32px;
     }
     
     .timer-controls {
         flex-direction: column;
         align-items: center;
         margin-bottom: 15px;
+        gap: 10px;
     }
     
     .control-btn {
-        width: 200px;
+        width: 100%;
+        max-width: 200px;
+        padding: 10px 20px;
+        font-size: 14px;
     }
     
     .timer-settings {
         margin-bottom: 15px;
+        padding: 15px;
     }
     
     .setting-group {
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .setting-group label {
+        font-size: 14px;
     }
     
     .setting-group input {
         width: 100%;
+        max-width: 100px;
     }
     
     .timer-stats {
         flex-direction: column;
         gap: 15px;
         margin-top: 5px;
+        padding: 15px;
+    }
+    
+    .stat-label {
+        font-size: 12px;
+    }
+    
+    .stat-value {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pomodoro-container {
+        padding: 5px;
+    }
+    
+    .timer-display {
+        padding: 10px;
+    }
+    
+    .progress-ring {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .progress-circle {
+        width: 160px;
+        height: 160px;
+    }
+    
+    #time-text {
+        font-size: 28px;
+    }
+    
+    .control-btn {
+        padding: 8px 16px;
+        font-size: 13px;
     }
 }
 </style>
@@ -358,9 +429,45 @@ class PomodoroTimer {
     }
     
     bindEvents() {
-        document.getElementById('start-pause-btn')?.addEventListener('click', () => this.toggleTimer());
-        document.getElementById('reset-btn')?.addEventListener('click', () => this.resetTimer());
-        document.getElementById('skip-btn')?.addEventListener('click', () => this.skipTimer());
+        // 绑定按钮事件 - 同时支持点击和触摸
+        const startPauseBtn = document.getElementById('start-pause-btn');
+        const resetBtn = document.getElementById('reset-btn');
+        const skipBtn = document.getElementById('skip-btn');
+        
+        if (startPauseBtn) {
+            startPauseBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.toggleTimer();
+            });
+            startPauseBtn.addEventListener('touchend', (e) => {
+                e.preventDefault();
+                this.toggleTimer();
+            });
+        }
+        
+        if (resetBtn) {
+            resetBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.resetTimer();
+            });
+            resetBtn.addEventListener('touchend', (e) => {
+                e.preventDefault();
+                this.resetTimer();
+            });
+        }
+        
+        if (skipBtn) {
+            skipBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log('Skip button clicked'); // 调试日志
+                this.skipTimer();
+            });
+            skipBtn.addEventListener('touchend', (e) => {
+                e.preventDefault();
+                console.log('Skip button touched'); // 调试日志
+                this.skipTimer();
+            });
+        }
         
         // 设置变更事件
         document.getElementById('work-time')?.addEventListener('change', (e) => this.updateTimeSetting('work', e.target.value));
@@ -428,6 +535,8 @@ class PomodoroTimer {
     }
     
     skipTimer() {
+        console.log('skipTimer called'); // 调试日志
+        
         // 停止当前计时器
         clearInterval(this.timer);
         this.isRunning = false;
@@ -449,8 +558,13 @@ class PomodoroTimer {
         this.saveData();
         
         // 确保按钮状态正确
-        document.getElementById('start-pause-btn').textContent = '开始';
-        document.getElementById('start-pause-btn').classList.remove('paused');
+        const startPauseBtn = document.getElementById('start-pause-btn');
+        if (startPauseBtn) {
+            startPauseBtn.textContent = '开始';
+            startPauseBtn.classList.remove('paused');
+        }
+        
+        console.log('skipTimer completed'); // 调试日志
     }
     
     completeSession() {

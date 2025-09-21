@@ -33,7 +33,6 @@ git add .
 git commit -m "配置GitHub Pages自动部署"
 
 # 推送到GitHub
-git push origin master
 ```
 
 ### 2. 在GitHub上配置Pages

@@ -8,7 +8,7 @@ params:
   googleAnalytics: "G-JLYX55NFNN"  # 你的GA4测量ID
 
 # Main sections for navigation
-mainSections: ['notification-jar', 'aquas-field', 'podcast-music']
+mainSections: ['notification-jar', 'aquas-field', 'podcast-music', 'toolbox']
 
 # Enable Table of Contents
 markup:
@@ -21,6 +21,10 @@ markup:
       unsafe: true
     extensions:
       taskList: true
+      table: true
+      strikethrough: true
+      linkify: true
+      typographer: true
   highlight:
     style: github
     codeFences: true

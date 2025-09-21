@@ -312,9 +312,9 @@ class PomodoroTimer {
                 </div>
                 
                 <div class="timer-controls">
-                    <button id="start-pause-btn" class="control-btn primary">开始</button>
-                    <button id="reset-btn" class="control-btn secondary">重置</button>
-                    <button id="skip-btn" class="control-btn secondary">跳过</button>
+                    <button id="start-pause-btn" class="control-btn primary" onclick="pomodoroTimer.toggleTimer()">开始</button>
+                    <button id="reset-btn" class="control-btn secondary" onclick="pomodoroTimer.resetTimer()">重置</button>
+                    <button id="skip-btn" class="control-btn secondary" onclick="pomodoroTimer.skipTimer()">跳过</button>
                 </div>
                 
                 <div class="timer-settings">
@@ -347,35 +347,6 @@ class PomodoroTimer {
     }
     
     bindEvents() {
-        // 简化的按钮事件绑定 - 统一使用click事件
-        const startPauseBtn = document.getElementById('start-pause-btn');
-        const resetBtn = document.getElementById('reset-btn');
-        const skipBtn = document.getElementById('skip-btn');
-        
-        if (startPauseBtn) {
-            startPauseBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                console.log('Start/Pause button clicked');
-                this.toggleTimer();
-            });
-        }
-        
-        if (resetBtn) {
-            resetBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                console.log('Reset button clicked');
-                this.resetTimer();
-            });
-        }
-        
-        if (skipBtn) {
-            skipBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                console.log('Skip button clicked');
-                this.skipTimer();
-            });
-        }
-        
         // 设置变更事件
         document.getElementById('work-time')?.addEventListener('change', (e) => this.updateTimeSetting('work', e.target.value));
         document.getElementById('short-break-time')?.addEventListener('change', (e) => this.updateTimeSetting('shortBreak', e.target.value));
@@ -442,7 +413,9 @@ class PomodoroTimer {
     }
     
     skipTimer() {
-        console.log('Skip button clicked - skipping current session');
+        console.log('=== SKIP TIMER CALLED ===');
+        console.log('Current mode:', this.currentMode);
+        console.log('Is running:', this.isRunning);
         
         // 停止当前计时器
         clearInterval(this.timer);
@@ -465,8 +438,16 @@ class PomodoroTimer {
         this.saveData();
         
         // 确保按钮状态正确
-        document.getElementById('start-pause-btn').textContent = '开始';
-        document.getElementById('start-pause-btn').classList.remove('paused');
+        const startPauseBtn = document.getElementById('start-pause-btn');
+        if (startPauseBtn) {
+            startPauseBtn.textContent = '开始';
+            startPauseBtn.classList.remove('paused');
+            console.log('Button state updated to 开始');
+        } else {
+            console.error('Start/Pause button not found!');
+        }
+        
+        console.log('=== SKIP TIMER COMPLETED ===');
     }
     
     completeSession() {
@@ -663,13 +644,14 @@ class PomodoroTimer {
 }
 
 // 初始化番茄计时器
+let pomodoroTimer;
 document.addEventListener('DOMContentLoaded', function() {
     // 请求通知权限
     if ('Notification' in window && Notification.permission === 'default') {
         Notification.requestPermission();
     }
     
-    // 创建番茄计时器实例
-    new PomodoroTimer();
+    // 创建番茄计时器实例并保存为全局变量
+    pomodoroTimer = new PomodoroTimer();
 });
 </script>

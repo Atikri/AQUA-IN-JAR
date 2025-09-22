@@ -6,6 +6,39 @@ description: "专注工作，高效休息。使用番茄工作法提升你的生
 
 🍅基于番茄工作法的时间管理工具，帮助你保持专注，提高工作效率。
 
+## 🎵 专注音乐
+
+在专注学习时，可以播放轻柔的背景音乐来提升效率。我们为你准备了精选的专注音乐播放列表。
+
+<div class="music-player">
+    <div class="music-controls">
+        <button id="prev-btn" class="music-btn prev-btn" onclick="previousTrack()" title="上一首">
+            <span>⏮️</span>
+        </button>
+        <button id="play-music-btn" class="music-btn play-btn" onclick="toggleMusic()" title="播放/暂停">
+            <span id="play-icon">▶️</span>
+        </button>
+        <button id="next-btn" class="music-btn next-btn" onclick="nextTrack()" title="下一首">
+            <span>⏭️</span>
+        </button>
+        <div class="music-info">
+            <div class="music-title" id="current-title">Instrumental Study</div>
+            <div class="music-subtitle" id="current-artist">Soft and contemplative piano music</div>
+            <div class="track-info">
+                <span id="current-track">1</span> / <span id="total-tracks">5</span>
+            </div>
+        </div>
+        <div class="volume-control">
+            <span>🔊</span>
+            <input type="range" id="volume-slider" min="0" max="100" value="30" onchange="setVolume(this.value)">
+        </div>
+    </div>
+    <div class="music-status" id="music-status">点击播放按钮开始音乐</div>
+    <div class="playlist-info">
+        <small>💡 提示：由于版权限制，这里播放的是示例音频。你可以打开 <a href="https://open.spotify.com/playlist/37i9dQZF1DX9sIqqvKsjG8?si=4f451714f7eb43f1" target="_blank" style="color: rgba(255,255,255,0.8);">Spotify播放列表</a> 在后台播放</small>
+    </div>
+</div>
+
 ## 什么是番茄工作法？
 
 番茄工作法是一种时间管理方法，由弗朗西斯科·西里洛于1992年创立。基本流程是：
@@ -32,6 +65,129 @@ description: "专注工作，高效休息。使用番茄工作法提升你的生
     margin: 0 auto;
     padding: 20px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* 音乐播放器样式 */
+.music-player {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.music-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.music-controls .music-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.music-controls .music-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.music-controls .play-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+}
+
+.music-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.music-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.music-info {
+    flex: 1;
+}
+
+.music-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.music-subtitle {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.track-info {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+.playlist-info {
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.volume-control input[type="range"] {
+    width: 80px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.volume-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.music-status {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.9;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
 }
 
 .timer-display {
@@ -229,6 +385,41 @@ description: "专注工作，高效休息。使用番茄工作法提升你的生
     .pomodoro-container {
         padding: 15px;
         max-width: 100%;
+    }
+    
+    .music-controls {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .music-controls .music-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    .music-controls .play-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+    
+    .music-info {
+        order: 2;
+    }
+    
+    .volume-control {
+        order: 3;
+        justify-content: center;
+    }
+    
+    .music-controls .prev-btn,
+    .music-controls .play-btn,
+    .music-controls .next-btn {
+        order: 1;
+        display: inline-flex;
+        margin: 0 5px;
     }
     
     .timer-controls {
@@ -643,6 +834,182 @@ class PomodoroTimer {
     }
 }
 
+// 音乐播放器功能
+let musicPlayer = null;
+let isMusicPlaying = false;
+let currentVolume = 30;
+
+// 音乐播放列表 - 基于Spotify的Instrumental Study播放列表
+const musicPlaylist = [
+    {
+        title: "Windswept",
+        artist: "J. Alke",
+        url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" // 示例音频，实际使用时需要替换为真实音频URL
+    },
+    {
+        title: "There Is Light", 
+        artist: "Alfons Daiminger",
+        url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav"
+    },
+    {
+        title: "Particles",
+        artist: "Malmkvist", 
+        url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav"
+    },
+    {
+        title: "In Green",
+        artist: "Arlo Thiem",
+        url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav"
+    },
+    {
+        title: "Equinox",
+        artist: "J. Alke",
+        url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav"
+    },
+    {
+        title: "New",
+        artist: "Marco Apicella",
+        url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav"
+    },
+    {
+        title: "Olivanders",
+        artist: "Adjoa Bekoe",
+        url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav"
+    },
+    {
+        title: "Molto piano",
+        artist: "Alex Laude",
+        url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav"
+    },
+    {
+        title: "Forgotten Photographs",
+        artist: "Arata Rin",
+        url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav"
+    },
+    {
+        title: "Whirlwinds of Life",
+        artist: "Francis Monet",
+        url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav"
+    }
+];
+
+let currentTrackIndex = 0;
+
+function initMusicPlayer() {
+    // 创建音频对象
+    musicPlayer = new Audio();
+    musicPlayer.loop = false; // 不循环单曲，而是播放整个播放列表
+    musicPlayer.volume = currentVolume / 100;
+    
+    // 设置第一首歌曲
+    loadTrack(currentTrackIndex);
+    
+    // 更新总曲目数
+    document.getElementById('total-tracks').textContent = musicPlaylist.length;
+    
+    // 监听音频事件
+    musicPlayer.addEventListener('loadstart', () => {
+        updateMusicStatus('正在加载音乐...');
+    });
+    
+    musicPlayer.addEventListener('canplay', () => {
+        updateMusicStatus('音乐已准备就绪');
+    });
+    
+    musicPlayer.addEventListener('error', () => {
+        updateMusicStatus('音乐加载失败，请检查网络连接');
+    });
+    
+    // 监听歌曲结束事件，自动播放下一首
+    musicPlayer.addEventListener('ended', () => {
+        nextTrack();
+    });
+}
+
+function loadTrack(index) {
+    if (musicPlaylist[index]) {
+        const track = musicPlaylist[index];
+        musicPlayer.src = track.url;
+        updateMusicInfo(track.title, track.artist);
+        updateTrackInfo(index + 1);
+    }
+}
+
+function updateMusicInfo(title, artist) {
+    document.getElementById('current-title').textContent = title;
+    document.getElementById('current-artist').textContent = artist;
+}
+
+function updateTrackInfo(trackNumber) {
+    document.getElementById('current-track').textContent = trackNumber;
+}
+
+function updateMusicStatus(message) {
+    document.getElementById('music-status').textContent = message;
+}
+
+function toggleMusic() {
+    if (!musicPlayer) {
+        initMusicPlayer();
+    }
+    
+    if (isMusicPlaying) {
+        musicPlayer.pause();
+        document.getElementById('play-icon').textContent = '▶️';
+        updateMusicStatus('音乐已暂停');
+        isMusicPlaying = false;
+    } else {
+        musicPlayer.play().then(() => {
+            document.getElementById('play-icon').textContent = '⏸️';
+            updateMusicStatus('正在播放专注音乐');
+            isMusicPlaying = true;
+        }).catch((error) => {
+            console.error('播放音乐失败:', error);
+            updateMusicStatus('播放失败，请检查浏览器设置');
+        });
+    }
+}
+
+function setVolume(value) {
+    currentVolume = parseInt(value);
+    if (musicPlayer) {
+        musicPlayer.volume = currentVolume / 100;
+    }
+    updateMusicStatus(`音量: ${currentVolume}%`);
+}
+
+function nextTrack() {
+    currentTrackIndex = (currentTrackIndex + 1) % musicPlaylist.length;
+    loadTrack(currentTrackIndex);
+    
+    if (isMusicPlaying) {
+        musicPlayer.play().then(() => {
+            updateMusicStatus(`正在播放: ${musicPlaylist[currentTrackIndex].title}`);
+        }).catch((error) => {
+            console.error('播放下一首失败:', error);
+            updateMusicStatus('播放失败，请检查浏览器设置');
+        });
+    } else {
+        updateMusicStatus(`已切换到: ${musicPlaylist[currentTrackIndex].title}`);
+    }
+}
+
+function previousTrack() {
+    currentTrackIndex = (currentTrackIndex - 1 + musicPlaylist.length) % musicPlaylist.length;
+    loadTrack(currentTrackIndex);
+    
+    if (isMusicPlaying) {
+        musicPlayer.play().then(() => {
+            updateMusicStatus(`正在播放: ${musicPlaylist[currentTrackIndex].title}`);
+        }).catch((error) => {
+            console.error('播放上一首失败:', error);
+            updateMusicStatus('播放失败，请检查浏览器设置');
+        });
+    } else {
+        updateMusicStatus(`已切换到: ${musicPlaylist[currentTrackIndex].title}`);
+    }
+}
+
 // 初始化番茄计时器
 let pomodoroTimer;
 document.addEventListener('DOMContentLoaded', function() {
@@ -653,5 +1020,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 创建番茄计时器实例并保存为全局变量
     pomodoroTimer = new PomodoroTimer();
+    
+    // 初始化音乐播放器
+    initMusicPlayer();
 });
 </script>

@@ -1,0 +1,2 @@
+<span class="blur-text">{{ .Inner | markdownify | replaceRE "^<p>(.*)</p>$" "$1" | safeHTML }}</span>
+

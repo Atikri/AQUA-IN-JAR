@@ -3,7 +3,7 @@ date: "2025-09-23"
 title: "Quinoa & eggplant salad"
 ---
 
-> [Anything's Possible](linktr.ee/Burburywholefoods)
+> [Anything's Possible](https://www.instagram.com/burburywholefoods?igsh=bGpuYTAzMnYwbjR3)
 > P142  
 
 ---  
@@ -20,7 +20,7 @@ This delicious , warm salad is fantastic on its own or as a side. You really can
 - 1 tsp ground cumin
 - 1 tsp ground cinnamon
 - 1/2 tsp cayenne pepper
-- 4 cups [cooked quinoa]()
+- 4 cups [cooked quinoa](https://atikri.github.io/AQUA-IN-JAR/aquas-field/recipe/How-to-cook-quinoa-rice/)
 - 4 medjool dates , pitted and diced
 - 6 cherry tomatoes(200g), cut into quarters
 - 1/2 cup mint(15g), roughly chopped

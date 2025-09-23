@@ -3,7 +3,8 @@ date: "2025-09-23"
 title: "Quinoa & eggplant salad"
 ---
 
-> [Anything's Possible](https://www.instagram.com/burburywholefoods?igsh=bGpuYTAzMnYwbjR3)
+> Anything's Possible
+(https://www.instagram.com/burburywholefoods?igsh=bGpuYTAzMnYwbjR3)
 > P142  
 
 ---  

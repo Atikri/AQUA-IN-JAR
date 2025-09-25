@@ -289,6 +289,8 @@ class PomodoroTimer {
         this.bindEvents();
         this.updateDisplay();
         this.loadSettings();
+        this.loadData();
+        this.updateStats(); // 加载今日完成数量
     }
     
     createTimerHTML() {
@@ -430,10 +432,15 @@ class PomodoroTimer {
         // 显示通知
         this.showNotification();
         
+        // 如果跳过的是工作模式，先增加计数
+        if (this.currentMode === 'work') {
+            this.incrementTodayCompleted();
+        }
+        
         // 切换到下一个模式
         this.switchMode();
         
-        // 更新统计
+        // 更新统计显示
         this.updateStats();
         
         // 保存数据
@@ -463,10 +470,15 @@ class PomodoroTimer {
         // 显示通知
         this.showNotification();
         
+        // 如果完成的是工作模式，先增加计数
+        if (this.currentMode === 'work') {
+            this.incrementTodayCompleted();
+        }
+        
         // 切换到下一个模式
         this.switchMode();
         
-        // 更新统计
+        // 更新统计显示
         this.updateStats();
         
         // 保存数据
@@ -492,6 +504,7 @@ class PomodoroTimer {
         this.currentTime = this.getCurrentModeTime();
         this.updateDisplay();
         this.updateModeIndicator();
+        this.updateStats(); // 更新统计信息
     }
     
     getCurrentModeTime() {
@@ -553,16 +566,23 @@ class PomodoroTimer {
         this.saveSettings();
     }
     
-    updateStats() {
+    incrementTodayCompleted() {
         const today = new Date().toDateString();
         const completed = this.getTodayCompleted();
+        localStorage.setItem(`pomodoro_${today}`, completed + 1);
+    }
+    
+    updateStats() {
+        // 更新显示
+        const todayCompletedElement = document.getElementById('today-completed');
+        const currentCycleElement = document.getElementById('current-cycle');
         
-        if (this.currentMode === 'work') {
-            localStorage.setItem(`pomodoro_${today}`, completed + 1);
+        if (todayCompletedElement) {
+            todayCompletedElement.textContent = this.getTodayCompleted();
         }
-        
-        document.getElementById('today-completed').textContent = this.getTodayCompleted();
-        document.getElementById('current-cycle').textContent = `${(this.cycleCount % 4) + 1}/4`;
+        if (currentCycleElement) {
+            currentCycleElement.textContent = `${(this.cycleCount % 4) + 1}/4`;
+        }
     }
     
     getTodayCompleted() {
@@ -571,22 +591,52 @@ class PomodoroTimer {
     }
     
     playNotificationSound() {
-        // 创建简单的提示音
+        // 创建更好听的提示音
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        const oscillator = audioContext.createOscillator();
-        const gainNode = audioContext.createGain();
         
-        oscillator.connect(gainNode);
-        gainNode.connect(audioContext.destination);
+        // 创建主音调
+        const oscillator1 = audioContext.createOscillator();
+        const gainNode1 = audioContext.createGain();
         
-        oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
-        oscillator.frequency.setValueAtTime(600, audioContext.currentTime + 0.1);
+        // 创建和声
+        const oscillator2 = audioContext.createOscillator();
+        const gainNode2 = audioContext.createGain();
         
-        gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+        // 连接音频节点
+        oscillator1.connect(gainNode1);
+        oscillator2.connect(gainNode2);
+        gainNode1.connect(audioContext.destination);
+        gainNode2.connect(audioContext.destination);
         
-        oscillator.start(audioContext.currentTime);
-        oscillator.stop(audioContext.currentTime + 0.3);
+        // 设置音调 - 使用更悦耳的音程
+        oscillator1.frequency.setValueAtTime(523.25, audioContext.currentTime); // C5
+        oscillator2.frequency.setValueAtTime(659.25, audioContext.currentTime); // E5
+        
+        // 创建上升音调效果
+        oscillator1.frequency.setValueAtTime(523.25, audioContext.currentTime);
+        oscillator1.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.2);
+        oscillator1.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.4);
+        
+        oscillator2.frequency.setValueAtTime(659.25, audioContext.currentTime);
+        oscillator2.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.2);
+        oscillator2.frequency.setValueAtTime(987.77, audioContext.currentTime + 0.4);
+        
+        // 设置音量包络 - 更柔和的音量变化
+        gainNode1.gain.setValueAtTime(0, audioContext.currentTime);
+        gainNode1.gain.linearRampToValueAtTime(0.2, audioContext.currentTime + 0.1);
+        gainNode1.gain.setValueAtTime(0.2, audioContext.currentTime + 0.4);
+        gainNode1.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.8);
+        
+        gainNode2.gain.setValueAtTime(0, audioContext.currentTime);
+        gainNode2.gain.linearRampToValueAtTime(0.15, audioContext.currentTime + 0.1);
+        gainNode2.gain.setValueAtTime(0.15, audioContext.currentTime + 0.4);
+        gainNode2.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.8);
+        
+        // 播放音效
+        oscillator1.start(audioContext.currentTime);
+        oscillator2.start(audioContext.currentTime);
+        oscillator1.stop(audioContext.currentTime + 0.8);
+        oscillator2.stop(audioContext.currentTime + 0.8);
     }
     
     showNotification() {

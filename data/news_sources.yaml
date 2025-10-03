@@ -1,0 +1,53 @@
+# Define your news sources here. You can add/remove sources as needed.
+# Supported types:
+# - rss: Provide an RSS/Atom feed URL; items are read directly
+# - webpage: Provide a page URL and optional CSS selector to pick article links
+#
+sources:
+  - name: Hacker News – Frontpage
+    type: rss
+    url: https://hnrss.org/frontpage
+    max_items: 10
+
+  - name: BBC World
+    type: rss
+    url: https://feeds.bbci.co.uk/news/world/rss.xml
+    max_items: 8
+
+  - name: The Verge
+    type: rss
+    url: https://www.theverge.com/rss/index.xml
+    max_items: 6
+
+  # Example of a webpage source (scrapes article links from a page)
+  # - name: Example Tech Blog
+  #   type: webpage
+  #   url: https://example.com/blog
+  #   link_selector: 'article a.post-link'
+  #   max_items: 5
+
+settings:
+  # Language hint for summarization (zh-CN, zh-TW, en, etc.)
+  language: zh-CN
+  # Timezone for dating the digest file
+  timezone: Asia/Shanghai
+  # Output directory for generated markdown (relative to repo root)
+  output_dir: content/aquas-field/daily
+  # Title template. {date} will be replaced with YYYY-MM-DD
+  title_template: "每日简报 · {date}"
+  # If true, keep only items from the last N hours (set hours_bounded > 0)
+  hours_bounded: 48
+  # Maximum characters per summary (soft limit)
+  max_summary_chars: 500
+
+ai:
+  # Summarization provider. Options: none, openai, anthropic
+  provider: none
+  # Model names (used when provider != none)
+  openai_model: gpt-4o-mini
+  anthropic_model: claude-3-5-sonnet-latest
+  # Environment variable names that carry API keys
+  openai_api_key_env: OPENAI_API_KEY
+  anthropic_api_key_env: ANTHROPIC_API_KEY
+
+

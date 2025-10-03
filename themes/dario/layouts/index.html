@@ -59,8 +59,8 @@
             </a>
             <a class="category-card-link" href="/AQUA-IN-JAR/toolbox/">
                 <div class="category-card">
-                    <h3>🧰 Tool Jar</h3>
-                    <p>实用工具集合 - Random Aqua & 番茄计时器</p>
+                    <h3>🧰 Laboratory</h3>
+                    <p>实验室 - 声音与声学研究 · 专题与小工具</p>
                 </div>
             </a>
         </div>
@@ -71,8 +71,11 @@
     <h2>{{ .Title }}</h2>
     <ul>
         {{- if eq .Section "toolbox" }}
-            <li><a href="/AQUA-IN-JAR/toolbox/random-aqua/">Random Aqua</a></li>
-            <li><a href="/AQUA-IN-JAR/toolbox/pomodoro-timer/">番茄计时器</a></li>
+            {{- $pages := where .Site.RegularPages "Section" "toolbox" -}}
+            {{- $pages = where $pages "Params.tags" "intersect" (slice "inter-nos") -}}
+            {{- range $pages }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{- end }}
         {{- else }}
             {{- range where .Site.RegularPages "Section" .Section }}
             <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>

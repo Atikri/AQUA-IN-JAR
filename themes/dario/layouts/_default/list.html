@@ -8,7 +8,8 @@
 
     {{- if .Pages }}
     <section class="posts-list">
-        {{- range .Pages }}
+        {{- $pages := where .Pages "Params.hiddenFromList" "ne" true -}}
+        {{- range $pages }}
         <article class="post-item">
             <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
             {{- if .Params.description }}

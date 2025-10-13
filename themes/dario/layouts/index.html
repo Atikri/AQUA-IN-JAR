@@ -25,6 +25,8 @@
         {{- end }}
     {{- end }}
 
+    <!-- Canvas Water Background removed per request -->
+
     <!-- Search Section -->
     <section id="search-section" class="search-section">
         <h2>{{ "Search Articles :turtle:" | emojify }}</h2>
@@ -57,13 +59,24 @@
                     <p>播客&音乐&视频：收录音频节目与乐曲还有视频</p>
                 </div>
             </a>
-            <a class="category-card-link" href="/AQUA-IN-JAR/toolbox/">
+            <a class="category-card-link" href="{{ "random-aqua/" | relURL }}">
                 <div class="category-card">
-                    <h3>🧰 Laboratory</h3>
-                    <p>实验室 - 声音与声学研究 · 专题与小工具</p>
+                    <h3>🎲 Random Aqua</h3>
+                    <p>随机探索 - 在网站里随缘漫游发现灵感</p>
                 </div>
             </a>
         </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section id="featured-section" class="featured-section">
+        <h2>おすすめ</h2>
+        <ul>
+        {{- $featured := where .Site.RegularPages ".Params.featured" true -}}
+        {{- range first 8 $featured }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{- end }}
+        </ul>
     </section>
 
     {{- range sort (where .Site.Sections "Section" "in" .Site.MainSections) "Weight" }}
@@ -84,6 +97,8 @@
     </ul>
     </section>
     {{- end }}
+
+    
 
     {{/* Precompute random-article list as JSON to avoid templating inside JS */}}
     {{- $s := newScratch -}}

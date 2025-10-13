@@ -32,13 +32,11 @@ class PomodoroTimer {
                         <span id="current-mode">专注工作</span>
                         <span id="cycle-info">第 1 个番茄钟</span>
                     </div>
-                    <div class="time-display">
-                        <span id="time-text">25:00</span>
-                    </div>
                     <div class="progress-ring">
-                        <svg class="progress-circle" width="200" height="200">
+                        <svg class="progress-circle" width="200" height="200" viewBox="0 0 200 200" aria-hidden="true">
                             <circle class="progress-bg" cx="100" cy="100" r="90"></circle>
-                            <circle class="progress-bar" cx="100" cy="100" r="90" id="progress-circle"></circle>
+                            <circle class="progress-bar" cx="100" cy="100" r="90" id="progress-circle" transform="rotate(-90 100 100)"></circle>
+                            <text id="time-text" x="50%" y="50%" dy="0.35em" text-anchor="middle" alignment-baseline="middle" font-size="48" fill="#2c3e50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">25:00</text>
                         </svg>
                     </div>
                 </div>

@@ -6,6 +6,7 @@ params:
   colorScheme: toggle
   # Google Analytics 4
   googleAnalytics: "G-JLYX55NFNN"  # 你的GA4测量ID
+  backToTopImage: images/navigation/top.png
 
 # Main sections for navigation
 mainSections: ['notification-jar', 'aquas-field', 'podcast-music', 'toolbox']

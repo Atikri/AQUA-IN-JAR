@@ -11,4 +11,3 @@ weight: 2
 - [Recipe](recipe/) - 食谱和烹饪心得  
 - [Daily](daily/) - 日常记录和生活感悟
 - [Mysterious Sea Area](mysterious-sea-area/) - 神秘海域
- - [Tool Jar](../toolbox/) - 小工具与实验室

@@ -1133,7 +1133,6 @@ footer {
   justify-content: center;
   background: transparent;
   position: relative;
-  /* Create a new stacking context so mix-blend-mode is stable on iOS/iPadOS */
   isolation: isolate;
 }
 
@@ -1142,31 +1141,22 @@ footer {
   height: 100%;
   object-fit: contain;
   transition: all 0.3s ease;
-  /* 使用 mix-blend-mode 来去除白色背景 */
-  mix-blend-mode: multiply;
-  opacity: 0.9;
+  background: transparent !important;
+  mix-blend-mode: normal !important;
+  opacity: 1 !important;
 }
 
 /* Light mode: 使用 multiply 模式去除白色背景 */
 @media (prefers-color-scheme: light) {
-  .nav-image img {
-    mix-blend-mode: multiply;
-    opacity: 0.9;
-  }
+  .nav-image img { background: transparent !important; }
 }
 
 /* Dark mode: 使用 screen 模式适配深色背景 */
 @media (prefers-color-scheme: dark) {
-  .nav-image img {
-    mix-blend-mode: screen;
-    opacity: 0.95;
-  }
+  .nav-image img { background: transparent !important; }
 }
 
-.dark-mode-on .nav-image img {
-  mix-blend-mode: screen;
-  opacity: 0.95;
-}
+.dark-mode-on .nav-image img { background: transparent !important; }
 
 /* Hover effects for navigation buttons */
 .nav-button:hover .nav-image img {

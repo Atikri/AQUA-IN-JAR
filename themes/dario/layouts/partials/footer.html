@@ -7,3 +7,27 @@
         {{- end }}
     </div>
 </footer>
+
+<!-- Back to top button (site-wide) -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  {{- with .Site.Params.backToTopImage -}}
+    <img src="{{ . | absURL }}" alt="Back to top" />
+  {{- else -}}
+    <span>↑</span>
+  {{- end -}}
+</button>
+
+<script>
+(function(){
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+  const showAt = 300;
+  function onScroll(){
+    if (window.scrollY > showAt) btn.style.display = 'flex';
+    else btn.style.display = 'none';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  btn.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+})();
+</script>

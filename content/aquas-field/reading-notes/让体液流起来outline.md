@@ -1,6 +1,7 @@
 ---
 date: "2025-09-17"
 title: "让体液流起来outline"
+featured: true
 ---
 
 这篇post列出了《让体液流起来》这本书的概要信息，以及目录定位栏~   

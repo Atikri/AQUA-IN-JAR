@@ -1,4 +1,4 @@
-baseURL: https://tikri.site
+baseURL: https://tikri.site/
 languageCode: en-us 
 title: AQUA IN JAR 
 theme: dario
@@ -38,6 +38,9 @@ markup:
 
 # Enable emoji support
 enableEmoji: true
+
+# Ensure all generated asset links use absolute URLs from baseURL
+canonifyURLs: true
 
 # Output formats for search
 outputs:

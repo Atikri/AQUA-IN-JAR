@@ -1,7 +1,9 @@
 name: Deploy Hugo site to Pages
 
 on:
-  # 仅在手动触发时运行，避免与 Pages 的 branch+docs 发布方式冲突
+  push:
+    branches:
+      - master
   workflow_dispatch:
 
 permissions:
@@ -29,24 +31,23 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build with Hugo (manual only)
+      - name: Build with Hugo
         env:
           HUGO_ENV: production
-          # 如需用 Actions 构建到自定义域，请改为你的域名
           HUGO_BASEURL: "https://tikri.site/"
         run: |
-          hugo --minify -d docs
+          hugo --minify -d public
           # 如果你使用的是 Hugo Module，并且你的 theme 目录不在根目录下，可能需要额外步骤。
           # 如果你的 `config.yaml` 中 theme 配置是 `theme = "dario"` 并且 dario 在 themes/dario 目录下， Hugo 应该能自动找到。
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      # 使用 branch+docs 发布时，不需要下面这两步。如果将来切回 Actions 部署，再恢复它们。
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v3
-      #   with:
-      #     path: ./public # Hugo 生成的静态文件目录
-      # - name: Deploy to GitHub Pages
-      #   id: deployment
-      #   uses: actions/deploy-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

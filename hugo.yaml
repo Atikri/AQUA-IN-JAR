@@ -1,4 +1,4 @@
-baseURL: https://Atikri.github.io/AQUA-IN-JAR/
+baseURL: https://tikri.site
 languageCode: en-us 
 title: AQUA IN JAR 
 theme: dario
@@ -48,3 +48,6 @@ disablePathToLower: true
 
 # Build settings
 buildFuture: true
+
+# Publish to docs/ so GitHub Pages can serve it directly
+publishDir: docs

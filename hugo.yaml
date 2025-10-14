@@ -3,7 +3,7 @@ languageCode: en-us
 title: AQUA IN JAR 
 theme: dario
 params:
-  colorScheme: toggle
+  colorScheme: light
   # Google Analytics 4
   googleAnalytics: "G-JLYX55NFNN"  # 你的GA4测量ID
   backToTopImage: images/navigation/top.png

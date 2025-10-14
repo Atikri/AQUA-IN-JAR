@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">Part 1 我怎会变成这样</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">1 是的，你再也回不去了 2 放手，怎么这么难 3 要和他分手吗？ 4 上班好苦，why？ 这本书是依据成年人发展理论的研究成果，相信人生中的转变是一段从迷失到重新找到方向的自然历程，这样的自然历程正是我们成长的重要里程碑，如果在这样重要的时刻，我们对转变缺乏了解，就会错过成长的机会，我们也会继续以 …</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

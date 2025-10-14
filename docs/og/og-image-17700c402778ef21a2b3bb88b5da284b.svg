@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">腰痛的原因是体液淤积</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">让体液流起来outline 腰痛的原因是体液淤积。哪里淤积呢？==最有可能是大腿根部==，大腿根部的腹股沟淋巴结的淋巴液循环变差才是造成腰疼主要原因。要按摩腿部的内收肌群。 怎么按摩呢？ 内收肌群是很少用到的肌肉。年纪越大也越不会使用。 如果单脚站立不能保持平衡，就说明没有正常使用这个肌肉。 其实内 …</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

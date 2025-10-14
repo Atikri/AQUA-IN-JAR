@@ -3,7 +3,7 @@ date: "2025-09-29"
 title: "Part 1 我怎会变成这样"
 ---
 
-[1 是的，你再也回不去了](https://atikri.github.io/AQUA-IN-JAR/aquas-field/reading-notes/1-%E6%98%AF%E7%9A%84%E4%BD%A0%E5%86%8D%E4%B9%9F%E5%9B%9E%E4%B8%8D%E5%8E%BB%E4%BA%86/)
+[1 是的，你再也回不去了](https://tikri.site/aquas-field/reading-notes/1-%E6%98%AF%E7%9A%84%E4%BD%A0%E5%86%8D%E4%B9%9F%E5%9B%9E%E4%B8%8D%E5%8E%BB%E4%BA%86/)
 2 放手，怎么这么难
 3 要和他分手吗？
 4 上班好苦，why？

@@ -15,4 +15,4 @@ description: "A minimal web log."
 
 前往收听最新podcast：
 
-[墙纸](https://atikri.github.io/AQUA-IN-JAR/podcast-music/%E5%A2%99%E7%BA%B8/)
+[墙纸](https://tikri.site/podcast-music/%E5%A2%99%E7%BA%B8/)

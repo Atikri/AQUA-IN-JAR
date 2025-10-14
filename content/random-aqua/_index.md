@@ -46,43 +46,43 @@ document.addEventListener('DOMContentLoaded', function() {
         // 这里需要从Hugo获取文章列表
         // 由于这是静态页面，我们需要通过其他方式获取文章列表
         const articles = [
-            '/AQUA-IN-JAR/aquas-field/daily/',
-            '/AQUA-IN-JAR/aquas-field/mysterious-sea-area/',
-            '/AQUA-IN-JAR/aquas-field/reading-notes/',
-            '/AQUA-IN-JAR/aquas-field/recipe/',
-            '/AQUA-IN-JAR/podcast-music/',
-            '/AQUA-IN-JAR/notification-jar/',
-            '/AQUA-IN-JAR/aqua-inspiration/'
+            '/aquas-field/daily/',
+            '/aquas-field/mysterious-sea-area/',
+            '/aquas-field/reading-notes/',
+            '/aquas-field/recipe/',
+            '/podcast-music/',
+            '/notification-jar/',
+            '/aqua-inspiration/'
         ];
         
         // 添加具体的文章页面
         const specificArticles = [
-            '/AQUA-IN-JAR/aquas-field/daily/东方明珠电视塔/',
-            '/AQUA-IN-JAR/aquas-field/daily/Chinese-Cabbage/',
-            '/AQUA-IN-JAR/aquas-field/daily/duel52/',
-            '/AQUA-IN-JAR/aquas-field/daily/How-to-Improve-Your-Teeth-and-Oral-Microbiome-for-Brain-and-Body-Health-Dr-Staci-Whitman/',
-            '/AQUA-IN-JAR/aquas-field/daily/Mandible-Line/',
-            '/AQUA-IN-JAR/aquas-field/daily/切东西谨记慢慢慢/',
-            '/AQUA-IN-JAR/aquas-field/daily/墨水屏supernote推荐/',
-            '/AQUA-IN-JAR/aquas-field/daily/油拔法Oil-Pulling/',
-            '/AQUA-IN-JAR/aquas-field/daily/眼肌锻炼放松额头/',
-            '/AQUA-IN-JAR/aquas-field/daily/等等我先拍张照/',
-            '/AQUA-IN-JAR/aquas-field/daily/给拉丁美洲小朋友们上课/',
-            '/AQUA-IN-JAR/aquas-field/daily/编织手机套/',
-            '/AQUA-IN-JAR/aquas-field/daily/芝麻油/',
-            '/AQUA-IN-JAR/aquas-field/daily/菌菌菌君/',
-            '/AQUA-IN-JAR/aquas-field/mysterious-sea-area/财务记录模板/',
-            '/AQUA-IN-JAR/aquas-field/mysterious-sea-area/Hugo-原始碼資料夾結構/',
-            '/AQUA-IN-JAR/aquas-field/mysterious-sea-area/theme-website/',
-            '/AQUA-IN-JAR/aquas-field/mysterious-sea-area/to-be-transported/',
-            '/AQUA-IN-JAR/aqua-inspiration/測試不可能的事改變我人生的17-個問題/',
-            '/AQUA-IN-JAR/podcast-music/AGA-Miss-u-goodbye-instrument/',
-            '/AQUA-IN-JAR/podcast-music/red-and-white-instrumental/',
-            '/AQUA-IN-JAR/podcast-music/墙纸/',
-            '/AQUA-IN-JAR/podcast-music/我们都被忘了/',
-            '/AQUA-IN-JAR/notification-jar/AQUA-IN-JAR/',
-            '/AQUA-IN-JAR/notification-jar/电子报订阅/',
-            '/AQUA-IN-JAR/notification-jar/联系我contact-with-me/'
+            '/aquas-field/daily/东方明珠电视塔/',
+            '/aquas-field/daily/Chinese-Cabbage/',
+            '/aquas-field/daily/duel52/',
+            '/aquas-field/daily/How-to-Improve-Your-Teeth-and-Oral-Microbiome-for-Brain-and-Body-Health-Dr-Staci-Whitman/',
+            '/aquas-field/daily/Mandible-Line/',
+            '/aquas-field/daily/切东西谨记慢慢慢/',
+            '/aquas-field/daily/墨水屏supernote推荐/',
+            '/aquas-field/daily/油拔法Oil-Pulling/',
+            '/aquas-field/daily/眼肌锻炼放松额头/',
+            '/aquas-field/daily/等等我先拍张照/',
+            '/aquas-field/daily/给拉丁美洲小朋友们上课/',
+            '/aquas-field/daily/编织手机套/',
+            '/aquas-field/daily/芝麻油/',
+            '/aquas-field/daily/菌菌菌君/',
+            '/aquas-field/mysterious-sea-area/财务记录模板/',
+            '/aquas-field/mysterious-sea-area/Hugo-原始碼資料夾結構/',
+            '/aquas-field/mysterious-sea-area/theme-website/',
+            '/aquas-field/mysterious-sea-area/to-be-transported/',
+            '/aqua-inspiration/測試不可能的事改變我人生的17-個問題/',
+            '/podcast-music/AGA-Miss-u-goodbye-instrument/',
+            '/podcast-music/red-and-white-instrumental/',
+            '/podcast-music/墙纸/',
+            '/podcast-music/我们都被忘了/',
+            '/notification-jar/AQUA-IN-JAR/',
+            '/notification-jar/电子报订阅/',
+            '/notification-jar/联系我contact-with-me/'
         ];
         
         const allArticles = [...articles, ...specificArticles];

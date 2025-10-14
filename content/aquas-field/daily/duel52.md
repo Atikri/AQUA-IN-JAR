@@ -10,11 +10,11 @@ featured: true
 
 不过后面我发现了一个很好的替代方案，这个卡牌游戏是我在[wiwi的blog](https://wiwi.blog/blog/duel52)上面看到的。
 
-看完之后感觉超级有意思，规则相对来说一开始上手可能会相对复杂，但是花一点点时间上手几把就能很快明白里面的精髓。聚会最佳游戏，所以我把这个Duel 52也加在了我的[AQUA IN JAR活动](https://atikri.github.io/AQUA-IN-JAR/notification-jar/AQUA-IN-JAR/)的可选清单中。
+看完之后感觉超级有意思，规则相对来说一开始上手可能会相对复杂，但是花一点点时间上手几把就能很快明白里面的精髓。聚会最佳游戏，所以我把这个Duel 52也加在了我的[AQUA IN JAR活动](https://tikri.site/notification-jar/AQUA-IN-JAR/)的可选清单中。
 
 这个是官方网站
 https://www.juddmadden.com/duel52/  
-以及[游玩指导](/AQUA-IN-JAR/file/duel52/1_duel52-instructions.pdf)
+以及[游玩指导](/file/duel52/1_duel52-instructions.pdf)
 
 
 这个是汉化网站

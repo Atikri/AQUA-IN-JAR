@@ -25,8 +25,8 @@ hiddenFromList: true
 
 ---
 
-<link rel="stylesheet" href="/AQUA-IN-JAR/css/pomodoro-timer.css">
+<link rel="stylesheet" href="/css/pomodoro-timer.css">
 <div id="pomodoro-timer"></div>
-<script src="/AQUA-IN-JAR/js/pomodoro-timer.js"></script>
+<script src="/js/pomodoro-timer.js"></script>
 
 

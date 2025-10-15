@@ -7,4 +7,4 @@ title: "you raise me up"
 看得出来老师是真的有一点紧张，不过真的不影响这个氛围很到位啊~
 现在再翻出来看看，emm...还是怀念上学时代的~
 
-<video controls preload="metadata" src="/videos/youraisemeup-720p.mp4" style="width:100%;max-width:800px"></video>
+<video controls preload="metadata" src="https://tikri.site/videos/youraisemeup-720p.mp4" style="width:100%;max-width:800px"></video>

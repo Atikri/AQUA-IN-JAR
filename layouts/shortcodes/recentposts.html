@@ -1,0 +1,23 @@
+{{/*
+  Alias Shortcode: recentposts (no hyphen)
+  Usage: {{< recentposts count=4 >}}
+*/}}
+
+{{- $count := .Get "count" | default 4 -}}
+{{- $all := site.RegularPages -}}
+{{- $published := where $all "Draft" "ne" true -}}
+{{- $sorted := sort $published "Date" "desc" -}}
+{{- $items := first $count $sorted -}}
+
+<section class="recent-posts">
+  <ul>
+  {{- range $items }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <time datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</time>
+    </li>
+  {{- end }}
+  </ul>
+</section>
+
+

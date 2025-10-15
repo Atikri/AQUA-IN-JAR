@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aqua&#39;s Field on AQUA IN JAR</title>
-    <link>https://tikri.site/aquas-field/</link>
+    <link>http://localhost:42318/aquas-field/</link>
     <description>Recent content in Aqua&#39;s Field on AQUA IN JAR</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://tikri.site/aquas-field/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:42318/aquas-field/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

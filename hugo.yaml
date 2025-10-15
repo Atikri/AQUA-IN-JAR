@@ -52,5 +52,4 @@ disablePathToLower: true
 # Build settings
 buildFuture: true
 
-# Publish to docs/ so GitHub Pages can serve it directly
-publishDir: docs
+# Using GitHub Actions to deploy; output directory is controlled by the workflow

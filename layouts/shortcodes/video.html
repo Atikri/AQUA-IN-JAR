@@ -39,24 +39,27 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const video = document.querySelector('video[src="{{ $srcRel }}"]');
-  if (video) {
+  // 使用更通用的选择器，不依赖具体的src路径
+  const videos = document.querySelectorAll('video');
+  videos.forEach(function(video) {
     const loading = video.parentElement.querySelector('.video-loading');
     const error = video.parentElement.querySelector('.video-error');
     
-    video.addEventListener('loadstart', function() {
-      if (loading) loading.style.display = 'block';
-    });
-    
-    video.addEventListener('canplay', function() {
-      if (loading) loading.style.display = 'none';
-    });
-    
-    video.addEventListener('error', function() {
-      if (loading) loading.style.display = 'none';
-      if (error) error.style.display = 'block';
-    });
-  }
+    if (loading || error) {
+      video.addEventListener('loadstart', function() {
+        if (loading) loading.style.display = 'block';
+      });
+      
+      video.addEventListener('canplay', function() {
+        if (loading) loading.style.display = 'none';
+      });
+      
+      video.addEventListener('error', function() {
+        if (loading) loading.style.display = 'none';
+        if (error) error.style.display = 'block';
+      });
+    }
+  });
 });
 </script>
 {{- end -}}

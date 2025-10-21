@@ -27,39 +27,8 @@
     <a href="{{ $srcRel }}">下载视频</a>
   </video>
   
-  {{- /* Add loading indicator and error handling */ -}}
-  <div class="video-loading" style="display: none; text-align: center; padding: 20px; opacity: 0.7;">
-    正在加载视频...
-  </div>
-  
-  <div class="video-error" style="display: none; text-align: center; padding: 20px; color: #e74c3c;">
-    视频加载失败，请尝试 <a href="{{ $srcRel }}">直接下载</a>
-  </div>
+  {{- /* Simplified video without complex JavaScript */ -}}
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // 使用更通用的选择器，不依赖具体的src路径
-  const videos = document.querySelectorAll('video');
-  videos.forEach(function(video) {
-    const loading = video.parentElement.querySelector('.video-loading');
-    const error = video.parentElement.querySelector('.video-error');
-    
-    if (loading || error) {
-      video.addEventListener('loadstart', function() {
-        if (loading) loading.style.display = 'block';
-      });
-      
-      video.addEventListener('canplay', function() {
-        if (loading) loading.style.display = 'none';
-      });
-      
-      video.addEventListener('error', function() {
-        if (loading) loading.style.display = 'none';
-        if (error) error.style.display = 'block';
-      });
-    }
-  });
-});
-</script>
+{{- /* JavaScript removed to prevent conflicts */ -}}
 {{- end -}}

@@ -1,12 +1,11 @@
 # 确保视频文件被正确识别为二进制文件
-*.mp4 binary
+*.mp4 filter=lfs diff=lfs merge=lfs -text
 *.webm binary
 *.ogg binary
 *.avi binary
 *.mov binary
 *.wmv binary
 *.flv binary
-
 # 确保图片文件被正确识别
 *.jpg binary
 *.jpeg binary
@@ -14,14 +13,12 @@
 *.gif binary
 *.webp binary
 *.svg binary
-
 # 确保音频文件被正确识别
 *.mp3 binary
 *.wav binary
 *.flac binary
 *.aac binary
 *.ogg binary
-
 # 确保其他二进制文件
 *.pdf binary
 *.zip binary

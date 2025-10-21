@@ -2,7 +2,7 @@
 {{- $srcRel := $src | relURL -}}
 {{- /* Add cache busting parameter */ -}}
 {{- if not (strings.Contains $srcRel "?") -}}
-{{- $srcRel = printf "%s?v=2" $srcRel -}}
+{{- $srcRel = printf "%s?v=3" $srcRel -}}
 {{- end -}}
 {{- $type := .Get "type" -}}
 {{- $preload := .Get "preload" | default "metadata" -}}

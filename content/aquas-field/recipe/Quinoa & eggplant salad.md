@@ -10,8 +10,8 @@ title: "Quinoa & eggplant salad"
 ---  
 
 This delicious , warm salad is fantastic on its own or as a side. You really can add whatever roast veggies you like or have in the fridge. We also enjoy it with roasted cauliflower instead of eggplant with pomegranate instead of dates.  
-![Quinoa & Eggplant Salad](/AQUA-IN-JAR/images/posts/quinoa-salad4.jpg)
-![Quinoa & Eggplant Salad](/AQUA-IN-JAR/images/posts/quinoa-salad5.jpg)
+![Quinoa & Eggplant Salad](images/posts/quinoa-salad4.jpg)
+![Quinoa & Eggplant Salad](images/posts/quinoa-salad5.jpg)
   
 
 ---  
@@ -43,6 +43,6 @@ This delicious , warm salad is fantastic on its own or as a side. You really can
 ## 我自己复刻的：
 > 味道还不错，主要是能不能接受食材本身的味道，有洋葱和甜椒，很多人其实不太喜欢这些味道。然后洋葱我加肉桂粉炒的比较熟，其实我感觉颜色淡一点可能更加符合整体调性。还有就是茄子甜椒烤的时间火候真的很难把控啊，一不小心就容易焦~  
 
-![Quinoa & Eggplant Salad](/AQUA-IN-JAR/images/posts/quinoa-salad1.jpg)
-![Roast capsicum](/AQUA-IN-JAR/images/posts/quinoa-salad2.jpg)  
-![Final quinoa salad](/AQUA-IN-JAR/images/posts/quinoa-salad3.jpg)
+![Quinoa & Eggplant Salad](images/posts/quinoa-salad1.jpg)
+![Roast capsicum](images/posts/quinoa-salad2.jpg)  
+![Final quinoa salad](images/posts/quinoa-salad3.jpg)

@@ -1,5 +1,9 @@
 {{- $src := .Get "src" -}}
 {{- $srcRel := $src | relURL -}}
+{{- /* Add cache busting parameter */ -}}
+{{- if not (strings.Contains $srcRel "?") -}}
+{{- $srcRel = printf "%s?v=2" $srcRel -}}
+{{- end -}}
 {{- $type := .Get "type" -}}
 {{- $preload := .Get "preload" | default "metadata" -}}
 {{- $poster := .Get "poster" -}}
@@ -14,6 +18,8 @@
   <video
     controls
     preload="{{ $preload }}"
+    muted
+    playsinline
     style="width: 100%; {{ $style }}"
     {{- if $poster }} poster="{{ $poster | relURL }}"{{ end -}}
   >

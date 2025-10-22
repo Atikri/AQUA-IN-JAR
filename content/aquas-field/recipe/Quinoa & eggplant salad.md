@@ -3,14 +3,14 @@ date: "2025-09-23"
 title: "Quinoa & eggplant salad"
 ---
 
-> Anything's Possible
-(https://www.instagram.com/burburywholefoods?igsh=bGpuYTAzMnYwbjR3)
-> P142  
+> Anything's Possible  
+:link:(https://www.instagram.com/burburywholefoods?igsh=bGpuYTAzMnYwbjR3)  
+> :page_with_curl: P142  
 
 ---  
 
 This delicious , warm salad is fantastic on its own or as a side. You really can add whatever roast veggies you like or have in the fridge. We also enjoy it with roasted cauliflower instead of eggplant with pomegranate instead of dates.  
-![](/images/posts/quinoa-salad4.jpg)
+![Quinoa & Eggplant Salad](/images/posts/quinoa-salad4.jpg)
 ![Quinoa & Eggplant Salad](/images/posts/quinoa-salad5.jpg)
   
 

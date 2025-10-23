@@ -1,0 +1,20 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $width := .Get "width" | default "100%" -}}
+{{- $maxWidth := .Get "max-width" | default "960px" -}}
+{{- $style := .Get "style" | default "border-radius:8px" -}}
+{{- $lazy := .Get "lazy" | default "true" -}}
+{{- $class := .Get "class" | default "" -}}
+
+{{- if not $src -}}
+<p style="opacity:0.7">Image source missing: use {{ "{{< lazy-image src=\"/images/file.jpg\" >}}" }}</p>
+{{- else -}}
+<div class="lazy-image-container" style="width: {{ $width }}; max-width: {{ $maxWidth }}; margin: 0 auto;">
+  <img
+    {{- if eq $lazy "true" }} data-src="{{ $src | relURL }}" class="lazy-loading {{ $class }}"{{ else }} src="{{ $src | relURL }}" class="{{ $class }}"{{ end -}}
+    alt="{{ $alt }}"
+    style="width: 100%; {{ $style }}"
+    loading="{{ if eq $lazy "true" }}lazy{{ else }}eager{{ end }}"
+  >
+</div>
+{{- end -}}

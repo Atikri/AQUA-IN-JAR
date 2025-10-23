@@ -50,6 +50,10 @@
     <script src="{{ $searchJS.RelPermalink }}" integrity="{{ $searchJS.Data.Integrity }}" defer></script>
     {{- end }}
 
+    {{- /* 延迟加载支持 */ -}}
+    <link rel="stylesheet" href="{{ "css/lazy-loading.css" | relURL }}">
+    <script src="{{ "js/lazy-loading.js" | relURL }}" defer></script>
+
     {{- if templates.Exists "partials/nonstdmeta.html" }}
 {{ partial "nonstdmeta.html" . }}
     {{- end }}

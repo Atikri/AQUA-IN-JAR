@@ -26,6 +26,10 @@
     <link rel="preload" href="{{ "fonts/Newsreader-italic.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
     {{- end }}
 
+    {{- /* 预加载关键资源 */ -}}
+    <link rel="preload" href="{{ "css/lazy-loading.css" | relURL }}" as="style">
+    <link rel="preload" href="{{ "js/lazy-loading.js" | relURL }}" as="script">
+
     {{- $defaultCSS := resources.Get "css/default.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $defaultCSS.RelPermalink }}" integrity="{{ $defaultCSS.Data.Integrity }}">
     {{- with resources.Get "css/custom.css" }}

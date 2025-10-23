@@ -1,20 +1,33 @@
-<!-- Mermaid support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+<!-- Mermaid support - 延迟加载优化 -->
 <script>
-  mermaid.initialize({
-    startOnLoad: true,
-    theme: 'default',
-    securityLevel: 'loose',
-    flowchart: {
-      useMaxWidth: true,
-      htmlLabels: true
-    },
-    pie: {
-      useMaxWidth: true
-    },
-    xychart: {
-      useMaxWidth: true
+  // 延迟加载Mermaid，只在需要时加载
+  function loadMermaid() {
+    if (document.querySelector('.mermaid')) {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js';
+      script.async = true;
+      script.onload = function() {
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: 'default',
+          securityLevel: 'loose',
+          flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true
+          },
+          pie: {
+            useMaxWidth: true
+          },
+          xychart: {
+            useMaxWidth: true
+          }
+        });
+      };
+      document.head.appendChild(script);
     }
-  });
+  }
+  
+  // 页面加载完成后检查是否需要Mermaid
+  document.addEventListener('DOMContentLoaded', loadMermaid);
 </script>
 

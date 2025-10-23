@@ -6,13 +6,28 @@
 {{ end }}
 
 {{ if site.Params.googleAnalytics }}
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.googleAnalytics }}"></script>
+<!-- Google Analytics 4 - 优化加载 -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '{{ site.Params.googleAnalytics }}');
+  // 延迟加载Google Analytics，避免阻塞页面渲染
+  function loadGA() {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.Params.googleAnalytics }}';
+    script.onload = function() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.Params.googleAnalytics }}');
+    };
+    document.head.appendChild(script);
+  }
+  
+  // 页面加载完成后延迟加载GA
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadGA);
+  } else {
+    setTimeout(loadGA, 100);
+  }
 </script>
 {{ end }}
 

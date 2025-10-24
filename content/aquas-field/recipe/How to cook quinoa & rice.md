@@ -3,8 +3,8 @@ date: '2025-09-23'
 title: "How to cook quinoa & rice"
 ---
 
-> Anything's Possible
-(https://www.instagram.com/burburywholefoods?igsh=bGpuYTAzMnYwbjR3)
+> Anything's Possible  
+:link:(https://www.instagram.com/burburywholefoods?igsh=bGpuYTAzMnYwbjR3)  
 > P56
 
 We find it to be the easiest way to get the fluffiest result.

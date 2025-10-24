@@ -70,7 +70,7 @@
 
     <!-- Featured Section -->
     <section id="featured-section" class="featured-section">
-        <h2>おすすめ:chipmunk: </h2>
+        <h2>{{ "おすすめ:chipmunk:" | emojify }}</h2>
         <ul>
         {{- $featured := where .Site.RegularPages ".Params.featured" true -}}
         {{- range first 8 $featured }}

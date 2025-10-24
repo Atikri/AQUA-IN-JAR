@@ -61,9 +61,9 @@ header h1 a {
   /* Same as @media (prefers-color-scheme: light)
    * Please edit in both places!
    */
-  --bg-color: #f5f3f0;
-  --text-color: #2c2c2c;
-  --border-color: #d4d1c7;
+  --bg-color: #f0efea;
+  --text-color: #141413;
+  --border-color: #e6e4dd;
   --footnote-bg-color: rgba(0, 0, 0, 0.08);
   --footnote-hover-bg-color: rgba(0, 0, 0, 0.15);
   --tooltip-bg-color: #f9f9f9;
@@ -106,9 +106,9 @@ header h1 a {
     /* Same as .dark-mode-off:root
      * Please edit in both places!
      */
-    --bg-color: #f5f3f0;
-    --text-color: #2c2c2c;
-    --border-color: #d4d1c7;
+    --bg-color: #f0efea;
+    --text-color: #141413;
+    --border-color: #e6e4dd;
     --footnote-bg-color: rgba(0, 0, 0, 0.08);
     --footnote-hover-bg-color: rgba(0, 0, 0, 0.15);
     --tooltip-bg-color: #f9f9f9;

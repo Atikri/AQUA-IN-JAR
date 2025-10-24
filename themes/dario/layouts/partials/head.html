@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     {{- with (partial "objects/author.html" .).name }}
     <meta name="author" content="{{ . }}">
@@ -33,6 +33,11 @@
     {{- $defaultCSS := resources.Get "css/default.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $defaultCSS.RelPermalink }}" integrity="{{ $defaultCSS.Data.Integrity }}">
     {{- with resources.Get "css/custom.css" }}
+        {{- with . | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+        {{- end }}
+    {{- end }}
+    {{- with resources.Get "css/mobile-fixes.css" }}
         {{- with . | minify | fingerprint }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
         {{- end }}

@@ -2,6 +2,7 @@
 date: "2025-09-09"
 draft: "false"
 title: "3 daily wins"
+featured: true
 ---
 
 今天看到朋友发的一张图片，非常言简意赅，分享记录一下：

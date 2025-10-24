@@ -1,56 +1,76 @@
 /* 移动端兼容性修复 */
 
-/* 1. 修复主题色显示问题 - 强制应用主题色 */
+/* 1. 修复主题色显示问题 - 强制应用暖黄色主题 */
 :root {
-  /* 确保基础颜色变量被正确设置 */
-  --bg-color: #f0efea;
-  --text-color: #141413;
-  --border-color: #e6e4dd;
+  /* 确保基础颜色变量被正确设置 - 使用更明显的暖黄色 */
+  --bg-color: #f5f3f0;
+  --text-color: #2c2c2c;
+  --border-color: #d4d1c7;
+  --warm-bg: #faf8f5;
 }
 
-/* 强制应用主题色，防止某些手机显示为白色 */
+/* 强制应用暖黄色主题，防止某些手机显示为白色 */
 body {
-  background-color: var(--bg-color) !important;
-  color: var(--text-color) !important;
+  background-color: #f5f3f0 !important;
+  color: #2c2c2c !important;
+  background-image: linear-gradient(135deg, #faf8f5 0%, #f5f3f0 100%) !important;
 }
 
-/* 2. 修复字体大小问题 - 统一移动端字体大小 */
+/* 针对Chrome浏览器的特殊修复 */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  body {
+    background-color: #f5f3f0 !important;
+    background-image: linear-gradient(135deg, #faf8f5 0%, #f5f3f0 100%) !important;
+  }
+}
+
+/* 针对华为/百度浏览器的特殊修复 */
+@media screen and (min-width: 320px) {
+  body {
+    background-color: #f5f3f0 !important;
+    background-image: linear-gradient(135deg, #faf8f5 0%, #f5f3f0 100%) !important;
+  }
+}
+
+/* 2. 修复字体大小问题 - 平衡字体大小和缩放功能 */
 @media (max-width: 768px) {
-  /* 基础字体大小调整 */
+  /* 基础字体大小调整 - 使用相对单位支持缩放 */
   html {
-    font-size: 16px !important; /* 防止某些手机字体过大 */
+    font-size: 14px !important; /* 基础字体稍小，支持缩放 */
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
   }
   
   body {
-    font-size: 16px !important;
-    line-height: 1.6 !important;
+    font-size: 0.9rem !important; /* 相对单位，支持用户缩放 */
+    line-height: 1.5 !important;
   }
   
-  /* 标题字体大小统一 */
+  /* 标题字体大小 - 使用相对单位 */
   h1 {
-    font-size: 1.8rem !important;
+    font-size: 1.4rem !important;
     line-height: 1.3 !important;
   }
   
   h2 {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
     line-height: 1.4 !important;
   }
   
   h3 {
-    font-size: 1.3rem !important;
-    line-height: 1.4 !important;
-  }
-  
-  h4, h5, h6 {
     font-size: 1.1rem !important;
     line-height: 1.4 !important;
   }
   
-  /* 段落文字大小 */
+  h4, h5, h6 {
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* 段落文字大小 - 支持缩放 */
   p {
-    font-size: 16px !important;
-    line-height: 1.6 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
   }
   
   /* 链接文字大小 */
@@ -60,56 +80,81 @@ body {
   
   /* 列表文字大小 */
   li {
-    font-size: 16px !important;
-    line-height: 1.6 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
   }
 }
 
-/* 3. 修复小屏幕设备字体问题 */
+/* 3. 修复小屏幕设备字体问题 - 支持缩放 */
 @media (max-width: 480px) {
   html {
-    font-size: 14px !important;
+    font-size: 13px !important; /* 更小的基础字体 */
   }
   
   body {
-    font-size: 14px !important;
+    font-size: 0.85rem !important; /* 相对单位，支持缩放 */
   }
   
   h1 {
-    font-size: 1.6rem !important;
+    font-size: 1.3rem !important;
   }
   
   h2 {
-    font-size: 1.4rem !important;
+    font-size: 1.15rem !important;
   }
   
   h3 {
-    font-size: 1.2rem !important;
+    font-size: 1.05rem !important;
   }
   
   p, li {
-    font-size: 14px !important;
+    font-size: 0.85rem !important; /* 相对单位，支持缩放 */
   }
 }
 
-/* 4. 修复iOS Safari字体缩放问题 */
+/* 4. 修复字体缩放问题 - 允许用户缩放 */
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   html {
-    -webkit-text-size-adjust: 100% !important;
-    text-size-adjust: 100% !important;
+    -webkit-text-size-adjust: auto !important; /* 允许缩放 */
+    text-size-adjust: auto !important;
   }
 }
 
-/* 5. 修复Android Chrome字体问题 */
+/* 5. 修复Android Chrome字体问题 - 支持缩放 */
 @media screen and (min-width: 320px) and (max-width: 768px) {
   html {
-    font-size: 16px !important;
-    -webkit-text-size-adjust: none !important;
-    text-size-adjust: none !important;
+    font-size: 14px !important; /* 基础字体适中 */
+    -webkit-text-size-adjust: auto !important; /* 允许缩放 */
+    text-size-adjust: auto !important;
   }
 }
 
-/* 6. 强制应用暗色模式变量 */
+/* 6. 针对华为/百度浏览器的特殊处理 */
+@media screen and (min-width: 320px) {
+  /* 华为手机字体优化 */
+  body {
+    font-size: 0.8rem !important; /* 更小的字体，避免老年机效果 */
+    line-height: 1.4 !important;
+  }
+  
+  h1 {
+    font-size: 1.2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.1rem !important;
+  }
+  
+  h3 {
+    font-size: 1rem !important;
+  }
+  
+  p, li {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* 7. 强制应用暗色模式变量 */
 .dark-mode-on {
   --bg-color: #141413 !important;
   --text-color: #f0efea !important;
@@ -119,6 +164,38 @@ body {
 .dark-mode-on body {
   background-color: #141413 !important;
   color: #f0efea !important;
+}
+
+/* 8. 额外的主题色强制应用 - 针对Chrome浏览器 */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  body {
+    background-color: #f5f3f0 !important;
+    background-image: linear-gradient(135deg, #faf8f5 0%, #f5f3f0 100%) !important;
+  }
+  
+  .content-wrapper {
+    background-color: transparent !important;
+  }
+  
+  .content-container {
+    background-color: transparent !important;
+  }
+}
+
+/* 9. 针对华为/百度浏览器的主题色强化 */
+@media screen and (min-width: 320px) {
+  body {
+    background-color: #f5f3f0 !important;
+    background-image: linear-gradient(135deg, #faf8f5 0%, #f5f3f0 100%) !important;
+  }
+  
+  /* 确保所有容器都继承暖黄色背景 */
+  .content-wrapper,
+  .content-container,
+  .toc-container,
+  main {
+    background-color: transparent !important;
+  }
 }
 
 /* 7. 修复分类卡片在移动端的显示 */

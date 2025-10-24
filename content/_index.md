@@ -9,6 +9,7 @@ In September 2025, I initially set up the website 'AQUA IN JAR' and it is still 
 我会在这个网站分享一些我阅读过的文章，一些食谱，好玩有趣的事以及日常~  
 
 在这里你可以翻阅我日常发过的一些blog，收集一些AQUA:droplet: （露水灵感），说不定会对你有帮助，那就太好啦！ 
+
 当然我也鼓励你把这个网站看作是一个知识探索的开端。因为里面有很多信息没有过多描述，也有一些值得你们深入探索:hugs:   
 :mailbox:遇到任何问题/想合作咨询，欢迎敲一下我的瓶子：
 > aqutikri@gmail.com.

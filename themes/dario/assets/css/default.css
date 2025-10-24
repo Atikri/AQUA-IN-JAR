@@ -61,7 +61,7 @@ header h1 a {
   /* Same as @media (prefers-color-scheme: light)
    * Please edit in both places!
    */
-  --bg-color: #f0efea;
+  --bg-color: #f0eee6;
   --text-color: #141413;
   --border-color: #e6e4dd;
   --footnote-bg-color: rgba(0, 0, 0, 0.08);

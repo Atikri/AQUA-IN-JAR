@@ -1,4 +1,14 @@
 {{- define "main" }}
+    <!-- Sparkling Header Section - 放在最顶部 -->
+    <section class="sparkling-header">
+        <div class="sparkle-container">
+            <div class="sparkle sparkle-left">✨</div>
+            <div class="sparkle sparkle-right">✨</div>
+        </div>
+        <h1 class="main-title">AQUA IN JAR</h1>
+        <p class="subtitle">欢迎来到我的瓶子世界 🌊</p>
+    </section>
+
     {{- with .Site.GetPage "_index.md" }}
         {{- if .Params.homePageIsPost }}
     <h1>{{ .Title }}</h1>
@@ -61,8 +71,8 @@
             </a>
             <a class="category-card-link" href="{{ "random-aqua/" | relURL }}">
                 <div class="category-card">
-                    <h3>🎲 Random Aqua</h3>
-                    <p>随机探索 - 在网站里随缘漫游发现灵感</p>
+                    <h3>🎲 Aqua's Game</h3>
+                    <p>收录了一些可互动的小游戏~</p>
                 </div>
             </a>
         </div>

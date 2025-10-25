@@ -6,7 +6,9 @@ title: "如何改善口腔健康"
 [How to Improve Your Teeth & Oral Microbiome for Brain & Body Health | Dr. Staci Whitman - YouTube](https://youtu.be/_oOEKKiwdDE?si=SxpSbaf6f9Lar8_e)
 
 ---
+
 口腔保健真的太太太重要了，之前听过Dr. Staci Whitman的podcast，里面提供了一些方法，总结一下，里面讲到了羥基磷灰石（Hydroxyapatite）牙膏，大家可以在购物网站上搜索含有此成分的牙膏；还提到了[油拔法（Oil Pulling）]({{< relref "aquas-field/daily/油拔法（Oil Pulling）.md" >}})。
+
 ---  
 
 羥基磷灰石（Hydroxyapatite）牙膏：這是一種很好的方法，可以改善牙齒的亮度和潔白度。羥基磷灰石是牙齒琺瑯質和骨骼中的主要礦物質成分。使用含有羥基磷灰石的牙膏，是為牙齒提供其通常用於再礦化的礦物質，這「非常有道理」，是一種仿生材料。這種牙膏可以透過改變光線在牙齒表面的反射和折射方式（表面修飾），使牙齒看起來更潔白亮麗。Dr. Staci Whitman提到，他的許多患者轉用羥基磷灰石牙膏後，牙齒看起來更健康、更強壯、更潔白亮麗，看起來更滋養、水潤，口腔微生物組也更平衡。自己也分享了轉用羥基磷灰石牙膏後牙齒明顯變得更白、更健康。

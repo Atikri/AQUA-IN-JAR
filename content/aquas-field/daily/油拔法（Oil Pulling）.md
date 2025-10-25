@@ -3,7 +3,7 @@ date: "2025-09-11"
 title: "油拔法（Oil Pulling）"
 ---
 
-[如何改善口腔健康？]（https://tikri.site/aquas-field/daily/How-to-Improve-Your-Teeth-and-Oral-Microbiome-for-Brain-and-Body-Health-Dr.-Staci-Whitman/）
+[如何改善口腔健康?]（https://tikri.site/aquas-field/daily/How-to-Improve-Your-Teeth-and-Oral-Microbiome-for-Brain-and-Body-Health-Dr.-Staci-Whitman/）
 在口腔清洁，特别是油拔法（Oil Pulling）方面，**椰子油通常被认为比[芝麻油](https://tikri.site/aquas-field/daily/%E8%8A%9D%E9%BA%BB%E6%B2%B9/)更受欢迎，并且在某些方面可能更具优势。**
 
 这主要基于以下几点：

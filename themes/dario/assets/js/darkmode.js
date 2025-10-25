@@ -68,10 +68,20 @@ function initDarkMode() {
   const tocOverlay = document.getElementById('tocOverlay');
   if (tocToggle && tocOverlay) {
     tocToggle.addEventListener('click', () => {
-      tocOverlay.classList.toggle('open');
+      const isOpen = tocOverlay.classList.contains('open');
+      if (isOpen) {
+        tocOverlay.classList.remove('open');
+        document.body.classList.remove('toc-open');
+      } else {
+        tocOverlay.classList.add('open');
+        document.body.classList.add('toc-open');
+      }
     });
     tocOverlay.addEventListener('click', (e) => {
-      if (e.target === tocOverlay) tocOverlay.classList.remove('open');
+      if (e.target === tocOverlay) {
+        tocOverlay.classList.remove('open');
+        document.body.classList.remove('toc-open');
+      }
     });
   }
 }

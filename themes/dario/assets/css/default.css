@@ -370,6 +370,13 @@ p a:hover {
 }
 .toc-overlay.open { display: block; }
 
+/* Prevent body scroll when TOC is open */
+body.toc-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 /* Toggle Switch Styles */
 .toggle-switch {
   visibility: hidden;

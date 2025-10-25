@@ -3,7 +3,7 @@ subtitle: "Hi! I'm **Tikri**.
 Welcome to my bottle:smiling_face_with_three_hearts:  "
 description: "A minimal web log."
 ---
-欢迎来我瓶中作客~  
+Hello!!!我的小瓶子们~ 欢迎来我瓶中作客~:partying_face:  
 In September 2025, I initially set up the website 'AQUA IN JAR' and it is still being refined recently~   
 
 我会在这个网站分享一些我阅读过的文章，一些食谱，好玩有趣的事以及日常~  

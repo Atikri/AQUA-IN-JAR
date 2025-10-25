@@ -2,6 +2,7 @@ baseURL: https://tikri.site/
 languageCode: en-us 
 title: AQUA IN JAR 
 theme: dario
+copyright: "© 2025 AQUA IN JAR"
 params:
   colorScheme: toggle
   # Google Analytics 4
@@ -53,3 +54,8 @@ disablePathToLower: true
 buildFuture: true
 
 # Using GitHub Actions to deploy; output directory is controlled by the workflow
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

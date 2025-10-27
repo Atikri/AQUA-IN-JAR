@@ -1,0 +1,268 @@
+{{ define "main" }}
+<div class="shop-container">
+  <header class="shop-header">
+    <h1>{{ .Title }}</h1>
+    {{ if .Params.subtitle }}
+      <p class="subtitle">{{ .Params.subtitle }}</p>
+    {{ end }}
+    {{ if .Content }}
+      <div class="shop-description">
+        {{ .Content }}
+      </div>
+    {{ end }}
+  </header>
+
+  <div class="products-grid">
+    {{ range .Pages }}
+      {{ if not .Draft }}
+        <div class="product-card">
+          {{ if .Params.featured }}
+            <div class="featured-badge">精选</div>
+          {{ end }}
+          
+          {{ if .Params.images }}
+            <div class="product-image">
+              <img src="{{ index .Params.images 0 }}" alt="{{ .Title }}" loading="lazy" />
+            </div>
+          {{ end }}
+          
+          <div class="product-info">
+            <h3 class="product-title">
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h3>
+            
+            {{ if .Params.subtitle }}
+              <p class="product-subtitle">{{ .Params.subtitle }}</p>
+            {{ end }}
+            
+            {{ if .Params.price }}
+              <div class="product-price">
+                <span class="currency">{{ .Params.currency }}</span>
+                <span class="price">{{ .Params.price }}</span>
+              </div>
+            {{ end }}
+            
+            {{ if .Params.category }}
+              <span class="product-category">{{ .Params.category }}</span>
+            {{ end }}
+            
+            <div class="product-tags">
+              {{ range .Params.tags }}
+                <span class="tag">{{ . }}</span>
+              {{ end }}
+            </div>
+            
+            <div class="product-actions">
+              <a href="{{ .RelPermalink }}" class="view-button">查看详情</a>
+              {{ if .Params.price }}
+                <a href="{{ .RelPermalink }}#buy" class="buy-button-small">立即购买</a>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+
+<style>
+.shop-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.shop-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.shop-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.shop-description {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-title {
+  margin: 0 0 8px 0;
+  font-size: 1.3em;
+}
+
+.product-title a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.product-title a:hover {
+  color: #667eea;
+}
+
+.product-subtitle {
+  color: #666;
+  margin: 0 0 12px 0;
+  font-size: 0.9em;
+}
+
+.product-price {
+  margin: 12px 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.currency {
+  font-size: 0.8em;
+  margin-right: 4px;
+}
+
+.product-category {
+  display: inline-block;
+  background: #f8f9fa;
+  color: #495057;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.product-tags {
+  margin: 12px 0;
+}
+
+.tag {
+  display: inline-block;
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.view-button, .buy-button-small {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.view-button {
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+}
+
+.view-button:hover {
+  background: #e9ecef;
+  color: #343a40;
+}
+
+.buy-button-small {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.buy-button-small:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .shop-header h1 {
+    font-size: 2em;
+  }
+  
+  .product-actions {
+    flex-direction: column;
+  }
+}
+</style>
+{{ end }}

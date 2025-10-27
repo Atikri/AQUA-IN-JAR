@@ -1,0 +1,382 @@
+{{- $product := .Get "product" -}}
+{{- $price := .Get "price" -}}
+{{- $currency := .Get "currency" -}}
+{{- $description := .Get "description" -}}
+
+<div class="buy-button-container">
+  <div class="product-info">
+    <h3>{{ $product }}</h3>
+    <p class="price">{{ $currency }}{{ $price }}</p>
+    <p class="description">{{ $description }}</p>
+  </div>
+  
+  <div class="payment-options">
+    <!-- 微信支付按钮 -->
+    <button class="buy-button wechat-button" onclick="showPaymentQR('wechat')">
+      <span class="button-icon">💚</span>
+      微信支付
+    </button>
+    
+    <!-- 支付宝支付按钮 -->
+    <button class="buy-button alipay-button" onclick="showPaymentQR('alipay')">
+      <span class="button-icon">🔵</span>
+      支付宝支付
+    </button>
+  </div>
+  
+  <!-- 支付二维码弹窗 -->
+  <div id="payment-qr-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" onclick="hidePaymentQR()">&times;</span>
+      <div id="payment-header">
+        <h3 id="payment-title">选择支付方式</h3>
+      </div>
+      
+      <!-- 微信支付区域 -->
+      <div id="wechat-payment" class="payment-section" style="display: none;">
+        <div class="payment-info">
+          <div class="payment-icon wechat-icon">💚</div>
+          <div class="payment-details">
+            <h4>微信支付</h4>
+            <p class="payment-amount">{{ $currency }}{{ $price }}</p>
+            <p class="payment-desc">{{ $product }}</p>
+          </div>
+        </div>
+        <div class="qr-code">
+          <img id="wechat-qr" src="/images/payment/wechat-qr.jpg" alt="微信支付二维码" />
+        </div>
+        <p class="payment-instruction">请使用微信扫描二维码完成支付</p>
+        <div class="payment-tips">
+          <p>💡 支付完成后，请截图保存支付凭证</p>
+          <p>📧 支付成功后，商品将发送至您的邮箱</p>
+        </div>
+      </div>
+      
+      <!-- 支付宝支付区域 -->
+      <div id="alipay-payment" class="payment-section" style="display: none;">
+        <div class="payment-info">
+          <div class="payment-icon alipay-icon">🔵</div>
+          <div class="payment-details">
+            <h4>支付宝支付</h4>
+            <p class="payment-amount">{{ $currency }}{{ $price }}</p>
+            <p class="payment-desc">{{ $product }}</p>
+          </div>
+        </div>
+        <div class="qr-code">
+          <img id="alipay-qr" src="/images/payment/alipay-qr.jpg" alt="支付宝支付二维码" />
+        </div>
+        <p class="payment-instruction">请使用支付宝扫描二维码完成支付</p>
+        <div class="payment-tips">
+          <p>💡 支付完成后，请截图保存支付凭证</p>
+          <p>📧 支付成功后，商品将发送至您的邮箱</p>
+        </div>
+      </div>
+      
+      <!-- 联系信息 -->
+      <div class="contact-info">
+        <p>如有问题，请联系：</p>
+        <p>📧 aqutikri@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.buy-button-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px 0;
+  color: white;
+  text-align: center;
+}
+
+.product-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 8px 0;
+  color: #ffd700;
+}
+
+.description {
+  margin: 8px 0 20px 0;
+  opacity: 0.9;
+}
+
+.payment-options {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.buy-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.wechat-button {
+  background: #07c160;
+  color: white;
+}
+
+.wechat-button:hover {
+  background: #06ad56;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(7, 193, 96, 0.4);
+}
+
+.alipay-button {
+  background: #1677ff;
+  color: white;
+}
+
+.alipay-button:hover {
+  background: #4096ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(22, 119, 255, 0.4);
+}
+
+.button-icon {
+  font-size: 18px;
+}
+
+/* 模态框样式 */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 24px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.close:hover {
+  color: #000;
+}
+
+.payment-section {
+  margin-top: 20px;
+}
+
+.payment-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.payment-icon {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.wechat-icon {
+  background: #07c160;
+  color: white;
+}
+
+.alipay-icon {
+  background: #1677ff;
+  color: white;
+}
+
+.payment-details h4 {
+  margin: 0 0 4px 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.payment-amount {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #e74c3c;
+  margin: 0 0 4px 0;
+}
+
+.payment-desc {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0;
+}
+
+.qr-code {
+  margin: 20px 0;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+}
+
+.qr-code img {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+.payment-instruction {
+  font-size: 14px;
+  color: #666;
+  margin: 12px 0;
+}
+
+.payment-tips {
+  background: #e3f2fd;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 16px 0;
+  text-align: left;
+}
+
+.payment-tips p {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #1976d2;
+}
+
+.contact-info {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e9ecef;
+  font-size: 14px;
+  color: #666;
+}
+
+.contact-info p {
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .payment-options {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .buy-button {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .modal-content {
+    margin: 10% auto;
+    width: 95%;
+    padding: 20px;
+  }
+  
+  .qr-code img {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .payment-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+
+<script>
+function showPaymentQR(paymentType) {
+  const modal = document.getElementById('payment-qr-modal');
+  const wechatSection = document.getElementById('wechat-payment');
+  const alipaySection = document.getElementById('alipay-payment');
+  const paymentTitle = document.getElementById('payment-title');
+  
+  // 隐藏所有支付区域
+  wechatSection.style.display = 'none';
+  alipaySection.style.display = 'none';
+  
+  // 显示对应的支付区域
+  if (paymentType === 'wechat') {
+    wechatSection.style.display = 'block';
+    paymentTitle.textContent = '微信支付';
+  } else if (paymentType === 'alipay') {
+    alipaySection.style.display = 'block';
+    paymentTitle.textContent = '支付宝支付';
+  }
+  
+  // 显示模态框
+  modal.style.display = 'block';
+}
+
+function hidePaymentQR() {
+  document.getElementById('payment-qr-modal').style.display = 'none';
+}
+
+// 点击模态框外部关闭
+window.onclick = function(event) {
+  const modal = document.getElementById('payment-qr-modal');
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+}
+
+// ESC键关闭模态框
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    hidePaymentQR();
+  }
+});
+</script>

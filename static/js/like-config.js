@@ -9,10 +9,10 @@
 
 window.LIKE_CONFIG = {
   // Supabase 项目 URL (例如: https://xxxxx.supabase.co)
-  supabaseUrl: '',
+  supabaseUrl: 'https://igjkrqkdbvjcoxjnsfob.supabase.co',
   
   // Supabase anon/public key
-  supabaseKey: ''
+  supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlnamtycWtkYnZqY294am5zZm9iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjIzOTM1MDUsImV4cCI6MjA3Nzk2OTUwNX0.HcOJAExb89GxxC7LRO-64DdjPm2yaRPhtkmf33hJMPw'
 };
 
 // 如果配置为空，使用 localStorage 作为后备方案

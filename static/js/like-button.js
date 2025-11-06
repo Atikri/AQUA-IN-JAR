@@ -45,34 +45,41 @@
     // 从 Supabase 获取点赞数
     async function fetchLikeCountFromSupabase(postId) {
         if (!isSupabaseConfigured()) {
+            console.log('[Like] Supabase not configured, using localStorage');
             return null;
         }
 
         try {
-            const response = await fetch(
-                `${window.LIKE_CONFIG.supabaseUrl}/rest/v1/post_likes?post_id=eq.${encodeURIComponent(postId)}&select=like_count`,
-                {
-                    method: 'GET',
-                    headers: {
-                        'apikey': window.LIKE_CONFIG.supabaseKey,
-                        'Authorization': `Bearer ${window.LIKE_CONFIG.supabaseKey}`,
-                        'Content-Type': 'application/json',
-                        'Prefer': 'return=representation'
-                    }
+            const url = `${window.LIKE_CONFIG.supabaseUrl}/rest/v1/post_likes?post_id=eq.${encodeURIComponent(postId)}&select=like_count`;
+            console.log('[Like] Fetching like count from:', url);
+            
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'apikey': window.LIKE_CONFIG.supabaseKey,
+                    'Authorization': `Bearer ${window.LIKE_CONFIG.supabaseKey}`,
+                    'Content-Type': 'application/json'
                 }
-            );
+            });
 
             if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+                const errorText = await response.text();
+                console.error('[Like] HTTP error:', response.status, errorText);
+                throw new Error(`HTTP error! status: ${response.status}, ${errorText}`);
             }
 
             const data = await response.json();
+            console.log('[Like] Response data:', data);
+            
             if (data && data.length > 0) {
-                return data[0].like_count;
+                const count = data[0].like_count;
+                console.log('[Like] Found like count:', count);
+                return count;
             }
+            console.log('[Like] No record found, returning 0');
             return 0;
         } catch (error) {
-            console.error('Error fetching like count from Supabase:', error);
+            console.error('[Like] Error fetching like count from Supabase:', error);
             return null;
         }
     }
@@ -80,76 +87,94 @@
     // 增加点赞数（Supabase）
     async function incrementLikeInSupabase(postId) {
         if (!isSupabaseConfigured()) {
+            console.log('[Like] Supabase not configured, using localStorage');
             return false;
         }
 
         try {
-            // 先尝试获取现有记录
-            const checkResponse = await fetch(
-                `${window.LIKE_CONFIG.supabaseUrl}/rest/v1/post_likes?post_id=eq.${encodeURIComponent(postId)}`,
-                {
-                    method: 'GET',
+            // 先检查记录是否存在
+            const checkUrl = `${window.LIKE_CONFIG.supabaseUrl}/rest/v1/post_likes?post_id=eq.${encodeURIComponent(postId)}&select=like_count`;
+            console.log('[Like] Checking existing record:', checkUrl);
+            
+            const checkResponse = await fetch(checkUrl, {
+                method: 'GET',
+                headers: {
+                    'apikey': window.LIKE_CONFIG.supabaseKey,
+                    'Authorization': `Bearer ${window.LIKE_CONFIG.supabaseKey}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (!checkResponse.ok) {
+                const errorText = await checkResponse.text();
+                throw new Error(`Check failed: ${checkResponse.status}, ${errorText}`);
+            }
+
+            const existing = await checkResponse.json();
+            console.log('[Like] Existing record:', existing);
+
+            const baseUrl = `${window.LIKE_CONFIG.supabaseUrl}/rest/v1/post_likes`;
+            
+            if (existing && existing.length > 0) {
+                // 记录存在，更新
+                const currentCount = existing[0].like_count || 0;
+                const newCount = currentCount + 1;
+                console.log('[Like] Updating existing record:', currentCount, '->', newCount);
+
+                const updateUrl = `${baseUrl}?post_id=eq.${encodeURIComponent(postId)}`;
+                const updateResponse = await fetch(updateUrl, {
+                    method: 'PATCH',
                     headers: {
                         'apikey': window.LIKE_CONFIG.supabaseKey,
                         'Authorization': `Bearer ${window.LIKE_CONFIG.supabaseKey}`,
-                        'Content-Type': 'application/json'
-                    }
-                }
-            );
-
-            const existing = await checkResponse.json();
-
-            if (existing && existing.length > 0) {
-                // 更新现有记录
-                const newCount = (existing[0].like_count || 0) + 1;
-                const updateResponse = await fetch(
-                    `${window.LIKE_CONFIG.supabaseUrl}/rest/v1/post_likes?post_id=eq.${encodeURIComponent(postId)}`,
-                    {
-                        method: 'PATCH',
-                        headers: {
-                            'apikey': window.LIKE_CONFIG.supabaseKey,
-                            'Authorization': `Bearer ${window.LIKE_CONFIG.supabaseKey}`,
-                            'Content-Type': 'application/json',
-                            'Prefer': 'return=representation'
-                        },
-                        body: JSON.stringify({ like_count: newCount })
-                    }
-                );
+                        'Content-Type': 'application/json',
+                        'Prefer': 'return=representation'
+                    },
+                    body: JSON.stringify({ like_count: newCount })
+                });
 
                 if (!updateResponse.ok) {
-                    throw new Error(`Update failed: ${updateResponse.status}`);
+                    const errorText = await updateResponse.text();
+                    console.error('[Like] Update failed:', updateResponse.status, errorText);
+                    throw new Error(`Update failed: ${updateResponse.status}, ${errorText}`);
                 }
 
                 const updated = await updateResponse.json();
-                return updated[0].like_count;
+                console.log('[Like] Updated successfully:', updated);
+                return updated[0]?.like_count || newCount;
             } else {
-                // 创建新记录
-                const insertResponse = await fetch(
-                    `${window.LIKE_CONFIG.supabaseUrl}/rest/v1/post_likes`,
-                    {
-                        method: 'POST',
-                        headers: {
-                            'apikey': window.LIKE_CONFIG.supabaseKey,
-                            'Authorization': `Bearer ${window.LIKE_CONFIG.supabaseKey}`,
-                            'Content-Type': 'application/json',
-                            'Prefer': 'return=representation'
-                        },
-                        body: JSON.stringify({
-                            post_id: postId,
-                            like_count: 1
-                        })
-                    }
-                );
+                // 记录不存在，插入
+                console.log('[Like] Creating new record with count: 1');
+                const insertResponse = await fetch(baseUrl, {
+                    method: 'POST',
+                    headers: {
+                        'apikey': window.LIKE_CONFIG.supabaseKey,
+                        'Authorization': `Bearer ${window.LIKE_CONFIG.supabaseKey}`,
+                        'Content-Type': 'application/json',
+                        'Prefer': 'return=representation'
+                    },
+                    body: JSON.stringify({
+                        post_id: postId,
+                        like_count: 1
+                    })
+                });
 
                 if (!insertResponse.ok) {
-                    throw new Error(`Insert failed: ${insertResponse.status}`);
+                    const errorText = await insertResponse.text();
+                    console.error('[Like] Insert failed:', insertResponse.status, errorText);
+                    throw new Error(`Insert failed: ${insertResponse.status}, ${errorText}`);
                 }
 
                 const inserted = await insertResponse.json();
-                return inserted[0].like_count;
+                console.log('[Like] Inserted successfully:', inserted);
+                return inserted[0]?.like_count || 1;
             }
         } catch (error) {
-            console.error('Error incrementing like in Supabase:', error);
+            console.error('[Like] Error incrementing like in Supabase:', error);
+            console.error('[Like] Error details:', error.message);
+            if (error.stack) {
+                console.error('[Like] Stack:', error.stack);
+            }
             return false;
         }
     }
@@ -282,11 +307,31 @@
         }
 
         // 增加点赞数
+        console.log('[Like] Attempting to increment like for:', postId);
         const newCount = await incrementLike(postId);
+        console.log('[Like] New count after increment:', newCount);
+        
+        if (newCount === false || newCount === undefined) {
+            console.error('[Like] Failed to increment like');
+            const messageElement = document.getElementById('like-message');
+            if (messageElement) {
+                messageElement.textContent = '点赞失败，请稍后重试';
+                messageElement.classList.add('show', 'error');
+                setTimeout(() => {
+                    messageElement.classList.remove('show', 'error');
+                }, 3000);
+            }
+            if (button) {
+                button.disabled = false;
+            }
+            return;
+        }
+
         await markAsLiked(postId);
 
         // 更新UI
         updateLikeUI(newCount, true, false);
+        console.log('[Like] UI updated with count:', newCount);
 
         // 添加动画效果
         if (button) {
@@ -300,21 +345,32 @@
     // 初始化
     async function initLikeButton() {
         const postId = getPostId();
-        if (!postId) return;
+        if (!postId) {
+            console.log('[Like] No post ID found');
+            return;
+        }
+
+        console.log('[Like] Initializing for post:', postId);
 
         const button = document.getElementById('like-btn');
-        if (!button) return;
+        if (!button) {
+            console.log('[Like] Like button not found');
+            return;
+        }
 
         // 显示加载状态
         updateLikeUI(0, false, true);
 
         // 加载并显示当前点赞数
+        console.log('[Like] Loading like count...');
         const count = await getLikeCount(postId);
         const isLiked = await hasLiked(postId);
+        console.log('[Like] Loaded count:', count, 'isLiked:', isLiked);
         updateLikeUI(count, isLiked, false);
 
         // 绑定点击事件
         button.addEventListener('click', handleLikeClick);
+        console.log('[Like] Initialization complete');
     }
 
     // DOM加载完成后初始化

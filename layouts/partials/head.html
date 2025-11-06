@@ -61,8 +61,33 @@
     {{- /* 点赞功能 - 仅在文章页面加载 */ -}}
     {{- if eq .Kind "page" }}
     <script src="{{ "js/like-config.js" | relURL }}"></script>
+    <script>
+      // 动态添加 preconnect/dns-prefetch，减少 Supabase 首次请求的握手时间
+      (function(){
+        try {
+          var cfg = window.LIKE_CONFIG;
+          if (!cfg || !cfg.supabaseUrl) return;
+          var a = document.createElement('a');
+          a.href = cfg.supabaseUrl;
+          var origin = a.protocol + '//' + a.host;
+          var link1 = document.createElement('link');
+          link1.rel = 'preconnect';
+          link1.href = origin;
+          link1.crossOrigin = '';
+          document.head.appendChild(link1);
+          var link2 = document.createElement('link');
+          link2.rel = 'dns-prefetch';
+          link2.href = origin;
+          document.head.appendChild(link2);
+        } catch (e) {}
+      })();
+    </script>
     <script src="{{ "js/like-button.js" | relURL }}" defer></script>
     {{- end }}
+
+    {{- /* 互动清单评分和 Jelly 复选框 - 全站加载，体积很小 */ -}}
+    <script src="{{ "js/checklist-score.js" | relURL }}" defer></script>
+    <script src="{{ "js/checkbox-jelly.js" | relURL }}" defer></script>
 
     {{- if templates.Exists "partials/nonstdmeta.html" }}
 {{ partial "nonstdmeta.html" . }}

@@ -190,6 +190,26 @@
         }
     }
 
+    // 会话级缓存：在 sessionStorage 中保存每篇文章的点赞数，带时间戳
+    function getCachedLikeCount(postId) {
+        try {
+            const raw = sessionStorage.getItem(`likeCache:${postId}`);
+            if (!raw) return null;
+            const { count, ts } = JSON.parse(raw);
+            // 60 秒有效期
+            if (Date.now() - ts > 60 * 1000) return null;
+            return typeof count === 'number' ? count : null;
+        } catch (_) {
+            return null;
+        }
+    }
+
+    function setCachedLikeCount(postId, count) {
+        try {
+            sessionStorage.setItem(`likeCache:${postId}`, JSON.stringify({ count, ts: Date.now() }));
+        } catch (_) {}
+    }
+
     // 保存点赞数据到 localStorage（后备方案）
     function saveLikesData(data) {
         try {
@@ -306,8 +326,12 @@
             return;
         }
 
-        // 增加点赞数
+        // 乐观更新：先在 UI 和缓存里+1，随后与服务端对齐
         console.log('[Like] Attempting to increment like for:', postId);
+        const currentShown = Number(document.getElementById('like-count')?.textContent || '0');
+        updateLikeUI(currentShown + 1, true, true);
+        setCachedLikeCount(postId, currentShown + 1);
+
         const newCount = await incrementLike(postId);
         console.log('[Like] New count after increment:', newCount);
         
@@ -321,9 +345,10 @@
                     messageElement.classList.remove('show', 'error');
                 }, 3000);
             }
-            if (button) {
-                button.disabled = false;
-            }
+            // 回滚到原值
+            updateLikeUI(currentShown, false, false);
+            setCachedLikeCount(postId, currentShown);
+            if (button) button.disabled = false;
             return;
         }
 
@@ -332,6 +357,7 @@
         // 更新UI
         updateLikeUI(newCount, true, false);
         console.log('[Like] UI updated with count:', newCount);
+        setCachedLikeCount(postId, newCount);
 
         // 添加动画效果
         if (button) {
@@ -361,12 +387,21 @@
         // 显示加载状态
         updateLikeUI(0, false, true);
 
-        // 加载并显示当前点赞数
+        // 先用缓存（如有）即时渲染，提升首屏速度
+        const cached = getCachedLikeCount(postId);
+        const likedCached = await hasLiked(postId);
+        if (typeof cached === 'number') {
+            console.log('[Like] Using cached count:', cached);
+            updateLikeUI(cached, likedCached, false);
+        }
+
+        // 后台刷新真实数据
         console.log('[Like] Loading like count...');
         const count = await getLikeCount(postId);
         const isLiked = await hasLiked(postId);
         console.log('[Like] Loaded count:', count, 'isLiked:', isLiked);
         updateLikeUI(count, isLiked, false);
+        setCachedLikeCount(postId, count);
 
         // 绑定点击事件
         button.addEventListener('click', handleLikeClick);

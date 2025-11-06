@@ -1,0 +1,18 @@
+{{/*
+  Usage:
+  {{< checklist-score title="健康自测" ok="0-5：健康状况良好" mid="6-10：健康状况不错" bad="11+：身体需要进行排毒" >}}
+  ... 放一段或多段 markdown 任务清单（- [ ] ...） ...
+  {{< /checklist-score >}}
+*/}}
+
+<div class="checklist-score {{ with .Get "style" }}jelly-{{ . }}{{ end }}" data-title="{{ with .Get "title" }}{{ . }}{{ else }}自测结果{{ end }}"
+     data-ok="{{ .Get "ok" }}" data-mid="{{ .Get "mid" }}" data-bad="{{ .Get "bad" }}">
+  <div class="checklist-score__content">
+    {{ .Inner | markdownify }}
+  </div>
+  <div class="checklist-score__actions">
+    <button type="button" class="checklist-score__btn">查看结果</button>
+    <span class="checklist-score__result" aria-live="polite"></span>
+  </div>
+</div>
+

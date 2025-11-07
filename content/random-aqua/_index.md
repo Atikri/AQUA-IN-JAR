@@ -4,27 +4,38 @@ date: 2025-01-27
 description: "收录了一些可互动的小游戏~"
 ---
 
-🎲点击下面的按钮，随机浏览网站中的任意一篇文章，发现意外的惊喜！
+## 🎮 小游戏列表
 
-<div style="text-align: center; margin: 40px 0;">
-  <button onclick="randomArticle()" style="
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 25px;
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;">
+  
+  <div style="
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-    transition: all 0.3s ease;
-    min-height: 44px;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
-  " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.4)'" 
-     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(102, 126, 234, 0.3)'">
-    🎲 随机探索
-  </button>
+  " onclick="window.location.href='/random-aqua/todo-list/'" 
+     onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.1)'"
+     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+    <h3 style="margin: 0 0 12px 0; font-size: 1.3rem;">📝 待办清单</h3>
+    <p style="margin: 0; opacity: 0.8; font-size: 0.95rem;">简洁优雅的待办清单工具，帮你管理每日任务</p>
+  </div>
+
+  <div style="
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  " onclick="randomArticle()" 
+     onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.1)'"
+     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+    <h3 style="margin: 0 0 12px 0; font-size: 1.3rem;">🎲 随机探索</h3>
+    <p style="margin: 0; opacity: 0.8; font-size: 0.95rem;">随机浏览网站中的任意一篇文章，发现意外的惊喜</p>
+  </div>
+
 </div>
 
 ---

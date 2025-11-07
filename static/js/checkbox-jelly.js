@@ -1,9 +1,14 @@
 (function(){
   'use strict';
   function enhanceLiCheckbox(li){
-    const input = li.querySelector('input[type="checkbox"]');
+    const input = li.querySelector(':scope > input[type="checkbox"]');
     if(!input || input.classList.contains('jelly')) return;
+    if (input.disabled) {
+      input.disabled = false;
+      input.removeAttribute('disabled');
+    }
     input.classList.add('jelly');
+    li.classList.add('checkbox-item');
     // 插入视觉复选框
     const cbx = document.createElement('span');
     cbx.className = 'cbx';

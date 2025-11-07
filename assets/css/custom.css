@@ -60,6 +60,50 @@ li input[type="checkbox"] {
   margin-right: 0.5rem;
 }
 
+/* Remove default bullets when a checkbox is present */
+.checkbox-item {
+  list-style: none !important;
+  padding-left: 0;
+  margin-left: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+
+.checkbox-item::marker {
+  content: '' !important;
+}
+
+.checkbox-item > input[type="checkbox"],
+.checkbox-item > .cbx {
+  margin: 0;
+}
+
+.checkbox-item .lbl {
+  display: inline-flex;
+  align-items: center;
+}
+
+.checkbox-item > ul {
+  margin: 0.35rem 0 0 0;
+  padding-left: 0 !important;
+}
+
+/* Parent list item with a nested UL: remove bullet and left padding so children align with top-level */
+ul > li:has(> ul) {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+ul > li:has(> ul)::marker { content: '' !important; }
+
+/* Also ensure the immediate nested UL has no extra indent */
+ul > li:has(> ul) > ul {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
 /* Align text better with larger boxes */
 li.task-list-item,
 li.task-list-item > * {

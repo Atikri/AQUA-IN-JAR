@@ -11,18 +11,17 @@ title: "Matcha Bowl"
 ### Ingredients:
 - Rolled Oats
 - Milk
-    - [ ] Almond Soymilk
-    - [ ] Chickpea Milk
-- Coconut Matcha Granola 
-- Coconut Water 
-- Crunchy Coconut Matcha Cashew Butter 
-- Coconut Flakes 
+  - [ ] Almond Soymilk
+  - [ ] Chickpea Milk
+- Coconut Matcha Granola
+- Coconut Water
+- Crunchy Coconut Matcha Cashew Butter
+- Coconut Flakes
 - Deep Green Organic Matcha
 - Mixed Green Powder
-- [ ] Organic Hemp Hearts 
+- [ ] Organic Hemp Hearts
 - [ ] Chia Seed
 - [ ] Organic Pure Hemp Protein Powder
-
 ---  
 
 这张图片是第一次做的时候拍的，topping放得草率了:rofl:  

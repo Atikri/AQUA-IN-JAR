@@ -48,15 +48,18 @@
   }
 
   function init(){
-    // 列表型（Markdown 常见）
+    // 列表型（Markdown 常见）- 包括 checklist-score 内部
     document.querySelectorAll('li').forEach(function(li){
-      if(li.querySelector('input[type="checkbox"]')){
+      const input = li.querySelector(':scope > input[type="checkbox"]');
+      if(input){
         enhanceLiCheckbox(li);
       }
     });
     // 非列表场景：文章或页面内任意 checkbox（避免重复增强）
-    document.querySelectorAll('article input[type="checkbox"], main input[type="checkbox"]').forEach(function(input){
+    document.querySelectorAll('article input[type="checkbox"], main input[type="checkbox"], .checklist-score__content input[type="checkbox"]').forEach(function(input){
       if (!input.classList.contains('jelly')) {
+        // 如果已经在 li 中，跳过（上面已处理）
+        if (input.closest('li')) return;
         // 构造一个临时 li 包裹逻辑以复用函数
         const tempLi = document.createElement('li');
         input.parentNode.insertBefore(tempLi, input);

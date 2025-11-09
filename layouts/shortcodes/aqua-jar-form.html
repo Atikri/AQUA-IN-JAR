@@ -1,0 +1,305 @@
+<div class="aqua-jar-form-container">
+  <h3>📝 活动报名表单</h3>
+  <form id="aqua-jar-registration-form" class="aqua-jar-form">
+    <!-- 姓名 -->
+    <div class="form-group">
+      <label for="name">姓名/昵称 <span class="required">*</span></label>
+      <input type="text" id="name" name="name" required placeholder="请输入您的姓名或昵称">
+    </div>
+
+    <!-- 联系方式 -->
+    <div class="form-group">
+      <label for="contact">联系方式 <span class="required">*</span></label>
+      <input type="text" id="contact" name="contact" required placeholder="微信/电话/邮箱（至少填写一个）">
+    </div>
+
+    <!-- 期望参与时间 -->
+    <div class="form-group">
+      <label for="preferred-time">期望参与时间 <span class="required">*</span></label>
+      <input type="text" id="preferred-time" name="preferred-time" required placeholder="例如：9月15日 15:00-18:00">
+    </div>
+
+    <!-- 感兴趣的活动 -->
+    <div class="form-group">
+      <label>感兴趣的活动（可多选）</label>
+      <div class="checkbox-group">
+        <label class="checkbox-label">
+          <input type="checkbox" name="activities" value="卡片对抗焦虑">
+          <span>卡片对抗焦虑</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="activities" value="500张拼图/飞行棋/Duel 52/打电动">
+          <span>500张拼图 / 飞行棋 / Duel 52 / 打电动 🎮</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="activities" value="描绘时尚插画的基础姿势">
+          <span>描绘时尚插画的基础姿势 👖</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="activities" value="阅读书籍/食谱书刊">
+          <span>阅读书籍/食谱书刊 📰</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="activities" value="身体拉伸">
+          <span>身体拉伸 🏃</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="activities" value="芳香制作">
+          <span>芳香制作 🍃</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="activities" value="享用食物">
+          <span>享用食物（具体食谱请见recipe）</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- 其他想说的话 -->
+    <div class="form-group">
+      <label for="message">其他想说的话</label>
+      <textarea id="message" name="message" rows="4" placeholder="可以分享你的想法、期望，或者任何想说的话..."></textarea>
+    </div>
+
+    <!-- 提交按钮 -->
+    <button type="submit" class="submit-btn" id="submit-btn">
+      <span class="btn-text">提交报名</span>
+      <span class="btn-loading" style="display: none;">提交中...</span>
+    </button>
+
+    <!-- 提交反馈 -->
+    <div id="form-feedback" class="form-feedback" style="display: none;"></div>
+  </form>
+</div>
+
+<style>
+.aqua-jar-form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--card-bg, #fff);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aqua-jar-form-container h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--heading-color, #333);
+}
+
+.aqua-jar-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.aqua-jar-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color, #333);
+}
+
+.aqua-jar-form .required {
+  color: #e74c3c;
+}
+
+.aqua-jar-form input[type="text"],
+.aqua-jar-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color, #ddd);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.aqua-jar-form input[type="text"]:focus,
+.aqua-jar-form textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.aqua-jar-form .checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.aqua-jar-form .checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.aqua-jar-form .checkbox-label:hover {
+  background-color: var(--hover-bg, #f5f5f5);
+}
+
+.aqua-jar-form .checkbox-label input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.aqua-jar-form .submit-btn {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.aqua-jar-form .submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.aqua-jar-form .submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.aqua-jar-form .form-feedback {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.aqua-jar-form .form-feedback.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.aqua-jar-form .form-feedback.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@media (max-width: 768px) {
+  .aqua-jar-form-container {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+}
+</style>
+
+<script>
+(function() {
+  // 配置：请将 YOUR_FORMSPREE_ID 替换为你的 Formspree 表单ID
+  // 获取方式：访问 https://formspree.io/ 注册账号，创建表单后会获得一个 endpoint URL
+  // 例如：https://formspree.io/f/YOUR_FORM_ID
+  const FORMSPREE_ENDPOINT = 'YOUR_FORMSPREE_ID'; // 需要替换为实际的 Formspree endpoint
+  
+  const form = document.getElementById('aqua-jar-registration-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const btnText = submitBtn.querySelector('.btn-text');
+  const btnLoading = submitBtn.querySelector('.btn-loading');
+  const feedback = document.getElementById('form-feedback');
+
+  if (!form) return;
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    // 禁用提交按钮
+    submitBtn.disabled = true;
+    btnText.style.display = 'none';
+    btnLoading.style.display = 'inline';
+    feedback.style.display = 'none';
+
+    // 收集表单数据
+    const formData = new FormData(form);
+    const activities = Array.from(form.querySelectorAll('input[name="activities"]:checked'))
+      .map(cb => cb.value)
+      .join('、');
+    
+    // 构建提交数据
+    const data = {
+      name: formData.get('name'),
+      contact: formData.get('contact'),
+      preferredTime: formData.get('preferred-time'),
+      activities: activities || '未选择',
+      message: formData.get('message') || '无'
+    };
+
+    // 格式化邮件内容
+    const emailBody = `
+AQUA IN JAR 活动报名
+
+姓名/昵称：${data.name}
+联系方式：${data.contact}
+期望参与时间：${data.preferredTime}
+感兴趣的活动：${data.activities}
+其他留言：${data.message}
+
+---
+提交时间：${new Date().toLocaleString('zh-CN')}
+    `.trim();
+
+    try {
+      // 检查是否配置了 Formspree endpoint
+      if (FORMSPREE_ENDPOINT === 'YOUR_FORMSPREE_ID') {
+        throw new Error('请先配置 Formspree endpoint！请查看表单代码中的配置说明。');
+      }
+
+      // 提交到 Formspree
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ENDPOINT}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: data.name,
+          contact: data.contact,
+          preferredTime: data.preferredTime,
+          activities: data.activities,
+          message: data.message,
+          _subject: `AQUA IN JAR 活动报名 - ${data.name}`,
+          _format: 'plain',
+          _replyto: data.contact.includes('@') ? data.contact : undefined
+        })
+      });
+
+      if (response.ok) {
+        // 成功
+        feedback.className = 'form-feedback success';
+        feedback.textContent = '✅ 报名成功！我会尽快通过您提供的联系方式与您联系。';
+        feedback.style.display = 'block';
+        form.reset();
+        
+        // 滚动到反馈信息
+        feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        const errorData = await response.json();
+        throw new Error(errorData.error || '提交失败，请稍后重试');
+      }
+    } catch (error) {
+      // 失败
+      feedback.className = 'form-feedback error';
+      feedback.textContent = '❌ ' + error.message;
+      feedback.style.display = 'block';
+      feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } finally {
+      // 恢复提交按钮
+      submitBtn.disabled = false;
+      btnText.style.display = 'inline';
+      btnLoading.style.display = 'none';
+    }
+  });
+})();
+</script>
+

@@ -56,8 +56,11 @@ ul.task-list input[type="checkbox"] {
 
 /* Also catch generic list checkboxes just in case */
 li input[type="checkbox"] {
-  transform: scale(1.4);
-  margin-right: 0.5rem;
+  transform: scale(1.6) !important;
+  width: 1.2rem !important;
+  height: 1.2rem !important;
+  margin-right: 0.6rem !important;
+  vertical-align: middle !important;
 }
 
 /* Remove default bullets when a checkbox is present */

@@ -4,7 +4,6 @@ draft: 'false'
 title: 'AQUA IN JAR活动报名'
 ---
 
-Hi :smiley: ,我是A滔tikri！:cowboy_hat_face: 
 ---
 ### 背景介绍：
 我们的生活就像待在一个瓶子中，很难跳脱出去。就像绝大多数瓶子，不能脱离这个世界。那我们需要观看瓶子外的世界嘛？我们和外面的世界间隔了一道玻璃～:milk_glass: 
@@ -25,14 +24,24 @@ Hi :smiley: ,我是A滔tikri！:cowboy_hat_face:
 
 ### :laughing: 我们可以选择一些活动：
 - [ ] 卡片对抗焦虑
-- [ ] 500张拼图:card_file_box: / 飞行棋／Duel 52:crossed_swords: /打电动:video_game: 
+- [ ] 500张拼图:card_file_box: / 飞行棋/[Duel 52:crossed_swords: ](https://tikri.site/aquas-field/daily/duel52/)/打电动:video_game: 
 - [ ] 描绘时尚插画的基础姿势:jeans: 
 - [ ] 阅读书籍/食谱书刊:newspaper: 
-- [ ] 身体拉伸:runner: 
+- [ ] 身体拉伸/冥想体验（需预定）:runner: 
 - [ ] 芳香制作:leaves: 
-- [ ] 享用食物（具体食谱请见[recipe]({{< relref "aquas-field/recipe/_index.md" >}})中标注可供AQUA IN JAR活动的菜品！）
-- 等等ddddd~~~~~:rofl: 
+- [ ] 享用食物（需预定，具体食谱请见[recipe]({{< relref "aquas-field/recipe/_index.md" >}})）
+- [ ] Estill Voice Training 学习经验分享讨论
+- [ ] 等等ddddd~~~~~:rofl: 
+
 ### 必备活动：
 - **录制一首你想唱的歌**:microphone: 
 - **石头堆叠**
 - **聊天+唱歌**:musical_note: 
+
+---
+
+## 📝 活动报名
+
+如果你想参与 AQUA IN JAR 活动，请填写下面的报名表单。我会尽快通过您提供的联系方式与您联系！
+
+{{< google-form >}}

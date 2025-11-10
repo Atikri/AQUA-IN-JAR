@@ -42,8 +42,10 @@
       // 统计 wrapper 内部的任务清单勾选数量
       const checked = wrapper.querySelectorAll('input[type="checkbox"]:checked').length;
       const title = wrapper.getAttribute('data-title') || '结果';
-      const resultText = pickResult(checked, ok, mid, bad);
-      out.textContent = title + '：' + resultText + `（勾选数：${checked}）`;
+      const raw = pickResult(checked, ok, mid, bad);
+      // 去掉区间前缀（例如 "0-3：健康状况良好" -> "健康状况良好"）
+      const display = raw && raw.indexOf('：') !== -1 ? raw.split('：').slice(1).join('：') : raw;
+      out.textContent = title + '：' + display + `（勾选数：${checked}）`;
       out.classList.add('show');
     });
   }

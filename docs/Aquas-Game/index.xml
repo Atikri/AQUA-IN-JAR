@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aqua&#39;s Game on AQUA IN JAR</title>
+    <link>https://tikri.site/Aquas-Game/</link>
+    <description>Recent content in Aqua&#39;s Game on AQUA IN JAR</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© 2025 AQUA IN JAR</copyright>
+    <lastBuildDate>Thu, 13 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tikri.site/Aquas-Game/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>习惯打卡计划</title>
+      <link>https://tikri.site/Aquas-Game/habit-tracker/</link>
+      <pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://tikri.site/Aquas-Game/habit-tracker/</guid>
+      <description>&lt;p&gt;🌱 设定一个想培养的习惯，定义目标天数，然后每天打卡完成。工具会记录你的连击、完成度与节奏，帮你稳稳推进计划。&lt;/p&gt;&#xA;&lt;h2 id=&#34;功能亮点&#34;&gt;功能亮点&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;✍️ &lt;strong&gt;自定义计划&lt;/strong&gt;：输入习惯名称、目标天数、开始日期即可创建&lt;/li&gt;&#xA;&lt;li&gt;📊 &lt;strong&gt;进度可视化&lt;/strong&gt;：进度条、剩余天数、领先/落后节奏一目了然&lt;/li&gt;&#xA;&lt;li&gt;🔥 &lt;strong&gt;连击追踪&lt;/strong&gt;：实时更新当前连击与最佳纪录&lt;/li&gt;&#xA;&lt;li&gt;✅ &lt;strong&gt;每日打卡&lt;/strong&gt;：支持今日打卡、补打卡、时间轴点击切换&lt;/li&gt;&#xA;&lt;li&gt;💾 &lt;strong&gt;本地保存&lt;/strong&gt;：所有数据保存在浏览器端，刷新页面也不会丢失&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://tikri.site/css/habit-tracker.css&#34;&gt;&#xD;&#xA;&lt;div id=&#34;habit-app&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;https://tikri.site/js/habit-tracker.js&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    <item>
+      <title>待办清单</title>
+      <link>https://tikri.site/Aquas-Game/todo-list/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://tikri.site/Aquas-Game/todo-list/</guid>
+      <description>&lt;p&gt;📝 一个简洁优雅的待办清单工具，帮你高效管理每日任务。&lt;/p&gt;&#xA;&lt;h2 id=&#34;功能特点&#34;&gt;功能特点&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;✅ &lt;strong&gt;添加任务&lt;/strong&gt; - 快速记录待办事项&lt;/li&gt;&#xA;&lt;li&gt;🎯 &lt;strong&gt;标记完成&lt;/strong&gt; - 点击任务即可完成/取消&lt;/li&gt;&#xA;&lt;li&gt;🗑️ &lt;strong&gt;删除任务&lt;/strong&gt; - 移除不需要的任务&lt;/li&gt;&#xA;&lt;li&gt;💾 &lt;strong&gt;自动保存&lt;/strong&gt; - 数据保存在浏览器本地，刷新不丢失&lt;/li&gt;&#xA;&lt;li&gt;🧹 &lt;strong&gt;清空已完成&lt;/strong&gt; - 一键清理已完成的任务&lt;/li&gt;&#xA;&lt;li&gt;📱 &lt;strong&gt;响应式设计&lt;/strong&gt; - 手机和电脑都能完美使用&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://tikri.site/css/todo-list.css&#34;&gt;&#xD;&#xA;&lt;div id=&#34;todo-app&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;https://tikri.site/js/todo-list.js&#34;&gt;&lt;/script&gt;</description>
+    </item>
+  </channel>
+</rss>

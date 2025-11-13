@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">you raise me up</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">翻滚手机相册系列~ 因为换了手机所以在清理旧手机中不免翻滚起了相册~ 初中毕业典礼上，有一位数学老师唱了&#34;You Raise Me Up&#34;。当时老师是一边唱，台下有学生就笑啊😸 看得出来老师是真的有一点紧张，不过真的不影响整个氛围很到位啊~ 现在再翻出来看看，emm…还是蛮怀念上学时代的~ 您的浏览 …</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

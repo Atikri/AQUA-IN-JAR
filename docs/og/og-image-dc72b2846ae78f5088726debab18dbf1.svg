@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">1 是的，你再也回不去了</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">📃转变之书outline 干脆卸下包袱,轻松前行吧。 多回忆，你会发现自己有多固执… 第一条法则：身处转变期的你会发现~自己会以新的方式来做旧的事情。 有人觉得抱怨一件人生中美好的事，甚至为此而恼怒是不恰当的表现，有人认为为了过去的事情感到懊悔，根本没意义。总之，人们往往在结束一段过往生活时，面对各 …</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

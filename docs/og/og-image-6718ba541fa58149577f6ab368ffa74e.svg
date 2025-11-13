@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">Duel 52</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">之前有一段时间喜欢看游戏王动漫。游戏王其实在我童年回忆中有一段记忆。那时候我哥带我一起玩的，当时的卡牌上面都是繁体字，那时候我看不懂繁体字，我哥能读懂一半😂 当时我们就随便玩，虽然玩不懂，但是也觉得蛮好玩的。 后面接触到游戏王手游，当初的热情一下就被点燃，不过看到那么多规则还有卡牌我都不知道从何开 …</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

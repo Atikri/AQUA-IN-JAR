@@ -1,0 +1,133 @@
+/**
+ * 延迟加载样式
+ * 提供占位符和加载效果
+ */
+
+/* 延迟加载图片的占位符样式 */
+img.lazy-loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+    min-height: 200px;
+    display: block;
+    opacity: 0.7;
+}
+
+/* 延迟加载视频的占位符样式 */
+video.lazy-loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+    min-height: 300px;
+    display: block;
+    opacity: 0.7;
+}
+
+/* 加载动画 */
+@keyframes loading-shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* 加载完成后的样式 */
+img.lazy-loaded,
+video.lazy-loaded {
+    animation: none;
+    background: none;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 加载错误样式 */
+img.lazy-error,
+video.lazy-error {
+    background: #f8f8f8;
+    border: 2px dashed #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    color: #999;
+    font-size: 14px;
+}
+
+img.lazy-error::after {
+    content: "图片加载失败";
+}
+
+video.lazy-error::after {
+    content: "视频加载失败";
+}
+
+/* 响应式图片样式 */
+.lazy-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.lazy-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 视频容器样式 */
+.lazy-video-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #000;
+}
+
+.lazy-video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 加载指示器 */
+.lazy-loading::before {
+    content: "加载中...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #666;
+    font-size: 14px;
+    z-index: 1;
+}
+
+/* 暗色模式适配 */
+@media (prefers-color-scheme: dark) {
+    img.lazy-loading,
+    video.lazy-loading {
+        background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+        background-size: 200% 100%;
+    }
+    
+    img.lazy-error,
+    video.lazy-error {
+        background: #1a1a1a;
+        border-color: #444;
+        color: #ccc;
+    }
+}
+
+/* 减少动画对性能的影响 */
+@media (prefers-reduced-motion: reduce) {
+    img.lazy-loading,
+    video.lazy-loading {
+        animation: none;
+        background: #f0f0f0;
+    }
+    
+    img.lazy-loaded,
+    video.lazy-loaded {
+        transition: none;
+    }
+}

@@ -2,7 +2,7 @@
 title: "Aqua's Game"
 date: 2025-01-27
 description: "收录了一些可互动的小游戏~"
-slug: "aquas-game"
+url: "/Aquas-Game/"
 aliases:
   - "/random-aqua/"
 ---
@@ -18,7 +18,7 @@ aliases:
     background: rgba(255, 255, 255, 0.5);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
-  " onclick="window.location.href='/aquas-game/todo-list/'" 
+  " onclick="window.location.href='/Aquas-Game/todo-list/'" 
      onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.1)'"
      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
     <h3 style="margin: 0 0 12px 0; font-size: 1.3rem;">📝 待办清单</h3>
@@ -32,7 +32,7 @@ aliases:
     background: rgba(255, 255, 255, 0.5);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
-  " onclick="window.location.href='/aquas-game/habit-tracker/'" 
+  " onclick="window.location.href='/Aquas-Game/habit-tracker/'" 
      onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.1)'"
      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
     <h3 style="margin: 0 0 12px 0; font-size: 1.3rem;">🔥 习惯打卡计划</h3>

@@ -2,6 +2,9 @@
 title: "待办清单"
 date: 2025-01-27
 description: "简洁优雅的待办清单，帮你管理每日任务"
+slug: "todo-list"
+aliases:
+  - "/random-aqua/todo-list/"
 ---
 
 📝 一个简洁优雅的待办清单工具，帮你高效管理每日任务。
@@ -20,6 +23,7 @@ description: "简洁优雅的待办清单，帮你管理每日任务"
 <link rel="stylesheet" href="/css/todo-list.css">
 <div id="todo-app"></div>
 <script src="/js/todo-list.js"></script>
+
 
 
 

@@ -2,6 +2,9 @@
 title: "Aqua's Game"
 date: 2025-01-27
 description: "收录了一些可互动的小游戏~"
+slug: "aquas-game"
+aliases:
+  - "/random-aqua/"
 ---
 
 ## 🎮 小游戏列表
@@ -15,11 +18,25 @@ description: "收录了一些可互动的小游戏~"
     background: rgba(255, 255, 255, 0.5);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
-  " onclick="window.location.href='/random-aqua/todo-list/'" 
+  " onclick="window.location.href='/aquas-game/todo-list/'" 
      onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.1)'"
      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
     <h3 style="margin: 0 0 12px 0; font-size: 1.3rem;">📝 待办清单</h3>
     <p style="margin: 0; opacity: 0.8; font-size: 0.95rem;">简洁优雅的待办清单工具，帮你管理每日任务</p>
+  </div>
+
+  <div style="
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  " onclick="window.location.href='/aquas-game/habit-tracker/'" 
+     onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.1)'"
+     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+    <h3 style="margin: 0 0 12px 0; font-size: 1.3rem;">🔥 习惯打卡计划</h3>
+    <p style="margin: 0; opacity: 0.8; font-size: 0.95rem;">设定目标天数，追踪连击、进度与节奏，让习惯稳稳落地</p>
   </div>
 
   <div style="

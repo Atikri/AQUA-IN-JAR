@@ -11,8 +11,8 @@ title: "Matcha Bowl"
 ### Ingredients:
 - Rolled Oats
 - Milk
-  - [ ] Almond Soymilk
-  - [ ] Chickpea Milk
+- [ ] Almond Soymilk
+- [ ] Chickpea Milk
 - Coconut Matcha Granola
 - Coconut Water
 - Crunchy Coconut Matcha Cashew Butter

@@ -10,19 +10,29 @@ title: "Quinoa & eggplant salad"
 ---  
 
 This delicious , warm salad is fantastic on its own or as a side. You really can add whatever roast veggies you like or have in the fridge. We also enjoy it with roasted cauliflower instead of eggplant with pomegranate instead of dates.  
-![quinoa-salad4.jpg](https://supernotes-resources.s3.amazonaws.com/image-uploads/b1c55d7a-61df-4409-8867-314838177e5d--quinoa-salad4.jpg)
----
-![quinoa-salad5.jpg](https://supernotes-resources.s3.amazonaws.com/image-uploads/bb04f99b-1e64-4b31-83f0-f835087bf331--quinoa-salad5.jpg)
+
+---  
+
+![quinoa-salad4.jpg](https://supernotes-resources.s3.amazonaws.com/image-uploads/b1c55d7a-61df-4409-8867-314838177e5d--quinoa-salad4.jpg)  
+
+---  
+
+![quinoa-salad5.jpg](https://supernotes-resources.s3.amazonaws.com/image-uploads/bb04f99b-1e64-4b31-83f0-f835087bf331--quinoa-salad5.jpg)  
   
 ---
-## 我自己复刻的：
+## 我自己复刻的：  
 > 味道还不错，主要是能不能接受食材本身的味道，有洋葱和甜椒，很多人其实不太喜欢这些味道。然后洋葱我加肉桂粉炒的比较熟，其实我感觉颜色淡一点可能更加符合整体调性。还有就是茄子甜椒烤的时间火候真的很难把控啊，一不小心就容易焦~  
 
-![quinoa-salad1.jpg](https://supernotes-resources.s3.amazonaws.com/image-uploads/0a7d2093-5f31-41ef-a368-2082b91cddca--quinoa-salad1.jpg)
+  
+![quinoa-salad1.jpg](https://supernotes-resources.s3.amazonaws.com/image-uploads/0a7d2093-5f31-41ef-a368-2082b91cddca--quinoa-salad1.jpg)  
+
 ---
-![quinoa-salad2.jpg](https://supernotes-resources.s3.amazonaws.com/image-uploads/0e60433e-8fa6-457e-a319-207b81f2d39d--quinoa-salad2.jpg)
+
+![quinoa-salad2.jpg](https://supernotes-resources.s3.amazonaws.com/image-uploads/0e60433e-8fa6-457e-a319-207b81f2d39d--quinoa-salad2.jpg)  
+
 ---
-![quinoa-salad3.jpg](https://supernotes-resources.s3.amazonaws.com/image-uploads/e2f6a457-8aca-4b2c-a428-8c46b1b1073b--quinoa-salad3.jpg)
+
+![quinoa-salad3.jpg](https://supernotes-resources.s3.amazonaws.com/image-uploads/e2f6a457-8aca-4b2c-a428-8c46b1b1073b--quinoa-salad3.jpg)  
 
 
 ---  

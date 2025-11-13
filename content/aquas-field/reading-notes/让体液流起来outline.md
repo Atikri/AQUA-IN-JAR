@@ -37,7 +37,7 @@ featured: true
 - 让体液流起来（第二章）：人体是透过体液相互连结
     - [肱三头肌](https://tikri.site/aquas-field/reading-notes/%E8%82%B1%E4%B8%89%E5%A4%B4%E8%82%8C/)
     - [腰痛的原因是体液淤积](https://tikri.site/aquas-field/reading-notes/%E8%85%B0%E7%97%9B%E7%9A%84%E5%8E%9F%E5%9B%A0%E6%98%AF%E4%BD%93%E6%B6%B2%E6%B7%A4%E7%A7%AF/)
-    - 骨盆歪斜会阻碍循环
+    - [骨盆歪斜会阻碍循环](https://tikri.site/aquas-field/reading-notes/%E9%AA%A8%E7%9B%86%E6%AD%AA%E6%96%9C%E4%BC%9A%E9%98%BB%E7%A2%8D%E5%BE%AA%E7%8E%AF/)
     - 无法深呼吸是因为肋骨和体液循环出问题
     - 肩膀动不了是因为肩关节和体液循环受阻
     - 脚踝僵硬是因为体内淤血

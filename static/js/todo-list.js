@@ -34,31 +34,39 @@
   // Create todo item element
   function createTodoElement(todo) {
     const li = document.createElement('li');
-    li.className = 'todo-item' + (todo.completed ? ' completed' : '');
+    li.className = 'todo-item checkbox-item' + (todo.completed ? ' completed' : '');
     li.dataset.id = todo.id;
 
-    // Checkbox and label wrapper (must be siblings for CSS to work)
     const checkboxId = 'todo-' + todo.id;
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.id = checkboxId;
     checkbox.name = 'todo';
     checkbox.value = 'todo';
+    checkbox.classList.add('jelly');
     checkbox.checked = todo.completed;
+    checkbox.setAttribute('aria-label', todo.text);
     checkbox.addEventListener('change', function() {
       toggleTodo(todo.id);
     });
 
-    const label = document.createElement('label');
-    label.htmlFor = checkboxId;
-    label.setAttribute('data-content', todo.text);
-    label.textContent = todo.text;
+    const cbx = document.createElement('span');
+    cbx.className = 'cbx';
+    cbx.setAttribute('tabindex', '0');
+    cbx.addEventListener('click', function() {
+      checkbox.click();
+    });
+    cbx.addEventListener('keydown', function(e) {
+      if (e.code === 'Space' || e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        checkbox.click();
+      }
+    });
 
-    // Wrapper for checkbox + label
-    const checkboxWrapper = document.createElement('div');
-    checkboxWrapper.className = 'todo-checkbox-wrapper';
-    checkboxWrapper.appendChild(checkbox);
-    checkboxWrapper.appendChild(label);
+    const label = document.createElement('label');
+    label.className = 'lbl todo-text';
+    label.htmlFor = checkboxId;
+    label.textContent = todo.text;
 
     const deleteBtn = document.createElement('button');
     deleteBtn.className = 'todo-delete-btn';
@@ -68,7 +76,9 @@
       deleteTodo(todo.id);
     });
 
-    li.appendChild(checkboxWrapper);
+    li.appendChild(checkbox);
+    li.appendChild(cbx);
+    li.appendChild(label);
     li.appendChild(deleteBtn);
 
     return li;

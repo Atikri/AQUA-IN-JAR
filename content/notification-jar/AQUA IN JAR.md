@@ -18,18 +18,18 @@ title: 'AQUA IN JAR活动报名'
 很高兴开展**AQUA IN JAR**的活动，我也很希望邀请你来到我的瓶子中。:sunglasses: 
 活动长期进行（一个月一期，一期仅邀请**1~2位**成员）
 
-### :timer_clock: 时间：15：00~~~~~~~~~~20：00（可协商）
+### :timer_clock: 时间：定期举办，详见报名表（可协商）
 
 ### :moneybag: 活动费用：58 
 
 ### :laughing: 我们可以选择一些活动：
 - [ ] 卡片对抗焦虑
-- [ ] 500张拼图:card_file_box: / 飞行棋/[Duel 52:crossed_swords: ](https://tikri.site/aquas-field/daily/duel52/)/打电动:video_game: 
+- [ ] 500张拼图:card_file_box: / 飞行棋/[Duel 52:crossed_swords: ](https://tikri.site/aquas-field/daily/duel52/)/打电动:video_game:  
 - [ ] 描绘时尚插画的基础姿势:jeans: 
 - [ ] 阅读书籍/食谱书刊:newspaper: 
 - [ ] 身体拉伸/冥想体验（需预定）:runner: 
 - [ ] 芳香制作:leaves: 
-- [ ] 享用食物（需预定，食谱请见[recipe]({{< relref "aquas-field/recipe/_index.md" >}})）
+- [ ] 享用食物（需预定，食谱请见[recipe]({{< relref "aquas-field/recipe/_index.md" >}}))  
 - [ ] Estill Voice Training 学习经验分享讨论
 - [ ] 等等ddddd~~~~~:rofl: 
 

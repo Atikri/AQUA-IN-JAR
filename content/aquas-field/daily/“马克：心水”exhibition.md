@@ -9,7 +9,7 @@ title: “马克：心水”exhibition
 > 水在此既是自然的物质形态,也是存在的隐喻;既是诗意的梦境,也是社会
 的缩影。透过录像与雕塑的交织,马克为观者营造出一种“水的在场性”,在其中,时间、身体与观看相互作用,生成出独一无二的心理共鸣与观看趣味性。
 
-## 图片
+## 图片  
 
 ![434.jpg](https://supernotes-resources.s3.amazonaws.com/image-uploads/7cb9bce0-128d-410a-9232-94fa341ca3c8--434.jpg)  
 

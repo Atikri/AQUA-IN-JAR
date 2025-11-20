@@ -6,6 +6,7 @@ slug: "habit-tracker"
 aliases:
   - "/random-aqua/habit-tracker/"
   - "/Aquas-Game/habit-tracker/"
+  - "/aquas-game/habit-tracker/"
 ---
 
 🌱 设定一个想培养的习惯，定义目标天数，然后每天打卡完成。工具会记录你的连击、完成度与节奏，帮你稳稳推进计划。

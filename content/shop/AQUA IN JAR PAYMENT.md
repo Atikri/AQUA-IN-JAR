@@ -2,7 +2,6 @@
 title: "AQUA IN JAR 活动报名支付"
 category: "数字产品"
 draft: false
-featured: true
 ---
 
 ## 商品详情内容

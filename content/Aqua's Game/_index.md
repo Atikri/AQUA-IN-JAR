@@ -6,6 +6,7 @@ slug: "aquas-game"
 aliases:
   - "/random-aqua/"
   - "/Aquas-Game/"
+  - "/aquas-game/"
 ---
 
 ## 🎮 小游戏列表

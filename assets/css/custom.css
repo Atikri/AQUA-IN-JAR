@@ -826,3 +826,45 @@ input.jelly:checked + .cbx:after { opacity: 1; transform: rotate(45deg) scale(1)
         font-size: 12px;
     }
 }
+
+/* Breadcrumb navigation */
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    margin: 0 0 20px 0;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.dark-mode-on .breadcrumb {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.breadcrumb__link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb__link:hover {
+    color: var(--text-color);
+}
+
+.breadcrumb__separator {
+    opacity: 0.6;
+}
+
+.breadcrumb__current {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+@media (max-width: 640px) {
+    .breadcrumb {
+        font-size: 0.88rem;
+        gap: 4px;
+    }
+}
+

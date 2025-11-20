@@ -1,0 +1,28 @@
+{{- /* Breadcrumb navigation component */ -}}
+{{- if not .IsHome }}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+    <a class="breadcrumb__link" href="{{ "/" | relURL }}">首页</a>
+    {{- $trail := slice -}}
+    {{- range .Ancestors }}
+        {{- $trail = $trail | append . }}
+    {{- end }}
+    {{- if .IsSection }}
+        {{- $trail = $trail | append . }}
+    {{- end }}
+    {{- with $trail }}
+    {{- range .Reverse }}
+        <span class="breadcrumb__separator">›</span>
+        {{- if eq .Permalink $.Permalink }}
+            <span class="breadcrumb__current">{{ .LinkTitle }}</span>
+        {{- else }}
+            <a class="breadcrumb__link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        {{- end }}
+    {{- end }}
+    {{- end }}
+    {{- if and (not .IsSection) (not .IsHome) }}
+        <span class="breadcrumb__separator">›</span>
+        <span class="breadcrumb__current">{{ .LinkTitle }}</span>
+    {{- end }}
+</nav>
+{{- end }}
+

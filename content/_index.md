@@ -1,13 +1,13 @@
----
-subtitle: "Hi! I'm **Tikri**.  
-Welcome to my bottle:smiling_face_with_three_hearts:  "
-description: "A minimal web log."
----
+Hi! I'm **Tikri**~  Welcome to my bottle :smiling_face_with_three_hearts:  
 Hello!!!我的小瓶子们~ 欢迎来我瓶中作客~:partying_face:  
 
 我会在这个网站分享一些我阅读过的文章，食谱，好玩有趣的事以及日常~  
 
 在这里你可以翻阅我日常发过的一些blog，收集一些AQUA:droplet: （露水灵感），说不定会对你有帮助，那就太好啦!:partying_face:  
+
+:sparkles: 下面是今天瓶口外的天气小卡片：  
+
+{{< weather-widget >}}
 
 :mailbox:遇到任何问题/想合作咨询，欢迎敲一下我的瓶子：
 > aqutikri@gmail.com.

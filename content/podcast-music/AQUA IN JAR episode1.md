@@ -1,6 +1,6 @@
 ---
-date: 2025-11-27
-title: AQUA IN JAR (瓶中水) Episode1: 什么是自源性?声音的重要性?
+date: "2025-11-27"
+title: "AQUA IN JAR (瓶中水) Episode1: 什么是自源性?声音的重要性?"
 ---
 
 {{< audio src="audio/podcast1.mp3" preload="metadata" >}}    

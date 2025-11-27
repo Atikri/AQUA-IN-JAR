@@ -1,16 +1,16 @@
 ---
-title: AQUA IN JAR (瓶中水) Episode1: 什么是自源性?声音的重要性?
 date: 2025-11-27
+title: AQUA IN JAR (瓶中水) Episode1: 什么是自源性?声音的重要性?
 ---
 
-{{< audio src="audio/podcast1.mp3" preload="metadata" >}}  
+{{< audio src="audio/podcast1.mp3" preload="metadata" >}}    
 
 我的第一集podcast终于终于!上线了!  
 太感动了😭  
 
 设备不会操作,不知道怎么录音,有时候傻傻地录完一整期还要推掉重新全部再录一遍😤  
 
-我的笔记PDF文档链接📃:[podcast1](/file/podcast 1.pdf) ,哈哈哈很乱,以后看看能不能尽量整齐一点~  
+我的笔记PDF文档链接📃:[podcast1](/file/podcast1.pdf) ,哈哈哈很乱,以后看看能不能尽量整齐一点~  
 
 播客中提到的书本链接:🔗[Your voice is your business](https://www.pluralpublishing.com/publications/your-voice-is-your-business-the-science-and-art-of-communication)
 

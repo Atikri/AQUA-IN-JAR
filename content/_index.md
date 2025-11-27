@@ -15,7 +15,7 @@ Hello!!!我的小瓶子们~ 欢迎来我瓶中作客~:partying_face:
 
 :headphones: 前往收听最新podcast：
 
-> [墙纸](https://tikri.site/podcast-music/%E5%A2%99%E7%BA%B8/)
+> [瓶中水podcast1: 什么是自源性?声音的重要性](https://tikri.site/podcast-music/AQUA-IN-JAR-episode1/)  
 
 :love_letter: 前往查阅最新文章blog：  
 
@@ -23,4 +23,4 @@ Hello!!!我的小瓶子们~ 欢迎来我瓶中作客~:partying_face:
 
 :hatching_chick: 前往查阅最新期刊：
 
-> [AQUA #0](https://tikri.site/notification-jar/AQUA-%230/)
+> [AQUA #0](https://tikri.site/notification-jar/AQUA-%230/)  

@@ -9,7 +9,7 @@ li input[type="checkbox"] {
   appearance: none !important;
   width: 1.15em !important;
   height: 1.15em !important;
-  border: 2px solid var(--border-color, rgba(0,0,0,0.35)) !important;
+  border: 2px solid var(--border-color, rgba(0, 0, 0, 0.35)) !important;
   border-radius: 6px !important;
   background: transparent !important;
 }
@@ -23,27 +23,27 @@ ul.contains-task-list {
 }
 
 /* Remove bullets from any task list item (even if theme adds circle/inside) */
-.task-list > li,
-ul.task-list > li,
-ul.contains-task-list > li,
-ul ul.task-list > li,
+.task-list>li,
+ul.task-list>li,
+ul.contains-task-list>li,
+ul ul.task-list>li,
 li.task-list-item,
 li.contains-task-list__item {
   list-style: none !important;
 }
 
 /* Some browsers render a ::marker even with list-style none on parents */
-.task-list > li::marker,
-ul.task-list > li::marker,
-ul.contains-task-list > li::marker,
-ul ul.task-list > li::marker,
+.task-list>li::marker,
+ul.task-list>li::marker,
+ul.contains-task-list>li::marker,
+ul ul.task-list>li::marker,
 li.task-list-item::marker,
 li.contains-task-list__item::marker {
   content: '' !important;
 }
 
 /* Enlarge the checkbox */
-li.task-list-item > input[type="checkbox"],
+li.task-list-item>input[type="checkbox"],
 .task-list input[type="checkbox"],
 ul.contains-task-list input[type="checkbox"],
 ul.task-list input[type="checkbox"] {
@@ -74,8 +74,8 @@ li input[type="checkbox"] {
   content: '' !important;
 }
 
-.checkbox-item > input[type="checkbox"],
-.checkbox-item > .cbx {
+.checkbox-item>input[type="checkbox"],
+.checkbox-item>.cbx {
   margin: 0;
 }
 
@@ -84,22 +84,24 @@ li input[type="checkbox"] {
   align-items: center;
 }
 
-.checkbox-item > ul {
+.checkbox-item>ul {
   margin: 0.35rem 0 0 0;
   padding-left: 0 !important;
 }
 
 /* Parent list item with a nested UL: remove bullet and left padding so children align with top-level */
-ul > li:has(> ul) {
+ul>li:has(> ul) {
   list-style: none !important;
   padding-left: 0 !important;
   margin-left: 0 !important;
 }
 
-ul > li:has(> ul)::marker { content: '' !important; }
+ul>li:has(> ul)::marker {
+  content: '' !important;
+}
 
 /* Also ensure the immediate nested UL has no extra indent */
-ul > li:has(> ul) > ul {
+ul>li:has(> ul)>ul {
   padding-left: 0 !important;
   margin-left: 0 !important;
 }
@@ -108,7 +110,7 @@ ul > li:has(> ul) > ul {
 
 /* Align text better with larger boxes */
 li.task-list-item,
-li.task-list-item > * {
+li.task-list-item>* {
   line-height: 1.8;
 }
 
@@ -126,7 +128,7 @@ li.task-list-item > * {
 }
 
 .category-card {
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 12px;
   padding: 14px 16px;
   transition: transform 0.08s ease, box-shadow 0.08s ease, border-color 0.08s ease;
@@ -134,8 +136,8 @@ li.task-list-item > * {
 
 .category-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  border-color: rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .category-card h3 {
@@ -175,6 +177,7 @@ li.task-list-item > * {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .gallery .featured {
     grid-column: span 2;
   }
@@ -188,11 +191,15 @@ li.task-list-item > * {
 }
 
 @media (min-width: 640px) {
-  .masonry { column-count: 2; }
+  .masonry {
+    column-count: 2;
+  }
 }
 
 @media (min-width: 1024px) {
-  .masonry { column-count: 3; }
+  .masonry {
+    column-count: 3;
+  }
 }
 
 .masonry-item {
@@ -259,7 +266,7 @@ table th {
   padding: 40px 20px;
   margin-bottom: 30px;
   position: relative;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
   border-radius: 15px;
   overflow: hidden;
 }
@@ -291,7 +298,7 @@ table th {
   font-weight: bold;
   color: var(--text-color);
   margin: 0;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   animation: titleGlow 3s ease-in-out infinite alternate;
 }
 
@@ -305,18 +312,23 @@ table th {
 
 /* Sparkle Animation */
 @keyframes sparkle {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1) rotate(0deg);
     filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
   }
+
   25% {
     transform: scale(1.2) rotate(90deg);
     filter: drop-shadow(0 0 20px rgba(255, 215, 0, 1));
   }
+
   50% {
     transform: scale(1.1) rotate(180deg);
     filter: drop-shadow(0 0 15px rgba(255, 165, 0, 0.9));
   }
+
   75% {
     transform: scale(1.3) rotate(270deg);
     filter: drop-shadow(0 0 25px rgba(255, 215, 0, 1));
@@ -326,10 +338,11 @@ table th {
 /* Title Glow Animation */
 @keyframes titleGlow {
   0% {
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+
   100% {
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 0 20px rgba(64, 224, 208, 0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 20px rgba(64, 224, 208, 0.3);
   }
 }
 
@@ -339,6 +352,7 @@ table th {
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 0.8;
     transform: translateY(0);
@@ -362,6 +376,7 @@ table th {
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(100%);
   }
@@ -372,15 +387,15 @@ table th {
   .sparkling-header {
     padding: 30px 15px;
   }
-  
+
   .main-title {
     font-size: 2.2rem;
   }
-  
+
   .subtitle {
     font-size: 1rem;
   }
-  
+
   .sparkle {
     font-size: 1.5rem;
   }
@@ -390,11 +405,11 @@ table th {
   .main-title {
     font-size: 1.8rem;
   }
-  
+
   .subtitle {
     font-size: 0.9rem;
   }
-  
+
   .sparkle {
     font-size: 1.2rem;
   }
@@ -411,32 +426,50 @@ table th {
   border: none;
   background: transparent;
   box-shadow: none;
-  display: none; /* shown via JS */
+  display: none;
+  /* shown via JS */
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
-.back-to-top img { max-width: 100%; max-height: 100%; display: block; object-fit: contain; }
-.back-to-top:hover { transform: translateY(-2px); }
+
+.back-to-top img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+}
 
 @media (max-width: 640px) {
-  .back-to-top { width: 64px; height: 64px; }
+  .back-to-top {
+    width: 64px;
+    height: 64px;
+  }
 }
-.back-to-top span { display:none; }
+
+.back-to-top span {
+  display: none;
+}
 
 /* Category cards hover tweak (already present, enhance slightly) */
 .categories-grid .category-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .categories-grid .category-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 /* Featured section styling */
 .featured-section {
   margin-top: 32px;
 }
+
 .featured-section ul {
   list-style: none;
   padding-left: 0;
@@ -444,43 +477,72 @@ table th {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 12px 16px;
 }
+
 .featured-section li a {
   display: block;
   padding: 10px 12px;
   border-radius: 10px;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: saturate(120%) blur(2px);
   transition: background 0.2s ease, transform 0.2s ease;
 }
-.dark-mode-on .featured-section li a { background: rgba(255,255,255,0.04); }
-.featured-section li a:hover { background: rgba(255,255,255,0.85); transform: translateY(-2px); }
-.dark-mode-on .featured-section li a:hover { background: rgba(255,255,255,0.08); }
+
+.dark-mode-on .featured-section li a {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.featured-section li a:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateY(-2px);
+}
+
+.dark-mode-on .featured-section li a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
 
 /* Interactive checklist scoring */
 .checklist-score {
   margin: 16px 0 24px 0;
   padding: 12px 14px;
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 12px;
 }
-.dark-mode-on .checklist-score { border-color: rgba(255,255,255,0.15); }
+
+.dark-mode-on .checklist-score {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
 .checklist-score__actions {
   margin-top: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .checklist-score__btn {
   padding: 8px 14px;
-  border: 1px solid rgba(0,0,0,0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 8px;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   cursor: pointer;
 }
-.dark-mode-on .checklist-score__btn { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.2); }
-.checklist-score__btn:hover { transform: translateY(-1px); }
-.checklist-score__result { opacity: 0.9; }
-.checklist-score__result.show { opacity: 1; }
+
+.dark-mode-on .checklist-score__btn {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.checklist-score__btn:hover {
+  transform: translateY(-1px);
+}
+
+.checklist-score__result {
+  opacity: 0.9;
+}
+
+.checklist-score__result.show {
+  opacity: 1;
+}
 
 /* Jelly Checkbox styles (default) - globalize to all article checkboxes */
 /* 强化选择器，确保覆盖所有文章里的 checkbox（包括未包裹特定容器的情况） */
@@ -495,7 +557,7 @@ li input[type="checkbox"],
   width: 1.15em;
   height: 1.15em;
   margin: 0 8px 0 0;
-  border: 2px solid var(--border-color, rgba(0,0,0,0.35)) !important;
+  border: 2px solid var(--border-color, rgba(0, 0, 0, 0.35)) !important;
   border-radius: 6px;
   position: relative;
   display: inline-grid;
@@ -504,26 +566,33 @@ li input[type="checkbox"],
   /* 即时切换，无动画延迟 */
   transition: none;
 }
+
 .dark-mode-on article input[type="checkbox"],
 .dark-mode-on .content-container input[type="checkbox"],
 .dark-mode-on .content-wrapper input[type="checkbox"],
 .dark-mode-on main input[type="checkbox"],
 .dark-mode-on li input[type="checkbox"],
 .dark-mode-on .checklist-score input[type="checkbox"] {
-  border-color: rgba(255,255,255,0.55);
+  border-color: rgba(255, 255, 255, 0.55);
 }
+
 article input[type="checkbox"]::before,
 .content-container input[type="checkbox"]::before,
 .content-wrapper input[type="checkbox"]::before,
 main input[type="checkbox"]::before,
 li input[type="checkbox"]::before,
-.checklist-score input[type="checkbox"]::before { display: none; }
+.checklist-score input[type="checkbox"]::before {
+  display: none;
+}
+
 article input[type="checkbox"]:active,
 .content-container input[type="checkbox"]:active,
 .content-wrapper input[type="checkbox"]:active,
 main input[type="checkbox"]:active,
 li input[type="checkbox"]:active,
-.checklist-score input[type="checkbox"]:active { transform: none; }
+.checklist-score input[type="checkbox"]:active {
+  transform: none;
+}
 
 /* 通用 √ 形可视标记 */
 article input[type="checkbox"]::after,
@@ -536,21 +605,26 @@ li input[type="checkbox"]::after,
   position: absolute;
   width: 0.24em;
   height: 0.48em;
-  border: 0.14em solid #fff; /* 更细的 √ */
+  border: 0.14em solid #fff;
+  /* 更细的 √ */
   border-top: 0;
   border-left: 0;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -60%) rotate(45deg);
   opacity: 0;
-  transition: none; /* 勾选即时出现 */
+  transition: none;
+  /* 勾选即时出现 */
 }
+
 article input[type="checkbox"]:checked::after,
 .content-container input[type="checkbox"]:checked::after,
 .content-wrapper input[type="checkbox"]:checked::after,
 main input[type="checkbox"]:checked::after,
 li input[type="checkbox"]:checked::after,
-.checklist-score input[type="checkbox"]:checked::after { opacity: 1; }
+.checklist-score input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
 
 /* Jelly animation */
 /* 去除果冻动画，瞬时切换 */
@@ -560,18 +634,42 @@ article input[type="checkbox"]:checked,
 main input[type="checkbox"]:checked,
 li input[type="checkbox"]:checked {
   border-color: #6f79ff;
-  background: linear-gradient(180deg,#7784ff 0%, #5d6bff 100%);
+  background: linear-gradient(180deg, #7784ff 0%, #5d6bff 100%);
 }
 
 /* Override inside checklist-score to match provided module exactly */
 .checklist-score input[type="checkbox"] {
-  width: 17px; height: 17px; border: 1px solid #c8ccd4; border-radius: 3px; transition: background 0.1s ease; cursor: pointer;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #c8ccd4;
+  border-radius: 3px;
+  transition: background 0.1s ease;
+  cursor: pointer;
 }
+
 .checklist-score input[type="checkbox"]::after {
-  top: 1px; left: 5px; width: 5px; height: 11px; border-right: 2px solid #fff; border-bottom: 2px solid #fff; opacity: 0; transform: rotate(45deg) scale(0); transition: all 0.3s ease; transition-delay: 0.15s;
+  top: 1px;
+  left: 5px;
+  width: 5px;
+  height: 11px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  opacity: 0;
+  transform: rotate(45deg) scale(0);
+  transition: all 0.3s ease;
+  transition-delay: 0.15s;
 }
-.checklist-score input[type="checkbox"]:checked { border-color: transparent; background: #6871f1; animation: jelly 0.6s ease; }
-.checklist-score input[type="checkbox"]:checked::after { opacity: 1; transform: rotate(45deg) scale(1); }
+
+.checklist-score input[type="checkbox"]:checked {
+  border-color: transparent;
+  background: #6871f1;
+  animation: jelly 0.6s ease;
+}
+
+.checklist-score input[type="checkbox"]:checked::after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1);
+}
 
 /* Ensure checklist-score internal checkbox-item has proper styling */
 .checklist-score .checkbox-item {
@@ -587,8 +685,8 @@ li input[type="checkbox"]:checked {
   content: '' !important;
 }
 
-.checklist-score .checkbox-item > input[type="checkbox"],
-.checklist-score .checkbox-item > .cbx {
+.checklist-score .checkbox-item>input[type="checkbox"],
+.checklist-score .checkbox-item>.cbx {
   margin: 0;
   flex-shrink: 0;
 }
@@ -600,13 +698,33 @@ li input[type="checkbox"]:checked {
 }
 
 @keyframes jelly {
-  from { transform: scale(1,1); }
-  30% { transform: scale(1.25, 0.75); }
-  40% { transform: scale(0.75, 1.25); }
-  50% { transform: scale(1.15, 0.85); }
-  65% { transform: scale(0.95, 1.05); }
-  75% { transform: scale(1.05, 0.95); }
-  to { transform: scale(1,1); }
+  from {
+    transform: scale(1, 1);
+  }
+
+  30% {
+    transform: scale(1.25, 0.75);
+  }
+
+  40% {
+    transform: scale(0.75, 1.25);
+  }
+
+  50% {
+    transform: scale(1.15, 0.85);
+  }
+
+  65% {
+    transform: scale(0.95, 1.05);
+  }
+
+  75% {
+    transform: scale(1.05, 0.95);
+  }
+
+  to {
+    transform: scale(1, 1);
+  }
 }
 
 /* === Jelly module (global utility) — copy of provided CSS adapted for Markdown === */
@@ -622,6 +740,7 @@ li input[type="checkbox"]:checked {
   cursor: pointer;
   display: inline-block;
 }
+
 .cbx:after {
   content: '';
   position: absolute;
@@ -636,236 +755,283 @@ li input[type="checkbox"]:checked {
   transition: all 0.3s ease;
   transition-delay: 0.15s;
 }
-.lbl { margin-left: 5px; vertical-align: middle; cursor: pointer; }
+
+.lbl {
+  margin-left: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
 /* Use class .jelly on input to avoid id-specific selector */
-input.jelly { -webkit-appearance: none; appearance: none; width: 17px; height: 17px; margin: 0 8px 0 0; position: relative; z-index: 1; opacity: 0; }
-input.jelly:checked + .cbx { border-color: transparent; background: #6871f1; animation: jelly 0.6s ease; }
-input.jelly:checked + .cbx:after { opacity: 1; transform: rotate(45deg) scale(1); }
+input.jelly {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  margin: 0 8px 0 0;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+}
+
+input.jelly:checked+.cbx {
+  border-color: transparent;
+  background: #6871f1;
+  animation: jelly 0.6s ease;
+}
+
+input.jelly:checked+.cbx:after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1);
+}
 
 /* Slim variant */
 .checklist-score.jelly-slim input[type="checkbox"] {
-  width: 1.05em; height: 1.05em; border-width: 1.5px; border-radius: 4px;
+  width: 1.05em;
+  height: 1.05em;
+  border-width: 1.5px;
+  border-radius: 4px;
 }
+
 .checklist-score.jelly-slim input[type="checkbox"]::before {
-  width: 0.55em; height: 0.55em; border-radius: 3px;
+  width: 0.55em;
+  height: 0.55em;
+  border-radius: 3px;
 }
 
 /* Stylus variant: rounded pill with tick */
 .checklist-score.jelly-stylus input[type="checkbox"] {
-  border-radius: 6px; width: 1.15em; height: 1.15em; position: relative;
+  border-radius: 6px;
+  width: 1.15em;
+  height: 1.15em;
+  position: relative;
 }
+
 /* stylus 复用通用 √，仅做尺寸微调 */
 .checklist-score.jelly-stylus input[type="checkbox"]::after {
-  width: 0.26em; height: 0.5em;
+  width: 0.26em;
+  height: 0.5em;
 }
 
 /* Better tap targets for mobile */
-.checklist-score li { cursor: pointer; }
-.checklist-score li > input[type="checkbox"],
+.checklist-score li {
+  cursor: pointer;
+}
+
+.checklist-score li>input[type="checkbox"],
 .content-container input[type="checkbox"],
-.content-wrapper input[type="checkbox"] { vertical-align: middle; }
+.content-wrapper input[type="checkbox"] {
+  vertical-align: middle;
+}
 
 /* Like Button Styling */
 .like-button-container {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 20px 0 30px 0;
-    padding: 16px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0 30px 0;
+  padding: 16px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .dark-mode-on .like-button-container {
-    border-top-color: rgba(255, 255, 255, 0.1);
-    border-bottom-color: rgba(255, 255, 255, 0.1);
+  border-top-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
 }
 
 .like-button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 18px;
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 24px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    color: var(--text-color);
-    backdrop-filter: saturate(120%) blur(2px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+  backdrop-filter: saturate(120%) blur(2px);
 }
 
 .dark-mode-on .like-button {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .like-button:hover:not(:disabled) {
-    background: rgba(255, 192, 203, 0.3);
-    border-color: rgba(255, 105, 180, 0.4);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+  background: rgba(255, 192, 203, 0.3);
+  border-color: rgba(255, 105, 180, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
 }
 
 .dark-mode-on .like-button:hover:not(:disabled) {
-    background: rgba(255, 105, 180, 0.15);
-    border-color: rgba(255, 105, 180, 0.3);
-    box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+  background: rgba(255, 105, 180, 0.15);
+  border-color: rgba(255, 105, 180, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
 }
 
 .like-button:active:not(:disabled) {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .like-button:disabled {
-    cursor: not-allowed;
-    opacity: 0.7;
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
 .like-button:disabled:not(.liked) {
-    position: relative;
+  position: relative;
 }
 
 .like-button:disabled:not(.liked)::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border: 2px solid currentColor;
-    border-top-color: transparent;
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-    margin-left: 8px;
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-left: 8px;
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .like-button.liked {
-    background: rgba(255, 105, 180, 0.2);
-    border-color: rgba(255, 105, 180, 0.4);
-    color: #ff69b4;
+  background: rgba(255, 105, 180, 0.2);
+  border-color: rgba(255, 105, 180, 0.4);
+  color: #ff69b4;
 }
 
 .dark-mode-on .like-button.liked {
-    background: rgba(255, 105, 180, 0.15);
-    border-color: rgba(255, 105, 180, 0.3);
+  background: rgba(255, 105, 180, 0.15);
+  border-color: rgba(255, 105, 180, 0.3);
 }
 
 .like-icon {
-    font-size: 18px;
-    line-height: 1;
-    transition: transform 0.3s ease;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.3s ease;
 }
 
 .like-button.animate .like-icon {
-    animation: heartBeat 0.6s ease;
+  animation: heartBeat 0.6s ease;
 }
 
 @keyframes heartBeat {
-    0%, 100% {
-        transform: scale(1);
-    }
-    25% {
-        transform: scale(1.3);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    75% {
-        transform: scale(1.2);
-    }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.3);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  75% {
+    transform: scale(1.2);
+  }
 }
 
 .like-count {
-    font-weight: 600;
-    min-width: 20px;
-    text-align: center;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
 }
 
 .like-message {
-    font-size: 14px;
-    color: var(--text-color);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
+  font-size: 14px;
+  color: var(--text-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .like-message.show {
-    opacity: 1;
+  opacity: 1;
 }
 
 .like-message.error {
-    color: #ff6b6b;
+  color: #ff6b6b;
 }
 
 .dark-mode-on .like-message.error {
-    color: #ff8787;
+  color: #ff8787;
 }
 
 /* Mobile responsive */
 @media (max-width: 640px) {
-    .like-button-container {
-        margin: 16px 0 24px 0;
-        padding: 12px 0;
-    }
+  .like-button-container {
+    margin: 16px 0 24px 0;
+    padding: 12px 0;
+  }
 
-    .like-button {
-        padding: 8px 14px;
-        font-size: 14px;
-    }
+  .like-button {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
 
-    .like-icon {
-        font-size: 16px;
-    }
+  .like-icon {
+    font-size: 16px;
+  }
 
-    .like-message {
-        font-size: 12px;
-    }
+  .like-message {
+    font-size: 12px;
+  }
 }
 
 /* Breadcrumb navigation */
 .breadcrumb {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.95rem;
-    margin: 0 0 20px 0;
-    color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  margin: 0 0 20px 0;
+  color: rgba(0, 0, 0, 0.65);
 }
 
 .dark-mode-on .breadcrumb {
-    color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .breadcrumb__link {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
 }
 
 .breadcrumb__link:hover {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 .breadcrumb__separator {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .breadcrumb__current {
-    font-weight: 600;
-    color: var(--text-color);
+  font-weight: 600;
+  color: var(--text-color);
 }
 
 @media (max-width: 640px) {
-    .breadcrumb {
-        font-size: 0.88rem;
-        gap: 4px;
-    }
+  .breadcrumb {
+    font-size: 0.88rem;
+    gap: 4px;
+  }
 }
 
 /* Weather widget */
@@ -1168,8 +1334,7 @@ body.bottle-open .bottle-bg-layer {
 .bottle-bg-layer[data-theme="sunny"] {
   /* Soft layered warm sky similar to the reference: peach at top, bands, bright base */
   background-image:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       #ffd2a0 0%,
       #ffd9af 8%,
       #ffe3be 16%,
@@ -1179,8 +1344,7 @@ body.bottle-open .bottle-bg-layer {
       #ecedef 60%,
       #f3f5f8 78%,
       #f8fafc 90%,
-      #fbfcfe 100%
-    );
+      #fbfcfe 100%);
   animation: sunnyShift 32s ease-in-out infinite;
 }
 
@@ -1195,8 +1359,7 @@ body.bottle-open .bottle-bg-layer {
 .bottle-bg-layer[data-theme="rainy"] {
   /* Multi-band rainy sky, darker at top, brighter near horizon, light ground */
   background-image:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       #030611 0%,
       #050b16 14%,
       #111a25 26%,
@@ -1205,8 +1368,7 @@ body.bottle-open .bottle-bg-layer {
       #d1d5dd 52%,
       #e5e8f0 68%,
       #f4f6fb 82%,
-      #f9fafc 100%
-    );
+      #f9fafc 100%);
   animation: rainyShift 32s ease-in-out infinite;
 }
 
@@ -1241,12 +1403,10 @@ body.bottle-open .bottle-bg-layer {
   inset: -10%;
   opacity: 0.4;
   filter: none;
-  background-image: linear-gradient(
-    190deg,
-    rgba(180, 198, 234, 0.0) 0%,
-    rgba(180, 198, 234, 0.0) 65%,
-    rgba(180, 198, 234, 0.9) 100%
-  );
+  background-image: linear-gradient(190deg,
+      rgba(180, 198, 234, 0.0) 0%,
+      rgba(180, 198, 234, 0.0) 65%,
+      rgba(180, 198, 234, 0.9) 100%);
   background-size: 2px 90px;
   background-repeat: repeat;
   animation: rainFall 1.4s linear infinite;
@@ -1262,9 +1422,11 @@ body.bottle-open .bottle-bg-layer {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -1274,9 +1436,11 @@ body.bottle-open .bottle-bg-layer {
   0% {
     background-position: 50% 0%;
   }
+
   50% {
     background-position: 50% 100%;
   }
+
   100% {
     background-position: 50% 0%;
   }
@@ -1286,6 +1450,7 @@ body.bottle-open .bottle-bg-layer {
   0% {
     background-position: 0 0;
   }
+
   100% {
     background-position: 0 60px;
   }
@@ -1295,9 +1460,11 @@ body.bottle-open .bottle-bg-layer {
   0% {
     background-position: 0% 0%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 0%;
   }
@@ -1307,9 +1474,11 @@ body.bottle-open .bottle-bg-layer {
   0% {
     transform: translate3d(0, 0, 0) scale(1);
   }
+
   50% {
     transform: translate3d(5%, -10%, 0) scale(0.9);
   }
+
   100% {
     transform: translate3d(-5%, -20%, 0) scale(1);
   }
@@ -1319,6 +1488,7 @@ body.bottle-open .bottle-bg-layer {
   0% {
     transform: translate3d(0, -40px, 0);
   }
+
   100% {
     transform: translate3d(0, 40px, 0);
   }
@@ -1327,3 +1497,233 @@ body.bottle-open .bottle-bg-layer {
 
 
 
+
+/* Weather Widget Launcher & Animations */
+.weather-widget__container {
+  position: relative;
+  width: fit-content;
+  margin: 20px 0;
+}
+
+.weather-widget__launcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, rgba(173, 216, 230, 0.2), rgba(255, 255, 255, 0.9));
+  border: 1px solid rgba(135, 206, 235, 0.5);
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #0c2d3c;
+  box-shadow: 0 4px 12px rgba(135, 206, 235, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+}
+
+.dark-mode-on .weather-widget__launcher {
+  background: linear-gradient(135deg, rgba(135, 206, 235, 0.15), rgba(0, 0, 0, 0.6));
+  border-color: rgba(173, 216, 230, 0.4);
+  color: #e6f4ff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.weather-widget__launcher:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(135, 206, 235, 0.3);
+}
+
+.weather-widget__launcher-icon {
+  font-size: 1.2rem;
+}
+
+/* Card Transitions */
+.weather-widget__card-wrapper {
+  transform-origin: top left;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.weather-widget__card-wrapper.is-hidden {
+  opacity: 0;
+  transform: scale(0.9) translateY(-10px);
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Control Buttons */
+.weather-widget__controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.weather-widget__icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: inherit;
+}
+
+.weather-widget__icon-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode-on .weather-widget__icon-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.weather-widget__locate-btn {
+  font-size: 1rem;
+}
+
+/* Adjust header for controls */
+.weather-widget__header {
+  padding-right: 4px;
+}
+
+/* Homepage Feature Cards */
+.home-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.home-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dark-mode-on .home-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.home-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.dark-mode-on .home-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.home-card__icon {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.home-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.home-card__desc {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.home-card__link {
+  margin-top: auto;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease;
+}
+
+.dark-mode-on .home-card__link {
+  color: #66b3ff;
+}
+
+.home-card__link:hover {
+  gap: 10px;
+}
+
+/* Spotify Container */
+.spotify-container {
+  margin: 30px 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.spotify-container:hover {
+  transform: scale(1.01);
+}
+
+/* Recent Posts Grid */
+.recent-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.post-card {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 18px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dark-mode-on .post-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.dark-mode-on .post-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.post-card__title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.post-card__date {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}

@@ -9,18 +9,26 @@ Hello!!!我的小瓶子们~ 欢迎来我瓶中作客~:partying_face:
 
 {{< weather-widget >}}
 
-:mailbox:遇到任何问题/想合作咨询，欢迎敲一下我的瓶子：
-> aqutikri@gmail.com.
+<div class="home-section-grid">
+  <div class="home-card">
+    <div class="home-card__icon">📬</div>
+    <h3 class="home-card__title">Contact Me</h3>
+    <p class="home-card__desc">遇到任何问题或想合作咨询，欢迎敲一下我的瓶子。</p>
+    <a href="mailto:aqutikri@gmail.com" class="home-card__link">aqutikri@gmail.com →</a>
+  </div>
 
+  <div class="home-card">
+    <div class="home-card__icon">🐣</div>
+    <h3 class="home-card__title">Latest Journal</h3>
+    <p class="home-card__desc">前往查阅最新期刊 AQUA #0</p>
+    <a href="https://tikri.site/notification-jar/AQUA-%230/" class="home-card__link">Read Now →</a>
+  </div>
+</div>
 
-:headphones: 前往收听最新podcast：
+<div class="spotify-container">
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/65SF59UXV4TJPbRGY0QXAQ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
 
-> [瓶中水podcast1: 什么是自源性?声音的重要性](https://tikri.site/podcast-music/AQUA-IN-JAR-episode1/)  
+:love_letter: **Latest Blog Posts**
 
-:love_letter: 前往查阅最新文章blog：  
-
-> {{< recent-posts count=4 >}}
-
-:hatching_chick: 前往查阅最新期刊：
-
-> [AQUA #0](https://tikri.site/notification-jar/AQUA-%230/)  
+{{< recent-posts count=4 >}}

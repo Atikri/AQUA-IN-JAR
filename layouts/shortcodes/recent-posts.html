@@ -10,15 +10,13 @@
 {{- $sorted := sort $published "Date" "desc" -}}
 {{- $items := first $count $sorted -}}
 
-<section class="recent-posts">
-  <ul>
+<div class="recent-posts-grid">
   {{- range $items }}
-    <li>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-      <time datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</time>
-    </li>
+    <a href="{{ .Permalink }}" class="post-card">
+      <div class="post-card__title">{{ .Title }}</div>
+      <div class="post-card__date">{{ .Date.Format "2006-01-02" }}</div>
+    </a>
   {{- end }}
-  </ul>
-</section>
+</div>
 
 

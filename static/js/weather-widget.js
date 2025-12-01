@@ -6,6 +6,8 @@
   const BG_LAYER_ID = "bottle-bg-layer";
   let isBottleOpen = false;
   let activeTheme = null;
+  let isExpanded = false;
+  let currentWeatherData = null;
 
   const defaultLocation = {
     name: "香港 · Hong Kong",
@@ -149,16 +151,23 @@
             <div class="weather-widget__location-line">
               <span class="weather-widget__location-pin">📍</span>
               <span class="weather-widget__location-name">${locationName}</span>
+              <div class="weather-widget__controls">
+                <button class="weather-widget__icon-btn weather-widget__locate-btn" title="定位我的位置" aria-label="Locate me">
+                  ◎
+                </button>
+                <button class="weather-widget__icon-btn weather-widget__minimize-btn" title="收起天气" aria-label="Minimize weather">
+                  _
+                </button>
+              </div>
             </div>
-            <span class="weather-widget__subtitle">${
-              locationNote || "今天瓶口外的天气"
-            }</span>
+            <span class="weather-widget__subtitle">${locationNote || "今天瓶口外的天气"
+      }</span>
           </div>
           <div class="weather-widget__current">
             <div class="weather-widget__current-icon">${current.icon}</div>
             <div class="weather-widget__current-temp">${Math.round(
-              currentTemp
-            )}°</div>
+        currentTemp
+      )}°</div>
             <div class="weather-widget__current-desc">${current.label}</div>
           </div>
         </div>
@@ -184,6 +193,79 @@
     `;
   }
 
+  function createLauncherHTML() {
+    return `
+      <button class="weather-widget__launcher" aria-label="Show weather">
+        <span class="weather-widget__launcher-icon">🌤️</span>
+        <span class="weather-widget__launcher-text">Weather</span>
+      </button>
+    `;
+  }
+
+  function renderWidget(container) {
+    // Clear container
+    container.innerHTML = '';
+
+    // Create wrapper structure
+    const wrapper = document.createElement('div');
+    wrapper.className = 'weather-widget__container';
+
+    // Add launcher
+    const launcher = document.createElement('div');
+    launcher.innerHTML = createLauncherHTML();
+    const launcherBtn = launcher.firstElementChild;
+
+    // Add card wrapper
+    const cardWrapper = document.createElement('div');
+    cardWrapper.className = 'weather-widget__card-wrapper';
+
+    if (!isExpanded) {
+      cardWrapper.classList.add('is-hidden');
+      launcherBtn.style.display = 'flex';
+    } else {
+      launcherBtn.style.display = 'none';
+    }
+
+    wrapper.appendChild(launcherBtn);
+    wrapper.appendChild(cardWrapper);
+    container.appendChild(wrapper);
+
+    // Event listeners
+    launcherBtn.addEventListener('click', () => {
+      isExpanded = true;
+      updateWidgetState(wrapper);
+    });
+
+    return { wrapper, cardWrapper, launcherBtn };
+  }
+
+  function updateWidgetState(wrapper) {
+    const launcherBtn = wrapper.querySelector('.weather-widget__launcher');
+    const cardWrapper = wrapper.querySelector('.weather-widget__card-wrapper');
+
+    if (isExpanded) {
+      launcherBtn.style.display = 'none';
+      cardWrapper.classList.remove('is-hidden');
+      // If we don't have data yet, show loading
+      if (!cardWrapper.innerHTML.trim()) {
+        renderLoading(cardWrapper);
+        // If no data, fetch default
+        if (!currentWeatherData) {
+          fetchDefaultWeather(cardWrapper);
+        } else {
+          // Re-render existing data
+          cardWrapper.innerHTML = createCardHTML(currentWeatherData);
+          setupCardInteractions(cardWrapper, wrapper);
+        }
+      }
+    } else {
+      cardWrapper.classList.add('is-hidden');
+      setTimeout(() => {
+        launcherBtn.style.display = 'flex';
+      }, 300); // Wait for transition
+    }
+  }
+
   function renderLoading(container) {
     container.innerHTML = `
       <div class="weather-widget__card weather-widget__card--loading">
@@ -198,6 +280,7 @@
       <div class="weather-widget__card weather-widget__card--error">
         <div class="weather-widget__error-icon">💧</div>
         <div class="weather-widget__error-text">${message}</div>
+        <button class="weather-widget__toggle-btn" style="margin-top:10px; flex:none;" onclick="location.reload()">重试</button>
       </div>
     `;
   }
@@ -257,30 +340,28 @@
       });
   }
 
-  function initWidget() {
-    const container = document.getElementById(WIDGET_ID);
-    if (!container) return;
+  function fetchDefaultWeather(container) {
+    fetchWeather(defaultLocation)
+      .then((data) => {
+        currentWeatherData = {
+          ...data,
+          locationNote: "默认位置：AQUA 的瓶口 · Hong Kong",
+        };
+        container.innerHTML = createCardHTML(currentWeatherData);
+        setupCardInteractions(container, container.parentElement);
+      })
+      .catch(() => {
+        renderError(container, "AQUA 今天没看清楚外面的天气，下次再试试吧～");
+      });
+  }
 
-    renderLoading(container);
-
-    function useDefault() {
-      fetchWeather(defaultLocation)
-        .then((data) => {
-          container.innerHTML = createCardHTML({
-            ...data,
-            locationNote: "默认位置：AQUA 的瓶口 · Hong Kong",
-          });
-          setupBottleToggle(container);
-        })
-        .catch(() => {
-          renderError(container, "AQUA 今天没看清楚外面的天气，下次再试试吧～");
-        });
-    }
-
+  function handleLocateMe(container, wrapper) {
     if (!navigator.geolocation) {
-      useDefault();
+      alert("你的浏览器不支持地理定位");
       return;
     }
+
+    renderLoading(container);
 
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -296,37 +377,77 @@
             });
           })
           .then((data) => {
+            currentWeatherData = data;
             container.innerHTML = createCardHTML(data);
-            setupBottleToggle(container);
+            setupCardInteractions(container, wrapper);
           })
           .catch(() => {
-            // 如果反向地理失败或接口有问题，仍然用你的坐标，只是不显示具体城市名
+            // Fallback to coordinates only
+            const latStr = latitude.toFixed(2);
+            const lonStr = longitude.toFixed(2);
+            const coordName = `Lat: ${latStr}, Lon: ${lonStr}`;
+
             fetchWeather({
               latitude,
               longitude,
-              name: "Your location",
+              name: coordName,
               timezone: "auto",
               locationNote: "基于你的浏览器定位，AQUA 正在陪你看这片天",
             })
               .then((data) => {
+                currentWeatherData = data;
                 container.innerHTML = createCardHTML(data);
-                setupBottleToggle(container);
+                setupCardInteractions(container, wrapper);
               })
               .catch(() => {
-                // 最后一步才退回默认城市
-                useDefault();
+                renderError(container, "定位获取天气失败，请重试");
               });
           });
       },
-      () => {
-        useDefault();
+      (err) => {
+        console.error(err);
+        // If denied or error, go back to default but keep card open
+        fetchDefaultWeather(container);
+        alert("无法获取位置信息，已显示默认天气");
       },
       {
         enableHighAccuracy: false,
-        timeout: 7000,
+        timeout: 10000,
         maximumAge: 60 * 60 * 1000,
       }
     );
+  }
+
+  function setupCardInteractions(cardContainer, wrapper) {
+    // Minimize button
+    const minimizeBtn = cardContainer.querySelector('.weather-widget__minimize-btn');
+    if (minimizeBtn) {
+      minimizeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        isExpanded = false;
+        updateWidgetState(wrapper);
+      });
+    }
+
+    // Locate button
+    const locateBtn = cardContainer.querySelector('.weather-widget__locate-btn');
+    if (locateBtn) {
+      locateBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        handleLocateMe(cardContainer, wrapper);
+      });
+    }
+
+    // Bottle toggle logic
+    setupBottleToggle(cardContainer);
+  }
+
+  function initWidget() {
+    const container = document.getElementById(WIDGET_ID);
+    if (!container) return;
+
+    // Initial render: just the structure, default collapsed
+    renderWidget(container);
   }
 
   if (document.readyState === "loading") {
@@ -344,6 +465,9 @@
     if (!buttons.length) return;
 
     buttons.forEach((btn) => {
+      // Skip if it's the retry button in error state which might share class
+      if (btn.hasAttribute('onclick')) return;
+
       btn.addEventListener("click", () => {
         const target = btn.dataset.toggle === "open" ? "open" : "close";
         applyBottleBackground(target, theme);
@@ -362,6 +486,7 @@
 
   function updateToggleButtons(buttons, mode) {
     buttons.forEach((btn) => {
+      if (!btn.dataset.toggle) return;
       const isActive = btn.dataset.toggle === mode;
       btn.classList.toggle("is-active", isActive);
     });

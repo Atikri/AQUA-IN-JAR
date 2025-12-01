@@ -1681,6 +1681,18 @@ body.bottle-open .bottle-bg-layer {
   transform: scale(1.01);
 }
 
+.spotify-fallback {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 8px;
+  opacity: 0.8;
+}
+
+.spotify-fallback a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 /* Recent Posts Grid */
 .recent-posts-grid {
   display: grid;

@@ -261,157 +261,200 @@ table th {
 /* (Removed global droplet overlay per request) */
 
 /* Sparkling Header Animation */
+/* Sparkling Header Animation - Premium Upgrade */
 .sparkling-header {
   text-align: center;
-  padding: 40px 20px;
-  margin-bottom: 30px;
+  padding: 60px 20px;
+  margin-bottom: 40px;
   position: relative;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-  border-radius: 15px;
+  border-radius: 24px;
   overflow: hidden;
+  /* Softer Glass Effect Override */
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.05) 100%) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1) !important;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.dark-mode-on .sparkling-header {
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.01) 100%) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2) !important;
 }
 
 .sparkle-container {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .sparkle {
-  font-size: 2rem;
-  animation: sparkle 2s ease-in-out infinite;
-  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+  animation: floatSparkle 4s ease-in-out infinite;
 }
 
 .sparkle-left {
+  top: 20%;
+  left: 15%;
   animation-delay: 0s;
+  font-size: 1.8rem;
 }
 
 .sparkle-right {
-  animation-delay: 1s;
+  bottom: 25%;
+  right: 15%;
+  animation-delay: 2s;
+  font-size: 1.4rem;
 }
 
 .main-title {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 3.5rem;
+  font-weight: 800;
   color: var(--text-color);
   margin: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  animation: titleGlow 3s ease-in-out infinite alternate;
+  letter-spacing: -0.02em;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(135deg, var(--text-color) 30%, rgba(100, 100, 100, 0.8) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: var(--text-color);
+}
+
+.dark-mode-on .main-title {
+  background: linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--text-color);
   opacity: 0.8;
-  margin: 10px 0 0 0;
-  animation: fadeInUp 1s ease-out;
+  margin: 0;
+  font-weight: 400;
+  /* Lighter weight */
+  letter-spacing: 0.2em;
+  /* Wider spacing */
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  /* Blur-in animation */
+  animation: blurIn 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  filter: blur(10px);
+  opacity: 0;
 }
 
-/* Sparkle Animation */
-@keyframes sparkle {
+/* Floating Animation */
+@keyframes floatSparkle {
 
   0%,
   100% {
-    transform: scale(1) rotate(0deg);
-    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
-  }
-
-  25% {
-    transform: scale(1.2) rotate(90deg);
-    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 1));
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 0.8;
   }
 
   50% {
-    transform: scale(1.1) rotate(180deg);
-    filter: drop-shadow(0 0 15px rgba(255, 165, 0, 0.9));
-  }
-
-  75% {
-    transform: scale(1.3) rotate(270deg);
-    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 1));
+    transform: translateY(-15px) scale(1.1) rotate(15deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.9));
   }
 }
 
-/* Title Glow Animation */
-@keyframes titleGlow {
+/* Blur In Animation for Subtitle */
+@keyframes blurIn {
   0% {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  100% {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 20px rgba(64, 224, 208, 0.3);
-  }
-}
-
-/* Fade In Up Animation */
-@keyframes fadeInUp {
-  0% {
+    filter: blur(10px);
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
 
   100% {
+    filter: blur(0);
     opacity: 0.8;
     transform: translateY(0);
   }
 }
 
-/* Additional Sparkle Effects */
-.sparkling-header::before {
+/* Shimmer Overlay - Softer */
+.sparkling-header::after {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, transparent 30%, rgba(255, 215, 0, 0.1) 50%, transparent 70%);
-  animation: shimmer 3s ease-in-out infinite;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.15),
+      transparent);
+  transform: skewX(-25deg);
+  animation: shimmerSweep 8s infinite;
   pointer-events: none;
 }
 
-@keyframes shimmer {
+@keyframes shimmerSweep {
   0% {
-    transform: translateX(-100%);
+    left: -100%;
+  }
+
+  20% {
+    left: 200%;
   }
 
   100% {
-    transform: translateX(100%);
+    left: 200%;
   }
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .sparkling-header {
-    padding: 30px 15px;
+    padding: 40px 20px;
   }
 
   .main-title {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
   }
 
-  .sparkle {
-    font-size: 1.5rem;
+  .sparkle-left {
+    left: 5%;
+  }
+
+  .sparkle-right {
+    right: 5%;
   }
 }
 
 @media (max-width: 480px) {
   .main-title {
-    font-size: 1.8rem;
-  }
-
-  .subtitle {
-    font-size: 0.9rem;
-  }
-
-  .sparkle {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 }
 
@@ -1901,7 +1944,8 @@ body.bottle-open .bottle-bg-layer {
 .checklist-score,
 .post-card,
 .featured-section li a,
-.sparkling-header {
+.sparkling-header,
+.home-card {
   /* Inherit glass properties */
   background: var(--glass-gradient) !important;
   background-attachment: fixed !important;
@@ -1920,7 +1964,8 @@ body.bottle-open .bottle-bg-layer {
 .checklist-score:hover,
 .post-card:hover,
 .featured-section li a:hover,
-.sparkling-header:hover {
+.sparkling-header:hover,
+.home-card:hover {
   transform: translateY(-4px) !important;
   box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25) !important;
   border-color: rgba(255, 255, 255, 0.6) !important;
@@ -1930,7 +1975,8 @@ body.bottle-open .bottle-bg-layer {
 .dark-mode-on .checklist-score:hover,
 .dark-mode-on .post-card:hover,
 .dark-mode-on .featured-section li a:hover,
-.dark-mode-on .sparkling-header:hover {
+.dark-mode-on .sparkling-header:hover,
+.dark-mode-on .home-card:hover {
   box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5) !important;
   border-color: rgba(255, 255, 255, 0.2) !important;
 }

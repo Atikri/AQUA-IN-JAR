@@ -5,6 +5,10 @@ title: "Episode1: 什么是自源性?声音的重要性?"
 
 {{< audio src="audio/podcast1.mp3" preload="metadata" >}}    
 
+<div class="podcast-container">
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/65SF59UXV4TJPbRGY0QXAQ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
+
 我的第一集podcast终于终于!上线了!  
 太感动了😭  
 

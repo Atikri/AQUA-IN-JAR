@@ -1739,3 +1739,218 @@ body.bottle-open .bottle-bg-layer {
   font-size: 0.85rem;
   opacity: 0.6;
 }
+
+/* Premium Checklist Theme */
+.checklist-score.jelly-premium {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.dark-mode-on .checklist-score.jelly-premium {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.checklist-score.jelly-premium .checklist-score__content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checklist-score.jelly-premium .checklist-score__content li {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 16px 20px;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* Shine Effect */
+.checklist-score.jelly-premium .checklist-score__content li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.6) 50%,
+      transparent 70%);
+  background-attachment: fixed;
+  background-size: 200% 200%;
+  opacity: 0.4;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+.dark-mode-on .checklist-score.jelly-premium .checklist-score__content li {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.checklist-score.jelly-premium .checklist-score__content li:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.dark-mode-on .checklist-score.jelly-premium .checklist-score__content li:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Custom Checkbox for Premium Theme */
+.checklist-score.jelly-premium input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px !important;
+  height: 22px !important;
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 6px !important;
+  margin-right: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #fff !important;
+  flex-shrink: 0;
+}
+
+.dark-mode-on .checklist-score.jelly-premium input[type="checkbox"] {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.checklist-score.jelly-premium input[type="checkbox"]:checked {
+  background: #9d8ec3 !important;
+  /* Soft purple */
+  border-color: #9d8ec3 !important;
+  transform: scale(1.05);
+}
+
+.checklist-score.jelly-premium input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg) scale(0);
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+
+.checklist-score.jelly-premium input[type="checkbox"]:checked::after {
+  transform: rotate(45deg) scale(1);
+  opacity: 1;
+}
+
+/* Hide default markers if any */
+.checklist-score.jelly-premium input[type="checkbox"]::before {
+  display: none !important;
+}
+
+/* Glassmorphism & Dynamic Scroll Effect */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  --glass-blur: blur(12px);
+  /* Dynamic scroll gradient */
+  --glass-gradient: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.1) 100%);
+}
+
+.dark-mode-on {
+  --glass-bg: rgba(20, 20, 20, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  --glass-gradient: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.02) 100%);
+}
+
+/* Base Glass Class */
+.glass-effect {
+  background: var(--glass-gradient);
+  background-attachment: fixed;
+  /* This creates the dynamic scroll effect */
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 16px;
+}
+
+/* Apply to specific elements */
+.category-card,
+.checklist-score,
+.post-card,
+.featured-section li a,
+.sparkling-header {
+  /* Inherit glass properties */
+  background: var(--glass-gradient) !important;
+  background-attachment: fixed !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow) !important;
+  border-radius: 16px !important;
+
+  /* Reset some existing styles to avoid conflicts */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+}
+
+/* Hover effects */
+.category-card:hover,
+.checklist-score:hover,
+.post-card:hover,
+.featured-section li a:hover,
+.sparkling-header:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.dark-mode-on .category-card:hover,
+.dark-mode-on .checklist-score:hover,
+.dark-mode-on .post-card:hover,
+.dark-mode-on .featured-section li a:hover,
+.dark-mode-on .sparkling-header:hover {
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Post Card Specifics (since it might be new) */
+.post-card {
+  display: block;
+  padding: 20px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-card__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.post-card__date {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}

@@ -57,7 +57,7 @@
             {{- if eq .Kind "home" }}
             <ul>
                 <li><a href="#search-section">Search Articles</a></li>
-                <li><a href="#categories-section">分类浏览</a></li>
+                <li><a href="#categories-section">categories</a></li>
                 {{- range .Site.MainSections }}
                 {{- $section := $.Site.GetPage "section" . }}
                 {{- if $section }}

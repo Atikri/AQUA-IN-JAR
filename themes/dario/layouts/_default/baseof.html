@@ -1,13 +1,12 @@
 <!doctype html>
-<html lang="{{- .Site.Language.LanguageCode -}}" dir="{{- .Site.Language.LanguageDirection | default "ltr" -}}" class="kind-{{ .Kind }}
-{{- if eq .Site.Params.colorScheme "dark" }} dark-mode-on
-{{- else if eq .Site.Params.colorScheme "light" }} dark-mode-off
-{{- end }}">
+<html lang="{{- .Site.Language.LanguageCode -}}" dir="{{- .Site.Language.LanguageDirection | default " ltr" -}}" class="kind-{{ .Kind }}
+{{- if eq .Site.Params.colorScheme " dark" }} dark-mode-on {{- else if eq .Site.Params.colorScheme "light" }}
+    dark-mode-off {{- end }}">
 
 {{ partial "head.html" . }}
 
-<body{{ if .TableOfContents }} class="has-toc"{{ end }}>
-{{ partial "header.html" . }}
+<body{{ if .TableOfContents }} class="has-toc" {{ end }}>
+    {{ partial "header.html" . }}
 
     {{- if or .TableOfContents (eq .Kind "section") (eq .Kind "home") }}
     <div class="toc-container">
@@ -22,7 +21,7 @@
             <li><a href="{{ $section.Permalink }}">{{ $section.Title }}</a></li>
             {{- end }}
             {{- end }}
-            
+
         </ul>
         {{- else if and (eq .Kind "section") .Sections }}
         {{- if eq .Section "toolbox" }}
@@ -64,7 +63,7 @@
                 <li><a href="{{ $section.Permalink }}">{{ $section.Title }}</a></li>
                 {{- end }}
                 {{- end }}
-            
+
             </ul>
             {{- else if and (eq .Kind "section") .Sections }}
             {{- if eq .Section "toolbox" }}
@@ -96,12 +95,27 @@
     <main class="content-wrapper">
         <article class="content-container">
 
-{{ block "main" . }}{{ end }}
+            {{ block "main" . }}{{ end }}
 
         </article>
     </main>
 
-{{ partial "footer.html" . }}
-</body>
+    {{ partial "footer.html" . }}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tocOverlay = document.getElementById('tocOverlay');
+            if (tocOverlay) {
+                const links = tocOverlay.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', function () {
+                        // Close the overlay
+                        tocOverlay.classList.remove('open');
+                        document.body.classList.remove('toc-open');
+                    });
+                });
+            }
+        });
+    </script>
+    </body>
 
 </html>

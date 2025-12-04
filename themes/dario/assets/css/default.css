@@ -55,6 +55,7 @@ header h1 a {
   --invert-percentage: 100%;
   --code-bg: rgb(55, 56, 62);
   --hljs-bg: rgb(46, 46, 51);
+  --logo-glow: drop-shadow(0 0 6px rgba(255, 200, 80, 0.8));
 }
 
 .dark-mode-off:root {
@@ -98,6 +99,7 @@ header h1 a {
     --invert-percentage: 100%;
     --code-bg: rgb(55, 56, 62);
     --hljs-bg: rgb(46, 46, 51);
+    --logo-glow: drop-shadow(0 0 6px rgba(255, 200, 80, 0.8));
   }
 }
 
@@ -1184,6 +1186,7 @@ footer {
     display: inline-block;
     mix-blend-mode: normal;
     opacity: 1;
+    filter: invert(1) var(--logo-glow);
   }
 }
 
@@ -1195,7 +1198,7 @@ footer {
   display: inline-block;
   mix-blend-mode: normal;
   opacity: 1;
-  filter: invert(1);
+  filter: invert(1) var(--logo-glow);
 }
 
 /* Article Navigation Styles */
@@ -1263,11 +1266,13 @@ footer {
 @media (prefers-color-scheme: dark) {
   .nav-image img {
     background: transparent !important;
+    filter: var(--logo-glow);
   }
 }
 
 .dark-mode-on .nav-image img {
   background: transparent !important;
+  filter: var(--logo-glow);
 }
 
 /* Hover effects for navigation buttons */
@@ -1312,5 +1317,16 @@ footer {
   .nav-button {
     width: 50px;
     height: 35px;
+  }
+}
+
+/* Back to Top Button Dark Mode Glow */
+.dark-mode-on .back-to-top {
+  filter: var(--logo-glow);
+}
+
+@media (prefers-color-scheme: dark) {
+  .back-to-top {
+    filter: var(--logo-glow);
   }
 }

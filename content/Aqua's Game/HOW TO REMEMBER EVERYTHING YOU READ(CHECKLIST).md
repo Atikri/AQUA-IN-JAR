@@ -5,11 +5,6 @@ title: "HOW TO REMEMBER EVERYTHING YOU READ(CHECKLIST)"
 
 [具体内容请见这篇文章](http://tikri.site/aquas-field/reading-notes/HOW-TO-REMEMBER-EVERYTHING-YOU-READ/)
 
-{{< checklist-score title="阅读记忆力自测"
-    ok="0-10：还需要加强"
-    mid="11-30：做得不错，继续保持"
-    bad="31+：你是阅读大师！"
-    style="premium" >}}
 
 ## 🧠 一、编码与理解策略
 
@@ -71,6 +66,4 @@ title: "HOW TO REMEMBER EVERYTHING YOU READ(CHECKLIST)"
 - [ ] 环境与情境管理
 - [ ] 身心健康（睡眠/运动/饮食）
 - [ ] 行动与兴趣一致性
-
-{{< /checklist-score >}}
 

@@ -1,0 +1,149 @@
+{{- define "main" }}
+<!-- Sparkling Header Section - 放在最顶部 -->
+<section class="sparkling-header">
+    <div class="sparkle-container">
+        <div class="sparkle sparkle-left">✨</div>
+        <div class="sparkle sparkle-right">✨</div>
+    </div>
+    <h1 class="main-title">AQUA IN JAR</h1>
+    <p class="subtitle">欢迎来到我的瓶子世界 🌊</p>
+</section>
+
+{{- with .Site.GetPage "_index.md" }}
+{{- if .Params.homePageIsPost }}
+<h1>{{ .Title }}</h1>
+<h4>{{ .Params.description }}</h4>
+<p class="author-date"><time datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</time> - {{ .Params.author }}
+</p>
+
+{{- if not (.Param "disableAnchoredHeadings") }}
+
+{{ partial "anchored_headings.html" .Content }}
+
+{{- else }}
+
+{{ .Content }}
+
+{{- end }}
+{{- else }}
+{{- $subtitle := .Params.subtitle }}
+{{- with .Content }}
+<section>
+    <h1 class="smaller">{{ $subtitle | emojify }}</h1>
+    {{ . }}
+</section>
+{{- end }}
+{{- end }}
+{{- end }}
+
+<!-- Canvas Water Background removed per request -->
+
+<!-- Calendar Section -->
+<section id="calendar-section" class="calendar-section" style="margin-bottom: 40px;">
+    <h2>{{ "Calendar :calendar:" | emojify }}</h2>
+    {{ partial "calendar-widget.html" . }}
+</section>
+
+<!-- Search Section -->
+<section id="search-section" class="search-section">
+    <h2>{{ "Search Articles :turtle:" | emojify }}</h2>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="输入关键词搜索..." class="search-input">
+        <p style="opacity:0.8; margin: 6px 0 8px; font-size: 0.95em;">请输入至少两个字再开始搜索</p>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section id="categories-section" class="categories-section">
+    <h2>{{ "分类浏览:monkey:" | emojify }}</h2>
+    <div class="categories-grid">
+        <a class="category-card-link" href="{{ " notification-jar/" | relURL }}">
+            <div class="category-card">
+                <h3>📢 Notification Jar</h3>
+                <p>通知罐子 - 记录重要的通知和提醒</p>
+            </div>
+        </a>
+        <a class="category-card-link" href="{{ " aquas-field/" | relURL }}">
+            <div class="category-card">
+                <h3>🌾 Aqua's Field</h3>
+                <p>水之田野 - 创意和灵感的源泉</p>
+            </div>
+        </a>
+        <a class="category-card-link" href="{{ " podcast-music/" | relURL }}">
+            <div class="category-card">
+                <h3>🎧 Podcast & Music & Video</h3>
+                <p>播客&音乐&视频：收录音频节目与乐曲还有视频</p>
+            </div>
+        </a>
+        <a class="category-card-link" href="{{ " aquas-game/" | relURL }}">
+            <div class="category-card">
+                <h3>🎲 Aqua's Game</h3>
+                <p>收录了一些可互动的小游戏~</p>
+            </div>
+        </a>
+        <a class="category-card-link" href="{{ " self-generation/" | relURL }}">
+            <div class="category-card">
+                <h3>✨ Self-Generation</h3>
+                <p>AQUA IN JAR主题专栏</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- Featured Section -->
+<section id="featured-section" class="featured-section">
+    <h2>{{ "おすすめ:chipmunk:" | emojify }}</h2>
+    <ul>
+        {{- $featured := where .Site.RegularPages ".Params.featured" true -}}
+        {{- range first 8 $featured }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{- end }}
+    </ul>
+</section>
+
+{{- range sort (where .Site.Sections "Section" "in" .Site.MainSections) "Weight" }}
+<section>
+    <h2>{{ .Title }}</h2>
+    <ul>
+        {{- if eq .Section "toolbox" }}
+        {{- $pages := where .Site.RegularPages "Section" "toolbox" -}}
+        {{- $pages = where $pages "Params.tags" "intersect" (slice "inter-nos") -}}
+        {{- range $pages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{- end }}
+        {{- else }}
+        {{- range where .Site.RegularPages "Section" .Section }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{- end }}
+        {{- end }}
+    </ul>
+</section>
+{{- end }}
+
+
+
+{{/* Precompute random-article list as JSON to avoid templating inside JS */}}
+{{- $s := newScratch -}}
+{{- $s.Set "articles" (slice) -}}
+{{- $types := slice "posts" "aquas-field" "notification-jar" "podcast-music" -}}
+{{- range where .Site.RegularPages "Type" "in" $types -}}
+{{- $s.Add "articles" (slice .Permalink) -}}
+{{- end -}}
+{{- $articlesJSON := ($s.Get "articles") | jsonify -}}
+
+<!-- Random Article JavaScript -->
+<script>
+    const __randomArticles = JSON.parse('{{ $articlesJSON | safeJS }}');
+    function randomArticle() {
+        const validArticles = __randomArticles.filter(url => url && url.trim() !== '');
+        if (validArticles.length > 0) {
+            const randomIndex = Math.floor(Math.random() * validArticles.length);
+            const randomUrl = validArticles[randomIndex];
+            window.location.href = randomUrl;
+        } else {
+            alert('暂时没有可用的文章');
+        }
+    }
+</script>
+{{- end }}

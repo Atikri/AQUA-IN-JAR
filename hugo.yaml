@@ -45,7 +45,19 @@ canonifyURLs: true
 
 # Output formats for search
 outputs:
-  home: ["HTML", "JSON"]
+  home: ["HTML", "JSON", "Calendar"]
+
+mediaTypes:
+  application/json:
+    suffixes:
+      - json
+
+outputFormats:
+  Calendar:
+    mediaType: "application/json"
+    baseName: "calendar"
+    isPlainText: true
+    notAlternative: true
 
 # Development settings
 disablePathToLower: true

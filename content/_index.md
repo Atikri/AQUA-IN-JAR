@@ -1,5 +1,5 @@
-Hi! I'm **Tikri**~  Welcome to my bottle :smiling_face_with_three_hearts:  
-Hello!!!我的小瓶子们~ 欢迎来我瓶中作客~:partying_face:  
+## Hi! I'm **Tikri**~  
+Hello!!!我的小瓶子们~ 欢迎来我瓶中作客~:smiling_face_with_three_hearts: 
 
 我会在这个网站分享一些我阅读过的文章，食谱，好玩有趣的事以及日常~  
 

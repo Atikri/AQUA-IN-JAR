@@ -59,8 +59,6 @@ aliases:
 
 ---
 
-*每次点击都可能带来新的惊喜，就像在海洋中随机漂流一样。*
-
 <script>
 // Random Aqua 功能
 document.addEventListener('DOMContentLoaded', function() {

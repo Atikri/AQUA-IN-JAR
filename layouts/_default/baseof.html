@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="{{- .Site.Language.LanguageCode -}}" dir="{{- .Site.Language.LanguageDirection | default " ltr" -}}" class="kind-{{ .Kind }}
+{{- if eq .Site.Params.colorScheme " dark" }} dark-mode-on {{- else if eq .Site.Params.colorScheme "light" }}
+    dark-mode-off {{- end }}">
+
+{{ partial "head.html" . }}
+
+<body{{ if .TableOfContents }} class="has-toc" {{ end }}>
+    {{ partial "header.html" . }}
+
+    {{- if or .TableOfContents (eq .Kind "section") (eq .Kind "home") }}
+    <div class="toc-container">
+        <h2>Outline</h2>
+        {{- if eq .Kind "home" }}
+        <ul>
+            <li><a href="#calendar-section">Calendar</a></li>
+            <li><a href="#search-section">Search Articles</a></li>
+            <li><a href="#categories-section">Categories</a></li>
+            {{- range .Site.MainSections }}
+            {{- $section := $.Site.GetPage "section" . }}
+            {{- if $section }}
+            <li><a href="{{ $section.Permalink }}">{{ $section.Title }}</a></li>
+            {{- end }}
+            {{- end }}
+
+        </ul>
+        {{- else if and (eq .Kind "section") .Sections }}
+        {{- if eq .Section "toolbox" }}
+        <ul>
+            {{- $r := where site.RegularPages "Section" "toolbox" -}}
+            {{- range $r }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{- end }}
+        </ul>
+        {{- else }}
+        <ul>
+            {{- range .Sections }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{- end }}
+        </ul>
+        {{- end }}
+        {{- else if eq .Kind "section" }}
+        <ul>
+            {{- range .Pages }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{- end }}
+        </ul>
+        {{- else if .TableOfContents }}
+        {{ .TableOfContents }}
+        {{- end }}
+    </div>
+    {{- end }}
+
+    <div class="toc-overlay" id="tocOverlay">
+        <div class="toc-panel">
+            <h2>Outline</h2>
+            {{- if eq .Kind "home" }}
+            <ul>
+                <li><a href="#calendar-section">Calendar</a></li>
+                <li><a href="#search-section">Search Articles</a></li>
+                <li><a href="#categories-section">Categories</a></li>
+                {{- range .Site.MainSections }}
+                {{- $section := $.Site.GetPage "section" . }}
+                {{- if $section }}
+                <li><a href="{{ $section.Permalink }}">{{ $section.Title }}</a></li>
+                {{- end }}
+                {{- end }}
+
+            </ul>
+            {{- else if and (eq .Kind "section") .Sections }}
+            {{- if eq .Section "toolbox" }}
+            <ul>
+                {{- $r := where site.RegularPages "Section" "toolbox" -}}
+                {{- range $r }}
+                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{- end }}
+            </ul>
+            {{- else }}
+            <ul>
+                {{- range .Sections }}
+                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{- end }}
+            </ul>
+            {{- end }}
+            {{- else if eq .Kind "section" }}
+            <ul>
+                {{- range .Pages }}
+                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{- end }}
+            </ul>
+            {{- else if .TableOfContents }}
+            {{ .TableOfContents }}
+            {{- end }}
+        </div>
+    </div>
+
+    <main class="content-wrapper">
+        <article class="content-container">
+
+            {{ block "main" . }}{{ end }}
+
+        </article>
+    </main>
+
+    {{ partial "footer.html" . }}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tocOverlay = document.getElementById('tocOverlay');
+            if (tocOverlay) {
+                const links = tocOverlay.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', function () {
+                        // Close the overlay
+                        tocOverlay.classList.remove('open');
+                        document.body.classList.remove('toc-open');
+                    });
+                });
+            }
+        });
+    </script>
+    </body>
+
+</html>

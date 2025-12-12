@@ -2,7 +2,7 @@
 title: "AQUA Shop"
 subtitle: "精选商品 · 灵感之源"
 description: "发现AQUA IN JAR精选商品，每一件都承载着独特的灵感与故事"
-draft: true
+draft: false
 ---
 
 欢迎来到AQUA Shop！:shopping_bags:

@@ -54,42 +54,7 @@
     </div>
 </section>
 
-<!-- Categories Section -->
-<section id="categories-section" class="categories-section">
-    <h2>{{ "分类浏览:monkey:" | emojify }}</h2>
-    <div class="categories-grid">
-        <a class="category-card-link" href="{{ " notification-jar/" | relURL }}">
-            <div class="category-card">
-                <h3>📢 Notification Jar</h3>
-                <p>通知罐子 - 记录重要的通知和提醒</p>
-            </div>
-        </a>
-        <a class="category-card-link" href="{{ " aquas-field/" | relURL }}">
-            <div class="category-card">
-                <h3>🌾 Aqua's Field</h3>
-                <p>水之田野 - 创意和灵感的源泉</p>
-            </div>
-        </a>
-        <a class="category-card-link" href="{{ " podcast-music/" | relURL }}">
-            <div class="category-card">
-                <h3>🎧 Podcast & Music & Video</h3>
-                <p>播客&音乐&视频：收录音频节目与乐曲还有视频</p>
-            </div>
-        </a>
-        <a class="category-card-link" href="{{ " aquas-game/" | relURL }}">
-            <div class="category-card">
-                <h3>🎲 Aqua's Game</h3>
-                <p>收录了一些可互动的小游戏~</p>
-            </div>
-        </a>
-        <a class="category-card-link" href="{{ " self-generation/" | relURL }}">
-            <div class="category-card">
-                <h3>✨ Self-Generation</h3>
-                <p>AQUA IN JAR主题专栏</p>
-            </div>
-        </a>
-    </div>
-</section>
+
 
 <!-- Featured Section -->
 <section id="featured-section" class="featured-section">
@@ -133,6 +98,39 @@
 {{- $articlesJSON := ($s.Get "articles") | jsonify -}}
 
 <!-- Random Article JavaScript -->
+
+<!-- Explore More Section (Moved to Bottom) -->
+<section id="explore-more-section" class="explore-more-section">
+    <div class="explore-container">
+        <div class="explore-column">
+            <h3>探索 | EXPLORE</h3>
+            <ul>
+                <li><a href="{{ " aquas-field/" | relURL }}">Aqua's Field</a></li>
+                <li><a href="{{ " notification-jar/" | relURL }}">Notification Jar</a></li>
+                <li><a href="{{ " podcast-music/" | relURL }}">Podcast & Music</a></li>
+                <li><a href="{{ " self-generation/" | relURL }}">Self-Generation</a></li>
+            </ul>
+        </div>
+        <div class="explore-column">
+            <h3>更多 | MORE</h3>
+            <ul>
+                <li><a href="{{ " toolbox/" | relURL }}">Toolbox</a></li>
+                <li><a href="#calendar-section">Calendar</a></li>
+                <li><a href="#search-section">Search</a></li>
+            </ul>
+        </div>
+        <div class="explore-column">
+            <h3>关于 | ABOUT</h3>
+            <ul>
+                <li><a href="{{ with .Site.GetPage " /notification-jar/aboutme.md" }}{{ .RelPermalink }}{{ end }}">About
+                        Me</a></li>
+                <li><a href="{{ with .Site.GetPage " /notification-jar/联系我（contact with me）.md" }}{{ .RelPermalink }}{{
+                        end }}">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
 <script>
     const __randomArticles = JSON.parse('{{ $articlesJSON | safeJS }}');
     function randomArticle() {

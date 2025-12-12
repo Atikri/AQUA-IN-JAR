@@ -1,10 +1,17 @@
 {{- define "main" }}
+{{- $isProtected := .Params.password }}
+{{- if $isProtected }}
+{{- partial "password-gate.html" . -}}
+<div id="protected-content" style="display:none;">
+    {{- end }}
+
     {{- partial "breadcrumbs.html" . -}}
     <h1>{{ .Title }}</h1>
     <h4>{{ .Params.description }}</h4>
 
     {{- if isset .Params "date" }}
-    <p class="author-date">{{ printf `<time datetime="%s">%s</time>` (.Date.Format "2006-01-02T15:04:05Z07:00") (.Date.Format "January 2, 2006") | safeHTML }}</p>
+    <p class="author-date">{{ printf `<time datetime="%s">%s</time>` (.Date.Format "2006-01-02T15:04:05Z07:00")
+        (.Date.Format "January 2, 2006") | safeHTML }}</p>
     {{- end }}
 
     {{- /* 点赞按钮 */ -}}
@@ -14,11 +21,11 @@
 
     {{- if not (.Param "disableAnchoredHeadings") }}
 
-{{ partial "anchored_headings.html" .Content }}
+    {{ partial "anchored_headings.html" .Content }}
 
     {{- else }}
 
-{{ .Content }}
+    {{ .Content }}
 
     {{- end }}
 
@@ -30,17 +37,17 @@
         {{- if $older }}
         <a href="{{ $older.Permalink }}" class="nav-button prev-button" title="较新一篇: {{ $older.Title }}">
             <div class="nav-image">
-                <img src="{{ "images/navigation/left-image.png?v=3" | absURL }}" alt="较新一篇" />
+                <img src="{{ " images/navigation/left-image.png?v=3" | absURL }}" alt="较新一篇" />
             </div>
         </a>
         {{- else }}
         <div class="nav-button disabled"></div>
         {{- end }}
-        
+
         {{- if $newer }}
         <a href="{{ $newer.Permalink }}" class="nav-button next-button" title="较旧一篇: {{ $newer.Title }}">
             <div class="nav-image">
-                <img src="{{ "images/navigation/right-image.png?v=3" | absURL }}" alt="较旧一篇" />
+                <img src="{{ " images/navigation/right-image.png?v=3" | absURL }}" alt="较旧一篇" />
             </div>
         </a>
         {{- else }}
@@ -48,5 +55,8 @@
         {{- end }}
     </div>
     {{- end }}
-{{- end }}
 
+    {{- if $isProtected }}
+</div> <!-- Close protected-content -->
+{{- end }}
+{{- end }}

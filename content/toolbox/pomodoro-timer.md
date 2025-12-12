@@ -25,8 +25,8 @@ featured: true
 (模块加载可能稍慢，可以稍作等待~)
 ---
 
-<link rel="stylesheet" href="/css/pomodoro-timer.css">
+<link rel="stylesheet" href="/css/pomodoro-timer.css?v=2">
 <div id="pomodoro-timer"></div>
-<script src="/js/pomodoro-timer.js"></script>
+<script src="/js/pomodoro-timer.js?v=2"></script>
 
 

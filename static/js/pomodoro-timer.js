@@ -11,6 +11,8 @@ class PomodoroTimer {
         this.cycleCount = 0;
         this.timer = null;
         this.audioContext = null;
+        this.breakMusic = new Audio('/audio/rainy-day-lofi-guitar-drums-piano-216566.mp3');
+        this.breakMusic.loop = true;
 
         this.init();
     }
@@ -23,12 +25,21 @@ class PomodoroTimer {
         this.updateDisplay();
         this.updateModeUI();
 
-        // Request audio context interaction
-        document.body.addEventListener('click', () => {
+        // Mobile-friendly audio unlock
+        const unlockAudio = () => {
             if (!this.audioContext) {
                 this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
             }
-        }, { once: true });
+            if (this.audioContext.state === 'suspended') {
+                this.audioContext.resume();
+            }
+            // Pre-load audio to unlock generic audio playback
+            this.breakMusic.load();
+        };
+
+        ['click', 'touchstart'].forEach(evt => {
+            document.body.addEventListener(evt, unlockAudio, { once: true });
+        });
     }
 
     createTimerHTML() {
@@ -120,8 +131,15 @@ class PomodoroTimer {
 
         startBtn?.addEventListener('click', () => this.toggleTimer());
         resetBtn?.addEventListener('click', () => this.resetTimer());
-        skipBtn?.addEventListener('click', () => this.skipTimer());
 
+        // Robust skip handling for mobile
+        skipBtn?.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.skipTimer();
+        });
+
+        // Manual mode switching
         document.querySelectorAll('.mode-badge').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const mode = e.target.dataset.mode;
@@ -173,6 +191,14 @@ class PomodoroTimer {
         this.updateControlsState('running');
         this.ensureAudioContext();
 
+        // Manage music state on start
+        if (this.currentMode !== 'work' && this.breakMusic.paused) {
+            safelyPlayAudio(this.breakMusic);
+        } else if (this.currentMode === 'work') {
+            this.breakMusic.pause();
+            this.breakMusic.currentTime = 0;
+        }
+
         this.timer = setInterval(() => {
             this.currentTime--;
             this.updateDisplay();
@@ -189,6 +215,11 @@ class PomodoroTimer {
         this.isPaused = true;
         this.updateControlsState('paused');
         clearInterval(this.timer);
+
+        if (!this.breakMusic.paused) {
+            this.breakMusic.pause();
+        }
+
         this.saveData();
     }
 
@@ -196,6 +227,9 @@ class PomodoroTimer {
         this.isRunning = false;
         this.isPaused = false;
         clearInterval(this.timer);
+        this.breakMusic.pause();
+        this.breakMusic.currentTime = 0;
+
         this.currentTime = this.getCurrentModeTime();
         this.updateDisplay();
         this.updateControlsState('initial');
@@ -209,17 +243,45 @@ class PomodoroTimer {
     completeSession() {
         clearInterval(this.timer);
         this.isRunning = false;
-        this.playNotificationSound();
-        this.showNotification();
-        this.updateStats(); // Update stats BEFORE switching mode
-        this.switchModeAuto();
+
+        // Visual update first for immediate feedback
         this.updateControlsState('initial');
+
+        // Logic wrapper to prevent crashes
+        try {
+            this.handleSessionCompletionEffects();
+        } catch (err) {
+            console.error('Error during session completion effects:', err);
+        }
+
+        this.updateStats();
+        this.switchModeAuto();
         this.saveData();
+    }
+
+    handleSessionCompletionEffects() {
+        const justFinishedWork = this.currentMode === 'work';
+
+        this.playNotificationSound(justFinishedWork);
+        this.showNotification();
+
+        if (justFinishedWork) {
+            // Finished Work -> Entering Break
+            this.breakMusic.currentTime = 0;
+            safelyPlayAudio(this.breakMusic);
+        } else {
+            // Finished Break -> Entering Work
+            this.breakMusic.pause();
+            this.breakMusic.currentTime = 0;
+        }
     }
 
     switchModeManual(mode) {
         this.isRunning = false;
         clearInterval(this.timer);
+        this.breakMusic.pause();
+        this.breakMusic.currentTime = 0;
+
         this.currentMode = mode;
         this.currentTime = this.getCurrentModeTime();
         this.updateDisplay();
@@ -246,8 +308,12 @@ class PomodoroTimer {
 
     updateDisplay() {
         const timeText = this.formatTime(this.currentTime);
-        document.getElementById('time-text').textContent = timeText;
-        this.updateTitle();
+        const timeDisplay = document.getElementById('time-text');
+        if (timeDisplay) timeDisplay.textContent = timeText;
+
+        if (this.currentTime % 5 === 0 || this.currentTime < 60) {
+            this.updateTitle();
+        }
 
         const totalTime = this.getCurrentModeTime();
         const progress = ((totalTime - this.currentTime) / totalTime);
@@ -310,7 +376,6 @@ class PomodoroTimer {
     }
 
     updateStats() {
-        // If we were working, add to today's count
         if (this.currentMode === 'work') {
             const today = new Date().toDateString();
             const current = this.getTodayCompleted();
@@ -333,48 +398,36 @@ class PomodoroTimer {
         }
     }
 
-    playNotificationSound() {
+    playNotificationSound(justFinishedWork) {
         this.ensureAudioContext();
         if (!this.audioContext) return;
 
-        const ctx = this.audioContext;
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
+        // Only play alert when returning to work (Break -> Work)
+        if (!justFinishedWork) {
+            const ctx = this.audioContext;
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
 
-        osc.connect(gain);
-        gain.connect(ctx.destination);
+            osc.connect(gain);
+            gain.connect(ctx.destination);
 
-        const now = ctx.currentTime;
-        osc.type = 'sine';
+            const now = ctx.currentTime;
+            osc.type = 'sine';
 
-        // Check "previous" mode (which is still currentMode at this point in logic if we call before switch)
-        // Actually completeSession calls playNotificationSound BEFORE switchModeAuto.
-        // So this.currentMode is the one that just finished.
-
-        if (this.currentMode === 'work') {
-            // Work finished -> Happy break sound
-            osc.frequency.setValueAtTime(523.25, now); // C5
-            osc.frequency.exponentialRampToValueAtTime(783.99, now + 0.1); // G5
-            osc.frequency.exponentialRampToValueAtTime(1046.50, now + 0.2); // C6
+            // Alert for back to work
+            osc.frequency.setValueAtTime(880.00, now);
+            osc.frequency.linearRampToValueAtTime(440.00, now + 0.3);
             gain.gain.setValueAtTime(0.3, now);
-            gain.gain.exponentialRampToValueAtTime(0.01, now + 1.5);
+            gain.gain.exponentialRampToValueAtTime(0.01, now + 0.8);
             osc.start(now);
-            osc.stop(now + 1.5);
-        } else {
-            // Break finished -> "Back to work" alert
-            osc.frequency.setValueAtTime(659.25, now); // E5
-            osc.frequency.exponentialRampToValueAtTime(880.00, now + 0.1); // A5
-            gain.gain.setValueAtTime(0.3, now);
-            gain.gain.exponentialRampToValueAtTime(0.01, now + 1.2);
-            osc.start(now);
-            osc.stop(now + 1.2);
+            osc.stop(now + 0.8);
         }
     }
 
     showNotification() {
         if ('Notification' in window && Notification.permission === 'granted') {
             const isWork = this.currentMode === 'work';
-            const msg = isWork ? 'Good job! Take a break.' : 'Break is over! Time to focus.';
+            const msg = isWork ? 'Good job! Relax to the music.' : 'Break is over! Time to focus.';
             new Notification('Pomodoro Timer', { body: msg, icon: '/favicon.ico' });
         } else if ('Notification' in window && Notification.permission !== 'denied') {
             Notification.requestPermission();
@@ -424,6 +477,16 @@ class PomodoroTimer {
         } else {
             document.getElementById('today-completed').textContent = this.getTodayCompleted();
         }
+    }
+}
+
+// Helper for safe audio playback
+function safelyPlayAudio(audioElement) {
+    const playPromise = audioElement.play();
+    if (playPromise !== undefined) {
+        playPromise.catch(error => {
+            console.log('Auto-play was prevented:', error);
+        });
     }
 }
 

@@ -22,6 +22,7 @@ featured: true
 - 🔔 **实时提醒**：浏览器标题栏会实时显示倒计时，让你随时掌握进度
 - 💾 **自动保存**：刷新页面也不会丢失当前进度与统计
 
+(模块加载可能稍慢，可以稍作等待~)
 ---
 
 <link rel="stylesheet" href="/css/pomodoro-timer.css">

@@ -2,6 +2,7 @@
 title: "Money Toolbox"
 date: 2025-12-12
 description: "A secure, offline-first personal finance tracker. All data stays in your browser."
+featured: true
 slug: "money-toolbox"
 layout: "single"
 ---

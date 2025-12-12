@@ -37,7 +37,7 @@
         {{- if $older }}
         <a href="{{ $older.Permalink }}" class="nav-button prev-button" title="较新一篇: {{ $older.Title }}">
             <div class="nav-image">
-                <img src="{{ " images/navigation/left-image.png?v=3" | absURL }}" alt="较新一篇" />
+                <img src="{{ " images/navigation/left-image.png?v=3" | relURL }}" alt="较新一篇" />
             </div>
         </a>
         {{- else }}
@@ -47,7 +47,7 @@
         {{- if $newer }}
         <a href="{{ $newer.Permalink }}" class="nav-button next-button" title="较旧一篇: {{ $newer.Title }}">
             <div class="nav-image">
-                <img src="{{ " images/navigation/right-image.png?v=3" | absURL }}" alt="较旧一篇" />
+                <img src="{{ " images/navigation/right-image.png?v=3" | relURL }}" alt="较旧一篇" />
             </div>
         </a>
         {{- else }}

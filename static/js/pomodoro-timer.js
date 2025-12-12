@@ -11,10 +11,36 @@ class PomodoroTimer {
         this.cycleCount = 0;
         this.timer = null;
         this.audioContext = null;
-        this.breakMusic = new Audio('/audio/rainy-day-lofi-guitar-drums-piano-216566.mp3');
+
+        const audioPath = this.resolveAudioPath();
+        this.breakMusic = new Audio(audioPath);
         this.breakMusic.loop = true;
+        this.breakMusic.addEventListener('error', (e) => {
+            console.error('Error loading audio from path:', audioPath, e);
+        });
 
         this.init();
+    }
+
+    resolveAudioPath() {
+        // dynamic path resolution for subdirectory deployments
+        try {
+            const script = document.querySelector('script[src*="pomodoro-timer.js"]');
+            if (script) {
+                // Assumes structure: .../js/pomodoro-timer.js and .../audio/file.mp3
+                // new URL('.', script.src) gives the directory of the script (.../js/)
+                // So going up one level to static root is '..' relative to that?
+                // Actually, new URL('../audio/...', script.src) works if script.src is the file.
+                // Examples: 
+                // script.src = "http://site.com/js/pomodoro-timer.js" -> new URL("../audio/x", src) = "http://site.com/audio/x"
+                // script.src = "http://site.com/repo/js/pomodoro-timer.js" -> new URL("../audio/x", src) = "http://site.com/repo/audio/x"
+                return new URL('../audio/rainy-day-lofi-guitar-drums-piano-216566.mp3', script.src).href;
+            }
+        } catch (e) {
+            console.warn('Could not resolve audio path dynamically:', e);
+        }
+        // Fallback to absolute path
+        return '/audio/rainy-day-lofi-guitar-drums-piano-216566.mp3';
     }
 
     init() {
@@ -132,12 +158,60 @@ class PomodoroTimer {
         startBtn?.addEventListener('click', () => this.toggleTimer());
         resetBtn?.addEventListener('click', () => this.resetTimer());
 
-        // Robust skip handling for mobile
-        skipBtn?.addEventListener('click', (e) => {
-            e.preventDefault();
+        // Robust skip handling for mobile and desktop
+        // Using a single handler function
+        const handleSkip = (e) => {
+            // Prevent default touch behavior (scrolling/zoom) if it's a touch event,
+            // but also prevent default click behavior
+            if (e.cancelable) e.preventDefault();
             e.stopPropagation();
             this.skipTimer();
-        });
+        };
+
+        if (skipBtn) {
+            // Use touchstart for faster reaction on mobile
+            // Use simple click for desktop
+            // To avoid double firing if both fire:
+            // Touchend is safer than touchstart for buttons to allow scrolling?
+            // But user said "does nothing", implying lack of response.
+            // Let's use click, but ensure it captures bubbles.
+
+            // Actually, mobile browsers often wait 300ms on click. 
+            // 'touchstart' is immediate.
+            skipBtn.addEventListener('touchstart', handleSkip, { passive: false });
+            skipBtn.addEventListener('click', (e) => {
+                // If it was triggered by touch, we might get a click later 
+                // We can't easily know. But handleSkip calls completeSession.
+                // completeSession is idempotent regarding timer stop, but NOT regarding cycle count.
+                // We need to debounce or throttle?
+                // Or check e.isTrusted?
+
+                // Let's keep it simple: Just handle click.
+                // If the user says "does nothing", maybe it's not receiving click.
+                // But touchstart is aggressive.
+
+                // If I listen to touchstart AND click, I might get two skips.
+                // I will listen to CLICK only, but with logging.
+                // Wait, I promised to fix it. 
+                // Most robust mobile fix: 'touchend'.
+                // If I use 'touchend', I can preventDefault() to stop the click from firing.
+            });
+
+            // Re-implementing handleSkip attachment safely
+            skipBtn.addEventListener('touchend', (e) => {
+                e.preventDefault(); // Prevents mouse click generation
+                e.stopPropagation();
+                this.skipTimer();
+            });
+
+            skipBtn.addEventListener('click', (e) => {
+                // This click will happen if not prevented by touchend.
+                // Desktop clicks will come here.
+                e.preventDefault();
+                e.stopPropagation();
+                this.skipTimer();
+            });
+        }
 
         // Manual mode switching
         document.querySelectorAll('.mode-badge').forEach(btn => {

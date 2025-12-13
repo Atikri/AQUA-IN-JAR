@@ -252,6 +252,10 @@ class PomodoroTimer {
                 this.resetTimer();
             }
         });
+
+        // Update Skip button state based on music
+        this.breakMusic.addEventListener('play', () => this.updateSkipButtonState());
+        this.breakMusic.addEventListener('pause', () => this.updateSkipButtonState());
     }
 
     toggleTimer() {
@@ -311,6 +315,12 @@ class PomodoroTimer {
     }
 
     skipTimer() {
+        // Smart Skip: If in break and music is playing, stop music first
+        const isBreak = this.currentMode !== 'work';
+        if (isBreak && !this.breakMusic.paused) {
+            this.breakMusic.pause();
+            return;
+        }
         this.completeSession();
     }
 
@@ -414,7 +424,26 @@ class PomodoroTimer {
         return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
     }
 
+    updateSkipButtonState() {
+        const skipBtn = document.getElementById('skip-btn');
+        if (!skipBtn) return;
+
+        const isBreak = this.currentMode !== 'work';
+        const isMusicPlaying = !this.breakMusic.paused;
+
+        if (isBreak && isMusicPlaying) {
+            skipBtn.innerHTML = '<span class="btn-icon">🔇</span>';
+            skipBtn.classList.add('music-active');
+            skipBtn.setAttribute('aria-label', 'Stop Music');
+        } else {
+            skipBtn.innerHTML = '<span class="btn-icon">⏭</span>';
+            skipBtn.classList.remove('music-active');
+            skipBtn.setAttribute('aria-label', 'Skip Session');
+        }
+    }
+
     updateModeUI() {
+        this.updateSkipButtonState();
         document.querySelectorAll('.mode-badge').forEach(b => {
             b.classList.toggle('active', b.dataset.mode === this.currentMode);
         });

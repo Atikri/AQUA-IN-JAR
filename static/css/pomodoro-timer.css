@@ -355,3 +355,16 @@
         transform: translateY(0);
     }
 }
+
+/* Music Active State */
+.control-btn.secondary.music-active {
+    color: #ff6b6b;
+    border-color: rgba(255, 107, 107, 0.4);
+    animation: pulse-soft 2s infinite;
+}
+
+@keyframes pulse-soft {
+    0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.2); }
+    70% { box-shadow: 0 0 0 6px rgba(255, 107, 107, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
+}

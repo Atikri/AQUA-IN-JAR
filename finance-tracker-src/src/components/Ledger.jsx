@@ -89,22 +89,23 @@ const Ledger = () => {
             <div className="max-w-2xl mx-auto px-4 pt-8">
 
                 {/* Summary Cards */}
-                <div className="grid grid-cols-3 gap-4 mb-8">
-                    <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-28">
+                {/* Summary Cards */}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                    <div className="bg-white p-4 md:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-24 md:h-28">
                         <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Income</span>
-                        <div className="text-2xl font-bold text-[#34C759] tracking-tight truncate">
+                        <div className="text-xl md:text-2xl font-bold text-[#34C759] tracking-tight truncate">
                             {formatMoney(summary.income)}
                         </div>
                     </div>
-                    <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-28">
+                    <div className="bg-white p-4 md:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-24 md:h-28">
                         <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Expense</span>
-                        <div className="text-2xl font-bold text-[#FF3B30] tracking-tight truncate">
+                        <div className="text-xl md:text-2xl font-bold text-[#FF3B30] tracking-tight truncate">
                             {formatMoney(summary.expense)}
                         </div>
                     </div>
-                    <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-28">
+                    <div className="col-span-2 md:col-span-1 bg-white p-4 md:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-24 md:h-28">
                         <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Net Balance</span>
-                        <div className={`text-2xl font-bold tracking-tight truncate ${netBalance < 0 ? 'text-[#FF3B30]' : 'text-gray-900'}`}>
+                        <div className={`text-xl md:text-2xl font-bold tracking-tight truncate ${netBalance < 0 ? 'text-[#FF3B30]' : 'text-gray-900'}`}>
                             {formatMoney(netBalance)}
                         </div>
                     </div>

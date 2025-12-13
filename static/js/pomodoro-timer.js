@@ -505,19 +505,26 @@ class PomodoroTimer {
         this.ensureAudioContext();
         if (!this.audioContext) return;
 
-        // Only play alert when returning to work (Break -> Work)
-        if (!justFinishedWork) {
-            const ctx = this.audioContext;
-            const osc = ctx.createOscillator();
-            const gain = ctx.createGain();
+        const ctx = this.audioContext;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
 
-            osc.connect(gain);
-            gain.connect(ctx.destination);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
 
-            const now = ctx.currentTime;
-            osc.type = 'sine';
+        const now = ctx.currentTime;
+        osc.type = 'sine';
 
-            // Alert for back to work
+        if (justFinishedWork) {
+            // Success sound for Work -> Break (Rising tone)
+            osc.frequency.setValueAtTime(440.00, now);
+            osc.frequency.exponentialRampToValueAtTime(880.00, now + 0.1);
+            gain.gain.setValueAtTime(0.1, now);
+            gain.gain.linearRampToValueAtTime(0.01, now + 0.5);
+            osc.start(now);
+            osc.stop(now + 0.5);
+        } else {
+            // Alert sound for Break -> Work (Falling tone)
             osc.frequency.setValueAtTime(880.00, now);
             osc.frequency.linearRampToValueAtTime(440.00, now + 0.3);
             gain.gain.setValueAtTime(0.3, now);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { format, addMonths, subMonths, isSameMonth, parseISO } from 'date-fns';
-import { Trash2, ChevronLeft, ChevronRight, Plus, ArrowUpRight, ArrowDownRight, Wallet } from 'lucide-react';
+import { format, addMonths, subMonths, isSameMonth, parseISO, startOfMonth, endOfMonth, isWithinInterval } from 'date-fns';
+import { Trash2, ChevronLeft, ChevronRight, Plus, ArrowUpRight, ArrowDownRight, Wallet, Download, X } from 'lucide-react';
 
 const STORAGE_KEY = 'simple_ledger_data';
 
@@ -16,6 +16,11 @@ const Ledger = () => {
     const [amount, setAmount] = useState('');
     const [desc, setDesc] = useState('');
     const [date, setDate] = useState(format(new Date(), 'yyyy-MM-dd'));
+
+    // Export State
+    const [showExport, setShowExport] = useState(false);
+    const [exportStart, setExportStart] = useState(format(startOfMonth(new Date()), 'yyyy-MM-dd'));
+    const [exportEnd, setExportEnd] = useState(format(endOfMonth(new Date()), 'yyyy-MM-dd'));
 
     useEffect(() => {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(transactions));
@@ -60,28 +65,78 @@ const Ledger = () => {
         }
     };
 
+    const handleExport = () => {
+        const start = parseISO(exportStart);
+        const end = parseISO(exportEnd);
+
+        // Ensure end includes the full day (comparison often depends on time)
+        // Since we parse YYYY-MM-DD, it parses to 00:00 local.
+        // We want end date to be inclusive.
+        // Simple string comparison works for ISO dates if YYYY-MM-DD format is consistent.
+
+        const dataToExport = transactions.filter(t => {
+            return t.date >= exportStart && t.date <= exportEnd;
+        });
+
+        const headers = ['Date', 'Type', 'Description', 'Amount', 'ID'];
+        const csvRows = [
+            headers.join(','),
+            ...dataToExport.map(t => {
+                const safeDesc = t.desc.replace(/"/g, '""'); // Escape quotes
+                return [
+                    t.date,
+                    t.type,
+                    `"${safeDesc}"`,
+                    t.amount,
+                    t.id
+                ].join(',');
+            })
+        ];
+
+        const csvContent = csvRows.join('\n');
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', `money_toolbox_export_${exportStart}_to_${exportEnd}.csv`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        setShowExport(false);
+    };
+
     const handlePrevMonth = () => setCurrentMonth(subMonths(currentMonth, 1));
     const handleNextMonth = () => setCurrentMonth(addMonths(currentMonth, 1));
 
     const formatMoney = (val) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(val);
 
     return (
-        <div className="min-h-screen bg-[#F5F5F7] text-[#1D1D1F] font-sans selection:bg-blue-100 selection:text-blue-900 pb-20">
+        <div className="min-h-screen bg-[#F5F5F7] text-[#1D1D1F] font-sans selection:bg-blue-100 selection:text-blue-900 pb-20 relative">
 
             {/* Top Navbar / Month Selector */}
             <div className="sticky top-0 z-10 bg-[#F5F5F7]/80 backdrop-blur-md border-b border-gray-200">
                 <div className="max-w-2xl mx-auto px-4 h-16 flex items-center justify-between">
                     <div className="flex items-center gap-2 text-gray-500">
                         <Wallet size={20} />
-                        <span className="font-semibold tracking-tight text-gray-900">Ledger</span>
+                        <span className="font-semibold tracking-tight text-gray-900 hidden sm:inline">Ledger</span>
                     </div>
 
-                    <div className="flex items-center gap-2 bg-white rounded-lg p-1 shadow-sm border border-gray-200">
-                        <button onClick={handlePrevMonth} className="p-1.5 hover:bg-gray-50 rounded-md transition-colors text-gray-500"><ChevronLeft size={16} /></button>
-                        <span className="text-sm font-semibold text-gray-900 min-w-[120px] text-center select-none">
-                            {format(currentMonth, 'MMMM yyyy')}
-                        </span>
-                        <button onClick={handleNextMonth} className="p-1.5 hover:bg-gray-50 rounded-md transition-colors text-gray-500"><ChevronRight size={16} /></button>
+                    <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-1 bg-white rounded-lg p-1 shadow-sm border border-gray-200">
+                            <button onClick={handlePrevMonth} className="p-1.5 hover:bg-gray-50 rounded-md transition-colors text-gray-500"><ChevronLeft size={16} /></button>
+                            <span className="text-sm font-semibold text-gray-900 min-w-[100px] sm:min-w-[120px] text-center select-none">
+                                {format(currentMonth, 'MMMM yyyy')}
+                            </span>
+                            <button onClick={handleNextMonth} className="p-1.5 hover:bg-gray-50 rounded-md transition-colors text-gray-500"><ChevronRight size={16} /></button>
+                        </div>
+
+                        <button
+                            onClick={() => setShowExport(true)}
+                            className="p-2 bg-white border border-gray-200 text-gray-600 rounded-lg hover:bg-gray-50 transition-colors shadow-sm"
+                            title="Export Data"
+                        >
+                            <Download size={18} />
+                        </button>
                     </div>
                 </div>
             </div>
@@ -89,23 +144,22 @@ const Ledger = () => {
             <div className="max-w-2xl mx-auto px-4 pt-8">
 
                 {/* Summary Cards */}
-                {/* Summary Cards */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                    <div className="bg-white p-4 md:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-24 md:h-28">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-8">
+                    <div className="bg-white p-3 md:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-24 md:h-28">
                         <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Income</span>
-                        <div className="text-xl md:text-2xl font-bold text-[#34C759] tracking-tight truncate">
+                        <div className="text-lg sm:text-xl md:text-2xl font-bold text-[#34C759] tracking-tight truncate">
                             {formatMoney(summary.income)}
                         </div>
                     </div>
-                    <div className="bg-white p-4 md:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-24 md:h-28">
+                    <div className="bg-white p-3 md:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-24 md:h-28">
                         <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Expense</span>
-                        <div className="text-xl md:text-2xl font-bold text-[#FF3B30] tracking-tight truncate">
+                        <div className="text-lg sm:text-xl md:text-2xl font-bold text-[#FF3B30] tracking-tight truncate">
                             {formatMoney(summary.expense)}
                         </div>
                     </div>
-                    <div className="col-span-2 md:col-span-1 bg-white p-4 md:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-24 md:h-28">
+                    <div className="col-span-2 md:col-span-1 bg-white p-3 md:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-24 md:h-28">
                         <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Net Balance</span>
-                        <div className={`text-xl md:text-2xl font-bold tracking-tight truncate ${netBalance < 0 ? 'text-[#FF3B30]' : 'text-gray-900'}`}>
+                        <div className={`text-lg sm:text-xl md:text-2xl font-bold tracking-tight truncate ${netBalance < 0 ? 'text-[#FF3B30]' : 'text-gray-900'}`}>
                             {formatMoney(netBalance)}
                         </div>
                     </div>
@@ -205,8 +259,53 @@ const Ledger = () => {
                         </div>
                     )}
                 </div>
-
             </div>
+
+            {/* Export Modal */}
+            {showExport && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/20 backdrop-blur-sm">
+                    <div className="bg-white rounded-2xl shadow-2xl w-full max-w-sm overflow-hidden animate-in fade-in zoom-in duration-200">
+                        <div className="p-4 border-b border-gray-100 flex items-center justify-between">
+                            <h3 className="font-bold text-gray-900">Export Options</h3>
+                            <button onClick={() => setShowExport(false)} className="text-gray-400 hover:text-gray-600">
+                                <X size={20} />
+                            </button>
+                        </div>
+                        <div className="p-6 space-y-4">
+                            <p className="text-sm text-gray-500">Select a date range to export your transactions as a CSV file.</p>
+
+                            <div className="space-y-2">
+                                <label className="text-xs font-bold text-gray-500 uppercase">Start Date</label>
+                                <input
+                                    type="date"
+                                    value={exportStart}
+                                    onChange={(e) => setExportStart(e.target.value)}
+                                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm outline-none focus:border-blue-500 transition-colors"
+                                />
+                            </div>
+
+                            <div className="space-y-2">
+                                <label className="text-xs font-bold text-gray-500 uppercase">End Date</label>
+                                <input
+                                    type="date"
+                                    value={exportEnd}
+                                    onChange={(e) => setExportEnd(e.target.value)}
+                                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm outline-none focus:border-blue-500 transition-colors"
+                                />
+                            </div>
+
+                            <button
+                                onClick={handleExport}
+                                className="w-full bg-[#007AFF] hover:bg-[#0066CC] text-white font-bold py-3 rounded-xl shadow-sm transition-colors flex items-center justify-center gap-2"
+                            >
+                                <Download size={18} />
+                                Download CSV
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
         </div>
     );
 };

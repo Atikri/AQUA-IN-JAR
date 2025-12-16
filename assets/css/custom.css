@@ -2101,3 +2101,198 @@ body.bottle-open .bottle-bg-layer {
     margin-bottom: 16px;
   }
 }
+/* Display Settings Panel */
+.display-settings-container {
+    position: relative;
+    display: inline-block;
+}
+
+.header-icon-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 8px; /* Square-ish with rounded corners */
+    color: var(--text-color);
+    font-weight: 600;
+    font-family: var(--font-family-base), serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.header-icon-btn:hover,
+.display-settings-container.active .header-icon-btn {
+    background-color: var(--footnote-bg-color);
+    border-color: var(--text-color);
+}
+
+.display-settings-panel {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 260px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    z-index: 1000;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px) scale(0.98);
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform-origin: top right;
+}
+
+.display-settings-panel.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* Glassmorphism hook if widely used, otherwise solid is safer for settings */
+.display-settings-panel {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+}
+.dark-mode-on .display-settings-panel {
+    background: rgba(20, 20, 19, 0.95);
+    border-color: rgba(255,255,255,0.1);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.settings-group {
+    margin-bottom: 20px;
+}
+
+.settings-group:last-child {
+    margin-bottom: 0;
+}
+
+.settings-label {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-color);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Theme Toggles */
+.theme-toggles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.theme-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    border: 2px solid transparent; /* Highlight border */
+    border-radius: 12px;
+    background: var(--footnote-bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.theme-btn:hover {
+    background: var(--footnote-hover-bg-color);
+}
+
+.theme-btn.active {
+    border-color: var(--text-color);
+    background: var(--bg-color); /* Highlight background */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.color-swatch {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.1);
+    display: block;
+}
+
+/* Hardcoded to match the required Theme Colors */
+.color-swatch.light {
+    background-color: #f0efea; /* Default Light Theme */
+}
+
+.color-swatch.dark {
+    background-color: #141413; /* Dark Mode Theme */
+    border-color: rgba(255,255,255,0.2);
+}
+
+/* Font Size Controls */
+.font-size-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--footnote-bg-color);
+    border-radius: 12px;
+    padding: 6px;
+}
+
+.font-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: var(--bg-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.1s;
+}
+
+.font-btn:active {
+    transform: scale(0.95);
+}
+
+.font-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.font-indicator-track {
+    display: flex;
+    gap: 6px;
+}
+
+.font-indicator {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-color);
+    opacity: 0.2;
+    transition: all 0.2s;
+}
+
+.font-indicator.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+
+/* Smooth Font Transition */
+body {
+    transition: background-color 0.2s ease, color 0.2s ease, font-size 0.2s ease;
+}
+

@@ -3,19 +3,54 @@
         <h1 class="site-brand">
             <a href="{{ .Site.BaseURL }}">
                 <span class="site-title">{{ .Site.Title }}</span>
-                <img class="site-inline-logo site-logo-light" src="{{ "images/logo.png" | relURL }}" alt="{{ .Site.Title }} logo light" loading="eager" />
-                <img class="site-inline-logo site-logo-dark" src="{{ "images/logo-right.png" | relURL }}" alt="{{ .Site.Title }} logo dark" loading="eager" />
+                <img class="site-inline-logo site-logo-light" src="/images/logo.png" alt="{{ .Site.Title }} logo light"
+                    loading="eager" />
+                <img class="site-inline-logo site-logo-dark" src="/images/logo-right.png"
+                    alt="{{ .Site.Title }} logo dark" loading="eager" />
             </a>
         </h1>
         <div class="header-controls">
             <button class="toc-toggle" aria-label="Toggle table of contents" title="目录">
                 <span class="toc-icon">≡</span>
             </button>
-            <div class="toggle-switch">
-                <input type="checkbox" id="darkModeToggle" class="toggle-input" aria-label="Toggle dark mode">
-                <label for="darkModeToggle" class="toggle-label">
-                    <span class="toggle-slider"></span>
-                </label>
+            <div class="display-settings-container">
+                <button id="displaySettingsBtn" class="header-icon-btn" aria-label="Display Settings"
+                    title="Appearance">
+                    <span class="settings-icon">Aa</span>
+                </button>
+                <div id="displaySettingsPanel" class="display-settings-panel" aria-hidden="true">
+                    <div class="settings-group">
+                        <label class="settings-label">Theme</label>
+                        <div class="theme-toggles">
+                            <button class="theme-btn light-theme-btn" data-theme="light" aria-label="Light Theme">
+                                <span class="color-swatch light"></span>
+                                <span>Day</span>
+                            </button>
+                            <button class="theme-btn dark-theme-btn" data-theme="dark" aria-label="Dark Theme">
+                                <span class="color-swatch dark"></span>
+                                <span>Night</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="settings-group">
+                        <label class="settings-label">Font Size</label>
+                        <div class="font-size-controls">
+                            <button id="decreaseFont" class="font-btn" aria-label="Decrease Font Size" title="Decrease">
+                                <span style="font-size: 14px;">A</span>
+                            </button>
+                            <div class="font-indicator-track">
+                                <span class="font-indicator active"></span>
+                                <span class="font-indicator"></span>
+                                <span class="font-indicator"></span>
+                                <span class="font-indicator"></span>
+                                <span class="font-indicator"></span>
+                            </div>
+                            <button id="increaseFont" class="font-btn" aria-label="Increase Font Size" title="Increase">
+                                <span style="font-size: 20px;">A</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

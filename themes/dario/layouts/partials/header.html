@@ -13,6 +13,27 @@
             <button class="toc-toggle" aria-label="Toggle table of contents" title="目录">
                 <span class="toc-icon">≡</span>
             </button>
+
+            <!-- Search Toggle -->
+
+            <button id="headerSearchBtn" class="header-icon-btn" aria-label="Search" title="Search">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="6" />
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="16" y1="16" x2="14.1" y2="14.1" />
+                </svg>
+            </button>
+
+            <!-- Search Panel Overlay -->
+            <div id="headerSearchPanel" class="header-search-panel">
+                <div class="header-search-container">
+                    <input type="text" id="searchInput" placeholder="Search..." class="header-search-input">
+                    <p class="header-search-hint">Please enter at least 2 characters</p>
+                    <div id="searchResults" class="header-search-results"></div>
+                </div>
+            </div>
+
             <div class="display-settings-container">
                 <button id="displaySettingsBtn" class="header-icon-btn" aria-label="Display Settings"
                     title="Appearance">

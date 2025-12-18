@@ -1,12 +1,45 @@
 {{- define "main" }}
-<!-- Sparkling Header Section - 放在最顶部 -->
-<section class="sparkling-header">
-    <div class="sparkle-container">
-        <div class="sparkle sparkle-left">✨</div>
-        <div class="sparkle sparkle-right">✨</div>
+<!-- Sliding Quote Section -->
+<section class="quote-section">
+    <!-- Main Card -->
+    <div class="quote-container">
+        <div class="quote-icon">❝</div>
+        <div class="quote-slider" id="quoteSlider">
+            {{ range $index, $element := .Site.Data.quotes }}
+            <div class="quote-slide {{ if eq $index 0 }}active{{ end }}" data-index="{{ $index }}">
+                <p class="quote-text">{{ .content }}</p>
+                <p class="quote-author">{{ .author }}</p>
+            </div>
+            {{ end }}
+        </div>
     </div>
-    <h1 class="main-title">AQUA IN JAR</h1>
-    <p class="subtitle">欢迎来到我的瓶子世界 🌊</p>
+
+    <!-- Separated Controls Config -->
+    <div class="quote-controls">
+        <!-- Dots on Left -->
+        <div class="quote-dots">
+            {{ range $index, $element := .Site.Data.quotes }}
+            <button class="quote-dot {{ if eq $index 0 }}active{{ end }}" data-index="{{ $index }}"
+                aria-label="Go to quote {{ add $index 1 }}"></button>
+            {{ end }}
+        </div>
+
+        <!-- Arrows on Right -->
+        <div class="quote-arrows">
+            <button class="quote-nav prev" aria-label="Previous quote">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button class="quote-nav next" aria-label="Next quote">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
 </section>
 
 {{- with .Site.GetPage "_index.md" }}
@@ -44,15 +77,7 @@
     {{ partial "calendar-widget.html" . }}
 </section>
 
-<!-- Search Section -->
-<section id="search-section" class="search-section">
-    <h2>{{ "Search Articles :turtle:" | emojify }}</h2>
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="输入关键词搜索..." class="search-input">
-        <p style="opacity:0.8; margin: 6px 0 8px; font-size: 0.95em;">请输入至少两个字再开始搜索</p>
-        <div id="searchResults" class="search-results"></div>
-    </div>
-</section>
+
 
 
 
@@ -114,7 +139,6 @@
         <div class="explore-column">
             <h3>更多 | MORE</h3>
             <ul>
-                <li><a href="{{ " toolbox/" | relURL }}">Toolbox</a></li>
                 <li><a href="#calendar-section">Calendar</a></li>
                 <li><a href="#search-section">Search</a></li>
             </ul>
@@ -143,5 +167,103 @@
             alert('暂时没有可用的文章');
         }
     }
+
+    // Quote Slider Logic
+    document.addEventListener('DOMContentLoaded', function () {
+        const slides = document.querySelectorAll('.quote-slide');
+        const dots = document.querySelectorAll('.quote-dot');
+        const prevBtn = document.querySelector('.quote-nav.prev');
+        const nextBtn = document.querySelector('.quote-nav.next');
+        const container = document.querySelector('.quote-container');
+
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        const slideInterval = 8000;
+        let autoPlayTimer;
+
+        function showSlide(index, direction = 'next') {
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+                slide.classList.remove('slide-in-next');
+                slide.classList.remove('slide-in-prev');
+            });
+            if (dots) dots.forEach(dot => dot.classList.remove('active'));
+
+            if (index >= totalSlides) index = 0;
+            if (index < 0) index = totalSlides - 1;
+
+            currentSlide = index;
+
+            slides[currentSlide].classList.add('active');
+            if (direction === 'next') {
+                slides[currentSlide].classList.add('slide-in-next');
+            } else {
+                slides[currentSlide].classList.add('slide-in-prev');
+            }
+
+            if (dots && dots[currentSlide]) dots[currentSlide].classList.add('active');
+        }
+
+        // Random logic for Auto-Play
+        function nextSlideRandom() {
+            if (totalSlides <= 1) return;
+            let nextIndex;
+            let attempts = 0;
+            do {
+                nextIndex = Math.floor(Math.random() * totalSlides);
+                attempts++;
+            } while (nextIndex === currentSlide && attempts < 5);
+            showSlide(nextIndex, 'next');
+        }
+
+        // Sequential logic for Manual Buttons
+        function nextSlideSequential() {
+            showSlide(currentSlide + 1, 'next');
+        }
+
+        function prevSlideSequential() {
+            showSlide(currentSlide - 1, 'prev');
+        }
+
+        if (nextBtn) nextBtn.addEventListener('click', () => {
+            nextSlideSequential();
+            resetTimer();
+        });
+
+        if (prevBtn) prevBtn.addEventListener('click', () => {
+            prevSlideSequential();
+            resetTimer();
+        });
+
+        if (dots) dots.forEach(dot => {
+            dot.addEventListener('click', function () {
+                const index = parseInt(this.getAttribute('data-index'));
+                const direction = index > currentSlide ? 'next' : 'prev';
+                showSlide(index, direction);
+                resetTimer();
+            });
+        });
+
+        if (container) {
+            container.addEventListener('mouseenter', () => clearInterval(autoPlayTimer));
+            container.addEventListener('mouseleave', startTimer);
+        }
+
+        function startTimer() {
+            clearInterval(autoPlayTimer);
+            if (totalSlides > 1) {
+                // Use random for auto-play
+                autoPlayTimer = setInterval(nextSlideRandom, slideInterval);
+            }
+        }
+
+        function resetTimer() {
+            clearInterval(autoPlayTimer);
+            startTimer();
+        }
+
+        // Init
+        startTimer();
+    });
 </script>
 {{- end }}

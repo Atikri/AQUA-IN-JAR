@@ -1,19 +1,19 @@
 "use strict";
 
 // Search functionality
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("searchInput");
     const searchResults = document.getElementById("searchResults");
-    
+
     if (!searchInput || !searchResults) return;
-    
+
     let searchData = [];
     let debounceTimer;
-    
+
     // Load search data from all pages
     async function loadSearchData() {
         searchData = [];
-        
+
         try {
             // Build base-aware URL for index.json (works under subpaths)
             const baseHref = (document.querySelector('base') && document.querySelector('base').href) || document.baseURI || '/';
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
             collectDataFromPage();
         }
     }
-    
+
     // Fallback method to collect data from current page
     function collectDataFromPage() {
         // Get all page links and their titles
@@ -57,21 +57,21 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-    
+
     // Highlight search terms in text
     function highlightText(text, searchTerm) {
         if (!searchTerm) return text;
         const regex = new RegExp(`(${searchTerm})`, 'gi');
         return text.replace(regex, '<span class="search-highlight">$1</span>');
     }
-    
+
     // Perform search
     function performSearch(query) {
         if (!query || query.length < 2) {
             searchResults.style.display = 'none';
             return;
         }
-        
+
         const queryLower = query.toLowerCase();
         const results = searchData.filter(item => {
             const titleMatch = item.title.toLowerCase().includes(queryLower);
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (item.title.toLowerCase().includes(queryLower)) score += 10;
             if (item.excerpt.toLowerCase().includes(queryLower)) score += 5;
             if (item.content.toLowerCase().includes(queryLower)) score += 1;
-            
+
             // Find content snippet around the match
             let snippet = item.excerpt;
             if (item.content) {
@@ -98,17 +98,17 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (end < item.content.length) snippet = snippet + '...';
                 }
             }
-            
+
             return {
                 ...item,
                 score: score,
                 snippet: snippet
             };
         }).sort((a, b) => b.score - a.score); // Sort by relevance
-        
+
         displayResults(results, query);
     }
-    
+
     // Display search results
     function displayResults(results, query) {
         if (results.length === 0) {
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
             searchResults.style.display = 'block';
             return;
         }
-        
+
         const html = results.slice(0, 10).map(item => `
             <div class="search-result-item" onclick="window.location.href='${item.url}'">
                 <div class="search-result-title">${highlightText(item.title, query)}</div>
@@ -124,11 +124,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 ${item.section ? `<div class="search-result-section">分类: ${item.section}</div>` : ''}
             </div>
         `).join('');
-        
+
         searchResults.innerHTML = html;
         searchResults.style.display = 'block';
     }
-    
+
     // Debounced search
     function debouncedSearch(query) {
         clearTimeout(debounceTimer);
@@ -136,38 +136,64 @@ document.addEventListener("DOMContentLoaded", function() {
             performSearch(query);
         }, 300);
     }
-    
+
     // Event listeners
-    searchInput.addEventListener('input', function(e) {
+    searchInput.addEventListener('input', function (e) {
         debouncedSearch(e.target.value);
     });
-    
-    searchInput.addEventListener('focus', function() {
+
+    searchInput.addEventListener('focus', function () {
         if (searchInput.value.length >= 2) {
             performSearch(searchInput.value);
         }
     });
-    
-    // Hide results when clicking outside
-    document.addEventListener('click', function(e) {
+
+    // Header Search Toggle
+    const headerSearchBtn = document.getElementById('headerSearchBtn');
+    const headerSearchPanel = document.getElementById('headerSearchPanel');
+
+    if (headerSearchBtn && headerSearchPanel) {
+        headerSearchBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            headerSearchPanel.classList.toggle('active');
+            if (headerSearchPanel.classList.contains('active')) {
+                searchInput.focus();
+            }
+        });
+
+        // Prevent closing when clicking inside panel
+        headerSearchPanel.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+    }
+
+    // Hide results/panel when clicking outside
+    document.addEventListener('click', function (e) {
         if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
             searchResults.style.display = 'none';
         }
+
+        // Close header panel if clicking outside
+        if (headerSearchPanel && headerSearchBtn &&
+            !headerSearchPanel.contains(e.target) &&
+            !headerSearchBtn.contains(e.target)) {
+            headerSearchPanel.classList.remove('active');
+        }
     });
-    
+
     // Load search data
     loadSearchData();
-    
+
     // Add keyboard navigation
-    searchInput.addEventListener('keydown', function(e) {
+    searchInput.addEventListener('keydown', function (e) {
         const items = searchResults.querySelectorAll('.search-result-item');
         const currentActive = searchResults.querySelector('.search-result-item.active');
         let activeIndex = -1;
-        
+
         if (currentActive) {
             activeIndex = Array.from(items).indexOf(currentActive);
         }
-        
+
         if (e.key === 'ArrowDown') {
             e.preventDefault();
             if (activeIndex < items.length - 1) {

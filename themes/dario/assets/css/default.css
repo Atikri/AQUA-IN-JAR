@@ -1781,6 +1781,24 @@ footer {
   }
 }
 
+/* Explicit override for Search Panel in Light Mode */
+.dark-mode-off .header-search-panel {
+  background: var(--bg-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--border-color);
+}
+
+.dark-mode-off .header-search-input {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.dark-mode-off .header-search-hint {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
 /* Dark Mode Tweaks for Search */
 .dark-mode-on .header-search-panel {
   background: rgba(30, 30, 35, 0.95);

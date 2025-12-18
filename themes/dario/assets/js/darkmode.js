@@ -73,7 +73,7 @@ function initTheme() {
    FONT SIZE MANAGEMENT
    ========================================= */
 
-const DEFAULT_FONT_SIZE = 20;
+const DEFAULT_FONT_SIZE = 18;
 const FONT_STEP = 2;
 const MIN_FONT = 16;
 const MAX_FONT = 24;

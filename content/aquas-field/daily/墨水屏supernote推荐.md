@@ -34,5 +34,3 @@ title: "墨水屏supernote推荐"
 ![IMG_20250807_163916.jpg](https://supernotes-resources.s3.amazonaws.com/image-uploads/b6248e91-d6d8-4865-8034-59d50207966b--IMG_20250807_163916.jpg)
 
 ---
-
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114987431369630&bvid=BV1sitzzuEvx&cid=31548246701&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>

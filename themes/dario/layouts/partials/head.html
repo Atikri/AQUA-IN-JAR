@@ -16,30 +16,30 @@
     {{- else }}
     <link rel="canonical" href="{{ .Permalink }}">
 
-        {{- if not .Site.Params.disableSocialMeta }}
-{{ partial "opengraph.html" . }}
-        {{- end }}
+    {{- if not .Site.Params.disableSocialMeta }}
+    {{ partial "opengraph.html" . }}
+    {{- end }}
     {{- end }}
 
     {{- if not .Site.Params.disableFontPreload }}
-    <link rel="preload" href="{{ "fonts/Newsreader.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ "fonts/Newsreader-italic.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ " fonts/Newsreader.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ " fonts/Newsreader-italic.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
     {{- end }}
 
     {{- /* 预加载关键资源 */ -}}
-    <link rel="preload" href="{{ "css/lazy-loading.css" | relURL }}" as="style">
-    <link rel="preload" href="{{ "js/lazy-loading.js" | relURL }}" as="script">
+    <link rel="preload" href="{{ " css/lazy-loading.css" | relURL }}" as="style">
+    <link rel="preload" href="{{ " js/lazy-loading.js" | relURL }}" as="script">
 
     {{- $defaultCSS := resources.Get "css/default.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $defaultCSS.RelPermalink }}" integrity="{{ $defaultCSS.Data.Integrity }}">
     {{- with resources.Get "css/custom.css" }}
-        {{- with . | minify | fingerprint }}
+    {{- with . | minify | fingerprint }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
-        {{- end }}
+    {{- end }}
     {{- end }}
 
-    <link rel="icon" type="image/x-icon" href="{{ (print "favicon.ico?v=2") | relURL }}">
-    <link rel="apple-touch-icon" href="{{ (print "apple-touch-icon.png?v=2") | relURL }}">
+    <link rel="icon" type="image/x-icon" href="{{ (print " favicon.ico?v=2") | relURL }}">
+    <link rel="apple-touch-icon" href="{{ (print " apple-touch-icon.png?v=2") | relURL }}">
 
     {{- if or (not .Site.Params.colorScheme) (eq .Site.Params.colorScheme "toggle") }}
     {{- $darkmodeJS := resources.Get "js/darkmode.js" | minify | fingerprint }}
@@ -49,16 +49,14 @@
     {{- $footnotesJS := resources.Get "js/footnotes.js" | minify | fingerprint }}
     <script src="{{ $footnotesJS.RelPermalink }}" integrity="{{ $footnotesJS.Data.Integrity }}" defer></script>
 
-    {{- if .IsHome }}
     {{- $searchJS := resources.Get "js/search.js" | minify | fingerprint }}
     <script src="{{ $searchJS.RelPermalink }}" integrity="{{ $searchJS.Data.Integrity }}" defer></script>
-    {{- end }}
 
     {{- /* 延迟加载支持 */ -}}
-    <link rel="stylesheet" href="{{ "css/lazy-loading.css" | relURL }}">
-    <script src="{{ "js/lazy-loading.js" | relURL }}" defer></script>
+    <link rel="stylesheet" href="{{ " css/lazy-loading.css" | relURL }}">
+    <script src="{{ " js/lazy-loading.js" | relURL }}" defer></script>
 
     {{- if templates.Exists "partials/nonstdmeta.html" }}
-{{ partial "nonstdmeta.html" . }}
+    {{ partial "nonstdmeta.html" . }}
     {{- end }}
 </head>

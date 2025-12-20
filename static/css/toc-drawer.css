@@ -23,8 +23,11 @@
     font-size: 0.95rem;
     color: var(--text-color);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    /* Align start to keep arrow next to text */
     align-items: center;
+    gap: 8px;
+    /* Space between text and arrow */
     transition: color 0.2s ease, background-color 0.2s ease;
     border-radius: 6px;
 }
@@ -40,19 +43,19 @@
 }
 
 /* Custom Arrow using Pseudo-element */
-/* Custom Arrow using Pseudo-element */
 .drawer-item details summary::after {
     content: '';
     display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-right: 2px solid #8c7b75;
-    /* Warmer color */
-    border-bottom: 2px solid #8c7b75;
+    width: 5px;
+    height: 5px;
+    border-right: 1.5px solid #8c7b75;
+    /* Warmer color, thinner line */
+    border-bottom: 1.5px solid #8c7b75;
     transform: rotate(-45deg);
     /* Point right */
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    margin-right: 6px;
+    transition: transform 0.2s ease;
+    margin-top: -2px;
+    /* Visual center adjustment */
     opacity: 0.8;
 }
 

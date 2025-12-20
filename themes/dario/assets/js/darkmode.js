@@ -77,7 +77,7 @@ const DEFAULT_FONT_SIZE = 18;
 const FONT_STEP = 2;
 const MIN_FONT = 16;
 const MAX_FONT = 24;
-// Levels: 16, 18, 20 (default), 22, 24 (5 levels maps nicely to 5 dots)
+// Levels: 16, 18 (default), 20, 22, 24 (5 levels maps nicely to 5 dots)
 
 function setFontSize(size) {
   // Constrain
@@ -88,7 +88,7 @@ function setFontSize(size) {
   document.documentElement.style.setProperty('--font-size-base', `${size}px`);
 
   // Persist
-  localStorage.setItem('fontSize', size);
+  localStorage.setItem('siteFontSize', size);
 
   // Update UI
   updateFontUI(size);
@@ -111,7 +111,7 @@ function updateFontUI(currentSize) {
 }
 
 function initFontSize() {
-  const savedFont = parseInt(localStorage.getItem('fontSize'));
+  const savedFont = parseInt(localStorage.getItem('siteFontSize'));
   const initialSize = !isNaN(savedFont) ? savedFont : DEFAULT_FONT_SIZE;
   setFontSize(initialSize);
 

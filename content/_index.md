@@ -3,6 +3,8 @@ Hello!!!我的小瓶子们~ 欢迎来我瓶中作客~:smiling_face_with_three_he
 
 在这里你可以翻阅我日常发过的一些blog，收集一些AQUA:droplet: （露水灵感），说不定会对你有帮助，那就太好啦!:partying_face:  
 
+[订阅我的RSS Feed](index.xml) 
+
 :sparkles: 下面是今天瓶口外的天气小卡片：  
 
 {{< weather-widget >}}

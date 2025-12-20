@@ -1,96 +1,96 @@
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {{- with (partial "objects/author.html" .).name }}
-    <meta name="author" content="{{ . }}">
-    {{- end }}
+  {{- with (partial "objects/author.html" .).name }}
+  <meta name="author" content="{{ . }}">
+  {{- end }}
 
-    {{- $page := partial "objects/page.html" . }}
-    <meta name="description" content="{{- $page.description -}}">
+  {{- $page := partial "objects/page.html" . }}
+  <meta name="description" content="{{- $page.description -}}">
 
-    <title>{{ $page.title }}</title>
+  <title>{{ $page.title }}</title>
 
-    {{- if strings.HasSuffix .RelPermalink "/404.html" }}
-    <meta name="robots" content="noindex, nofollow">
-    {{- else }}
-    <link rel="canonical" href="{{ .Permalink }}">
+  {{- if strings.HasSuffix .RelPermalink "/404.html" }}
+  <meta name="robots" content="noindex, nofollow">
+  {{- else }}
+  <link rel="canonical" href="{{ .Permalink }}">
 
-        {{- if not .Site.Params.disableSocialMeta }}
-{{ partial "opengraph.html" . }}
-        {{- end }}
-    {{- end }}
+  {{- if not .Site.Params.disableSocialMeta }}
+  {{ partial "opengraph.html" . }}
+  {{- end }}
+  {{- end }}
 
-    {{- if not .Site.Params.disableFontPreload }}
-    <link rel="preload" href="{{ "fonts/Newsreader.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ "fonts/Newsreader-italic.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
-    {{- end }}
+  {{- if not .Site.Params.disableFontPreload }}
+  <link rel="preload" href="{{ " fonts/Newsreader.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ " fonts/Newsreader-italic.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  {{- end }}
 
-    {{- /* 预加载关键资源 */ -}}
-    <link rel="preload" href="{{ "css/lazy-loading.css" | relURL }}" as="style">
-    <link rel="preload" href="{{ "js/lazy-loading.js" | relURL }}" as="script">
+  {{- /* 预加载关键资源 */ -}}
+  <link rel="preload" href="{{ " css/lazy-loading.css" | relURL }}" as="style">
+  <link rel="preload" href="{{ " js/lazy-loading.js" | relURL }}" as="script">
 
-    {{- $defaultCSS := resources.Get "css/default.css" | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $defaultCSS.RelPermalink }}" integrity="{{ $defaultCSS.Data.Integrity }}">
-    {{- with resources.Get "css/custom.css" }}
-        {{- with . | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
-        {{- end }}
-    {{- end }}
+  {{- $defaultCSS := resources.Get "css/default.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $defaultCSS.RelPermalink }}" integrity="{{ $defaultCSS.Data.Integrity }}">
+  {{- with resources.Get "css/custom.css" }}
+  {{- with . | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+  {{- end }}
+  {{- end }}
 
-    <link rel="icon" type="image/x-icon" href="{{ (print "favicon.ico?v=2") | relURL }}">
-    <link rel="apple-touch-icon" href="{{ (print "apple-touch-icon.png?v=2") | relURL }}">
+  <link rel="icon" type="image/x-icon" href="{{ (print " favicon.ico?v=2") | relURL }}">
+  <link rel="apple-touch-icon" href="{{ (print " apple-touch-icon.png?v=2") | relURL }}">
 
-    {{- if or (not .Site.Params.colorScheme) (eq .Site.Params.colorScheme "toggle") }}
-    {{- $darkmodeJS := resources.Get "js/darkmode.js" | minify | fingerprint }}
-    <script src="{{ $darkmodeJS.RelPermalink }}" integrity="{{ $darkmodeJS.Data.Integrity }}" defer></script>
-    {{- end }}
+  {{- if or (not .Site.Params.colorScheme) (eq .Site.Params.colorScheme "toggle") }}
+  {{- $darkmodeJS := resources.Get "js/darkmode.js" | minify | fingerprint }}
+  <script src="{{ $darkmodeJS.RelPermalink }}" integrity="{{ $darkmodeJS.Data.Integrity }}" defer></script>
+  {{- end }}
 
-    {{- $footnotesJS := resources.Get "js/footnotes.js" | minify | fingerprint }}
-    <script src="{{ $footnotesJS.RelPermalink }}" integrity="{{ $footnotesJS.Data.Integrity }}" defer></script>
+  {{- $footnotesJS := resources.Get "js/footnotes.js" | minify | fingerprint }}
+  <script src="{{ $footnotesJS.RelPermalink }}" integrity="{{ $footnotesJS.Data.Integrity }}" defer></script>
 
-    {{- if .IsHome }}
-    {{- $searchJS := resources.Get "js/search.js" | minify | fingerprint }}
-    <script src="{{ $searchJS.RelPermalink }}" integrity="{{ $searchJS.Data.Integrity }}" defer></script>
-    {{- end }}
+  {{- if .IsHome }}
+  {{- $searchJS := resources.Get "js/search.js" | minify | fingerprint }}
+  <script src="{{ $searchJS.RelPermalink }}" integrity="{{ $searchJS.Data.Integrity }}" defer></script>
+  {{- end }}
 
-    {{- /* 延迟加载支持 */ -}}
-    <link rel="stylesheet" href="{{ "css/lazy-loading.css" | relURL }}">
-    <script src="{{ "js/lazy-loading.js" | relURL }}" defer></script>
+  {{- /* 延迟加载支持 */ -}}
+  <link rel="stylesheet" href="{{ " css/lazy-loading.css" | relURL }}">
+  <link rel="stylesheet" href="{{ " css/toc-drawer.css" | relURL }}">
+  <script src="{{ " js/lazy-loading.js" | relURL }}" defer></script>
 
-    {{- /* 点赞功能 - 仅在文章页面加载 */ -}}
-    {{- if eq .Kind "page" }}
-    <script src="{{ "js/like-config.js" | relURL }}"></script>
-    <script>
-      // 动态添加 preconnect/dns-prefetch，减少 Supabase 首次请求的握手时间
-      (function(){
-        try {
-          var cfg = window.LIKE_CONFIG;
-          if (!cfg || !cfg.supabaseUrl) return;
-          var a = document.createElement('a');
-          a.href = cfg.supabaseUrl;
-          var origin = a.protocol + '//' + a.host;
-          var link1 = document.createElement('link');
-          link1.rel = 'preconnect';
-          link1.href = origin;
-          link1.crossOrigin = '';
-          document.head.appendChild(link1);
-          var link2 = document.createElement('link');
-          link2.rel = 'dns-prefetch';
-          link2.href = origin;
-          document.head.appendChild(link2);
-        } catch (e) {}
-      })();
-    </script>
-    <script src="{{ "js/like-button.js" | relURL }}" defer></script>
-    {{- end }}
+  {{- /* 点赞功能 - 仅在文章页面加载 */ -}}
+  {{- if eq .Kind "page" }}
+  <script src="{{ " js/like-config.js" | relURL }}"></script>
+  <script>
+    // 动态添加 preconnect/dns-prefetch，减少 Supabase 首次请求的握手时间
+    (function () {
+      try {
+        var cfg = window.LIKE_CONFIG;
+        if (!cfg || !cfg.supabaseUrl) return;
+        var a = document.createElement('a');
+        a.href = cfg.supabaseUrl;
+        var origin = a.protocol + '//' + a.host;
+        var link1 = document.createElement('link');
+        link1.rel = 'preconnect';
+        link1.href = origin;
+        link1.crossOrigin = '';
+        document.head.appendChild(link1);
+        var link2 = document.createElement('link');
+        link2.rel = 'dns-prefetch';
+        link2.href = origin;
+        document.head.appendChild(link2);
+      } catch (e) { }
+    })();
+  </script>
+  <script src="{{ " js/like-button.js" | relURL }}" defer></script>
+  {{- end }}
 
-    {{- /* 互动清单评分和 Jelly 复选框 - 全站加载，体积很小 */ -}}
-    <script src="{{ "js/checklist-score.js" | relURL }}" defer></script>
-    <script src="{{ "js/checkbox-jelly.js" | relURL }}" defer></script>
+  {{- /* 互动清单评分和 Jelly 复选框 - 全站加载，体积很小 */ -}}
+  <script src="{{ " js/checklist-score.js" | relURL }}" defer></script>
+  <script src="{{ " js/checkbox-jelly.js" | relURL }}" defer></script>
 
-    {{- if templates.Exists "partials/nonstdmeta.html" }}
-{{ partial "nonstdmeta.html" . }}
-    {{- end }}
+  {{- if templates.Exists "partials/nonstdmeta.html" }}
+  {{ partial "nonstdmeta.html" . }}
+  {{- end }}
 </head>
-

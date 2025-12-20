@@ -12,14 +12,23 @@
     <div class="toc-container">
         <h2>Outline</h2>
         {{- if eq .Kind "home" }}
-        <ul>
+        <ul class="toc-drawer">
             <li><a href="#calendar-section">Calendar</a></li>
-            <li><a href="#search-section">Search Articles</a></li>
-            <li><a href="#explore-more-section">Explore</a></li>
+
             {{- range .Site.MainSections }}
             {{- $section := $.Site.GetPage "section" . }}
             {{- if $section }}
-            <li><a href="{{ $section.Permalink }}">{{ $section.Title }}</a></li>
+            <li class="drawer-item">
+                <details>
+                    <summary>{{ $section.Title }}</summary>
+                    <ul>
+                        <li><a href="{{ $section.Permalink }}" class="section-link">View All</a></li>
+                        {{- range $section.Pages }}
+                        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                        {{- end }}
+                    </ul>
+                </details>
+            </li>
             {{- end }}
             {{- end }}
 
@@ -33,9 +42,26 @@
             {{- end }}
         </ul>
         {{- else }}
-        <ul>
+        <ul class="toc-drawer">
             {{- range .Sections }}
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            <li class="drawer-item">
+                <details>
+                    <summary>{{ .Title }}</summary>
+                    <ul>
+                        <li><a href="{{ .Permalink }}" class="section-link">View All</a></li>
+                        {{- range .Pages }}
+                        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                        {{- end }}
+                    </ul>
+                </details>
+            </li>
+            {{- end }}
+            {{- range .RegularPages }}
+            <li class="drawer-item">
+                <a href="{{ .Permalink }}"
+                    style="display:block; padding: 10px 4px; color: var(--text-color); text-decoration: none;">{{ .Title
+                    }}</a>
+            </li>
             {{- end }}
         </ul>
         {{- end }}
@@ -55,14 +81,23 @@
         <div class="toc-panel">
             <h2>Outline</h2>
             {{- if eq .Kind "home" }}
-            <ul>
+            <ul class="toc-drawer">
                 <li><a href="#calendar-section">Calendar</a></li>
-                <li><a href="#search-section">Search Articles</a></li>
-                <li><a href="#explore-more-section">Explore</a></li>
+
                 {{- range .Site.MainSections }}
                 {{- $section := $.Site.GetPage "section" . }}
                 {{- if $section }}
-                <li><a href="{{ $section.Permalink }}">{{ $section.Title }}</a></li>
+                <li class="drawer-item">
+                    <details>
+                        <summary>{{ $section.Title }}</summary>
+                        <ul>
+                            <li><a href="{{ $section.Permalink }}" class="section-link">View All</a></li>
+                            {{- range $section.Pages }}
+                            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            {{- end }}
+                        </ul>
+                    </details>
+                </li>
                 {{- end }}
                 {{- end }}
 
@@ -76,9 +111,26 @@
                 {{- end }}
             </ul>
             {{- else }}
-            <ul>
+            <ul class="toc-drawer">
                 {{- range .Sections }}
-                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                <li class="drawer-item">
+                    <details>
+                        <summary>{{ .Title }}</summary>
+                        <ul>
+                            <li><a href="{{ .Permalink }}" class="section-link">View All</a></li>
+                            {{- range .Pages }}
+                            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            {{- end }}
+                        </ul>
+                    </details>
+                </li>
+                {{- end }}
+                {{- range .RegularPages }}
+                <li class="drawer-item">
+                    <a href="{{ .Permalink }}"
+                        style="display:block; padding: 10px 4px; color: var(--text-color); text-decoration: none;">{{
+                        .Title }}</a>
+                </li>
                 {{- end }}
             </ul>
             {{- end }}

@@ -92,24 +92,7 @@
     </ul>
 </section>
 
-{{- range sort (where .Site.Sections "Section" "in" .Site.MainSections) "Weight" }}
-<section>
-    <h2>{{ .Title }}</h2>
-    <ul>
-        {{- if eq .Section "toolbox" }}
-        {{- $pages := where .Site.RegularPages "Section" "toolbox" -}}
-        {{- $pages = where $pages "Params.tags" "intersect" (slice "inter-nos") -}}
-        {{- range $pages }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        {{- end }}
-        {{- else }}
-        {{- range where .Site.RegularPages "Section" .Section }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        {{- end }}
-        {{- end }}
-    </ul>
-</section>
-{{- end }}
+
 
 
 
@@ -130,25 +113,25 @@
         <div class="explore-column">
             <h3>探索 | EXPLORE</h3>
             <ul>
-                <li><a href="{{ " aquas-field/" | relURL }}">Aqua's Field</a></li>
-                <li><a href="{{ " notification-jar/" | relURL }}">Notification Jar</a></li>
-                <li><a href="{{ " podcast-music/" | relURL }}">Podcast & Music</a></li>
-                <li><a href="{{ " self-generation/" | relURL }}">Self-Generation</a></li>
+                <li><a href="https://tikri.site/aquas-field/">Aqua's Field</a></li>
+                <li><a href="https://tikri.site/notification-jar/">Notification Jar</a></li>
+                <li><a href="https://tikri.site/podcast-music/">Podcast & Music & Video</a></li>
+                <li><a href="https://tikri.site/self-generation/">Self-Generation</a></li>
             </ul>
         </div>
         <div class="explore-column">
             <h3>更多 | MORE</h3>
             <ul>
                 <li><a href="#calendar-section">Calendar</a></li>
-                <li><a href="#search-section">Search</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleSearch()">Search</a></li>
             </ul>
         </div>
         <div class="explore-column">
             <h3>关于 | ABOUT</h3>
             <ul>
-                <li><a href="{{ with .Site.GetPage " /notification-jar/aboutme.md" }}{{ .RelPermalink }}{{ end }}">About
+                <li><a href="{{ with .Site.GetPage " notification-jar/aboutme.md" }}{{ .RelPermalink }}{{ end }}">About
                         Me</a></li>
-                <li><a href="{{ with .Site.GetPage " /notification-jar/联系我（contact with me）.md" }}{{ .RelPermalink }}{{
+                <li><a href="{{ with .Site.GetPage " notification-jar/联系我（contact with me）.md" }}{{ .RelPermalink }}{{
                         end }}">Contact</a></li>
             </ul>
         </div>
@@ -164,7 +147,7 @@
             const randomUrl = validArticles[randomIndex];
             window.location.href = randomUrl;
         } else {
-            alert('暂时没有可用的文章');
+            alert('暂时没有发现的文章');
         }
     }
 

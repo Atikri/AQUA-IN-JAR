@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Season Tactics - Web Prototype</title>
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --text-color: #e5e5e5;
+            --accent-green: #4ade80;
+            --accent-red: #f87171;
+            --grid-line: #333;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        #game-container {
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        canvas {
+            background-color: #262626;
+            display: block;
+            cursor: pointer;
+        }
+
+        #ui-layer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border-top: 1px solid #444;
+        }
+
+        .btn {
+            background: #444;
+            color: white;
+            border: 1px solid #666;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: #555;
+            border-color: #888;
+        }
+
+        .turn-indicator {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .p1-color {
+            background-color: var(--accent-green);
+        }
+
+        .p2-color {
+            background-color: var(--accent-red);
+        }
+
+        #status-msg {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>SEASON TACTICS</h1>
+
+    <div id="game-container">
+        <canvas id="gameCanvas" width="600" height="600"></canvas>
+        <div id="ui-layer">
+            <div id="status-msg">Welcome, Commander. Green starts.</div>
+            <div class="turn-indicator">
+                <span id="turn-dot" class="dot p1-color"></span>
+                <span id="turn-text">P1 Turn</span>
+            </div>
+            <button class="btn" onclick="game.endTurn()">End Turn (Space)</button>
+        </div>
+    </div>
+
+    <script>
+        /** 
+         * Game Configuration 
+         */
+        const CONFIG = {
+            ROWS: 8,
+            COLS: 8,
+            GRID_SIZE: 75, // 600 / 8
+            COLORS: {
+                P1_BG: '#14532d', // Dark green for territory
+                P2_BG: '#7f1d1d', // Dark red for territory
+                P1_UNIT: '#4ade80',
+                P2_UNIT: '#f87171',
+                HIGHLIGHT: 'rgba(255, 215, 0, 0.4)',
+                SELECTION: '#ffd700',
+                GRID: '#333'
+            }
+        };
+
+        /**
+         * Unit Classes
+         */
+        class Unit {
+            constructor(row, col, owner) {
+                this.row = row;
+                this.col = col;
+                this.owner = owner; // 1 or 2
+                this.hasMoved = false;
+
+                // Defaults
+                this.name = "Unit";
+                this.maxHp = 10;
+                this.hp = 10;
+                this.baseDamage = 0;
+                this.baseMoveRange = 0;
+                this.attackRange = 0;
+                this.type = "basic"; // used for drawing shapes
+            }
+
+            startTurn(grid) {
+                this.hasMoved = false;
+                // Buff: Heal 1 if on own territory
+                if (this.isOnOwnTerritory(grid)) {
+                    this.heal(1);
+                    return true; // healed
+                }
+                return false;
+            }
+
+            getMoveRange(grid) {
+                let penalty = 0;
+                // Debuff: -1 move range if on enemy territory
+                if (this.isOnEnemyTerritory(grid)) {
+                    penalty = 1;
+                }
+                return Math.max(0, this.baseMoveRange - penalty);
+            }
+
+            getDamage(grid) {
+                let bonus = 0;
+                // Buff: +1 damage if on own territory
+                if (this.isOnOwnTerritory(grid)) {
+                    bonus = 1;
+                }
+                return this.baseDamage + bonus;
+            }
+
+            receiveDamage(amount) {
+                this.hp -= amount;
+                return this.hp <= 0; // returns true if dead
+            }
+
+            heal(amount) {
+                this.hp = Math.min(this.hp + amount, this.maxHp);
+            }
+
+            isOnOwnTerritory(grid) {
+                if (!this.isValid(this.row, this.col)) return false;
+                return grid[this.row][this.col] === this.owner;
+            }
+
+            isOnEnemyTerritory(grid) {
+                if (!this.isValid(this.row, this.col)) return false;
+                const owner = grid[this.row][this.col];
+                return owner !== 0 && owner !== this.owner;
+            }
+
+            isValid(r, c) {
+                return r >= 0 && r < CONFIG.ROWS && c >= 0 && c < CONFIG.COLS;
+            }
+
+            paintTerritory(grid, r, c) {
+                if (this.isValid(r, c)) {
+                    grid[r][c] = this.owner;
+                }
+            }
+        }
+
+        class Base extends Unit {
+            constructor(row, col, owner) {
+                super(row, col, owner);
+                this.name = "Base";
+                this.maxHp = 50;
+                this.hp = 50;
+                this.type = "base";
+            }
+        }
+
+        class Infantry extends Unit {
+            constructor(row, col, owner) {
+                super(row, col, owner);
+                this.name = "Infantry";
+                this.maxHp = 10;
+                this.hp = 10;
+                this.baseDamage = 3;
+                this.baseMoveRange = 3;
+                this.attackRange = 1;
+                this.type = "infantry";
+            }
+
+            paintTerritory(grid, r, c) {
+                super.paintTerritory(grid, r, c);
+                // Paint Cross Shape
+                const neighbors = [[r + 1, c], [r - 1, c], [r, c + 1], [r, c - 1]];
+                neighbors.forEach(([nr, nc]) => {
+                    if (this.isValid(nr, nc)) grid[nr][nc] = this.owner;
+                });
+            }
+        }
+
+        class Tank extends Unit {
+            constructor(row, col, owner) {
+                super(row, col, owner);
+                this.name = "Tank";
+                this.maxHp = 20;
+                this.hp = 20;
+                this.baseDamage = 4;
+                this.baseMoveRange = 1;
+                this.attackRange = 1;
+                this.type = "tank";
+            }
+        }
+
+        class Ranged extends Unit {
+            constructor(row, col, owner) {
+                super(row, col, owner);
+                this.name = "Ranged";
+                this.maxHp = 6;
+                this.hp = 6;
+                this.baseDamage = 2;
+                this.baseMoveRange = 2;
+                this.attackRange = 3;
+                this.type = "ranged";
+            }
+        }
+
+        /**
+         * Game Engine
+         */
+        class Game {
+            constructor() {
+                this.canvas = document.getElementById('gameCanvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.grid = Array(CONFIG.ROWS).fill().map(() => Array(CONFIG.COLS).fill(0)); // 0=None, 1=P1, 2=P2
+                this.units = [];
+                this.turn = 1;
+                this.selectedUnit = null;
+                this.msg = "Player 1's Turn";
+
+                this.initBoard();
+                this.setupInput();
+                this.render();
+            }
+
+            initBoard() {
+                // Bases
+                this.addUnit(new Base(0, 0, 1));
+                this.addUnit(new Base(CONFIG.ROWS - 1, CONFIG.COLS - 1, 2));
+                this.grid[0][0] = 1;
+                this.grid[CONFIG.ROWS - 1][CONFIG.COLS - 1] = 2;
+
+                // P1 Units
+                this.addUnit(new Infantry(0, 1, 1));
+                this.addUnit(new Ranged(1, 0, 1));
+                this.addUnit(new Tank(1, 1, 1));
+
+                // P2 Units
+                this.addUnit(new Infantry(CONFIG.ROWS - 1, CONFIG.COLS - 2, 2));
+                this.addUnit(new Ranged(CONFIG.ROWS - 2, CONFIG.COLS - 1, 2));
+                this.addUnit(new Tank(CONFIG.ROWS - 2, CONFIG.COLS - 2, 2));
+            }
+
+            addUnit(unit) {
+                this.units.push(unit);
+            }
+
+            getUnitAt(r, c) {
+                return this.units.find(u => u.row === r && u.col === c);
+            }
+
+            setupInput() {
+                this.canvas.addEventListener('mousedown', (e) => {
+                    const rect = this.canvas.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const c = Math.floor(x / CONFIG.GRID_SIZE);
+                    const r = Math.floor(y / CONFIG.GRID_SIZE);
+                    this.handleClick(r, c);
+                });
+
+                window.addEventListener('keydown', (e) => {
+                    if (e.code === 'Space') {
+                        this.endTurn();
+                    }
+                });
+            }
+
+            endTurn() {
+                this.turn = this.turn === 1 ? 2 : 1;
+                this.selectedUnit = null;
+                this.updateUIStatus(`Player ${this.turn}'s Turn`, true);
+
+                // Start turn logic
+                this.units.forEach(u => {
+                    if (u.owner === this.turn) {
+                        u.startTurn(this.grid);
+                    } else {
+                        u.hasMoved = false;
+                    }
+                });
+                this.render();
+            }
+
+            handleClick(r, c) {
+                if (r < 0 || r >= CONFIG.ROWS || c < 0 || c >= CONFIG.COLS) return;
+
+                const clickedUnit = this.getUnitAt(r, c);
+                const unit = this.selectedUnit;
+
+                // 1. Select Unit
+                if (!unit) {
+                    if (clickedUnit && clickedUnit.owner === this.turn && !clickedUnit.hasMoved) {
+                        this.selectedUnit = clickedUnit;
+                        const range = clickedUnit.getMoveRange(this.grid);
+                        this.updateUIStatus(`${clickedUnit.name} Selected. Mov: ${range}, Dmg: ${clickedUnit.getDamage(this.grid)}`);
+                    }
+                    this.render();
+                    return;
+                }
+
+                // 2. Action with Selected Unit
+
+                // Switch Selection?
+                if (clickedUnit && clickedUnit.owner === this.turn) {
+                    if (!clickedUnit.hasMoved) {
+                        this.selectedUnit = clickedUnit;
+                        const range = clickedUnit.getMoveRange(this.grid);
+                        this.updateUIStatus(`Switched to ${clickedUnit.name}. Mov: ${range}`);
+                        this.render();
+                        return;
+                    }
+                }
+
+                const dist = Math.abs(unit.row - r) + Math.abs(unit.col - c);
+
+                // Attack?
+                if (clickedUnit && clickedUnit.owner !== this.turn) {
+                    if (dist <= unit.attackRange) {
+                        const dmg = unit.getDamage(this.grid);
+                        const isDead = clickedUnit.receiveDamage(dmg);
+                        this.updateUIStatus(`Bang! Dealt ${dmg} damage to ${clickedUnit.name}.`);
+
+                        if (isDead) {
+                            this.units = this.units.filter(u => u !== clickedUnit);
+                            if (clickedUnit.type === 'base') {
+                                alert(`PLAYER ${this.turn} WINS!`);
+                                location.reload();
+                            }
+                        }
+
+                        unit.hasMoved = true;
+                        this.selectedUnit = null;
+                        this.render();
+                    } else {
+                        this.updateUIStatus("Target out of range!");
+                    }
+                    return;
+                }
+
+                // Move?
+                if (!clickedUnit) {
+                    const range = unit.getMoveRange(this.grid);
+                    if (dist <= range) {
+                        // Determine path or just teleport in this prototype
+                        // Validating simple distance usually enough for prototype unless obstacles exist
+                        // Logic: A* could go here, but Manhattan dist <= range is okay for open field
+
+                        unit.row = r;
+                        unit.col = c;
+                        unit.paintTerritory(this.grid, r, c);
+                        unit.hasMoved = true;
+                        this.selectedUnit = null;
+                        this.updateUIStatus("Moved & Captured Territory.");
+                        this.render();
+                    } else {
+                        this.updateUIStatus("Too far to move!");
+                    }
+                }
+            }
+
+            updateUIStatus(msg, turnChange = false) {
+                document.getElementById('status-msg').innerText = msg;
+                if (turnChange) {
+                    const turnText = document.getElementById('turn-text');
+                    const turnDot = document.getElementById('turn-dot');
+                    turnText.innerText = `P${this.turn} Turn`;
+                    turnDot.className = `dot ${this.turn === 1 ? 'p1-color' : 'p2-color'}`;
+                }
+            }
+
+            render() {
+                // Clear
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+                // 1. Draw Grid & Territory
+                for (let r = 0; r < CONFIG.ROWS; r++) {
+                    for (let c = 0; c < CONFIG.COLS; c++) {
+                        const x = c * CONFIG.GRID_SIZE;
+                        const y = r * CONFIG.GRID_SIZE;
+
+                        // Fill
+                        let color = '#262626';
+                        if (this.grid[r][c] === 1) color = CONFIG.COLORS.P1_BG;
+                        if (this.grid[r][c] === 2) color = CONFIG.COLORS.P2_BG;
+
+                        this.ctx.fillStyle = color;
+                        this.ctx.fillRect(x, y, CONFIG.GRID_SIZE, CONFIG.GRID_SIZE);
+
+                        // Border
+                        this.ctx.strokeStyle = CONFIG.COLORS.GRID;
+                        this.ctx.strokeRect(x, y, CONFIG.GRID_SIZE, CONFIG.GRID_SIZE);
+                    }
+                }
+
+                // 2. Highlight Move Range (if selected)
+                if (this.selectedUnit) {
+                    const range = this.selectedUnit.getMoveRange(this.grid);
+                    const u = this.selectedUnit;
+                    this.ctx.fillStyle = CONFIG.COLORS.HIGHLIGHT;
+
+                    // Simple range BFS or iteration for visualization
+                    // Since there are no walls, simple Manhattan distance check is fine for visualization too
+                    for (let r = 0; r < CONFIG.ROWS; r++) {
+                        for (let c = 0; c < CONFIG.COLS; c++) {
+                            const dist = Math.abs(u.row - r) + Math.abs(u.col - c);
+                            if (dist <= range && dist > 0 && !this.getUnitAt(r, c)) {
+                                this.ctx.fillRect(c * CONFIG.GRID_SIZE, r * CONFIG.GRID_SIZE, CONFIG.GRID_SIZE, CONFIG.GRID_SIZE);
+                            }
+                        }
+                    }
+                }
+
+                // 3. Draw Units
+                this.units.forEach(u => {
+                    const cx = u.col * CONFIG.GRID_SIZE + CONFIG.GRID_SIZE / 2;
+                    const cy = u.row * CONFIG.GRID_SIZE + CONFIG.GRID_SIZE / 2;
+                    const color = u.owner === 1 ? CONFIG.COLORS.P1_UNIT : CONFIG.COLORS.P2_UNIT;
+
+                    this.ctx.fillStyle = color;
+                    this.ctx.strokeStyle = 'white';
+                    this.ctx.lineWidth = 2;
+
+                    if (u.type === 'base') {
+                        const s = 20;
+                        this.ctx.fillRect(cx - s, cy - s, s * 2, s * 2);
+                        this.ctx.strokeRect(cx - s, cy - s, s * 2, s * 2);
+                        // Gold border for base
+                        this.ctx.strokeStyle = '#ffd700';
+                        this.ctx.strokeRect(cx - s - 3, cy - s - 3, s * 2 + 6, s * 2 + 6);
+                    }
+                    else if (u.type === 'infantry') {
+                        this.ctx.beginPath();
+                        this.ctx.arc(cx, cy, 15, 0, Math.PI * 2);
+                        this.ctx.fill();
+                        this.ctx.stroke();
+                    }
+                    else if (u.type === 'tank') {
+                        const s = 18;
+                        this.ctx.fillRect(cx - s, cy - s, s * 2, s * 2);
+                        this.ctx.strokeRect(cx - s, cy - s, s * 2, s * 2);
+                        // Inner rect
+                        this.ctx.fillStyle = 'rgba(0,0,0,0.3)';
+                        this.ctx.fillRect(cx - 8, cy - 8, 16, 16);
+                    }
+                    else if (u.type === 'ranged') {
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(cx, cy - 20);
+                        this.ctx.lineTo(cx - 15, cy + 10);
+                        this.ctx.lineTo(cx + 15, cy + 10);
+                        this.ctx.closePath();
+                        this.ctx.fill();
+                        this.ctx.stroke();
+                    }
+
+                    // Selection Glow
+                    if (u === this.selectedUnit) {
+                        this.ctx.strokeStyle = CONFIG.COLORS.SELECTION;
+                        this.ctx.lineWidth = 3;
+                        this.ctx.beginPath();
+                        this.ctx.arc(cx, cy, 30, 0, Math.PI * 2);
+                        this.ctx.stroke();
+                    }
+
+                    // HP Bar or Text
+                    this.ctx.fillStyle = 'white';
+                    this.ctx.font = '12px Arial';
+                    this.ctx.textAlign = 'center';
+                    this.ctx.fillText(u.hp, cx, cy + 30);
+                });
+            }
+        }
+
+        // Start Game
+        const game = new Game();
+
+    </script>
+</body>
+
+</html>

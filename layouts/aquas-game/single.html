@@ -1,0 +1,170 @@
+{{ define "main" }}
+<div class="daily-puzzle-container">
+    <div class="daily-header">
+        <h1 class="daily-title">{{ .Title }}</h1>
+        <div class="daily-date" id="puzzleDate">Loading...</div>
+    </div>
+
+    <!-- Difficulty Selector -->
+    <div class="difficulty-selector" id="difficultySelector">
+        <label>
+            <input type="radio" name="difficulty" value="easy" checked>
+            <span>Easy</span>
+        </label>
+        <label>
+            <input type="radio" name="difficulty" value="medium">
+            <span>Medium</span>
+        </label>
+        <label>
+            <input type="radio" name="difficulty" value="hard">
+            <span>Hard</span>
+        </label>
+    </div>
+
+    <canvas id="dailyPuzzleCanvas" width="500" height="500"></canvas>
+
+    <div class="controls">
+        <button class="btn-game btn-reset" id="resetBtn">Restart</button>
+        <a href="/aquas-game/" class="back-link"
+            style="margin-left: 1rem; color: #6b7280; text-decoration: none; font-size: 0.9rem;">← Back to Arcade</a>
+    </div>
+
+    <div class="instructions">
+        <h3>How to Play</h3>
+        {{ .Content }}
+    </div>
+</div>
+
+<link rel="stylesheet" href="/css/daily-puzzle.css">
+<style>
+    .difficulty-selector {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+        background: #e5e7eb;
+        padding: 0.25rem;
+        border-radius: 0.5rem;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .difficulty-selector label {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .difficulty-selector input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .difficulty-selector span {
+        display: block;
+        padding: 0.4rem 1rem;
+        border-radius: 0.375rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #4b5563;
+        transition: all 0.2s;
+    }
+
+    .difficulty-selector input:checked+span {
+        background: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        color: #111827;
+    }
+
+    /* Dark Mode */
+    @media (prefers-color-scheme: dark) {
+        .difficulty-selector {
+            background: #374151;
+        }
+
+        .difficulty-selector span {
+            color: #9ca3af;
+        }
+
+        .difficulty-selector input:checked+span {
+            background: #1f2937;
+            color: #f3f4f6;
+        }
+    }
+</style>
+
+<script src="/js/daily-puzzle/rng.js"></script>
+
+{{ if eq .Params.gameType "tents" }}
+<script src="/js/daily-puzzle/tents.js"></script>
+{{ else if eq .Params.gameType "bridges" }}
+<script src="/js/daily-puzzle/bridges.js"></script>
+{{ else if eq .Params.gameType "sudoku" }}
+<script src="/js/daily-puzzle/sudoku.js"></script>
+{{ else if eq .Params.gameType "nonogram" }}
+<script src="/js/daily-puzzle/nonogram.js"></script>
+{{ end }}
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const date = new Date();
+        const dateStr = date.toISOString().split('T')[0];
+        document.getElementById('puzzleDate').innerText = date.toLocaleDateString(undefined, {
+            weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+        });
+
+        const type = "{{ .Params.gameType }}";
+        const canvasId = 'dailyPuzzleCanvas';
+        let game;
+
+        // Difficulty Logic
+        let currentDifficulty = 'easy'; // Default
+
+        function initGame() {
+            // Seed includes date AND difficulty (so Hard isn't just Easy seed recycled directly if algo differs)
+            const seed = `${dateStr}-${currentDifficulty}`;
+
+            if (type === 'tents') {
+                let size = 6;
+                if (currentDifficulty === 'medium') size = 8;
+                if (currentDifficulty === 'hard') size = 10;
+                game = new DailyTents(canvasId, seed, size);
+            }
+            else if (type === 'bridges') {
+                let size = 7;
+                if (currentDifficulty === 'medium') size = 10;
+                if (currentDifficulty === 'hard') size = 12;
+                game = new DailyBridges(canvasId, seed, size);
+            }
+            else if (type === 'sudoku') {
+                // Pass difficulty string to class
+                game = new DailySudoku(canvasId, seed, currentDifficulty);
+            }
+            else if (type === 'nonogram') {
+                let size = 5;
+                if (currentDifficulty === 'medium') size = 10;
+                if (currentDifficulty === 'hard') size = 15;
+                game = new DailyNonogram(canvasId, seed, size);
+            }
+        }
+
+        // Init
+        initGame();
+
+        // Listeners
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            if (confirm('Restart this puzzle?')) {
+                initGame();
+            }
+        });
+
+        document.querySelectorAll('input[name="difficulty"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                currentDifficulty = e.target.value;
+                initGame();
+            });
+        });
+    });
+</script>
+{{ end }}

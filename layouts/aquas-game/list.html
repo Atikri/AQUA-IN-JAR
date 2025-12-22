@@ -1,0 +1,103 @@
+{{ define "main" }}
+<div class="daily-puzzle-container" style="max-width: 800px;">
+    <div class="daily-header">
+        <h1 class="daily-title">🎮 AQUA'S ARCADE</h1>
+        <p style="color: #6b7280;">A fresh puzzle every day. Train your brain!</p>
+    </div>
+
+    <div class="arcade-grid"
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; width: 100%;">
+        {{ range .Pages }}
+        <a href="{{ .Permalink }}" class="arcade-card">
+            <div class="card-icon">{{ .Params.icon }}</div>
+            <div class="card-content">
+                <h3>{{ .Title }}</h3>
+                <p>{{ .Description }}</p>
+                <span class="difficulty {{ .Params.difficulty }}">
+                    {{ .Params.difficulty | humanize }}
+                </span>
+            </div>
+        </a>
+        {{ end }}
+    </div>
+</div>
+
+<style>
+    .arcade-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-decoration: none;
+        color: inherit;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border: 1px solid #e5e7eb;
+    }
+
+    .arcade-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        border-color: #3b82f6;
+    }
+
+    .card-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-content h3 {
+        margin: 0.5rem 0;
+        color: #111827;
+        font-size: 1.25rem;
+    }
+
+    .card-content p {
+        color: #6b7280;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .difficulty {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .difficulty.easy {
+        background: #d1fae5;
+        color: #065f46;
+    }
+
+    .difficulty.medium {
+        background: #fef3c7;
+        color: #92400e;
+    }
+
+    .difficulty.hard {
+        background: #fee2e2;
+        color: #991b1b;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .arcade-card {
+            background: #1f2937;
+            border-color: #374151;
+        }
+
+        .card-content h3 {
+            color: #f3f4f6;
+        }
+
+        .card-content p {
+            color: #9ca3af;
+        }
+    }
+</style>
+{{ end }}

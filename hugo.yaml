@@ -10,7 +10,7 @@ params:
   backToTopImage: images/navigation/top.png
 
 # Main sections for navigation
-mainSections: ['notification-jar', 'aquas-field', 'podcast-music', 'self-generation', 'toolbox']
+mainSections: ['notification-jar', 'aquas-field', 'podcast-music', 'self-generation', 'toolbox', 'aquas-game']
 
 # Enable Table of Contents
 markup:

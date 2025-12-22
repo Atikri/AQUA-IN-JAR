@@ -1,0 +1,117 @@
+/* Daily Puzzle Styles */
+.daily-puzzle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #fafafa;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 600px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.daily-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.daily-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.daily-date {
+    font-size: 1rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+canvas#dailyPuzzleCanvas {
+    max-width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    touch-action: none;
+    /* Prevent scrolling while playing */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-game {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    outline: none;
+}
+
+.btn-reset {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.btn-reset:hover {
+    background-color: #e5e7eb;
+}
+
+.instructions {
+    margin-top: 2rem;
+    max-width: 100%;
+    font-size: 0.875rem;
+    color: #4b5563;
+    line-height: 1.5;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+}
+
+.instructions h3 {
+    margin-top: 0;
+    color: #1f2937;
+}
+
+/* Dark Mode adaptation if site supports it */
+@media (prefers-color-scheme: dark) {
+    .daily-puzzle-container {
+        background-color: #1f2937;
+    }
+
+    .daily-title {
+        color: #f9fafb;
+    }
+
+    .daily-date {
+        color: #9ca3af;
+    }
+
+    .instructions {
+        background: #374151;
+        border-color: #4b5563;
+        color: #d1d5db;
+    }
+
+    .instructions h3 {
+        color: #f3f4f6;
+    }
+
+    .btn-reset {
+        background-color: #4b5563;
+        color: #f3f4f6;
+    }
+
+    .btn-reset:hover {
+        background-color: #6b7280;
+    }
+}

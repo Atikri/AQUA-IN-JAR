@@ -89,13 +89,22 @@ class DailyNonogram {
 
     setupInput() {
         const handleStart = (e) => {
-            e.preventDefault();
+            if (e.type !== 'mousedown') e.preventDefault();
             const rect = this.canvas.getBoundingClientRect();
-            let clientX = e.touches ? e.touches[0].clientX : e.clientX;
-            let clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            let clientX, clientY;
+            if (e.touches && e.touches.length > 0) {
+                clientX = e.touches[0].clientX;
+                clientY = e.touches[0].clientY;
+            } else {
+                clientX = e.clientX;
+                clientY = e.clientY;
+            }
 
-            let x = clientX - rect.left - this.hintSize;
-            let y = clientY - rect.top - this.hintSize;
+            const scaleX = this.canvas.width / rect.width;
+            const scaleY = this.canvas.height / rect.height;
+
+            let x = (clientX - rect.left) * scaleX - this.hintSize;
+            let y = (clientY - rect.top) * scaleY - this.hintSize;
 
             if (x < 0 || y < 0) return; // Clicked Hints
 
@@ -109,6 +118,7 @@ class DailyNonogram {
 
         this.canvas.addEventListener('mousedown', handleStart);
         this.canvas.addEventListener('contextmenu', e => e.preventDefault());
+        this.canvas.addEventListener('touchstart', handleStart, { passive: false });
     }
 
     toggleCell(r, c, isRight) {

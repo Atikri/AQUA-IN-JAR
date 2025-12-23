@@ -153,11 +153,11 @@ class DailyTents {
         let isTouching = false;
 
         const handleStart = (e) => {
-            e.preventDefault();
+            if (e.type !== 'mousedown') e.preventDefault(); // Prevent scroll on touch
             const rect = this.canvas.getBoundingClientRect();
             let clientX, clientY;
 
-            if (e.touches) {
+            if (e.touches && e.touches.length > 0) {
                 clientX = e.touches[0].clientX;
                 clientY = e.touches[0].clientY;
             } else {
@@ -165,22 +165,23 @@ class DailyTents {
                 clientY = e.clientY;
             }
 
-            const x = clientX - rect.left;
-            const y = clientY - rect.top;
+            // Calculate scale
+            const scaleX = this.canvas.width / rect.width;
+            const scaleY = this.canvas.height / rect.height;
 
-            // Map to grid coords
-            // Grid starts at 1,1 (0,0 is empty corner)
-            // But let's verify render logic
-            const c = Math.floor(x / this.cellSize) - 1;
-            const r = Math.floor(y / this.cellSize) - 1;
+            const x = (clientX - rect.left) * scaleX;
+            const y = (clientY - rect.top) * scaleY;
 
-            this.handleAction(r, c, e.button === 2); // Right click = 2
+            // Map to grid
+            const cellSize = this.canvas.width / (this.size + 1);
+            const c = Math.floor(x / cellSize) - 1;
+            const r = Math.floor(y / cellSize) - 1;
+
+            this.handleAction(r, c, e.button === 2);
         };
 
         this.canvas.addEventListener('mousedown', handleStart);
         this.canvas.addEventListener('contextmenu', e => e.preventDefault());
-
-        // Touch
         this.canvas.addEventListener('touchstart', handleStart, { passive: false });
     }
 

@@ -168,10 +168,22 @@ class DailyBridges {
 
         const getCoords = (e) => {
             const rect = this.canvas.getBoundingClientRect();
-            let x, y;
-            if (e.touches) { x = e.touches[0].clientX; y = e.touches[0].clientY; }
-            else { x = e.clientX; y = e.clientY; }
-            return { x: x - rect.left, y: y - rect.top };
+            let clientX, clientY;
+            if (e.touches && e.touches.length > 0) {
+                clientX = e.touches[0].clientX;
+                clientY = e.touches[0].clientY;
+            } else {
+                clientX = e.clientX;
+                clientY = e.clientY;
+            }
+
+            const scaleX = this.canvas.width / rect.width;
+            const scaleY = this.canvas.height / rect.height;
+
+            return {
+                x: (clientX - rect.left) * scaleX,
+                y: (clientY - rect.top) * scaleY
+            };
         };
 
         const getNodeAt = (x, y) => {
@@ -179,24 +191,23 @@ class DailyBridges {
             const p = this.padding;
             for (let n of this.islands) {
                 let nx = n.c * cs + cs + p;
-                let ny = n.r * cs + cs + p; // offset
-                // Simple distance check
-                if (Math.hypot(nx - x, ny - y) < cs * 0.4) return n;
+                let ny = n.r * cs + cs + p;
+                if (Math.hypot(nx - x, ny - y) < cs * 0.45) return n; // Increased hit area slightly
             }
             return null;
         };
 
         const handleDown = (e) => {
-            //e.preventDefault();
+            if (e.type !== 'mousedown') e.preventDefault();
             let { x, y } = getCoords(e);
             startNode = getNodeAt(x, y);
             currentMouse = { x, y };
-            if (startNode) this.render(); // highlight
+            if (startNode) this.render();
         };
 
         const handleMove = (e) => {
             if (startNode) {
-                e.preventDefault();
+                e.preventDefault(); // Critical for Touch Drag
                 currentMouse = getCoords(e);
                 this.render();
             }
@@ -204,8 +215,16 @@ class DailyBridges {
 
         const handleUp = (e) => {
             if (startNode) {
-                e.preventDefault();
-                let { x, y } = getCoords(e);
+                // e.preventDefault(); // Not strictly needed
+
+                // For touch end, we might need last known position if no touches
+                // But typically we track currentMouse in move
+
+                let { x, y } = currentMouse;
+                // Note: touchend doesn't have coords in changedTouches usually for simple logic, 
+                // but we already updated currentMouse in handleMove. 
+                // If it was a TAP (no move), currentMouse is from handleDown.
+
                 let endNode = getNodeAt(x, y);
 
                 if (endNode && endNode !== startNode) {
@@ -223,8 +242,10 @@ class DailyBridges {
         window.addEventListener('mouseup', handleUp);
 
         this.canvas.addEventListener('touchstart', handleDown, { passive: false });
+        // We attach touchmove/end to WINDOW to track drag outside canvas if needed, 
+        // but for now Canvas is fine if we prevent default
         this.canvas.addEventListener('touchmove', handleMove, { passive: false });
-        this.canvas.addEventListener('touchend', handleUp);
+        window.addEventListener('touchend', handleUp);
     }
 
     toggleBridge(u, v) {

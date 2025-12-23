@@ -140,10 +140,24 @@ class DailySudoku {
     }
 
     setupInput() {
-        this.canvas.addEventListener('mousedown', (e) => {
+        const handleStart = (e) => {
+            if (e.type !== 'mousedown') e.preventDefault();
             const rect = this.canvas.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
+            let clientX, clientY;
+            if (e.touches && e.touches.length > 0) {
+                clientX = e.touches[0].clientX;
+                clientY = e.touches[0].clientY;
+            } else {
+                clientX = e.clientX;
+                clientY = e.clientY;
+            }
+
+            const scaleX = this.canvas.width / rect.width;
+            const scaleY = this.canvas.height / rect.height;
+
+            let x = (clientX - rect.left) * scaleX;
+            let y = (clientY - rect.top) * scaleY;
+
             const c = Math.floor(x / this.cellSize);
             const r = Math.floor(y / this.cellSize);
 
@@ -151,22 +165,28 @@ class DailySudoku {
                 this.selected = { r, c };
                 this.render();
             }
-        });
+        };
+
+        this.canvas.addEventListener('mousedown', handleStart);
+        this.canvas.addEventListener('touchstart', handleStart, { passive: false });
 
         // Keypad
         window.addEventListener('keydown', (e) => {
-            if (this.selected.r === -1) return;
-            if (this.fixed[this.selected.r][this.selected.c]) return;
-
             if (e.key >= '1' && e.key <= '9') {
-                this.board[this.selected.r][this.selected.c] = parseInt(e.key);
-                this.render();
-                this.checkWin();
+                this.handleInput(parseInt(e.key));
             } else if (e.key === 'Backspace' || e.key === 'Delete' || e.key === '0') {
-                this.board[this.selected.r][this.selected.c] = 0;
-                this.render();
+                this.handleInput(0);
             }
         });
+    }
+
+    handleInput(num) {
+        if (this.selected.r === -1) return;
+        if (this.fixed[this.selected.r][this.selected.c]) return;
+
+        this.board[this.selected.r][this.selected.c] = num;
+        this.render();
+        this.checkWin();
     }
 
     render() {

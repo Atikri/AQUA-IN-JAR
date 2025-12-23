@@ -85,19 +85,18 @@
         color: #991b1b;
     }
 
-    @media (prefers-color-scheme: dark) {
-        .arcade-card {
-            background: #1f2937;
-            border-color: #374151;
-        }
+    /* Explicit Dark Mode for Cards */
+    .dark-mode-on .arcade-card {
+        background: #1f2937;
+        border-color: #374151;
+    }
 
-        .card-content h3 {
-            color: #f3f4f6;
-        }
+    .dark-mode-on .card-content h3 {
+        color: #f3f4f6;
+    }
 
-        .card-content p {
-            color: #9ca3af;
-        }
+    .dark-mode-on .card-content p {
+        color: #9ca3af;
     }
 </style>
 {{ end }}

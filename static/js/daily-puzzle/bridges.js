@@ -6,14 +6,14 @@ class DailyBridges {
         this.rng = new DailyRNG(seed);
         this.islands = [];
         this.bridges = []; // {u, v, count}
-        this.activeBridge = null; // for dragging
+        this.selectedNode = null; // For Tap-Tap interaction
 
         this.COLORS = {
             BG: '#f0f9ff',
             ISLAND: '#fff',
             TEXT: '#0f172a',
             BRIDGE: '#3b82f6',
-            HIGHLIGHT: 'rgba(59, 130, 246, 0.2)',
+            HIGHLIGHT: 'rgba(59, 130, 246, 0.4)', // Stronger highlight for selection
             ERROR: '#ef4444',
             COMPLETE: '#10b981'
         };
@@ -163,89 +163,111 @@ class DailyBridges {
     }
 
     setupInput() {
-        let startNode = null;
-        let currentMouse = null;
+        // Hybrid Interaction: Supports both Tap-Tap and Drag-Release
+        this.selectedNode = null;
+        this.dragStartNode = null;
+        this.currentMouse = null; // For drawing drag line
 
-        const getCoords = (e) => {
-            const rect = this.canvas.getBoundingClientRect();
-            let clientX, clientY;
-            if (e.touches && e.touches.length > 0) {
-                clientX = e.touches[0].clientX;
-                clientY = e.touches[0].clientY;
-            } else {
-                clientX = e.clientX;
-                clientY = e.clientY;
-            }
-
-            const scaleX = this.canvas.width / rect.width;
-            const scaleY = this.canvas.height / rect.height;
-
-            return {
-                x: (clientX - rect.left) * scaleX,
-                y: (clientY - rect.top) * scaleY
-            };
-        };
-
-        const getNodeAt = (x, y) => {
-            const cs = this.cellSize;
-            const p = this.padding;
-            for (let n of this.islands) {
-                let nx = n.c * cs + cs + p;
-                let ny = n.r * cs + cs + p;
-                if (Math.hypot(nx - x, ny - y) < cs * 0.45) return n; // Increased hit area slightly
-            }
-            return null;
-        };
-
-        const handleDown = (e) => {
+        const handleStart = (e) => {
             if (e.type !== 'mousedown') e.preventDefault();
-            let { x, y } = getCoords(e);
-            startNode = getNodeAt(x, y);
-            currentMouse = { x, y };
-            if (startNode) this.render();
+            const { x, y } = this.getEventCoords(e);
+
+            let node = this.getNodeAt(x, y);
+            if (node) {
+                // Drag Init
+                this.dragStartNode = node;
+                this.currentMouse = { x, y };
+
+                // Tap Selection (Optimistic)
+                if (this.selectedNode && this.selectedNode !== node) {
+                    // If we tapped B after A, we might be completing a tap-tap
+                    // But we also might be starting a drag from B
+                    // We'll resolve on Up
+                }
+            } else {
+                // Clicked void
+                this.selectedNode = null;
+            }
+            this.render();
         };
 
         const handleMove = (e) => {
-            if (startNode) {
-                e.preventDefault(); // Critical for Touch Drag
-                currentMouse = getCoords(e);
+            if (this.dragStartNode) {
+                e.preventDefault();
+                const { x, y } = this.getEventCoords(e);
+                this.currentMouse = { x, y };
                 this.render();
             }
         };
 
-        const handleUp = (e) => {
-            if (startNode) {
-                // e.preventDefault(); // Not strictly needed
+        const handleEnd = (e) => {
+            if (this.dragStartNode) {
+                // Resolve Drag or Tap
+                let { x, y } = this.currentMouse;
+                let endNode = this.getNodeAt(x, y);
 
-                // For touch end, we might need last known position if no touches
-                // But typically we track currentMouse in move
-
-                let { x, y } = currentMouse;
-                // Note: touchend doesn't have coords in changedTouches usually for simple logic, 
-                // but we already updated currentMouse in handleMove. 
-                // If it was a TAP (no move), currentMouse is from handleDown.
-
-                let endNode = getNodeAt(x, y);
-
-                if (endNode && endNode !== startNode) {
-                    this.toggleBridge(startNode, endNode);
+                if (endNode && endNode !== this.dragStartNode) {
+                    // Successful Drag to different node
+                    this.toggleBridge(this.dragStartNode, endNode);
+                    this.selectedNode = null; // Clear selection if drag succeeded
+                } else {
+                    // Drag ended on same node = TAP
+                    if (this.selectedNode) {
+                        if (this.selectedNode === this.dragStartNode) {
+                            this.selectedNode = null; // Deselect
+                        } else {
+                            this.toggleBridge(this.selectedNode, this.dragStartNode);
+                            this.selectedNode = null;
+                        }
+                    } else {
+                        // Select it
+                        this.selectedNode = this.dragStartNode;
+                    }
                 }
-                startNode = null;
-                currentMouse = null;
+
+                this.dragStartNode = null;
+                this.currentMouse = null;
                 this.render();
                 this.checkWin();
             }
         };
 
-        this.canvas.addEventListener('mousedown', handleDown);
+        this.canvas.addEventListener('mousedown', handleStart);
         window.addEventListener('mousemove', handleMove);
-        window.addEventListener('mouseup', handleUp);
+        window.addEventListener('mouseup', handleEnd);
 
-        this.canvas.addEventListener('touchstart', handleDown, { passive: false });
-        // We attach touchmove/end to WINDOW to track drag outside canvas if needed, 
-        // but for now Canvas is fine if we prevent default
+        this.canvas.addEventListener('touchstart', handleStart, { passive: false });
         this.canvas.addEventListener('touchmove', handleMove, { passive: false });
-        window.addEventListener('touchend', handleUp);
+        window.addEventListener('touchend', handleEnd);
+    }
+
+    getEventCoords(e) {
+        const rect = this.canvas.getBoundingClientRect();
+        let clientX, clientY;
+        if (e.touches && e.touches.length > 0) {
+            clientX = e.touches[0].clientX;
+            clientY = e.touches[0].clientY;
+        } else {
+            clientX = e.clientX;
+            clientY = e.clientY;
+        }
+        const scaleX = this.canvas.width / rect.width;
+        const scaleY = this.canvas.height / rect.height;
+        return {
+            x: (clientX - rect.left) * scaleX / this.scale,
+            y: (clientY - rect.top) * scaleY / this.scale
+        };
+    }
+
+    getNodeAt(x, y) {
+        const cs = this.cellSize;
+        const p = this.padding;
+        for (let n of this.islands) {
+            let nx = n.c * cs + cs + p;
+            let ny = n.r * cs + cs + p;
+            if (Math.hypot(nx - x, ny - y) < cs * 0.45) return n;
+        }
+        return null;
     }
 
     toggleBridge(u, v) {
@@ -313,9 +335,32 @@ class DailyBridges {
             }
         }
 
+        // Draw Active Selection Ring
+        if (this.selectedNode) {
+            let n = this.selectedNode;
+            let x = n.c * cs + cs + p;
+            let y = n.r * cs + cs + p;
+            ctx.fillStyle = this.COLORS.HIGHLIGHT;
+            ctx.beginPath();
+            ctx.arc(x, y, cs * 0.6, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
         // Draw Drag Line
-        if (this.activeBridge) {
-            // ...
+        if (this.dragStartNode && this.currentMouse) {
+            let n = this.dragStartNode;
+            let x1 = n.c * cs + cs + p;
+            let y1 = n.r * cs + cs + p;
+            let { x: x2, y: y2 } = this.currentMouse;
+
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.strokeStyle = this.COLORS.BRIDGE;
+            ctx.lineWidth = 2;
+            ctx.setLineDash([5, 5]); // Dashed line for drag preview
+            ctx.stroke();
+            ctx.setLineDash([]); // Reset
         }
 
         // Draw Islands

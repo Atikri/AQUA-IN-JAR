@@ -49,6 +49,11 @@ canvas#dailyPuzzleCanvas {
     border-radius: 4px;
     cursor: pointer;
     touch-action: none;
+    /* Critical for mobile lag reduction */
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    /* Prevent scrolling while playing */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 

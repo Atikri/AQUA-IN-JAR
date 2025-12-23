@@ -36,21 +36,7 @@
                 Arcade</a>
         </div>
 
-        <!-- Sudoku Keypad -->
-        {{ if eq .Params.gameType "sudoku" }}
-        <div class="sudoku-keypad">
-            <button data-key="1">1</button>
-            <button data-key="2">2</button>
-            <button data-key="3">3</button>
-            <button data-key="4">4</button>
-            <button data-key="5">5</button>
-            <button data-key="6">6</button>
-            <button data-key="7">7</button>
-            <button data-key="8">8</button>
-            <button data-key="9">9</button>
-            <button data-key="0" class="btn-clear">⌫</button>
-        </div>
-        {{ end }}
+        <!-- Sudoku Keypad Removed (Game Deleted) -->
 
         <div class="instructions">
             <h3>How to Play</h3>
@@ -165,8 +151,8 @@
 <script src="/js/daily-puzzle/tents.js"></script>
 {{ else if eq .Params.gameType "bridges" }}
 <script src="/js/daily-puzzle/bridges.js"></script>
-{{ else if eq .Params.gameType "sudoku" }}
-<script src="/js/daily-puzzle/sudoku.js"></script>
+{{ else if eq .Params.gameType "pipes" }}
+<script src="/js/daily-puzzle/pipes.js"></script>
 {{ else if eq .Params.gameType "nonogram" }}
 <script src="/js/daily-puzzle/nonogram.js"></script>
 {{ end }}
@@ -201,8 +187,11 @@
                 if (currentDifficulty === 'hard') size = 12;
                 game = new DailyBridges(canvasId, seed, size);
             }
-            else if (type === 'sudoku') {
-                game = new DailySudoku(canvasId, seed, currentDifficulty);
+            else if (type === 'pipes') {
+                let size = 5;
+                if (currentDifficulty === 'medium') size = 7;
+                if (currentDifficulty === 'hard') size = 10;
+                game = new DailyPipes(canvasId, seed, size);
             }
             else if (type === 'nonogram') {
                 let size = 5;
@@ -227,15 +216,7 @@
             });
         });
 
-        // Keypad Listener
-        const keypad = document.querySelector('.sudoku-keypad');
-        if (keypad) {
-            keypad.addEventListener('click', (e) => {
-                if (e.target.tagName === 'BUTTON' && game && game.handleInput) {
-                    game.handleInput(parseInt(e.target.dataset.key));
-                }
-            });
-        }
+        // Keypad Listener Removed
     });
 </script>
 {{ end }}

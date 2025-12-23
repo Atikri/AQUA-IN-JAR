@@ -4,18 +4,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
+    /* Reduced for mobile */
     background-color: #fafafa;
     border-radius: 1rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     margin: 2rem auto;
-    max-width: 600px;
+    width: 100%;
+    max-width: 1100px;
+    /* Increased for desktop */
     font-family: 'Segoe UI', system-ui, sans-serif;
+    box-sizing: border-box;
 }
 
 .daily-header {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
 }
 
 .daily-title {
@@ -31,19 +36,32 @@
     font-weight: 500;
 }
 
+/* Canvas Wrapper for Safe Touches */
+.canvas-wrapper {
+    padding: 10px;
+    /* Safe zone */
+    display: flex;
+    justify-content: center;
+}
+
 canvas#dailyPuzzleCanvas {
     max-width: 100%;
     border-radius: 4px;
     cursor: pointer;
     touch-action: none;
-    /* Prevent scrolling while playing */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.right-panel {
+    width: 100%;
 }
 
 .controls {
     margin-top: 1.5rem;
     display: flex;
     gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .btn-game {
@@ -67,7 +85,6 @@ canvas#dailyPuzzleCanvas {
 
 .instructions {
     margin-top: 2rem;
-    max-width: 100%;
     font-size: 0.875rem;
     color: #4b5563;
     line-height: 1.5;
@@ -82,36 +99,81 @@ canvas#dailyPuzzleCanvas {
     color: #1f2937;
 }
 
-/* Dark Mode adaptation if site supports it */
-@media (prefers-color-scheme: dark) {
+/* Desktop Side-by-Side Layout */
+@media (min-width: 900px) {
     .daily-puzzle-container {
-        background-color: #1f2937;
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        /* Game | Info */
+        gap: 2rem;
+        align-items: start;
+        padding: 2.5rem;
+
+        /* Breakout of parent container */
+        width: 90vw;
+        max-width: 1200px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    .daily-title {
-        color: #f9fafb;
+    .daily-header {
+        grid-column: 2;
+        text-align: left;
+        margin-bottom: 0;
     }
 
-    .daily-date {
-        color: #9ca3af;
+    .canvas-wrapper {
+        grid-column: 1;
+        grid-row: 1 / span 3;
+        padding: 0;
     }
 
-    .instructions {
-        background: #374151;
-        border-color: #4b5563;
-        color: #d1d5db;
+    .right-panel {
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
     }
 
-    .instructions h3 {
-        color: #f3f4f6;
+    .difficulty-selector {
+        width: 100%;
+        /* Full width in sidebar */
+        justify-content: space-between;
     }
 
-    .btn-reset {
-        background-color: #4b5563;
-        color: #f3f4f6;
+    .controls {
+        justify-content: flex-start;
     }
+}
 
-    .btn-reset:hover {
-        background-color: #6b7280;
-    }
+/* Explicit Dark Mode (Only active if .dark-mode-on class exists) */
+.dark-mode-on .daily-puzzle-container {
+    background-color: #1f2937;
+}
+
+.dark-mode-on .daily-title {
+    color: #f9fafb;
+}
+
+.dark-mode-on .daily-date {
+    color: #9ca3af;
+}
+
+.dark-mode-on .instructions {
+    background: #374151;
+    border-color: #4b5563;
+    color: #d1d5db;
+}
+
+.dark-mode-on .instructions h3 {
+    color: #f3f4f6;
+}
+
+.dark-mode-on .btn-reset {
+    background-color: #4b5563;
+    color: #f3f4f6;
+}
+
+.dark-mode-on .btn-reset:hover {
+    background-color: #6b7280;
 }

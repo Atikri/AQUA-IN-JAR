@@ -26,7 +26,6 @@ jobs:
         with:
           submodules: true  # 确保拉取主题（如果使用 git submodule）
           fetch-depth: 0
-          lfs: true  # 启用Git LFS支持
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2

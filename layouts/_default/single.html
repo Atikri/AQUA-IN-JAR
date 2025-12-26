@@ -61,8 +61,10 @@
     </div>
     {{- end }}
 
-    {{- /* 评论区 */ -}}
+    {{- /* 评论区: 仅在 "episode-1" 显示 */ -}}
+    {{- if eq .Slug "episode-1" }}
     {{- partial "comments.html" . -}}
+    {{- end }}
 
     {{- if $isProtected }}
 </div> <!-- Close protected-content -->

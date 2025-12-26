@@ -42,9 +42,16 @@
         let rawId = el.getAttribute('data-post-id');
         if (!rawId) return null;
         try {
-            return new URL(rawId).pathname.replace(/\/$/, '');
+            // Always use relative path (e.g., /podcast-music/episode-1/)
+            // We force a base to parse relative URLs if needed
+            const url = new URL(rawId, window.location.origin);
+            let path = url.pathname;
+            // Ensure trailing slash for consistency with Hugo
+            if (!path.endsWith('/')) path += '/';
+            return path;
         } catch (e) {
-            return rawId.replace(/\/$/, '');
+            console.error('Invalid URL', e);
+            return null;
         }
     }
 

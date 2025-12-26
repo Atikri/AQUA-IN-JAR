@@ -2,13 +2,12 @@
 date: "2025-11-27"
 title: "Episode1: 什么是自源性?声音的重要性?"
 featured: true
+slug: "episode-1"
 ---
 
 {{< audio src="audio/podcast1.mp3" preload="metadata" >}}    
 [小宇宙链接](https://www.xiaoyuzhoufm.com/episode/69282d619ccdf1f2d52d9f1b)  
-<div class="podcast-container">
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/65SF59UXV4TJPbRGY0QXAQ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
+
 
 我的第一集podcast终于终于!上线了!  
 太感动了😭  
@@ -41,7 +40,7 @@ featured: true
 
 --------------------------------------------------------------------------------
 
-## 一、 核心理念：“自源性”（Self-Generated Nature）
+## 一、 核心理念：“自源性”（Self-Generated）
 
 瓶中水的基石是“自源性”这一概念，它被定义为“源自于自身，不受外界干扰、不受外界支配的一种性质”。
 
@@ -49,8 +48,8 @@ featured: true
 
 播客的名称“瓶中水”本身就是对核心理念的形象化解释：
 
-- **水 (Water):** 象征着一种滋养生命的能量和力量。主持人本身是水瓶座（Aquarius），对“水”有天然的亲近感。
-- **瓶 (Bottle):** 象征着个体内心那个安稳、坚实的内核。它如同一个家，为我们提供安全感，使我们能在此安心休息、独立思考，不受外界的侵扰。
+- **水 (AQUA):** 象征着一种滋养生命的能量和力量。主持人本身是水瓶座（Aquarius），对“水”有天然的亲近感。
+- **瓶 (JAR):** 象征着个体内心那个安稳、坚实的内核。它如同一个家，为我们提供安全感，使我们能在此安心休息、独立思考，不受外界的侵扰。
 
 目标是与听众一同学习如何打磨这个内心的“瓶子”，使其变得足够坚强，以抵御如“海啸”般的外部危机，如中年危机、职业困境等等问题。
 
@@ -78,7 +77,7 @@ featured: true
 
 ### 2.1 选择声音的个人背景
 
-我分享了自己与声音相关的个人经历，解释了为何对此主题有深刻的体会：
+分享了自己与声音相关的个人经历，解释了为何对此主题有深刻的体会：
 
 - **童年困扰:** 小时候因口齿不清（将“老师”说成“老鼠”）而感到困扰。
 - **中学经历:** 因发音不标准被同学模仿嘲笑，对此非常在意。
@@ -108,7 +107,7 @@ featured: true
 
 ### 3.1 声音与成功的关联
 
-- **普遍现象:** 我观察到，大约80%的成功人士都非常懂得如何运用自己的声音。他们的谈吐往往能直接传递出能力和自信。
+- **普遍现象:** 大约80%的成功人士都非常懂得如何运用自己的声音。他们的谈吐往往能直接传递出能力和自信。
 - **权威性建立:** 以一位会多国语言的老师为例，其地道、自然的口音和语调，能够迅速建立专业权威性和客户的信任感，从而在商业上获得更多成功机会。相比之下，生硬（rigid）的表达则会削弱这种影响力。
 
 ### 3.2 沟通能力在组织中的核心价值
@@ -124,4 +123,6 @@ featured: true
 - **实践导向:** 计划提供可实际操作的方法和练习，帮助听众将理论付诸实践。
 
 
-
+<div class="podcast-container">
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/65SF59UXV4TJPbRGY0QXAQ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>

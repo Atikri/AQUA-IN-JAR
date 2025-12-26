@@ -21,10 +21,12 @@
 
     if (rawPostId) {
         try {
-            const url = new URL(rawPostId);
-            postId = url.pathname.replace(/\/$/, '');
+            const url = new URL(rawPostId, window.location.origin);
+            let path = url.pathname;
+            if (!path.endsWith('/')) path += '/';
+            postId = path;
         } catch (e) {
-            postId = rawPostId.replace(/\/$/, '');
+            postId = null;
         }
     }
 

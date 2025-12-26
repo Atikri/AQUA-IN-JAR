@@ -2573,9 +2573,19 @@ textarea.form-control {
 @media (max-width: 1199px) {
   .interaction-sidebar {
     display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin: 30px 0;
+    justify-content: flex-start;
+    /* Left align */
+    align-items: center;
+    gap: 16px;
+    margin: 32px 0;
+    padding: 24px 0;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .dark-mode-on .interaction-sidebar {
+    border-color: rgba(255, 255, 255, 0.06);
   }
 }
 

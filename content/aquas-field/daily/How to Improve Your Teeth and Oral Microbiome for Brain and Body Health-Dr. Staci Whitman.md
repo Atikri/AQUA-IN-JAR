@@ -7,7 +7,7 @@ title: "如何改善口腔健康"
 
 ---
 
-口腔保健真的太太太重要了，之前听过Dr. Staci Whitman的podcast，里面提供了一些方法，总结一下，里面讲到了羥基磷灰石（Hydroxyapatite）牙膏，大家可以在购物网站上搜索含有此成分的牙膏；还提到了[油拔法（Oil Pulling）]({{< relref "aquas-field/daily/油拔法（Oil Pulling）.md" >}})。
+口腔保健真的太太太重要了，之前听过Dr. Staci Whitman的podcast，里面提供了一些方法，总结一下，里面讲到了==羥基磷灰石（Hydroxyapatite）牙膏==，大家可以在购物网站上搜索含有此成分的牙膏；还提到了[油拔法（Oil Pulling）]({{< relref "aquas-field/daily/油拔法（Oil Pulling）.md" >}})。
 
 ---  
 

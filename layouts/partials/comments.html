@@ -1,0 +1,40 @@
+<div id="comments-section" class="comments-container" data-post-id="{{ .Permalink }}">
+    <div class="comments-title">
+        💬 评论 <span id="comments-count" style="font-size: 0.8em; opacity: 0.7; font-weight: normal;"></span>
+    </div>
+
+    <div class="comment-form">
+        <form id="comment-form">
+            <div style="display: flex; gap: 16px; margin-bottom: 16px; flex-wrap: wrap;">
+                <div class="form-group" style="flex: 1; min-width: 200px;">
+                    <label for="comment-name">昵称 *</label>
+                    <input type="text" id="comment-name" class="form-control" placeholder="你的名字" required
+                        maxlength="50">
+                </div>
+                <div class="form-group" style="flex: 1; min-width: 200px;">
+                    <label for="comment-email">邮箱 (选填)</label>
+                    <input type="email" id="comment-email" class="form-control" placeholder="仅用于头像显示(Gravatar)或联系">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comment-content">留言内容 *</label>
+                <textarea id="comment-content" class="form-control" placeholder="写下你的想法..." required rows="4"
+                    maxlength="1000"></textarea>
+            </div>
+
+            <div style="text-align: right;">
+                <button type="submit" class="submit-btn">发布评论</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="comments-list" class="comments-list">
+        <!-- Comments will be loaded here -->
+        <div style="text-align: center; padding: 20px; opacity: 0.6;">
+            <span class="loading-spinner"></span> 加载评论中...
+        </div>
+    </div>
+</div>
+
+<script src="{{ " js/comments.js" | relURL }}" defer></script>

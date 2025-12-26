@@ -14,8 +14,13 @@
         (.Date.Format "January 2, 2006") | safeHTML }}</p>
     {{- end }}
 
-    {{- /* 点赞按钮 */ -}}
-    {{- partial "like-button.html" . -}}
+    {{- /* Interaction Sidebar (Left) */ -}}
+    <div class="interaction-sidebar" data-post-id="{{ .Permalink }}">
+        <button class="interaction-btn btn-like" title="点赞">
+            ❤️
+            <span class="interaction-count">0</span>
+        </button>
+    </div>
 
     {{- /* Mobile overlay TOC is handled globally; remove inline TOC block */ -}}
 
@@ -55,6 +60,9 @@
         {{- end }}
     </div>
     {{- end }}
+
+    {{- /* 评论区 */ -}}
+    {{- partial "comments.html" . -}}
 
     {{- if $isProtected }}
 </div> <!-- Close protected-content -->

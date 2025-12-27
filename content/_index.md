@@ -28,13 +28,13 @@ Hello!!!我的小瓶子们~ 欢迎来我瓶中作客~:smiling_face_with_three_he
     <div class="home-card__icon">🎧</div>
     <h3 class="home-card__title">Latest Podcast</h3>
     <p class="home-card__desc">瓶中水podcast1: 什么是自源性?声音的重要性</p>
-    <a href="https://tikri.site/podcast-music/AQUA-IN-JAR-episode1/" class="home-card__link">Listen Now →</a>
+    <a href="https://tikri.site/podcast-music/episode-1/" class="home-card__link">Listen Now →</a>
   </div>
 </div>
 
 <div class="spotify-container">
   <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/65SF59UXV4TJPbRGY0QXAQ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  <p class="spotify-fallback">无法加载播放器？<a href="https://tikri.site/podcast-music/AQUA-IN-JAR-episode1/">点击前往收听</a></p>
+  <p class="spotify-fallback">无法加载播放器？<a href="https://tikri.site/podcast-music/episode-1/">点击前往收听</a></p>
 </div>
 
 :love_letter: **Latest Blog Posts**

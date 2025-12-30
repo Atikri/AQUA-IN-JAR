@@ -26,9 +26,9 @@
   <link rel="preload" href="{{ " fonts/Newsreader-italic.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
   {{- end }}
 
-  {{- /* 预加载关键资源 */ -}}
-  <link rel="preload" href="{{ " css/lazy-loading.css" | relURL }}" as="style">
-  <link rel="preload" href="{{ " js/lazy-loading.js" | relURL }}" as="script">
+  {{- /* 预加载关键资�?*/ -}}
+  <link rel="preload" href="{{ "css/lazy-loading.css" | relURL }}" as="style">
+  <link rel="preload" href="{{ "js/lazy-loading.js" | relURL }}" as="script">
 
   {{- $defaultCSS := resources.Get "css/default.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $defaultCSS.RelPermalink }}" integrity="{{ $defaultCSS.Data.Integrity }}">
@@ -55,15 +55,15 @@
   {{- end }}
 
   {{- /* 延迟加载支持 */ -}}
-  <link rel="stylesheet" href="{{ " css/lazy-loading.css" | relURL }}">
-  <link rel="stylesheet" href="{{ " css/toc-drawer.css" | relURL }}">
-  <script src="{{ " js/lazy-loading.js" | relURL }}" defer></script>
+  <link rel="stylesheet" href="{{ "css/lazy-loading.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/toc-drawer.css" | relURL }}">
+  <script src="{{ "js/lazy-loading.js" | relURL }}" defer></script>
 
   {{- /* 点赞功能 - 仅在文章页面加载 */ -}}
   {{- if eq .Kind "page" }}
-  <script src="{{ " js/like-config.js" | relURL }}"></script>
+  <script src="{{ "js/like-config.js" | relURL }}"></script>
   <script>
-    // 动态添加 preconnect/dns-prefetch，减少 Supabase 首次请求的握手时间
+    // 动态添�?preconnect/dns-prefetch，减�?Supabase 首次请求的握手时�?
     (function () {
       try {
         var cfg = window.LIKE_CONFIG;
@@ -83,12 +83,12 @@
       } catch (e) { }
     })();
   </script>
-  <script src="{{ " js/interactions.js" | relURL }}" defer></script>
+  <script src="{{ "js/interactions.js" | relURL }}" defer></script>
   {{- end }}
 
-  {{- /* 互动清单评分和 Jelly 复选框 - 全站加载，体积很小 */ -}}
-  <script src="{{ " js/checklist-score.js" | relURL }}" defer></script>
-  <script src="{{ " js/checkbox-jelly.js" | relURL }}" defer></script>
+  {{- /* 互动清单评分�?Jelly 复选框 - 全站加载，体积很�?*/ -}}
+  <script src="{{ "js/checklist-score.js" | relURL }}" defer></script>
+  <script src="{{ "js/checkbox-jelly.js" | relURL }}" defer></script>
 
   {{- if templates.Exists "partials/nonstdmeta.html" }}
   {{ partial "nonstdmeta.html" . }}

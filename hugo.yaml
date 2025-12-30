@@ -1,4 +1,4 @@
-baseURL: https://tikri.site/
+baseURL: http://localhost:1313/
 languageCode: en-us 
 title: AQUA IN JAR 
 theme: dario

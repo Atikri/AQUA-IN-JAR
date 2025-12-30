@@ -1,0 +1,386 @@
+{{ $type := .Get "type" | default "text" }}
+{{ $id := .Get "id" }}
+{{ $title := .Get "title" }}
+{{ $desc := .Get "desc" }}
+
+<div class="life-review-widget" id="widget-{{$id}}" data-type="{{$type}}" data-key="{{$id}}">
+    {{ if $title }}<h4 class="widget-title">{{$title}}</h4>{{end}}
+    {{ if $desc }}<p class="widget-desc">{{$desc}}</p>{{end}}
+
+    {{ if eq $type "text" }}
+    <textarea class="life-input-area" placeholder="在此输入你的想法..."></textarea>
+    {{ else if eq $type "audit" }}
+    <div class="audit-grid">
+        {{ $categories := slice "健康" "工作/学业" "金钱" "情感生活" "乐趣" "幸福感" "友谊" "灵性" "意义与目标" "自爱" }}
+        {{ range $categories }}
+        <div class="audit-row" data-cat="{{ . }}">
+            <div class="audit-header">
+                <span>{{ . }}</span>
+                <span class="audit-score-display">5 分</span>
+            </div>
+            <div class="audit-controls">
+                <span>1</span>
+                <input type="range" min="1" max="10" step="1" value="5" class="audit-slider">
+                <span>10</span>
+            </div>
+            <textarea class="life-input-area audit-note" placeholder="解释原因..."></textarea>
+        </div>
+        {{ end }}
+    </div>
+    {{ else if eq $type "export" }}
+    <button class="export-btn">📥 导出我的年度回顾 (Export)</button>
+    {{ end }}
+</div>
+
+<style>
+    .life-review-widget {
+        margin: 2rem 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .widget-title {
+        margin-bottom: 0.8rem;
+        color: #1a202c;
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+    }
+
+    .widget-desc {
+        margin-bottom: 1rem;
+        color: #718096;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .life-input-area {
+        width: 100%;
+        min-height: 250px;
+        padding: 20px;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #2d3748;
+        box-sizing: border-box;
+        resize: vertical;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    }
+
+    .life-input-area:focus {
+        outline: none;
+        border-color: #667eea;
+        background: #ffffff;
+        box-shadow: 0 10px 15px -3px rgba(102, 126, 234, 0.15), 0 4px 6px -2px rgba(102, 126, 234, 0.1);
+        transform: translateY(-1px);
+    }
+
+    .audit-grid {
+        display: grid;
+        gap: 2rem;
+    }
+
+    .audit-row {
+        background: #f8fafc;
+        padding: 24px;
+        border-radius: 20px;
+        border: 1px solid #edf2f7;
+        transition: transform 0.2s;
+    }
+
+    .audit-row:hover {
+        background: #fff;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    }
+
+    .audit-header {
+        font-weight: 700;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #2d3748;
+        font-size: 1.15rem;
+    }
+
+    .audit-controls {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+        color: #718096;
+        font-weight: 600;
+    }
+
+    .audit-slider {
+        flex: 1;
+        -webkit-appearance: none;
+        appearance: none;
+        height: 8px;
+        background: #cbd5e0;
+        border-radius: 4px;
+        outline: none;
+    }
+
+    .audit-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #667eea;
+        cursor: pointer;
+        transition: background .15s ease-in-out;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .audit-slider::-webkit-slider-thumb:hover {
+        background: #5a67d8;
+        transform: scale(1.1);
+    }
+
+    .audit-score-display {
+        font-weight: 800;
+        color: #5a67d8;
+        background: #ebf4ff;
+        padding: 6px 14px;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        min-width: 50px;
+        text-align: center;
+        border: 1px solid #c3dafe;
+    }
+
+    .audit-note {
+        min-height: 120px;
+        margin-top: 0;
+        font-size: 1rem;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+    }
+
+    .export-btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 20px 48px;
+        border-radius: 9999px;
+        font-weight: 800;
+        font-size: 1.25rem;
+        cursor: pointer;
+        display: block;
+        margin: 4rem auto;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 20px 25px -5px rgba(118, 75, 162, 0.3), 0 10px 10px -5px rgba(118, 75, 162, 0.2);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .export-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 25px 35px -5px rgba(118, 75, 162, 0.4);
+    }
+</style>
+
+<script>
+    (function () {
+        if (window.LifeReviewInitialized) return;
+        window.LifeReviewInitialized = true;
+
+        console.log("LifeReview Widget: Script Loaded");
+
+        const storeName = 'life_review_responses';
+        let data = {};
+
+        function loadData() {
+            try { data = JSON.parse(localStorage.getItem(storeName)) || {}; } catch (e) { console.error(e); }
+        }
+
+        function saveData() {
+            localStorage.setItem(storeName, JSON.stringify(data));
+        }
+
+        function updateScoreVisual(slider) {
+            const row = slider.closest('.audit-row');
+            if (row) {
+                const display = row.querySelector('.audit-score-display');
+                if (display) {
+                    display.innerText = slider.value + " 分";
+                }
+            }
+        }
+
+        function init() {
+            console.log("LifeReview Widget: Init sequence started");
+            loadData();
+
+            // 1. Text Widgets
+            const textWidgets = document.querySelectorAll('.life-review-widget[data-type="text"]');
+            textWidgets.forEach(widget => {
+                const key = widget.dataset.key;
+                const textarea = widget.querySelector('textarea');
+                if (textarea) {
+                    if (data[key]) textarea.value = data[key];
+                    textarea.addEventListener('input', () => {
+                        data[key] = textarea.value;
+                        saveData();
+                    });
+                }
+            });
+
+            // 2. Audit Widgets (Sliders)
+            const auditWidgets = document.querySelectorAll('.life-review-widget[data-type="audit"]');
+            console.log("Found audit widgets:", auditWidgets.length);
+
+            auditWidgets.forEach(widget => {
+                const mainKey = widget.dataset.key;
+                const savedAudit = data[mainKey] || {};
+
+                widget.querySelectorAll('.audit-row').forEach(row => {
+                    const cat = row.dataset.cat;
+                    const catData = savedAudit[cat] || { score: 5, note: '' };
+
+                    const slider = row.querySelector('.audit-slider');
+                    const note = row.querySelector('.audit-note');
+
+                    if (slider) {
+                        slider.value = catData.score;
+                        updateScoreVisual(slider);
+
+                        const handleInput = () => {
+                            updateScoreVisual(slider);
+                            if (!data[mainKey]) data[mainKey] = {};
+                            if (!data[mainKey][cat]) data[mainKey][cat] = { score: 5, note: '' };
+                            data[mainKey][cat].score = slider.value;
+                            saveData();
+                        };
+
+                        slider.addEventListener('input', handleInput);
+                        slider.addEventListener('change', handleInput);
+                    }
+
+                    if (note) {
+                        note.value = catData.note;
+                        note.addEventListener('input', () => {
+                            if (!data[mainKey]) data[mainKey] = {};
+                            if (!data[mainKey][cat]) data[mainKey][cat] = { score: 5, note: '' };
+                            data[mainKey][cat].note = note.value;
+                            saveData();
+                        });
+                    }
+                });
+            });
+
+            // 3. Export
+            const exportBtn = document.querySelector('.export-btn');
+            if (exportBtn) {
+                exportBtn.addEventListener('click', () => {
+                    loadData(); // Reload latest state
+                    const monthly = JSON.parse(localStorage.getItem('year_review_months_data') || '{}');
+                    const timestamp = new Date().toLocaleDateString();
+
+                    let html = `
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>My 2025 Life Review</title>
+                        <style>
+                            body { font-family: -apple-system, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #333; }
+                            h1 { border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 30px; }
+                            h2 { margin-top: 40px; color: #2d3748; background: #f7fafc; padding: 10px; border-radius: 8px; }
+                            h3 { margin-top: 25px; color: #4a5568; font-size: 1.1em; border-left: 4px solid #667eea; padding-left: 10px; }
+                            table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+                            th, td { border: 1px solid #e2e8f0; padding: 12px; text-align: left; vertical-align: top; }
+                            th { background-color: #f8fafc; font-weight: 600; width: 30%; }
+                            td { background-color: white; }
+                            .score-badge { display: inline-block; padding: 2px 8px; background: #ebf4ff; color: #5a67d8; border-radius: 4px; font-weight: bold; }
+                            .empty { color: #a0aec0; font-style: italic; }
+                            ul { margin: 0; padding-left: 20px; }
+                        </style>
+                    </head>
+                    <body>
+                        <h1>My 2025 Life Review</h1>
+                        <p>Exported on: ${timestamp}</p>
+
+                        <h2>Part 1: Monthly Review</h2>
+                        <table>
+                            <thead><tr><th>Month</th><th>Moments</th></tr></thead>
+                            <tbody>
+                    `;
+
+                    // Monthly Review
+                    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                    months.forEach(m => {
+                        const items = monthly[m] || [];
+                        const listHtml = items.length > 0 ?
+                            `<ul>${items.map(i => `<li>${i}</li>`).join('')}</ul>` :
+                            '<span class="empty">No moments recorded</span>';
+                        html += `<tr><td>${m}</td><td>${listHtml}</td></tr>`;
+                    });
+                    html += `</tbody></table>`;
+
+                    // Life Audit
+                    html += `<h2>Life Status Audit</h2>
+                             <table>
+                                <thead><tr><th>Category</th><th>Score</th><th>Notes</th></tr></thead>
+                                <tbody>`;
+
+                    // Helper to check if key is audit
+                    const auditKeys = Object.keys(data).filter(k => typeof data[k] === 'object');
+                    if (auditKeys.length > 0) {
+                        // Assuming one main audit for now, but loop just in case
+                        auditKeys.forEach(key => {
+                            const audit = data[key];
+                            for (let cat in audit) {
+                                html += `<tr>
+                                    <td><strong>${cat}</strong></td>
+                                    <td><span class="score-badge">${audit[cat].score}/10</span></td>
+                                    <td>${audit[cat].note || '<span class="empty">-</span>'}</td>
+                                  </tr>`;
+                            }
+                        });
+                    } else {
+                        html += `<tr><td colspan="3" class="empty">No audit data found</td></tr>`;
+                    }
+                    html += `</tbody></table>`;
+
+                    // Deep Questions (Text)
+                    html += `<h2>Reflections & Goals</h2><table><tbody>`;
+
+                    // Sort keys to try and maintain order? Hard without index. 
+                    // We can just iterate.
+                    Object.keys(data).forEach(key => {
+                        if (typeof data[key] !== 'object') {
+                            const title = document.querySelector(`.life-review-widget[data-key="${key}"] .widget-title`)?.innerText || key;
+                            // Clean up title if it has numbers/prefixes
+                            html += `<tr><th>${title}</th><td>${data[key].replace(/\n/g, '<br>')}</td></tr>`;
+                        }
+                    });
+                    html += `</tbody></table></body></html>`;
+
+                    const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'My_Life_Review_2025.html';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                });
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })();
+</script>

@@ -1,0 +1,240 @@
+<div class="monthly-review-wrapper">
+    {{ $months := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October"
+    "November" "December" }}
+
+    <div class="review-grid">
+        {{ range $i, $month := $months }}
+        <div class="month-card">
+            <div class="month-header">
+                <h3>{{ $month }}</h3>
+            </div>
+            <!-- All interaction is handled by Event Delegation on this container -->
+            <div id="inputs-{{ $i }}" class="input-container" data-month="{{ $month }}">
+                <!-- Javascript will render rows here -->
+            </div>
+            <button type="button" class="add-btn" data-month="{{ $month }}" data-index="{{ $i }}">+ Add Moment</button>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+<style>
+    /* Glassmorphism & Layout */
+    .monthly-review-wrapper {
+        margin: 2rem 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .review-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .month-card {
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        padding: 1.5rem;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        transition: transform 0.2s;
+    }
+
+    .month-card:hover {
+        transform: translateY(-2px);
+    }
+
+    .month-header h3 {
+        font-size: 1.35rem;
+        margin: 0 0 1.25rem 0;
+        color: #2d3748;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+        padding-bottom: 0.5rem;
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .input-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        animation: fadeIn 0.3s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(5px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .review-input {
+        flex: 1;
+        padding: 12px;
+        border-radius: 12px;
+        border: 1px solid rgba(200, 200, 200, 0.4);
+        background: rgba(255, 255, 255, 0.7);
+        font-size: 0.95rem;
+        color: #4a5568;
+        box-sizing: border-box;
+        transition: all 0.2s;
+    }
+
+    .review-input:focus {
+        outline: none;
+        background: #fff;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+    }
+
+    .del-btn {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        line-height: 1;
+        color: #cbd5e0;
+        cursor: pointer;
+        padding: 0 8px;
+        transition: color 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .del-btn:hover {
+        color: #e53e3e;
+    }
+
+    .add-btn {
+        width: 100%;
+        padding: 10px;
+        background: transparent;
+        border: 1px dashed #cbd5e0;
+        border-radius: 12px;
+        color: #718096;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .add-btn:hover {
+        background: rgba(102, 126, 234, 0.05);
+        border-color: #667eea;
+        color: #5a67d8;
+    }
+</style>
+
+<script>
+    (function () {
+        // Idempotency: Remove previous listener if exists (not easily done with anonymous functions), 
+        // rely on flag. 
+        if (window.MonthlyReviewInitialized) return;
+        window.MonthlyReviewInitialized = true;
+
+        console.log("MonthlyReview Script Initializing v3...");
+
+        const storeKey = 'year_review_months_data';
+        let data = {};
+
+        function load() {
+            try { data = JSON.parse(localStorage.getItem(storeKey)) || {}; } catch (e) { }
+        }
+
+        function save() {
+            let newData = {};
+            document.querySelectorAll('.input-container').forEach(container => {
+                const month = container.dataset.month;
+                const inputs = container.querySelectorAll('.review-input');
+                const values = Array.from(inputs).map(i => i.value).filter(v => v.trim() !== '');
+                if (values.length > 0) newData[month] = values;
+            });
+            localStorage.setItem(storeKey, JSON.stringify(newData));
+        }
+
+        function createRow(value = '') {
+            const div = document.createElement('div');
+            div.className = 'input-row';
+
+            const input = document.createElement('input');
+            input.type = "text";
+            input.className = "review-input";
+            input.placeholder = "Moment...";
+            input.value = value;
+
+            // Event delegation handles deletes, but inputs need direct binding or delegation too.
+            // Direct simple binding for inputs is fine as we are creating them.
+            input.addEventListener('input', save);
+
+            const btn = document.createElement('button');
+            btn.className = 'del-btn';
+            btn.title = "Delete";
+            btn.innerHTML = '×';
+            // Click handler attached directly to element
+            btn.addEventListener('click', function () {
+                div.remove();
+                save();
+            });
+
+            div.appendChild(input);
+            div.appendChild(btn);
+            return div;
+        }
+
+        function render() {
+            load(); // Refresh data from storage
+            document.querySelectorAll('.input-container').forEach((container, idx) => {
+                const month = container.dataset.month;
+                const savedItems = data[month] || [];
+
+                // Don't wipe if user is interacting? No, simple render is safer.
+                container.innerHTML = '';
+
+                // Ensure at least 2 empty rows if no data
+                const itemsToShow = savedItems.length > 0 ? savedItems : ['', ''];
+
+                itemsToShow.forEach(val => {
+                    container.appendChild(createRow(val));
+                });
+            });
+        }
+
+        function init() {
+            render();
+
+            // Bind Add Buttons (Static elements)
+            document.querySelectorAll('.add-btn').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const index = this.dataset.index;
+                    const container = document.getElementById('inputs-' + index);
+                    if (container) {
+                        const row = createRow();
+                        container.appendChild(row);
+                        row.querySelector('input').focus();
+                        // No save triggered on add, only on input/delete or valid value
+                    }
+                });
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })();
+</script>

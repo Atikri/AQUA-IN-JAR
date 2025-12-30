@@ -317,12 +317,19 @@
 
                     // Monthly Review
                     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                    // Map short codes used in content IDs to full names
+                    const monthMap = {
+                        "January": "month_jan", "February": "month_feb", "March": "month_mar",
+                        "April": "month_apr", "May": "month_may", "June": "month_jun",
+                        "July": "month_jul", "August": "month_aug", "September": "month_sep",
+                        "October": "month_oct", "November": "month_nov", "December": "month_dec"
+                    };
+
                     months.forEach(m => {
-                        const items = monthly[m] || [];
-                        const listHtml = items.length > 0 ?
-                            `<ul>${items.map(i => `<li>${i}</li>`).join('')}</ul>` :
-                            '<span class="empty">No moments recorded</span>';
-                        html += `<tr><td>${m}</td><td>${listHtml}</td></tr>`;
+                        const key = monthMap[m];
+                        const content = data[key] || "";
+                        const displayHtml = content ? content.replace(/\n/g, '<br>') : '<span class="empty">No moments recorded</span>';
+                        html += `<tr><td>${m}</td><td>${displayHtml}</td></tr>`;
                     });
                     html += `</tbody></table>`;
 

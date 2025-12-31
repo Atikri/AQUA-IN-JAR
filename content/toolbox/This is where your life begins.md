@@ -160,26 +160,27 @@ summary: "Annual review toolbox by Mel Robbins (Chinese Version)."
 
 最后Mel Robbins也推荐了一些播客可以帮助我们更加加强我们的思维，保持专注，持续进步，列表如下，之后我也会慢慢进行更新~
 
-## 8 Things to Tell Yourself Every Morning (Ep. 324)
+## [8 Things to Tell Yourself Every Morning (Ep. 324)](https://www.melrobbins.com/episode/episode-324/)
+[BLOG'S HERE📃](https://tikri.site/aquas-field/daily/8-things-to-tell-yourself-every-morning/)  
 A short, practical reset for your mornings that calms anxiety, builds confidence, and sets your mindset for the day.  
 
-## How to Get Things Done, Stay Focused, & Be More Productive (Ep. 322)
+## [How to Get Things Done, Stay Focused, & Be More Productive (Ep. 322)](https://www.melrobbins.com/episode/episode-322/)
 Mel and Dr. Cal Newport break down the science of focus and attention, and give you concrete ways to stop procrastinating and protect your time.  
 
-## #1 Neurosurgeon: How to Manifest Anything You Want & Unlock the Unlimited Power of Your Mind (Ep. 312)
+## [1 Neurosurgeon: How to Manifest Anything You Want & Unlock the Unlimited Power of Your Mind (Ep. 312)](https://www.melrobbins.com/episode/episode-312/)
 Dr. Jim Doty explains the neuroscience behind manifestation and gives a clear process for turning intention into reality.  
 
-## How to Get Motivated Even When You Don’t Feel Like It (Ep. 208)
+## [How to Get Motivated Even When You Don’t Feel Like It (Ep. 208)](https://www.melrobbins.com/episode/episode-208/)
 This episode teaches that motivation isn’t a feeling you wait for, it’s something you create through action.  
 
-## 3 Questions to Ask Yourself To Figure Out What You Really Want (Ep. 339)
+## [3 Questions to Ask Yourself To Figure Out What You Really Want (Ep. 339)](https://www.melrobbins.com/episode/episode-339/)
 Mel shares three Stanford-developed questions that help you get clear on what you genuinely want next. It’s a quick, clarifying listen when you feel unsure or off track.  
 
-## Tiny Fixes For a Tired Life: 7 Habits That Make Your Life Better (Ep. 298)
+## [Tiny Fixes For a Tired Life: 7 Habits That Make Your Life Better (Ep. 298)](https://www.melrobbins.com/episode/episode-298/)
 Seven small, doable habit shifts that improve energy, mood, and control without a life overhaul. Perfect if you feel worn down and need realistic change you can start today.  
 
-## Focus On Yourself: 3 Signs You’re Giving Too Much & What to Do About It Right Now (Ep. 223)
+## [Focus On Yourself: 3 Signs You’re Giving Too Much & What to Do About It Right Now (Ep. 223)](https://www.melrobbins.com/episode/episode-223/)
 Mel and Dr. Pooja Lakshmin unpack the hidden cost of over-giving and people-pleasing, and show you how to set boundaries without guilt.  
 
-## This One Study Will Change How You Think About Your Entire Life: The Cornell Legacy Project (Ep. 344)
+## [This One Study Will Change How You Think About Your Entire Life: The Cornell Legacy Project (Ep. 344)](https://www.melrobbins.com/episode/episode-344/)
 Cornell’s Legacy Project distills decades of interviews with people in their 80s–100s into the biggest regrets and best advice for living well now. It’s a wake-up call about what matters, what doesn’t, and how fast time goes.

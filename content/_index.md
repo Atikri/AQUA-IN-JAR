@@ -1,5 +1,5 @@
 ## Hi! I'm **Tikri**~  
-Hello!!!我的小瓶子们~ 欢迎来我瓶中作客~:smiling_face_with_three_hearts:  
+我亲爱的小瓶子们~ 欢迎来我瓶中作客~:smiling_face_with_three_hearts:  
 
 在这里你可以翻阅我日常发过的一些blog，收集一些AQUA:droplet: （露水灵感），说不定会对你有帮助，那就太好啦!:partying_face:  
 

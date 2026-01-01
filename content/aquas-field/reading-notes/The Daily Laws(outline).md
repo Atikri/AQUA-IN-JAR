@@ -23,9 +23,9 @@ Example: <li>January 1</li> becomes <li><a href="https://example.com">January 1<
 -->
 
 <details>
-  <summary style='cursor: pointer; font-weight: bold; margin: 10px 0;'>January</summary>
+  <summary style='cursor: pointer; font-weight: bold; margin: 10px 0;'><a href="https://tikri.site/aquas-field/reading-notes/January/">January</a></summary>
   <ul>
-    <li><a href='https://example.com/daily-laws-jan-1'>January 1</a> (Example Link)</li>
+    <li><a href='https://tikri.site/aquas-field/reading-notes/January1-Discover-Your-Calling/'>January 1:Discover Your Calling</a></li>
     <li>January 2</li>
     <li>January 3</li>
     <li>January 4</li>

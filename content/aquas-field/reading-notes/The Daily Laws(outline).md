@@ -21,7 +21,7 @@ Robert Greene在引言中指出，人类大脑的进化初衷是为了让我们�
       <summary style='cursor: pointer; font-weight: bold; margin: 10px 0;'><a href='https://tikri.site/aquas-field/reading-notes/January/'>January</a></summary>
       <ul>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January1-Discover-Your-Calling/'>January 1:Discover Your Calling</a></li>
-        <li>January 2</li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January2-Reconnect-with-Your-Childhood-Obsession/'>January 2:Reconnect with Your Childhood Obsession</a></li>
         <li>January 3</li>
         <li>January 4</li>
         <li>January 5</li>

@@ -2993,3 +2993,357 @@ textarea.form-control {
     font-size: 3rem;
   }
 }
+
+/* ===========================
+   Audio Player (Floating Glass Bar)
+   =========================== */
+
+.audio-player-floating {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: auto;
+  font-family: inherit;
+}
+
+.player-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  max-width: 90vw;
+}
+
+.dark-mode-on .player-bar {
+  background: rgba(30, 30, 35, 0.8);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Track Info */
+.track-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 150px;
+}
+
+.track-cover {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.track-cover.spinning {
+  animation: vinylSpin 4s linear infinite;
+}
+
+@keyframes vinylSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Inner "vinyl" hole */
+.track-cover::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.track-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.track-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+.track-artist {
+  font-size: 0.7rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+/* Controls */
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text-color);
+  opacity: 0.7;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.play-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(147, 197, 253, 0.2);
+  color: #3b82f6;
+  /* Blue accent */
+  border: 1px solid rgba(147, 197, 253, 0.3);
+  opacity: 1;
+}
+
+.play-btn:hover {
+  background: rgba(147, 197, 253, 0.4);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.dark-mode-on .play-btn {
+  color: #93c5fd;
+  background: rgba(147, 197, 253, 0.15);
+}
+
+/* Progress bar - Bottom of pill */
+.progress-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #93c5fd, #c4b5fd);
+  /* Gradient match quotes */
+  transition: width 0.1s linear;
+}
+
+/* Playlist Drawer (Slide Up) */
+.playlist-drawer {
+  position: absolute;
+  bottom: 80px;
+  /* Above player */
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  width: 300px;
+  max-height: 400px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark-mode-on .playlist-drawer {
+  background: rgba(30, 30, 35, 0.9);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.playlist-drawer.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.playlist-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark-mode-on .playlist-header {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.playlist-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+.playlist-tracks {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.playlist-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.playlist-item:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.dark-mode-on .playlist-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.playlist-item.active {
+  background: rgba(147, 197, 253, 0.15);
+}
+
+.item-number {
+  font-size: 0.8rem;
+  color: var(--text-color);
+  opacity: 0.4;
+  width: 20px;
+  text-align: center;
+}
+
+.item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.item-artist {
+  font-size: 0.75rem;
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+/* EQ visualizer for active track */
+.item-visual {
+  display: none;
+  gap: 2px;
+  align-items: flex-end;
+  height: 12px;
+}
+
+.playlist-item.active .item-visual {
+  display: flex;
+}
+
+.bar {
+  width: 3px;
+  background: #93c5fd;
+  animation: eq 1s ease-in-out infinite;
+}
+
+.bar:nth-child(2) {
+  animation-delay: 0.2s;
+  height: 60%;
+}
+
+.bar:nth-child(3) {
+  animation-delay: 0.4s;
+  height: 30%;
+}
+
+@keyframes eq {
+
+  0%,
+  100% {
+    height: 30%;
+  }
+
+  50% {
+    height: 100%;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .player-bar {
+    width: 90%;
+    max-width: none;
+    padding: 10px 16px;
+    bottom: 15px;
+  }
+
+  .track-details {
+    max-width: 100px;
+  }
+
+  .track-title,
+  .track-artist {
+    max-width: 90px;
+  }
+}

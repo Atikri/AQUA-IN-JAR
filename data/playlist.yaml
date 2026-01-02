@@ -1,0 +1,18 @@
+# Lo-Fi Mixtape Playlist
+# HOW TO USE LOCAL FILES:
+# 1. Create a folder named 'audio' inside your 'static' folder (d:\AQUA-IN-JAR\static\audio).
+# 2. Put your MP3 files there.
+# 3. Use the path format: "/audio/your-song.mp3"
+#
+# Examples:
+
+- title: "rainy day lofi"
+  artist: "local"
+  # This only works if you actually have a file at static/audio/mysong.mp3
+  url: "/audio/lofi-music/rainy-day-lofi-guitar-drums-piano-216566.mp3" 
+  cover: "/images/lofi.png"
+
+- title: "Lofi Study"
+  artist: "local"
+  url: "/audio/lofi-music/cozy-lofi-background-music-for-study-457198.mp3"
+  cover: "/images/lofi.png"

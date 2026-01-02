@@ -13,7 +13,7 @@ featured: false
       <summary style='cursor: pointer; font-weight: bold; margin: 10px 0;'><a href="https://tikri.site/aquas-field/reading-notes/January/">January</a></summary>
       <ul>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January1-Discover-Your-Calling/'>January 1:Discover Your Calling</a></li>
-        <li>January 2</li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January2-Reconnect-with-Your-Childhood-Obsession/'>January 2:Reconnect with Your Childhood Obsession</a></li>
         <li>January 3</li>
         <li>January 4</li>
         <li>January 5</li>
@@ -55,5 +55,6 @@ featured: false
 我今天粗略一想，嗯，好像小时候对书本文字特别入迷，晚上洗脚的时候都会拿着一本书看好久。现在就是变成了拿着手机刷很久😅  
 不过的确，我早期学习生涯一直是写作陪伴着我的，我只要拿起笔，总能写点什么。现在已经有好久没有这种感受了，或者的确就是感觉学习接触了很多其他新鲜的事物，就很难再有那种纯粹的痴迷感了，更多的是浅层的体验🤔  
 因此，童年的痴迷往往是纯粹的。它不像成年后的职业选择那样受金钱、名声或他人评价的影响。如果你现在感到职业方向迷茫，寻找出路的最好方式是==回顾过去==，寻找那些让你曾经废寝忘食、即使没有报酬也愿意关注的事物。  
-今日法则：你小时候痴迷于某件事是有原因的。重新连接它。  
+> 今日法则：你小时候痴迷于某件事是有原因的。重新连接它。  
+  
 > Daily Law: You were obsessed with it as a child for a reason. Reconnect with it.

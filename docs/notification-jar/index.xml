@@ -2,47 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notification Jar on AQUA IN JAR</title>
-    <link>https://tikri.site/notification-jar/</link>
+    <link>http://localhost:1313/notification-jar/</link>
     <description>Recent content in Notification Jar on AQUA IN JAR</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© 2025 AQUA IN JAR</copyright>
     <lastBuildDate>Mon, 10 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tikri.site/notification-jar/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/notification-jar/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AQUA#0 - 认识AQUA IN JAR</title>
-      <link>https://tikri.site/notification-jar/AQUA-%230/</link>
+      <link>http://localhost:1313/notification-jar/AQUA-%230/</link>
       <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://tikri.site/notification-jar/AQUA-%230/</guid>
+      <guid>http://localhost:1313/notification-jar/AQUA-%230/</guid>
       <description>&lt;p&gt;AQUA IN JAR期刊，第零期上线啦！💌&lt;/p&gt;&#xA;&lt;h2 id=&#34;什么是aqua-in-jar期刊&#34;&gt;什么是AQUA IN JAR期刊？&lt;/h2&gt;&#xA;&lt;p&gt;瓶中水（AQUA IN JAR）期刊主要是一些深度的知识分享，以海报的形式展现，每一期集中一些自源性（Self-generated）话题进行探讨~&lt;/p&gt;&#xA;&lt;h2 id=&#34;aqua-0&#34;&gt;AQUA #0&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://supernotes-resources.s3.amazonaws.com/image-uploads/33175a56-5e04-45e3-9f68-6f8fb92af4cc--AQUA%2520%25230.png&#34; alt=&#34;AQUA%20%230.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>未来更新 &amp; 修复显示&#34;瓶&#34;</title>
-      <link>https://tikri.site/notification-jar/update-menu/</link>
+      <link>http://localhost:1313/notification-jar/update-menu/</link>
       <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://tikri.site/notification-jar/update-menu/</guid>
-      <description>&lt;p&gt;这里整理当前website所遇到待被解决的问题以及未来的更新条目&lt;br&gt;&#xA;当然各位小瓶子们提出的问题我也会一并列在里面&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;更新 &amp;amp; 修复&lt;/th&gt;&#xA;          &lt;th&gt;具体内容&lt;/th&gt;&#xA;          &lt;th&gt;当前状态&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;修复&lt;/td&gt;&#xA;          &lt;td&gt;图片视频加载问题&lt;/td&gt;&#xA;          &lt;td&gt;修复中&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;更新&lt;/td&gt;&#xA;          &lt;td&gt;RSS 订阅源&lt;/td&gt;&#xA;          &lt;td&gt;等待添加&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
+      <guid>http://localhost:1313/notification-jar/update-menu/</guid>
+      <description>&lt;p&gt;这里整理当前website所遇到待被解决的问题以及未来的更新条目&lt;br&gt;&#xA;当然各位小瓶子们提出的问题我也会一并列在里面&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;更新 &amp;amp; 修复&lt;/th&gt;&#xA;          &lt;th&gt;具体内容&lt;/th&gt;&#xA;          &lt;th&gt;当前状态&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;修复&lt;/td&gt;&#xA;          &lt;td&gt;图片视频加载问题&lt;/td&gt;&#xA;          &lt;td&gt;修复中&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;更新&lt;/td&gt;&#xA;          &lt;td&gt;RSS 订阅源&lt;/td&gt;&#xA;          &lt;td&gt;已添加&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;更新&lt;/td&gt;&#xA;          &lt;td&gt;收藏功能&lt;/td&gt;&#xA;          &lt;td&gt;已添加，正在测试中&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;更新&lt;/td&gt;&#xA;          &lt;td&gt;用户登录系统&lt;/td&gt;&#xA;          &lt;td&gt;考虑中&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:1313/notification-jar/aboutme/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notification-jar/aboutme/</guid>
+      <description>&lt;p&gt;Hi!我是tikri~&#xA;现在居住在上海。&#xA;超级喜欢唱歌，以及一切有艺术性的东西。&#xA;未来想学习心理学专业，神经科学。也会一直交叉研究声音方面的领域~&lt;/p&gt;&#xA;&lt;h2 id=&#34;我的订阅服务&#34;&gt;我的订阅服务：&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Supernotes：我的笔记软体，相比于Notion,Obsidian这些比较流行的笔记软体，这一款软件绝对是小众的精品，记笔记思路采取的是卡片式笔记法，app的UI设计也非常好看，可玩性极高，上手有一点点难度。不过订阅费用的确还蛮贵的😭&lt;/li&gt;&#xA;&lt;li&gt;Spotify&lt;/li&gt;&#xA;&lt;li&gt;Thinking Lab：很多我分享的好文也是来源于这边，每天一篇深度阅读，内容的确很有深度，但是我现在还没有养成每天好好消化一篇文章的好习惯，导致已经堆了很多文章😭&lt;/li&gt;&#xA;&lt;li&gt;Miraa：影子跟读软件，非常好用&lt;/li&gt;&#xA;&lt;li&gt;Headspace：冥想软件。&lt;/li&gt;&#xA;&lt;li&gt;Google One&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
     <item>
       <title>电子报订阅</title>
-      <link>https://tikri.site/notification-jar/%E7%94%B5%E5%AD%90%E6%8A%A5%E8%AE%A2%E9%98%85/</link>
+      <link>http://localhost:1313/notification-jar/%E7%94%B5%E5%AD%90%E6%8A%A5%E8%AE%A2%E9%98%85/</link>
       <pubDate>Sat, 06 Sep 2025 17:38:31 +0800</pubDate>
-      <guid>https://tikri.site/notification-jar/%E7%94%B5%E5%AD%90%E6%8A%A5%E8%AE%A2%E9%98%85/</guid>
+      <guid>http://localhost:1313/notification-jar/%E7%94%B5%E5%AD%90%E6%8A%A5%E8%AE%A2%E9%98%85/</guid>
       <description>&lt;p&gt;&amp;#x2757; 目前尚未开通&lt;/p&gt;&#xA;&lt;p&gt;快来订阅我的电子报吧！(不开VPN可能加载稍慢，还请耐心等待)&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://aqua-in-jar.kit.com/412ccdbfb3&#34;&gt;https://aqua-in-jar.kit.com/412ccdbfb3&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://aqua-in-jar.kit.com&#34;&gt;https://aqua-in-jar.kit.com&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>联系我（contact with me）</title>
-      <link>https://tikri.site/notification-jar/%E8%81%94%E7%B3%BB%E6%88%91contact-with-me/</link>
+      <link>http://localhost:1313/notification-jar/contact/</link>
       <pubDate>Sat, 06 Sep 2025 17:38:31 +0800</pubDate>
-      <guid>https://tikri.site/notification-jar/%E8%81%94%E7%B3%BB%E6%88%91contact-with-me/</guid>
+      <guid>http://localhost:1313/notification-jar/contact/</guid>
       <description>&lt;p&gt;想获取更多资讯，合作洽谈，欢迎发邮箱给我哟~&lt;/p&gt;&#xA;&lt;p&gt;Email : &lt;a href=&#34;mailto:aqutikri@gmail.com&#34;&gt;aqutikri@gmail.com&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>AQUA IN JAR活动报名</title>
-      <link>https://tikri.site/notification-jar/AQUA-IN-JAR/</link>
+      <link>http://localhost:1313/notification-jar/AQUA-IN-JAR/</link>
       <pubDate>Fri, 05 Sep 2025 17:38:31 +0800</pubDate>
-      <guid>https://tikri.site/notification-jar/AQUA-IN-JAR/</guid>
-      <description>&lt;hr&gt;&#xA;&lt;h3 id=&#34;背景介绍&#34;&gt;背景介绍：&lt;/h3&gt;&#xA;&lt;p&gt;我们的生活就像待在一个瓶子中，很难跳脱出去。就像绝大多数瓶子，不能脱离这个世界。那我们需要观看瓶子外的世界嘛？我们和外面的世界间隔了一道玻璃～&amp;#x1f95b;&#xA;于是滔说，我们需要一点==内源性的==  (Self-generated)的东西。这些东西就像滔滔汩汩的水流滋养着我们，还有我们所种植的一切「生命」。&amp;#x1f3dd;&amp;#xfe0f;&#xA;&lt;strong&gt;当你感觉人生经历转变期，过渡期；当你想寻求新灵感；或者只是想聊聊天，互相交流进步，都欢迎来我的瓶子作客&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;活力、生命力、能量和原动力，透过你，转化为行动，又因你的独特性，成就了这独一无二的表达。然而，若你封闭了这转化，它将不再经由任何媒介存在，并将永远佚失。&#xA;&lt;center&gt; ——玛莎·葛兰姆（Martha Graham）致信阿格尼丝·德米尔（Agnes DeMille）&lt;/center&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;很高兴开展&lt;strong&gt;AQUA IN JAR&lt;/strong&gt;的活动，我也很希望邀请你来到我的瓶子中。&amp;#x1f60e;&#xA;活动长期进行（一个月一期，一期仅邀请&lt;strong&gt;1~2位&lt;/strong&gt;成员）&lt;/p&gt;&#xA;&lt;h3 id=&#34;timer_clock-时间15002000可协商&#34;&gt;&amp;#x23f2;&amp;#xfe0f; 时间：15：00~~~~~~~~~~20：00（可协商）&lt;/h3&gt;&#xA;&lt;h3 id=&#34;moneybag-活动费用58&#34;&gt;&amp;#x1f4b0; 活动费用：58&lt;/h3&gt;&#xA;&lt;h3 id=&#34;laughing-我们可以选择一些活动&#34;&gt;&amp;#x1f606; 我们可以选择一些活动：&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 卡片对抗焦虑&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 500张拼图&amp;#x1f5c3;&amp;#xfe0f; / 飞行棋/&lt;a href=&#34;https://tikri.site/aquas-field/daily/duel52/&#34;&gt;Duel 52&amp;#x2694;&amp;#xfe0f; &lt;/a&gt;/打电动&amp;#x1f3ae;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 描绘时尚插画的基础姿势&amp;#x1f456;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 阅读书籍/食谱书刊&amp;#x1f4f0;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 身体拉伸/冥想体验（需预定）&amp;#x1f3c3;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 芳香制作&amp;#x1f343;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 享用食物（需预定，食谱请见&lt;a href=&#34;https://tikri.site/aquas-field/recipe/&#34;&gt;recipe&lt;/a&gt;）&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Estill Voice Training 学习经验分享讨论&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 等等ddddd~~~~~&amp;#x1f923;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;必备活动&#34;&gt;必备活动：&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;录制一首你想唱的歌&lt;/strong&gt;&amp;#x1f3a4;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;石头堆叠&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;聊天+唱歌&lt;/strong&gt;&amp;#x1f3b5;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-活动报名&#34;&gt;📝 活动报名&lt;/h2&gt;&#xA;&lt;p&gt;如果你想参与 AQUA IN JAR 活动，请填写下面的报名表单。我会尽快通过您提供的联系方式与您联系！&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/forms/d/e/1FAIpQLSefyhOjVgbp54SY43MORS9OVfKMSvpkgmvZPMwOK3ylFT3cRQ/viewform?embedded=true&#34;&gt;👉 点击这里填写报名表单&lt;/a&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/notification-jar/AQUA-IN-JAR/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h3 id=&#34;背景介绍&#34;&gt;背景介绍：&lt;/h3&gt;&#xA;&lt;p&gt;我们的生活就像待在一个瓶子中，很难跳脱出去。就像绝大多数瓶子，不能脱离这个世界。那我们需要观看瓶子外的世界嘛？我们和外面的世界间隔了一道玻璃～&amp;#x1f95b;&#xA;于是滔说，我们需要一点==内源性的==  (Self-generated)的东西。这些东西就像滔滔汩汩的水流滋养着我们，还有我们所种植的一切「生命」。&amp;#x1f3dd;&amp;#xfe0f;&#xA;&lt;strong&gt;当你感觉人生经历转变期，过渡期；当你想寻求新灵感；或者只是想聊聊天，互相交流进步，都欢迎来我的瓶子作客&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;活力、生命力、能量和原动力，透过你，转化为行动，又因你的独特性，成就了这独一无二的表达。然而，若你封闭了这转化，它将不再经由任何媒介存在，并将永远佚失。&#xA;&lt;center&gt; ——玛莎·葛兰姆（Martha Graham）致信阿格尼丝·德米尔（Agnes DeMille）&lt;/center&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;很高兴开展&lt;strong&gt;AQUA IN JAR&lt;/strong&gt;的活动，我也很希望邀请你来到我的瓶子中。&amp;#x1f60e;&#xA;活动长期进行（一个月一期，一期仅邀请&lt;strong&gt;1~2位&lt;/strong&gt;成员）&lt;/p&gt;&#xA;&lt;h3 id=&#34;timer_clock-时间定期举办详见报名表可协商&#34;&gt;&amp;#x23f2;&amp;#xfe0f; 时间：定期举办，详见报名表（可协商）&lt;/h3&gt;&#xA;&lt;h3 id=&#34;moneybag-活动费用58&#34;&gt;&amp;#x1f4b0; 活动费用：58&lt;/h3&gt;&#xA;&lt;h3 id=&#34;laughing-我们可以选择一些活动&#34;&gt;&amp;#x1f606; 我们可以选择一些活动：&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 卡片对抗焦虑&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 500张拼图&amp;#x1f5c3;&amp;#xfe0f; / 飞行棋/&lt;a href=&#34;https://tikri.site/aquas-field/daily/duel52/&#34;&gt;Duel 52&amp;#x2694;&amp;#xfe0f; &lt;/a&gt;/打电动&amp;#x1f3ae;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 描绘时尚插画的基础姿势&amp;#x1f456;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 阅读书籍/食谱书刊&amp;#x1f4f0;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 身体拉伸/冥想体验（需预定）&amp;#x1f3c3;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 芳香制作&amp;#x1f343;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 享用食物（需预定，食谱请见&lt;a href=&#34;http://localhost:1313/aquas-field/recipe/&#34;&gt;recipe&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Estill Voice Training 学习经验分享讨论&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 等等ddddd~~~~~&amp;#x1f923;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;必备活动&#34;&gt;必备活动：&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;录制一首你想唱的歌&lt;/strong&gt;&amp;#x1f3a4;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;石头堆叠&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;聊天+唱歌&lt;/strong&gt;&amp;#x1f3b5;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-活动报名&#34;&gt;📝 活动报名&lt;/h2&gt;&#xA;&lt;p&gt;如果你想参与 AQUA IN JAR 活动，请填写下面的报名表单。我会尽快通过您提供的联系方式与您联系！&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/forms/d/e/1FAIpQLSefyhOjVgbp54SY43MORS9OVfKMSvpkgmvZPMwOK3ylFT3cRQ/viewform?embedded=true&#34;&gt;👉 点击这里填写报名表单&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

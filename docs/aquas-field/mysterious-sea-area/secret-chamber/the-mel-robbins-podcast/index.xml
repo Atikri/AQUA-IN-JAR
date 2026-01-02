@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Mel Robbins Podcast on AQUA IN JAR</title>
+    <link>http://localhost:1313/aquas-field/mysterious-sea-area/secret-chamber/the-mel-robbins-podcast/</link>
+    <description>Recent content in The Mel Robbins Podcast on AQUA IN JAR</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© 2025 AQUA IN JAR</copyright>
+    <atom:link href="http://localhost:1313/aquas-field/mysterious-sea-area/secret-chamber/the-mel-robbins-podcast/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/aquas-field/mysterious-sea-area/secret-chamber/the-mel-robbins-podcast/README/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/aquas-field/mysterious-sea-area/secret-chamber/the-mel-robbins-podcast/README/</guid>
+      <description>&lt;h1 id=&#34;the-mel-robbins-podcast&#34;&gt;The Mel Robbins Podcast&lt;/h1&gt;&#xA;&lt;p&gt;This section is automatically updated using the script &lt;code&gt;d:\AQUA-IN-JAR\scripts\fetch_mel_robbins.py&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-to-update&#34;&gt;How to Update&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Install Prerequisites&lt;/strong&gt;:&#xA;Double-click &lt;code&gt;d:\AQUA-IN-JAR\install_dependencies.bat&lt;/code&gt; to install Python libraries.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Set API Key&lt;/strong&gt;:&#xA;You need an OpenAI API Key set in your environment variables as &lt;code&gt;OPENAI_API_KEY&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Run Update&lt;/strong&gt;:&#xA;Run the following command in your terminal:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;&#34;&gt;&#xA;&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34; id=&#34;hl-0-1&#34;&gt;&lt;a style=&#34;outline:none;text-decoration:none;color:inherit&#34; href=&#34;#hl-0-1&#34;&gt;1&lt;/a&gt;&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python d:&lt;span style=&#34;color:#1f2328&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#6639ba&#34;&gt;AQUA-IN&lt;/span&gt;-JAR&lt;span style=&#34;color:#1f2328&#34;&gt;\&lt;/span&gt;scripts&lt;span style=&#34;color:#1f2328&#34;&gt;\&lt;/span&gt;fetch_mel_robbins&lt;span style=&#34;color:#1f2328&#34;&gt;.&lt;/span&gt;py&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;The script will:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Check for new episodes.&lt;/li&gt;&#xA;&lt;li&gt;Analyze them using AI.&lt;/li&gt;&#xA;&lt;li&gt;Generate a password-protected (0126) post here.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

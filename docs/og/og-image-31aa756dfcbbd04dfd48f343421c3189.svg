@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">January</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">The Daily Laws(outline) 一月份：人生使命——为精通埋下种子 一月份的主题是“人生使命” (Your Life’s Task)，其核心在于发现你被赋予的==独特性==并将其转化为==职业目标==。 独特性与“种子”：Greene认为每个人在出生时都带有一颗“种子”，即独特的基因 …</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

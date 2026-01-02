@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">About Me</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">Hi!我是tikri~ 现在居住在上海。 超级喜欢唱歌，以及一切有艺术性的东西。 未来想学习心理学专业，神经科学。也会一直交叉研究声音方面的领域~ 我的订阅服务： Supernotes：我的笔记软体，相比于Notion,Obsidian这些比较流行的笔记软体，这一款软件绝对是小众的精品，记笔记思路采 …</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

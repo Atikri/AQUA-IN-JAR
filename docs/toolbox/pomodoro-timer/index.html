@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en-us" dir=" ltr" class="kind-page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="专注工作，高效休息。使用番茄工作法提升你的生产力">
+
+  <title>番茄计时器</title>
+  <link rel="canonical" href="http://localhost:1313/toolbox/pomodoro-timer/">
+  
+
+
+<meta property="og:title" content="番茄计时器">
+<meta property="og:description" content="专注工作，高效休息。使用番茄工作法提升你的生产力">
+<meta property="og:image" content="http://localhost:1313/og/og-image-31a3b9310cfacaf41d819374aa3a551a.svg">
+<meta property="og:image:type" content="image/svg+xml">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://localhost:1313/toolbox/pomodoro-timer/">
+<meta property="og:locale" content="en-us">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="番茄计时器">
+<meta name="twitter:description" content="专注工作，高效休息。使用番茄工作法提升你的生产力">
+<meta name="twitter:image" content="http://localhost:1313/og/og-image-31a3b9310cfacaf41d819374aa3a551a.svg">
+
+  <link rel="preload" href="http://localhost:1313/%20fonts/Newsreader.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="http://localhost:1313/%20fonts/Newsreader-italic.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="http://localhost:1313/css/lazy-loading.css" as="style">
+  <link rel="preload" href="http://localhost:1313/js/lazy-loading.js" as="script">
+  <link rel="stylesheet" href="http://localhost:1313/css/default.min.388b659a20ae66767b8d09160c440cb17bd3e6d42f3f6997421628e7534922dc.css" integrity="sha256-OItlmiCuZnZ7jQkWDEQMsXvT5tQvP2mXQhYo51NJItw=">
+  <link rel="stylesheet" href="http://localhost:1313/css/custom.min.46ab9c5d5897cac5e876dad61149485f597a72c13c3c544bfe5cadc387786b12.css" integrity="sha256-RqucXViXysXodtrWEUlIX1l6csE8PFRL/lytw4d4axI=">
+
+  <link rel="icon" type="image/x-icon" href="http://localhost:1313/%20favicon.ico?v=2">
+  <link rel="apple-touch-icon" href="http://localhost:1313/%20apple-touch-icon.png?v=2">
+  <script src="http://localhost:1313/js/darkmode.min.e0ac5a7c16cd0255abc4e6b84ab4db50b7342ee516e007ed0132db0f8adf94c5.js" integrity="sha256-4KxafBbNAlWrxOa4SrTbULc0LuUW4AftATLbD4rflMU=" defer></script>
+  <script src="http://localhost:1313/js/footnotes.min.e049c26d7ddda424be30c222001b5dbd0890e1bd0659fa171e586e92158e1286.js" integrity="sha256-4EnCbX3dpCS&#43;MMIiABtdvQiQ4b0GWfoXHlhukhWOEoY=" defer></script><link rel="stylesheet" href="http://localhost:1313/css/lazy-loading.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/toc-drawer.css">
+  <script src="http://localhost:1313/js/lazy-loading.js" defer></script>
+  <script src="http://localhost:1313/js/like-config.js"></script>
+  <script>
+    
+    (function () {
+      try {
+        var cfg = window.LIKE_CONFIG;
+        if (!cfg || !cfg.supabaseUrl) return;
+        var a = document.createElement('a');
+        a.href = cfg.supabaseUrl;
+        var origin = a.protocol + '//' + a.host;
+        var link1 = document.createElement('link');
+        link1.rel = 'preconnect';
+        link1.href = origin;
+        link1.crossOrigin = '';
+        document.head.appendChild(link1);
+        var link2 = document.createElement('link');
+        link2.rel = 'dns-prefetch';
+        link2.href = origin;
+        document.head.appendChild(link2);
+      } catch (e) { }
+    })();
+  </script>
+  <script src="http://localhost:1313/js/interactions.js" defer></script><script src="http://localhost:1313/js/checklist-score.js" defer></script>
+  <script src="http://localhost:1313/js/checkbox-jelly.js" defer></script>
+  
+
+
+
+
+<script>
+  
+  function loadGA() {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-JLYX55NFNN';
+    script.onload = function() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JLYX55NFNN');
+    };
+    document.head.appendChild(script);
+  }
+  
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadGA);
+  } else {
+    setTimeout(loadGA, 100);
+  }
+</script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var checkboxes = document.querySelectorAll('li input[type="checkbox"]');
+    checkboxes.forEach(function (cb, idx) {
+      
+      if (cb.hasAttribute('disabled')) cb.removeAttribute('disabled');
+      if (!cb.hasAttribute('tabindex')) cb.setAttribute('tabindex', '0');
+      cb.setAttribute('role', 'checkbox');
+
+      var key = 'tasklist:' + (cb.id || cb.name || idx) + ':' + location.pathname;
+      try {
+        var saved = localStorage.getItem(key);
+        if (saved !== null) cb.checked = saved === '1';
+        cb.addEventListener('change', function () {
+          localStorage.setItem(key, cb.checked ? '1' : '0');
+        });
+      } catch (e) {}
+    });
+  });
+  
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.matches('li input[type="checkbox"]')) {
+      if (e.target.hasAttribute('disabled')) e.target.removeAttribute('disabled');
+      
+    }
+  });
+  
+  document.addEventListener('keydown', function (e) {
+    if (e.code === 'Space' && e.target && e.target.matches('li input[type="checkbox"]')) {
+      e.preventDefault();
+      if (e.target.hasAttribute('disabled')) e.target.removeAttribute('disabled');
+      e.target.checked = !e.target.checked;
+      e.target.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+  });
+</script>
+
+</head>
+
+
+<body class="has-toc" >
+    <header>
+    <div>
+        <h1 class="site-brand">
+            <a href="http://localhost:1313/">
+                <span class="site-title">AQUA IN JAR</span>
+                <img class="site-inline-logo site-logo-light" src="http://localhost:1313/images/logo.png" alt="AQUA IN JAR logo light"
+                    loading="eager" />
+                <img class="site-inline-logo site-logo-dark" src="http://localhost:1313/images/logo-right.png"
+                    alt="AQUA IN JAR logo dark" loading="eager" />
+            </a>
+        </h1>
+        <div class="header-controls">
+            <button class="toc-toggle" aria-label="Toggle table of contents" title="目录">
+                <span class="toc-icon">≡</span>
+            </button>
+
+            
+
+            <button id="headerSearchBtn" class="header-icon-btn" aria-label="Search" title="Search">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+
+            
+            <div id="headerSearchPanel" class="header-search-panel">
+                <div class="header-search-container">
+                    <input type="text" id="searchInput" placeholder="Search..." class="header-search-input">
+                    <p class="header-search-hint">Please enter at least 2 characters</p>
+                    <div id="searchResults" class="header-search-results"></div>
+                </div>
+            </div>
+
+            <div class="display-settings-container">
+                <button id="displaySettingsBtn" class="header-icon-btn" aria-label="Display Settings"
+                    title="Appearance">
+                    <span class="settings-icon">Aa</span>
+                </button>
+                <div id="displaySettingsPanel" class="display-settings-panel" aria-hidden="true">
+                    <div class="settings-group">
+                        <label class="settings-label">Theme</label>
+                        <div class="theme-toggles">
+                            <button class="theme-btn light-theme-btn" data-theme="light" aria-label="Light Theme">
+                                <span class="color-swatch light"></span>
+                                <span>Day</span>
+                            </button>
+                            <button class="theme-btn dark-theme-btn" data-theme="dark" aria-label="Dark Theme">
+                                <span class="color-swatch dark"></span>
+                                <span>Night</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="settings-group">
+                        <label class="settings-label">Font Size</label>
+                        <div class="font-size-controls">
+                            <button id="decreaseFont" class="font-btn" aria-label="Decrease Font Size" title="Decrease">
+                                <span style="font-size: 14px;">A</span>
+                            </button>
+                            <div class="font-indicator-track">
+                                <span class="font-indicator active"></span>
+                                <span class="font-indicator"></span>
+                                <span class="font-indicator"></span>
+                                <span class="font-indicator"></span>
+                                <span class="font-indicator"></span>
+                            </div>
+                            <button id="increaseFont" class="font-btn" aria-label="Increase Font Size" title="Increase">
+                                <span style="font-size: 20px;">A</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <div class="toc-container">
+        <h2>Outline</h2>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#什么是番茄工作法">什么是番茄工作法？</a></li>
+    <li><a href="#模块加载可能稍慢可以稍作等待">(模块加载可能稍慢，可以稍作等待~)</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div class="toc-overlay" id="tocOverlay">
+        <div class="toc-panel">
+            <h2>Outline</h2>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#什么是番茄工作法">什么是番茄工作法？</a></li>
+    <li><a href="#模块加载可能稍慢可以稍作等待">(模块加载可能稍慢，可以稍作等待~)</a></li>
+  </ul>
+</nav>
+        </div>
+    </div>
+
+    <main class="content-wrapper">
+        <article class="content-container">
+
+            
+<nav class="breadcrumb" aria-label="Breadcrumb">
+    <a class="breadcrumb__link" href="http://localhost:1313/">首页</a>
+        <span class="breadcrumb__separator">›</span>
+            <a class="breadcrumb__link" href="http://localhost:1313/"></a>
+        <span class="breadcrumb__separator">›</span>
+            <a class="breadcrumb__link" href="http://localhost:1313/toolbox/">Toolbox</a>
+        <span class="breadcrumb__separator">›</span>
+        <span class="breadcrumb__current">番茄计时器</span>
+</nav>
+
+<h1>番茄计时器</h1>
+    <h4>专注工作，高效休息。使用番茄工作法提升你的生产力</h4>
+    <p class="author-date"><time datetime="2025-01-27T00:00:00Z">January 27, 2025</time></p><div class="interaction-sidebar" data-post-id="http://localhost:1313/toolbox/pomodoro-timer/">
+        <button class="interaction-btn btn-like" title="点赞">
+            ❤️
+            <span class="interaction-count">0</span>
+        </button>
+    </div>
+
+    <p>🍅基于番茄工作法的时间管理工具，帮助你保持专注，提高工作效率。</p>
+<h2 id="什么是番茄工作法">什么是番茄工作法？<a hidden class="anchor" aria-hidden="true" href="#什么是番茄工作法">#</a></h2>
+<p>番茄工作法是一种时间管理方法，由弗朗西斯科·西里洛于1992年创立。基本流程是：</p>
+<ol>
+<li><strong>25分钟专注工作</strong> - 全身心投入当前任务</li>
+<li><strong>5分钟短休息</strong> - 放松身心，为下一个番茄钟做准备</li>
+<li><strong>每4个番茄钟后</strong> - 进行15-30分钟的长休息</li>
+</ol>
+<ul>
+<li>🎯 <strong>设定目标</strong>：在上方输入框填写你当前专注的任务</li>
+<li>⏱️ <strong>专注工作</strong>：默认25分钟，全身心投入</li>
+<li>☕ <strong>智能休息</strong>：工作完成后自动进入休息模式 (短休息5分钟/长休息15分钟)</li>
+<li>🔔 <strong>实时提醒</strong>：浏览器标题栏会实时显示倒计时，让你随时掌握进度</li>
+<li>💾 <strong>自动保存</strong>：刷新页面也不会丢失当前进度与统计</li>
+</ul>
+<h2 id="模块加载可能稍慢可以稍作等待">(模块加载可能稍慢，可以稍作等待~)<a hidden class="anchor" aria-hidden="true" href="#模块加载可能稍慢可以稍作等待">#</a></h2>
+<link rel="stylesheet" href="http://localhost:1313/css/pomodoro-timer.css?v=2">
+<div id="pomodoro-timer"></div>
+<script src="http://localhost:1313/js/pomodoro-timer.js?v=2"></script>
+
+
+    <div class="article-navigation">
+        <a href="http://localhost:1313/toolbox/todo-list/" class="nav-button prev-button" title="较新一篇: 待办清单">
+            <div class="nav-image">
+                <img src="http://localhost:1313/images/navigation/left-image.png" alt="较新一篇" />
+            </div>
+        </a>
+        <div class="nav-button disabled"></div>
+    </div>
+
+        </article>
+    </main>
+
+    <footer>
+    <div class="footer-content">
+        <p>© 2025 AQUA IN JAR</p>
+        <a href="https://tikri.site/index.xml" class="rss-link" aria-label="RSS Feed" title="Subscribe via RSS">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 11a9 9 0 0 1 9 9"></path>
+                <path d="M4 4a16 16 0 0 1 16 16"></path>
+                <circle cx="5" cy="19" r="1"></circle>
+            </svg>
+            RSS
+        </a>
+    </div>
+</footer>
+
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top"><img src="http://localhost:1313/images/navigation/top.png" alt="Back to top" /></button>
+
+<script>
+    (function () {
+        const btn = document.getElementById('backToTop');
+        if (!btn) return;
+        const showAt = 300;
+        function onScroll() {
+            if (window.scrollY > showAt) btn.style.display = 'flex';
+            else btn.style.display = 'none';
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+        btn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    })();
+</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tocOverlay = document.getElementById('tocOverlay');
+            if (tocOverlay) {
+                const links = tocOverlay.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', function () {
+                        
+                        tocOverlay.classList.remove('open');
+                        document.body.classList.remove('toc-open');
+                    });
+                });
+            }
+        });
+    </script>
+    </body>
+
+</html>

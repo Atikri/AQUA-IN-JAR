@@ -1,0 +1,177 @@
+/* Calendar Widget Styles */
+:root {
+    --cal-bg: #ffffff;
+    --cal-text: #1f2937;
+    --cal-border: #e5e7eb;
+    --cal-accent: #3b82f6;
+    --cal-hover: #f3f4f6;
+    --cal-muted: #9ca3af;
+    --cal-dot: #3b82f6;
+    --cal-dot-dark: #1e3a8a;
+}
+
+body.dark-mode-on {
+    --cal-bg: #1f2937;
+    /* Gray 800 */
+    --cal-text: #f9fafb;
+    /* Gray 50 */
+    --cal-border: #374151;
+    /* Gray 700 */
+    --cal-hover: #374151;
+    --cal-muted: #9ca3af;
+}
+
+.calendar-widget {
+    max-width: 400px;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--cal-bg);
+    border: 1px solid var(--cal-border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--cal-border);
+}
+
+.calendar-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--cal-text);
+    margin: 0;
+}
+
+.calendar-nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.calendar-nav button {
+    background: transparent;
+    border: none;
+    color: var(--cal-text);
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.calendar-nav button:hover {
+    background-color: var(--cal-hover);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.calendar-weekday {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--cal-muted);
+    padding-bottom: 0.5rem;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--cal-text);
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s;
+}
+
+.calendar-day:hover:not(:empty) {
+    background-color: var(--cal-hover);
+}
+
+.calendar-day.empty {
+    cursor: default;
+}
+
+.calendar-day.today {
+    font-weight: bold;
+    color: var(--cal-accent);
+}
+
+.calendar-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--cal-dot);
+    margin-top: 4px;
+}
+
+.calendar-dot.heavy {
+    background-color: var(--cal-dot-dark);
+    /* Darker for high word count */
+    width: 5px;
+    height: 5px;
+}
+
+/* Article Card */
+.article-card {
+    padding: 1rem;
+    border-top: 1px solid var(--cal-border);
+    background-color: var(--cal-bg);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    color: var(--cal-text);
+}
+
+.article-card h3 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-card h3 a:hover {
+    color: var(--cal-accent);
+}
+
+.article-card p {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.875rem;
+    color: var(--cal-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.article-meta {
+    font-size: 0.75rem;
+    color: var(--cal-muted);
+    display: flex;
+    justify-content: space-between;
+}

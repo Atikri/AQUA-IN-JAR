@@ -1,0 +1,127 @@
+/* TOC Drawer Styles */
+.toc-drawer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.drawer-item {
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.drawer-item:last-child {
+    border-bottom: none;
+}
+
+.drawer-item details summary {
+    cursor: pointer;
+    list-style: none;
+    /* Hide default marker */
+    padding: 10px 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    display: flex;
+    justify-content: flex-start;
+    /* Align start to keep arrow next to text */
+    align-items: center;
+    gap: 8px;
+    /* Space between text and arrow */
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 6px;
+}
+
+.drawer-item details summary::-webkit-details-marker {
+    display: none;
+    /* Hide default marker in WebKit */
+}
+
+.drawer-item details summary:hover {
+    color: var(--primary-color, #007bff);
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Custom Arrow using Pseudo-element */
+.drawer-item details summary::after {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-right: 1.5px solid #8c7b75;
+    /* Warmer color, thinner line */
+    border-bottom: 1.5px solid #8c7b75;
+    transform: rotate(-45deg);
+    /* Point right */
+    transition: transform 0.2s ease;
+    margin-top: -2px;
+    /* Visual center adjustment */
+    opacity: 0.8;
+}
+
+/* Rotating arrow when open */
+.drawer-item details[open] summary::after {
+    transform: rotate(45deg);
+    /* Point down */
+    opacity: 1;
+}
+
+/* Drawer Content Animation */
+.drawer-item details ul {
+    list-style: none;
+    padding: 8px 0 12px 16px;
+    margin: 0;
+    animation: slideDown 0.3s ease-out forwards;
+}
+
+.drawer-item details ul li {
+    margin-bottom: 6px;
+}
+
+.drawer-item details ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 0.9rem;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    display: block;
+}
+
+.drawer-item details ul li a:hover {
+    opacity: 1;
+    color: var(--primary-color, #007bff);
+    transform: translateX(4px);
+}
+
+/* Special styling for "View all" link */
+.drawer-item details ul li a.section-link {
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--primary-color, #007bff);
+    margin-bottom: 8px;
+    display: inline-block;
+    opacity: 0.9;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark Mode Adjustments */
+.dark-mode-on .drawer-item {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode-on .drawer-item details summary:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+}

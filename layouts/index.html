@@ -1,46 +1,128 @@
 {{- define "main" }}
-<!-- Sliding Quote Section -->
-<section class="quote-section">
-    <!-- Main Card -->
-    <div class="quote-container">
-        <div class="quote-icon">❝</div>
-        <div class="quote-slider" id="quoteSlider">
+<!-- Quote Marquee Section -->
+<section class="marquee-section">
+    <div class="marquee-wrapper">
+        <!-- Row 1: Left Scroll -->
+        <div class="marquee-track scroll-left">
             {{ range $index, $element := .Site.Data.quotes }}
-            <div class="quote-slide {{ if eq $index 0 }}active{{ end }}" data-index="{{ $index }}">
-                <p class="quote-text">{{ .content }}</p>
-                <p class="quote-author">{{ .author }}</p>
+            <div class="quote-card-compact" onclick="openQuoteModal(this)" data-quote="{{ .content }}"
+                data-author="{{ .author }}">
+                <span class="compact-icon">❝</span>
+                <p class="compact-text">{{ .content | truncate 60 }}</p>
+                <span class="compact-author">— {{ .author }}</span>
+            </div>
+            {{ end }}
+            {{ range $index, $element := .Site.Data.quotes }}
+            <div class="quote-card-compact" onclick="openQuoteModal(this)" data-quote="{{ .content }}"
+                data-author="{{ .author }}">
+                <span class="compact-icon">❝</span>
+                <p class="compact-text">{{ .content | truncate 60 }}</p>
+                <span class="compact-author">— {{ .author }}</span>
+            </div>
+            {{ end }}
+        </div>
+
+        <!-- Row 2: Right Scroll -->
+        <div class="marquee-track scroll-right">
+            {{ range $index, $element := .Site.Data.quotes }}
+            <div class="quote-card-compact" onclick="openQuoteModal(this)" data-quote="{{ .content }}"
+                data-author="{{ .author }}">
+                <span class="compact-icon">❝</span>
+                <p class="compact-text">{{ .content | truncate 60 }}</p>
+                <span class="compact-author">— {{ .author }}</span>
+            </div>
+            {{ end }}
+            {{ range $index, $element := .Site.Data.quotes }}
+            <div class="quote-card-compact" onclick="openQuoteModal(this)" data-quote="{{ .content }}"
+                data-author="{{ .author }}">
+                <span class="compact-icon">❝</span>
+                <p class="compact-text">{{ .content | truncate 60 }}</p>
+                <span class="compact-author">— {{ .author }}</span>
             </div>
             {{ end }}
         </div>
     </div>
+</section>
 
-    <!-- Separated Controls Config -->
-    <div class="quote-controls">
-        <!-- Dots on Left -->
-        <div class="quote-dots">
-            {{ range $index, $element := .Site.Data.quotes }}
-            <button class="quote-dot {{ if eq $index 0 }}active{{ end }}" data-index="{{ $index }}"
-                aria-label="Go to quote {{ add $index 1 }}"></button>
-            {{ end }}
-        </div>
+<!-- Expanded Quote Modal -->
+<div id="quoteModal" class="quote-modal">
+    <div class="quote-modal-backdrop" onclick="closeQuoteModal()"></div>
+    <div class="quote-modal-content">
+        <button class="modal-close" onclick="closeQuoteModal()">×</button>
+        <div class="modal-quote-icon">❝</div>
+        <p id="modalQuoteText" class="modal-text"></p>
+        <p id="modalQuoteAuthor" class="modal-author"></p>
 
-        <!-- Arrows on Right -->
-        <div class="quote-arrows">
-            <button class="quote-nav prev" aria-label="Previous quote">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-            </button>
-            <button class="quote-nav next" aria-label="Next quote">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
+        <div class="modal-actions">
+            <button id="modalLikeBtn" class="modal-like-btn" onclick="toggleModalLike()">
+                <span class="heart-icon">🤍</span> <span class="like-label">Like</span>
             </button>
         </div>
     </div>
-</section>
+</div>
+
+<script>
+    // Marquee & Modal Logic
+    const marqueeTracks = document.querySelectorAll('.marquee-track');
+    const modal = document.getElementById('quoteModal');
+    const modalText = document.getElementById('modalQuoteText');
+    const modalAuthor = document.getElementById('modalQuoteAuthor');
+    const modalLikeBtn = document.getElementById('modalLikeBtn');
+    let isPaused = false;
+
+    // Pause all marquees on hover
+    const wrapper = document.querySelector('.marquee-wrapper');
+    wrapper.addEventListener('mouseenter', () => {
+        marqueeTracks.forEach(track => track.style.animationPlayState = 'paused');
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+        if (!modal.classList.contains('show')) {
+            marqueeTracks.forEach(track => track.style.animationPlayState = 'running');
+        }
+    });
+
+    function openQuoteModal(element) {
+        const quote = element.getAttribute('data-quote');
+        const author = element.getAttribute('data-author');
+
+        modalText.textContent = quote;
+        modalAuthor.textContent = author;
+
+        // Reset like button state
+        modalLikeBtn.classList.remove('liked');
+        modalLikeBtn.querySelector('.heart-icon').textContent = '🤍';
+
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+        marqueeTracks.forEach(track => track.style.animationPlayState = 'paused');
+    }
+
+    function closeQuoteModal() {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+        marqueeTracks.forEach(track => track.style.animationPlayState = 'running');
+    }
+
+
+    function toggleModalLike() {
+        modalLikeBtn.classList.toggle('liked');
+        const heart = modalLikeBtn.querySelector('.heart-icon');
+        if (modalLikeBtn.classList.contains('liked')) {
+            heart.textContent = '❤️';
+            // Trigger confetti or animation here if desired
+        } else {
+            heart.textContent = '🤍';
+        }
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            closeQuoteModal();
+        }
+    });
+</script>
 
 {{- with .Site.GetPage "_index.md" }}
 {{- if .Params.homePageIsPost }}
@@ -149,102 +231,7 @@
         }
     }
 
-    // Quote Slider Logic
-    document.addEventListener('DOMContentLoaded', function () {
-        const slides = document.querySelectorAll('.quote-slide');
-        const dots = document.querySelectorAll('.quote-dot');
-        const prevBtn = document.querySelector('.quote-nav.prev');
-        const nextBtn = document.querySelector('.quote-nav.next');
-        const container = document.querySelector('.quote-container');
+    // Quote Slider Logic (Removed)
 
-        let currentSlide = 0;
-        const totalSlides = slides.length;
-        const slideInterval = 8000;
-        let autoPlayTimer;
-
-        function showSlide(index, direction = 'next') {
-            slides.forEach(slide => {
-                slide.classList.remove('active');
-                slide.classList.remove('slide-in-next');
-                slide.classList.remove('slide-in-prev');
-            });
-            if (dots) dots.forEach(dot => dot.classList.remove('active'));
-
-            if (index >= totalSlides) index = 0;
-            if (index < 0) index = totalSlides - 1;
-
-            currentSlide = index;
-
-            slides[currentSlide].classList.add('active');
-            if (direction === 'next') {
-                slides[currentSlide].classList.add('slide-in-next');
-            } else {
-                slides[currentSlide].classList.add('slide-in-prev');
-            }
-
-            if (dots && dots[currentSlide]) dots[currentSlide].classList.add('active');
-        }
-
-        // Random logic for Auto-Play
-        function nextSlideRandom() {
-            if (totalSlides <= 1) return;
-            let nextIndex;
-            let attempts = 0;
-            do {
-                nextIndex = Math.floor(Math.random() * totalSlides);
-                attempts++;
-            } while (nextIndex === currentSlide && attempts < 5);
-            showSlide(nextIndex, 'next');
-        }
-
-        // Sequential logic for Manual Buttons
-        function nextSlideSequential() {
-            showSlide(currentSlide + 1, 'next');
-        }
-
-        function prevSlideSequential() {
-            showSlide(currentSlide - 1, 'prev');
-        }
-
-        if (nextBtn) nextBtn.addEventListener('click', () => {
-            nextSlideSequential();
-            resetTimer();
-        });
-
-        if (prevBtn) prevBtn.addEventListener('click', () => {
-            prevSlideSequential();
-            resetTimer();
-        });
-
-        if (dots) dots.forEach(dot => {
-            dot.addEventListener('click', function () {
-                const index = parseInt(this.getAttribute('data-index'));
-                const direction = index > currentSlide ? 'next' : 'prev';
-                showSlide(index, direction);
-                resetTimer();
-            });
-        });
-
-        if (container) {
-            container.addEventListener('mouseenter', () => clearInterval(autoPlayTimer));
-            container.addEventListener('mouseleave', startTimer);
-        }
-
-        function startTimer() {
-            clearInterval(autoPlayTimer);
-            if (totalSlides > 1) {
-                // Use random for auto-play
-                autoPlayTimer = setInterval(nextSlideRandom, slideInterval);
-            }
-        }
-
-        function resetTimer() {
-            clearInterval(autoPlayTimer);
-            startTimer();
-        }
-
-        // Init
-        startTimer();
-    });
 </script>
 {{- end }}

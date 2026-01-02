@@ -1,324 +1,370 @@
-/* 番茄计时器样式 */
-.pomodoro-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+/* Pomodoro Timer Premium Styles */
+:root {
+    --color-work: #ff7e5f;
+    --color-work-gradient: linear-gradient(135deg, #ff7e5f, #feb47b);
+    --color-short-break: #4facfe;
+    --color-short-break-gradient: linear-gradient(135deg, #4facfe, #00f2fe);
+    --color-long-break: #43e97b;
+    --color-long-break-gradient: linear-gradient(135deg, #43e97b, #38f9d7);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --text-primary: #2c3e50;
+    --text-secondary: #7f8c8d;
 }
 
-.timer-display {
-    text-align: center;
+@media (prefers-color-scheme: dark) {
+    :root {
+        --glass-bg: rgba(30, 30, 30, 0.6);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --text-primary: #ecf0f1;
+        --text-secondary: #bdc3c7;
+    }
+}
+
+.pomodoro-container {
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 24px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header & Mode Badges */
+.timer-header {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.mode-badges {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 4px;
+    border-radius: 20px;
+    gap: 5px;
+}
+
+.mode-badge {
+    background: transparent;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-badge.active {
+    background: #fff;
+    color: var(--text-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    .mode-badges {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .mode-badge.active {
+        background: #333;
+        color: #fff;
+    }
+}
+
+/* Task Input */
+.task-input-section {
+    width: 100%;
     margin-bottom: 30px;
 }
 
-.mode-indicator {
-    margin-bottom: 20px;
-}
-
-.mode-indicator span {
-    display: block;
+.task-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
     font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 5px;
+    text-align: center;
+    color: var(--text-primary);
+    transition: border-color 0.3s;
 }
 
-#current-mode {
-    font-size: 24px;
-    color: #e74c3c;
+.task-input:focus {
+    outline: none;
+    border-color: var(--color-work);
 }
 
-#cycle-info {
-    font-size: 16px;
-    color: #7f8c8d;
+.task-input::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.6;
 }
 
-.progress-ring {
+/* Timer Display */
+.timer-display-section {
     position: relative;
-    width: 200px;
-    height: 200px;
-    display: inline-block;
+    margin-bottom: 40px;
 }
-.time-display {
+
+.progress-ring-container {
+    position: relative;
+    width: 260px;
+    height: 260px;
+}
+
+.progress-circle {
+    transform: rotate(-90deg);
+}
+
+.progress-bg {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.05);
+    stroke-width: 8;
+}
+
+@media (prefers-color-scheme: dark) {
+    .progress-bg {
+        stroke: rgba(255, 255, 255, 0.05);
+    }
+}
+
+.progress-bar {
+    fill: none;
+    stroke-width: 8;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s linear, stroke 0.3s ease;
+}
+
+/* Mode-specific colors */
+.mode-work .progress-bar {
+    stroke: url(#gradient-work);
+}
+
+.mode-shortBreak .progress-bar {
+    stroke: url(#gradient-break);
+}
+
+.mode-longBreak .progress-bar {
+    stroke: #43e97b;
+}
+
+/* Fallback/Solid */
+
+/* Ensure gradient works by referencing ID in JS or default CSS if possible, 
+   but SVG gradients are referenced by ID usually. 
+   Here we use the stroke property targeting the element. 
+*/
+
+.time-overlay {
     position: absolute;
     inset: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     pointer-events: none;
 }
 
-#time-text {
-    font-size: 48px;
-    font-weight: 300;
-    color: #2c3e50;
+.time-text {
+    font-size: 64px;
+    font-weight: 200;
+    color: var(--text-primary);
+    letter-spacing: -2px;
     font-variant-numeric: tabular-nums;
-    z-index: 2;
 }
 
-.progress-ring {
-    position: relative;
-    display: inline-block;
+.cycle-text {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 5px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.progress-circle { width: 100%; height: 100%; }
-
-.progress-bg {
-    fill: none;
-    stroke: #ecf0f1;
-    stroke-width: 8;
-}
-
-.progress-bar {
-    fill: none;
-    stroke: #e74c3c;
-    stroke-width: 8;
-    stroke-linecap: round;
-    stroke-dasharray: 565.48;
-    stroke-dashoffset: 565.48;
-    transition: stroke-dashoffset 1s linear;
-}
-
-/* 不同模式的颜色 */
-.work-mode .progress-bar {
-    stroke: #e74c3c;
-}
-
-.short-break-mode .progress-bar {
-    stroke: #3498db;
-}
-
-.long-break-mode .progress-bar {
-    stroke: #2ecc71;
-}
-
+/* Controls */
 .timer-controls {
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    gap: 20px;
     margin-bottom: 30px;
+    align-items: center;
 }
 
 .control-btn {
-    padding: 12px 24px;
     border: none;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    min-width: 80px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .control-btn.primary {
-    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--color-work-gradient);
     color: white;
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    font-size: 24px;
+    box-shadow: 0 10px 20px rgba(255, 126, 95, 0.4);
+}
+
+.mode-shortBreak .control-btn.primary {
+    background: var(--color-short-break-gradient);
+    box-shadow: 0 10px 20px rgba(79, 172, 254, 0.4);
+}
+
+.mode-longBreak .control-btn.primary {
+    background: var(--color-long-break-gradient);
+    box-shadow: 0 10px 20px rgba(67, 233, 123, 0.4);
 }
 
 .control-btn.primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.control-btn.primary.paused {
-    background: linear-gradient(135deg, #f39c12, #e67e22);
-    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+.control-btn.primary:active {
+    transform: scale(0.95);
 }
 
 .control-btn.secondary {
-    background: #ecf0f1;
-    color: #2c3e50;
-    border: 2px solid #bdc3c7;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .control-btn.secondary:hover {
-    background: #d5dbdb;
-    transform: translateY(-1px);
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--text-primary);
 }
 
-.timer-settings {
-    background: #f8f9fa;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 30px;
+@media (prefers-color-scheme: dark) {
+    .control-btn.secondary {
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .control-btn.secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Footer & Settings */
+.timer-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    .timer-footer {
+        border-top-color: rgba(255, 255, 255, 0.05);
+    }
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.stat-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.settings-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.settings-btn:hover {
+    color: var(--text-primary);
+}
+
+/* Settings Panel */
+.settings-panel {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    animation: slideDown 0.3s ease;
+}
+
+.settings-panel.hidden {
+    display: none;
 }
 
 .setting-group {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
-}
-
-.setting-group:last-child {
-    margin-bottom: 0;
+    margin-bottom: 12px;
 }
 
 .setting-group label {
-    font-weight: 500;
-    color: #2c3e50;
+    font-size: 14px;
+    color: var(--text-secondary);
 }
 
 .setting-group input {
-    width: 80px;
-    padding: 8px 12px;
-    border: 2px solid #bdc3c7;
-    border-radius: 6px;
-    text-align: center;
-    font-size: 14px;
-}
-
-.setting-group input:focus {
-    outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
-}
-
-.timer-stats {
-    display: flex;
-    justify-content: space-around;
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.stat-item {
-    text-align: center;
-}
-
-.stat-label {
-    display: block;
-    font-size: 14px;
-    color: #7f8c8d;
-    margin-bottom: 5px;
-}
-
-.stat-value {
-    display: block;
-    font-size: 24px;
-    font-weight: 600;
-    color: #2c3e50;
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    .pomodoro-container {
-        padding: 15px;
-    }
-    
-    #time-text {
-        font-size: 36px;
-    }
-    
-    .progress-circle {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .timer-controls {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .control-btn {
-        width: 200px;
-    }
-    
-    .setting-group {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-    
-    .setting-group input {
-        width: 100%;
-    }
-    
-    .timer-stats {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
-/* 深色模式支持 */
-@media (prefers-color-scheme: dark) {
-    .pomodoro-container {
-        color: #ecf0f1;
-    }
-    
-    .mode-indicator span {
-        color: #ecf0f1;
-    }
-    
-    #time-text {
-        color: #ecf0f1;
-    }
-    
-    .progress-bg {
-        stroke: #34495e;
-    }
-    
-    .timer-settings {
-        background: #2c3e50;
-    }
-    
-    .setting-group label {
-        color: #ecf0f1;
-    }
-    
-    .setting-group input {
-        background: #34495e;
-        border-color: #4a6741;
-        color: #ecf0f1;
-    }
-    
-    .timer-stats {
-        background: #2c3e50;
-    }
-    
-    .stat-label {
-        color: #bdc3c7;
-    }
-    
-    .stat-value {
-        color: #ecf0f1;
-    }
-}
-
-/* 动画效果 */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.timer-display.working {
-    animation: pulse 2s infinite;
-}
-
-/* 通知样式 */
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #2ecc71;
-    color: white;
-    padding: 15px 20px;
+    width: 60px;
+    padding: 6px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    animation: slideIn 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: transparent;
+    color: var(--text-primary);
+    text-align: center;
 }
 
-@keyframes slideIn {
+@keyframes slideDown {
     from {
-        transform: translateX(100%);
         opacity: 0;
+        transform: translateY(-10px);
     }
+
     to {
-        transform: translateX(0);
         opacity: 1;
+        transform: translateY(0);
     }
+}
+
+/* Music Active State */
+.control-btn.secondary.music-active {
+    color: #ff6b6b;
+    border-color: rgba(255, 107, 107, 0.4);
+    animation: pulse-soft 2s infinite;
+}
+
+@keyframes pulse-soft {
+    0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.2); }
+    70% { box-shadow: 0 0 0 6px rgba(255, 107, 107, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
 }

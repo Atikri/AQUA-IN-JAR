@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Secret Chamber on AQUA IN JAR</title>
+    <link>http://localhost:1313/aquas-field/mysterious-sea-area/secret-chamber/</link>
+    <description>Recent content in Secret Chamber on AQUA IN JAR</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© 2025 AQUA IN JAR</copyright>
+    <lastBuildDate>Thu, 11 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/aquas-field/mysterious-sea-area/secret-chamber/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Top Secret Document</title>
+      <link>http://localhost:1313/aquas-field/mysterious-sea-area/secret-chamber/top-secret-file/</link>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/aquas-field/mysterious-sea-area/secret-chamber/top-secret-file/</guid>
+      <description>&lt;h1 id=&#34;classified-information&#34;&gt;Classified Information&lt;/h1&gt;&#xA;&lt;p&gt;This is a top secret document. If you can read this, you have the password.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Access granted&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; World domination&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

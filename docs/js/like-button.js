@@ -1,18 +1,29 @@
-(function() {
+(function () {
     'use strict';
 
-    // 获取当前文章的唯一标识（使用permalink）
+    // 获取当前文章的唯一标识（使用路径作为ID，保证本地和线上一致）
     function getPostId() {
         const container = document.querySelector('.like-button-container');
         if (!container) return null;
-        return container.getAttribute('data-post-id');
+
+        let rawId = container.getAttribute('data-post-id');
+        if (!rawId) return null;
+
+        // Extract path only to ensure consistency between localhost and production
+        try {
+            const url = new URL(rawId);
+            return url.pathname.replace(/\/$/, ''); // Remove trailing slash
+        } catch (e) {
+            // Fallback if not a full URL
+            return rawId.replace(/\/$/, '');
+        }
     }
 
     // 检查是否配置了 Supabase
     function isSupabaseConfigured() {
-        return window.LIKE_CONFIG && 
-               window.LIKE_CONFIG.supabaseUrl && 
-               window.LIKE_CONFIG.supabaseKey;
+        return window.LIKE_CONFIG &&
+            window.LIKE_CONFIG.supabaseUrl &&
+            window.LIKE_CONFIG.supabaseKey;
     }
 
     // 生成浏览器指纹（用于防止重复点赞）
@@ -23,7 +34,7 @@
         ctx.textBaseline = 'top';
         ctx.font = '14px Arial';
         ctx.fillText('Fingerprint', 2, 2);
-        
+
         const fingerprint = [
             navigator.userAgent,
             navigator.language,
@@ -31,7 +42,7 @@
             new Date().getTimezoneOffset(),
             canvas.toDataURL()
         ].join('|');
-        
+
         // 使用简单的哈希函数
         let hash = 0;
         for (let i = 0; i < fingerprint.length; i++) {
@@ -52,7 +63,7 @@
         try {
             const url = `${window.LIKE_CONFIG.supabaseUrl}/rest/v1/post_likes?post_id=eq.${encodeURIComponent(postId)}&select=like_count`;
             console.log('[Like] Fetching like count from:', url);
-            
+
             const response = await fetch(url, {
                 method: 'GET',
                 headers: {
@@ -70,7 +81,7 @@
 
             const data = await response.json();
             console.log('[Like] Response data:', data);
-            
+
             if (data && data.length > 0) {
                 const count = data[0].like_count;
                 console.log('[Like] Found like count:', count);
@@ -95,7 +106,7 @@
             // 先检查记录是否存在
             const checkUrl = `${window.LIKE_CONFIG.supabaseUrl}/rest/v1/post_likes?post_id=eq.${encodeURIComponent(postId)}&select=like_count`;
             console.log('[Like] Checking existing record:', checkUrl);
-            
+
             const checkResponse = await fetch(checkUrl, {
                 method: 'GET',
                 headers: {
@@ -114,7 +125,7 @@
             console.log('[Like] Existing record:', existing);
 
             const baseUrl = `${window.LIKE_CONFIG.supabaseUrl}/rest/v1/post_likes`;
-            
+
             if (existing && existing.length > 0) {
                 // 记录存在，更新
                 const currentCount = existing[0].like_count || 0;
@@ -207,7 +218,7 @@
     function setCachedLikeCount(postId, count) {
         try {
             sessionStorage.setItem(`likeCache:${postId}`, JSON.stringify({ count, ts: Date.now() }));
-        } catch (_) {}
+        } catch (_) { }
     }
 
     // 保存点赞数据到 localStorage（后备方案）
@@ -334,7 +345,7 @@
 
         const newCount = await incrementLike(postId);
         console.log('[Like] New count after increment:', newCount);
-        
+
         if (newCount === false || newCount === undefined) {
             console.error('[Like] Failed to increment like');
             const messageElement = document.getElementById('like-message');

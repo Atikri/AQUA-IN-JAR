@@ -1,10 +1,53 @@
 ---
 title: "January2: Reconnect with Your Childhood Obsession"
-date: "2026-1-2"
+date: "2026-01-02"
 hiddenFromList: false
 featured: false
 ---
 
+[The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)  
+
+<ul class='toc-drawer'>
+  <li class='drawer-item'>
+    <details>
+      <summary style='cursor: pointer; font-weight: bold; margin: 10px 0;'><a href="https://tikri.site/aquas-field/reading-notes/January/">January</a></summary>
+      <ul>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January1-Discover-Your-Calling/'>January 1:Discover Your Calling</a></li>
+        <li>January 2</li>
+        <li>January 3</li>
+        <li>January 4</li>
+        <li>January 5</li>
+        <li>January 6</li>
+        <li>January 7</li>
+        <li>January 8</li>
+        <li>January 9</li>
+        <li>January 10</li>
+        <li>January 11</li>
+        <li>January 12</li>
+        <li>January 13</li>
+        <li>January 14</li>
+        <li>January 15</li>
+        <li>January 16</li>
+        <li>January 17</li>
+        <li>January 18</li>
+        <li>January 19</li>
+        <li>January 20</li>
+        <li>January 21</li>
+        <li>January 22</li>
+        <li>January 23</li>
+        <li>January 24</li>
+        <li>January 25</li>
+        <li>January 26</li>
+        <li>January 27</li>
+        <li>January 28</li>
+        <li>January 29</li>
+        <li>January 30</li>
+        <li>January 31</li>
+      </ul>
+    </details>
+  </li>
+</ul>
+  
 1月2日的内容主题为“**重新连接你童年时代所痴迷的事物**”。  
 书中引用了居里夫人的例子。她在四岁时曾站在父亲的书房里，被玻璃柜里的化学和物理实验仪器深深吸引，甚至因此驻足出神。这种早期的视觉冲击和好奇心，在她成年后第一次进入真正的实验室时得到了回响。这种瞬间的连接感让她确信，科学实验就是她的职业召唤。  
 

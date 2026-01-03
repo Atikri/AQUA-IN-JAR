@@ -3971,3 +3971,171 @@ html.is-changing #swup-loader {
     opacity: 1;
   }
 }
+
+/* Coffee-Style TOC Toggle (Custom Design) */
+.coffee-toggle {
+  background: #f7f4ef !important;
+  /* Creamy off-white */
+  border: none !important;
+  border-radius: 16px !important;
+  padding: 10px 14px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+  cursor: pointer;
+  box-shadow: none !important;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  width: auto !important;
+  height: auto !important;
+  margin-right: 18px;
+  /* Spacing from next item */
+}
+
+.coffee-toggle:hover {
+  transform: scale(1.05);
+  background: #ebe6de !important;
+}
+
+.coffee-line {
+  width: 24px;
+  height: 3px;
+  border-radius: 3px;
+  display: block !important;
+}
+
+.coffee-line.line-1 {
+  background-color: #6d4c41 !important;
+}
+
+/* Brown */
+.coffee-line.line-2 {
+  background-color: #000000 !important;
+}
+
+/* Black */
+.coffee-line.line-3 {
+  background-color: #6d4c41 !important;
+}
+
+/* Brown */
+
+.dark-mode-on .coffee-toggle {
+  background: #3e3e3e !important;
+}
+
+.dark-mode-on .coffee-line.line-1,
+.dark-mode-on .coffee-line.line-3 {
+  background-color: #a1887f !important;
+}
+
+.dark-mode-on .coffee-line.line-2 {
+  background-color: #ffffff !important;
+}
+
+
+
+/* TOC Guide Arrow & Text */
+.toc-toggle-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.toc-guide-container {
+  position: absolute;
+  top: -25px;
+  /* Moved down closer to button */
+  left: -40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  z-index: 20;
+  transform: rotate(-10deg);
+}
+
+.toc-guide-text {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #000;
+  margin-bottom: -5px;
+  white-space: nowrap;
+}
+
+.toc-guide-arrow-svg {
+  transform: rotate(10deg);
+  /* Adjust angle to point to button */
+}
+
+/* Hide the whole wrapper on desktop (Match header logic, usually > 1024px or 768px depending on theme) */
+@media (min-width: 1024px) {
+  .toc-toggle-wrapper {
+    display: none !important;
+  }
+}
+
+/* Fix Dark Mode Modal Text Legibility */
+.dark-mode-on .modal-text {
+  color: #5da9e9 !important;
+  /* Blue text in dark mode */
+}
+
+
+
+/* Dark Mode Gold Text Accents (Explore Section) */
+.dark-mode-on .explore-more-section ul li a {
+  color: #e6d5b8 !important;
+  /* Elegant Gold/Beige */
+  transition: color 0.3s ease;
+}
+
+.dark-mode-on .explore-more-section ul li a:hover {
+  color: #fff !important;
+  /* White on hover */
+  text-shadow: 0 0 10px rgba(230, 213, 184, 0.5);
+}
+
+/* Optional: Apply to other card titles in dark mode for consistency */
+.dark-mode-on .home-card__title {
+  color: #e6d5b8 !important;
+}
+
+
+
+/* Dark Mode: Global Golden Text Override */
+.dark-mode-on,
+.dark-mode-on body,
+.dark-mode-on h1,
+.dark-mode-on h2,
+.dark-mode-on h3,
+.dark-mode-on h4,
+.dark-mode-on p,
+.dark-mode-on li,
+.dark-mode-on span,
+.dark-mode-on a {
+  color: #e6d5b8 !important;
+}
+
+/* Maintain Blue Accent for Specific Elements (Restoring previous preference) */
+.dark-mode-on .compact-author,
+.dark-mode-on .modal-author,
+.dark-mode-on .modal-quote-icon,
+.dark-mode-on .modal-text,
+.dark-mode-on .explore-more-section ul li a:hover {
+  color: #5da9e9 !important;
+  /* Keep Blue Accents */
+}
+
+
+
+/* Fix Logo in Dark Mode: Hide Image, Show Text Only */
+.dark-mode-on .site-logo-dark {
+  display: none !important;
+}
+
+.dark-mode-on .site-logo-light {
+  display: none !important;
+}

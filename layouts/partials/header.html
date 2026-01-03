@@ -1,0 +1,86 @@
+<header>
+    <div>
+        <h1 class="site-brand">
+            <a href="{{ .Site.BaseURL }}">
+                <span class="site-title">{{ .Site.Title }}</span>
+                <img class="site-inline-logo site-logo-light" src="/images/logo.png" alt="{{ .Site.Title }} logo light"
+                    loading="eager" />
+                <img class="site-inline-logo site-logo-dark" src="/images/logo-right.png"
+                    alt="{{ .Site.Title }} logo dark" loading="eager" />
+            </a>
+        </h1>
+        <div class="header-controls">
+            <!-- Custom Coffee-style TOC Toggle with Guide -->
+            <div class="toc-toggle-wrapper">
+                <div class="toc-guide-container">
+
+                    <span class="toc-guide-text">click here</span>
+                </div>
+                <button class="toc-toggle coffee-toggle" aria-label="Toggle table of contents" title="Outline">
+                    <div class="coffee-line line-1"></div>
+                    <div class="coffee-line line-2"></div>
+                    <div class="coffee-line line-3"></div>
+                </button>
+            </div>
+
+            <!-- Search Toggle -->
+
+            <button id="headerSearchBtn" class="header-icon-btn" aria-label="Search" title="Search">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+
+            <!-- Search Panel Overlay -->
+            <div id="headerSearchPanel" class="header-search-panel">
+                <div class="header-search-container">
+                    <input type="text" id="searchInput" placeholder="Search..." class="header-search-input">
+                    <p class="header-search-hint">Please enter at least 2 characters</p>
+                    <div id="searchResults" class="header-search-results"></div>
+                </div>
+            </div>
+
+            <div class="display-settings-container">
+                <button id="displaySettingsBtn" class="header-icon-btn" aria-label="Display Settings"
+                    title="Appearance">
+                    <span class="settings-icon">Aa</span>
+                </button>
+                <div id="displaySettingsPanel" class="display-settings-panel" aria-hidden="true">
+                    <div class="settings-group">
+                        <label class="settings-label">Theme</label>
+                        <div class="theme-toggles">
+                            <button class="theme-btn light-theme-btn" data-theme="light" aria-label="Light Theme">
+                                <span class="color-swatch light"></span>
+                                <span>Day</span>
+                            </button>
+                            <button class="theme-btn dark-theme-btn" data-theme="dark" aria-label="Dark Theme">
+                                <span class="color-swatch dark"></span>
+                                <span>Night</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="settings-group">
+                        <label class="settings-label">Font Size</label>
+                        <div class="font-size-controls">
+                            <button id="decreaseFont" class="font-btn" aria-label="Decrease Font Size" title="Decrease">
+                                <span style="font-size: 14px;">A</span>
+                            </button>
+                            <div class="font-indicator-track">
+                                <span class="font-indicator active"></span>
+                                <span class="font-indicator"></span>
+                                <span class="font-indicator"></span>
+                                <span class="font-indicator"></span>
+                                <span class="font-indicator"></span>
+                            </div>
+                            <button id="increaseFont" class="font-btn" aria-label="Increase Font Size" title="Increase">
+                                <span style="font-size: 20px;">A</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

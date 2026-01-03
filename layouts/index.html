@@ -61,89 +61,25 @@
     </div>
 </div>
 
-<script>
-    // Marquee & Modal Logic
-    const marqueeTracks = document.querySelectorAll('.marquee-track');
-    const modal = document.getElementById('quoteModal');
-    const modalText = document.getElementById('modalQuoteText');
-    const modalAuthor = document.getElementById('modalQuoteAuthor');
-    const modalLikeBtn = document.getElementById('modalLikeBtn');
-    let isPaused = false;
-
-    // Pause all marquees on hover
-    const wrapper = document.querySelector('.marquee-wrapper');
-    wrapper.addEventListener('mouseenter', () => {
-        marqueeTracks.forEach(track => track.style.animationPlayState = 'paused');
-    });
-
-    wrapper.addEventListener('mouseleave', () => {
-        if (!modal.classList.contains('show')) {
-            marqueeTracks.forEach(track => track.style.animationPlayState = 'running');
-        }
-    });
-
-    function openQuoteModal(element) {
-        const quote = element.getAttribute('data-quote');
-        const author = element.getAttribute('data-author');
-
-        modalText.textContent = quote;
-        modalAuthor.textContent = author;
-
-        // Reset like button state
-        modalLikeBtn.classList.remove('liked');
-        modalLikeBtn.querySelector('.heart-icon').textContent = '🤍';
-
-        modal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-        marqueeTracks.forEach(track => track.style.animationPlayState = 'paused');
-    }
-
-    function closeQuoteModal() {
-        modal.classList.remove('show');
-        document.body.style.overflow = '';
-        marqueeTracks.forEach(track => track.style.animationPlayState = 'running');
-    }
-
-
-    function toggleModalLike() {
-        modalLikeBtn.classList.toggle('liked');
-        const heart = modalLikeBtn.querySelector('.heart-icon');
-        if (modalLikeBtn.classList.contains('liked')) {
-            heart.textContent = '❤️';
-            // Trigger confetti or animation here if desired
-        } else {
-            heart.textContent = '🤍';
-        }
-    }
-
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('show')) {
-            closeQuoteModal();
-        }
-    });
-</script>
-
+<!-- Intro Section -->
 {{- with .Site.GetPage "_index.md" }}
 {{- if .Params.homePageIsPost }}
-<h1>{{ .Title }}</h1>
-<h4>{{ .Params.description }}</h4>
-<p class="author-date"><time datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</time> - {{ .Params.author }}
-</p>
+<div class="intro-content-wrapper">
+    <h1>{{ .Title }}</h1>
+    <h4>{{ .Params.description }}</h4>
+    <p class="author-date"><time datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</time> - {{ .Params.author
+        }}</p>
 
-{{- if not (.Param "disableAnchoredHeadings") }}
-
-{{ partial "anchored_headings.html" .Content }}
-
-{{- else }}
-
-{{ .Content }}
-
-{{- end }}
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{ partial "anchored_headings.html" .Content }}
+    {{- else }}
+    {{ .Content }}
+    {{- end }}
+</div>
 {{- else }}
 {{- $subtitle := .Params.subtitle }}
 {{- with .Content }}
-<section>
+<section class="intro-section-simple">
     <h1 class="smaller">{{ $subtitle | emojify }}</h1>
     {{ . }}
 </section>
@@ -151,16 +87,12 @@
 {{- end }}
 {{- end }}
 
-<!-- Canvas Water Background removed per request -->
-
 <!-- Calendar Section -->
 <section id="calendar-section" class="calendar-section" style="margin-bottom: 40px;">
     <h2>{{ "Calendar :calendar:" | emojify }}</h2>
     {{ partial "calendar-widget.html" . }}
 </section>
 若无法加载请刷新试试看~
-
-
 
 
 <!-- Featured Section -->
@@ -175,9 +107,6 @@
 </section>
 
 
-
-
-
 {{/* Precompute random-article list as JSON to avoid templating inside JS */}}
 {{- $s := newScratch -}}
 {{- $s.Set "articles" (slice) -}}
@@ -187,7 +116,8 @@
 {{- end -}}
 {{- $articlesJSON := ($s.Get "articles") | jsonify -}}
 
-<!-- Random Article JavaScript -->
+<!-- Random Article Data -->
+<div id="random-article-data" data-articles='{{ $articlesJSON }}' style="display:none;"></div>
 
 <!-- Explore More Section (Moved to Bottom) -->
 <section id="explore-more-section" class="explore-more-section">
@@ -219,19 +149,29 @@
 </section>
 
 <script>
-    const __randomArticles = JSON.parse('{{ $articlesJSON | safeJS }}');
+    // Minimal inline script to bootstrap data if needed, 
+    // but better to put logic in external file.
+    // We'll leave the randomArticle function globally accessible for buttons that might use it?
+    // User didn't show a button using it in this file, but it might exist.
+
     function randomArticle() {
-        const validArticles = __randomArticles.filter(url => url && url.trim() !== '');
+        const dataEl = document.getElementById('random-article-data');
+        if (!dataEl) return;
+        const articles = JSON.parse(dataEl.getAttribute('data-articles') || '[]');
+        const validArticles = articles.filter(url => url && url.trim() !== '');
+
         if (validArticles.length > 0) {
             const randomIndex = Math.floor(Math.random() * validArticles.length);
             const randomUrl = validArticles[randomIndex];
-            window.location.href = randomUrl;
+            // Use Swup to navigate if available
+            if (window.swup) {
+                swup.navigate(randomUrl);
+            } else {
+                window.location.href = randomUrl;
+            }
         } else {
             alert('暂时没有发现的文章');
         }
     }
-
-    // Quote Slider Logic (Removed)
-
 </script>
 {{- end }}

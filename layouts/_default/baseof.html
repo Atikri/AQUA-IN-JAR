@@ -6,10 +6,12 @@
 {{ partial "head.html" . }}
 
 <body{{ if .TableOfContents }} class="has-toc" {{ end }}>
-    {{ partial "header.html" . }}
+    <div id="site-header">
+        {{ partial "header.html" . }}
+    </div>
 
     {{- if or .TableOfContents (eq .Kind "section") (eq .Kind "home") }}
-    <div class="toc-container">
+    <div class="toc-container" id="toc-sidebar">
         <h2>Outline</h2>
         {{- if eq .Kind "home" }}
         <ul class="toc-drawer">
@@ -146,7 +148,7 @@
         </div>
     </div>
 
-    <main class="content-wrapper">
+    <main id="swup" class="content-wrapper transition-fade">
         <article class="content-container">
 
             {{ block "main" . }}{{ end }}
@@ -155,20 +157,40 @@
     </main>
 
     {{ partial "footer.html" . }}
+    <script src="{{ " js/home-scripts.js" | relURL }}"></script>
+    <script src="https://unpkg.com/swup@4"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        const swup = new Swup({
+            containers: ["#swup", "#site-header", "#tocOverlay", "#toc-sidebar"]
+        });
+
+        function initScripts() {
+            // Re-attach TOC events
             const tocOverlay = document.getElementById('tocOverlay');
             if (tocOverlay) {
                 const links = tocOverlay.querySelectorAll('a');
                 links.forEach(link => {
                     link.addEventListener('click', function () {
-                        // Close the overlay
                         tocOverlay.classList.remove('open');
                         document.body.classList.remove('toc-open');
                     });
                 });
             }
-        });
+
+            // Init Quotes (Home) Logic
+            if (window.initQuotes) {
+                window.initQuotes();
+            }
+        }
+
+        // Run on initial load
+        document.addEventListener('DOMContentLoaded', initScripts);
+
+        // Run on Swup replace (v4)
+        swup.hooks.on('content:replace', initScripts);
+
+        // Backup listener
+        document.addEventListener('swup:contentReplaced', initScripts);
     </script>
     {{ partial "audio-player.html" . }}
     </body>

@@ -14,7 +14,7 @@ featured: false
       <ul>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January1-Discover-Your-Calling/'>January 1:Discover Your Calling</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January2-Reconnect-with-Your-Childhood-Obsession/'>January 2:Reconnect with Your Childhood Obsession</a></li>
-        <li>January 3</li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January3/'>January 3: The Voice</a></li>
         <li>January 4</li>
         <li>January 5</li>
         <li>January 6</li>

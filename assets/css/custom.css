@@ -1,3 +1,109 @@
+/* Quote Card Compact (Marquee) */
+.quote-card-compact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 8px 16px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  max-width: 400px;
+  /* Constrain width */
+  overflow: hidden;
+  /* Ensure content stays inside */
+}
+
+.dark-mode-on .quote-card-compact {
+  background: rgba(40, 40, 45, 0.9);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+.quote-card-compact:hover {
+  transform: scale(1.02);
+  background: #fff;
+}
+
+.compact-icon {
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  flex-shrink: 0;
+  /* Prevent icon shrinking */
+}
+
+.compact-text {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+  /* Ensure text truncates */
+  flex: 1;
+  /* Allow taking available space */
+  min-width: 0;
+  /* Enable flex child shrinking */
+}
+
+.compact-author {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  font-style: italic;
+  margin-left: auto;
+  /* Push to right slightly if needed, or keeping it inline */
+}
+
+/* Marquee Track */
+.marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  /* Important: allows content to size naturally */
+}
+
+.scroll-left {
+  animation: scrollLeft 60s linear infinite;
+}
+
+.scroll-right {
+  animation: scrollRight 65s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .content-container input[type="checkbox"],
 .content-wrapper input[type="checkbox"],
 article input[type="checkbox"],
@@ -3346,4 +3452,97 @@ textarea.form-control {
   .track-artist {
     max-width: 90px;
   }
+}
+
+/* Swup Page Transitions */
+.transition-fade {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+/* Minimized Audio Player Styles */
+.audio-player-floating .minimize-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  padding: 0 4px;
+  margin-left: auto;
+  /* Push to right */
+}
+
+.audio-player-floating .minimize-toggle:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.audio-player-floating.minimized .player-bar {
+  width: auto;
+  max-width: fit-content;
+  padding: 8px 12px;
+  border-radius: 50px;
+  gap: 8px;
+}
+
+/* Hide elements when minimized */
+.audio-player-floating.minimized .player-controls,
+.audio-player-floating.minimized .progress-container,
+.audio-player-floating.minimized .playlist-btn {
+  display: none !important;
+}
+
+/* Show minimal track cover */
+.audio-player-floating.minimized .track-info {
+  display: flex !important;
+  min-width: 0;
+  margin-right: 0;
+  gap: 0;
+}
+
+.audio-player-floating.minimized .track-details {
+  display: none;
+}
+
+.audio-player-floating.minimized .track-cover {
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  box-shadow: none;
+}
+
+/* Rotate chevron when minimized */
+.audio-player-floating.minimized .minimize-toggle svg {
+  transform: rotate(180deg);
+}
+
+/* Fix for Intro Section Text Overflow */
+.intro-section-simple {
+  position: relative;
+  margin-bottom: 40px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.intro-section-simple h1 {
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+/* Ensure marquee section doesn't overlap */
+.marquee-section {
+  position: relative;
+  margin: 40px 0;
+  overflow: hidden;
+  /* Contain floats/content */
 }

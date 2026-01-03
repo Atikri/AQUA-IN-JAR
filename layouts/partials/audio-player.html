@@ -212,6 +212,111 @@
             if (isMin) playlistDrawer.classList.remove('open');
         });
 
+        // Drag & Drop Functionality
+        let isDragging = false;
+        let currentX;
+        let currentY;
+        let initialX;
+        let initialY;
+        let xOffset = 0;
+        let yOffset = 0;
+
+        // Restore saved position
+        const savedX = localStorage.getItem('audio_player_x');
+        const savedY = localStorage.getItem('audio_player_y');
+        if (savedX && savedY) {
+            xOffset = parseInt(savedX);
+            yOffset = parseInt(savedY);
+            setPosition();
+        }
+
+        function setPosition() {
+            // Calculate boundaries to keep player on screen
+            const rect = container.getBoundingClientRect();
+            const maxX = window.innerWidth - rect.width;
+            const maxY = window.innerHeight - rect.height;
+
+            // Constrain within viewport
+            const constrainedX = Math.max(0, Math.min(xOffset, maxX));
+            const constrainedY = Math.max(0, Math.min(yOffset, maxY));
+
+            container.style.left = constrainedX + 'px';
+            container.style.top = constrainedY + 'px';
+            container.style.bottom = 'auto';
+            container.style.transform = 'none';
+        }
+
+        function dragStart(e) {
+            // Don't start drag if clicking on controls or progress bar
+            if (e.target.closest('.control-btn, .progress-container, .playlist-item')) {
+                return;
+            }
+
+            if (e.type === 'touchstart') {
+                initialX = e.touches[0].clientX - xOffset;
+                initialY = e.touches[0].clientY - yOffset;
+            } else {
+                initialX = e.clientX - xOffset;
+                initialY = e.clientY - yOffset;
+            }
+
+            isDragging = true;
+            container.style.cursor = 'grabbing';
+        }
+
+        function drag(e) {
+            if (!isDragging) return;
+
+            e.preventDefault();
+
+            if (e.type === 'touchmove') {
+                currentX = e.touches[0].clientX - initialX;
+                currentY = e.touches[0].clientY - initialY;
+            } else {
+                currentX = e.clientX - initialX;
+                currentY = e.clientY - initialY;
+            }
+
+            xOffset = currentX;
+            yOffset = currentY;
+
+            setPosition();
+        }
+
+        function dragEnd(e) {
+            if (!isDragging) return;
+
+            initialX = currentX;
+            initialY = currentY;
+            isDragging = false;
+            container.style.cursor = 'grab';
+
+            // Save position
+            localStorage.setItem('audio_player_x', xOffset);
+            localStorage.setItem('audio_player_y', yOffset);
+        }
+
+        // Mouse events
+        container.addEventListener('mousedown', dragStart);
+        document.addEventListener('mousemove', drag);
+        document.addEventListener('mouseup', dragEnd);
+
+        // Touch events for mobile
+        container.addEventListener('touchstart', dragStart, { passive: false });
+        document.addEventListener('touchmove', drag, { passive: false });
+        document.addEventListener('touchend', dragEnd);
+
+        // Reset position on window resize
+        window.addEventListener('resize', () => {
+            if (savedX && savedY) {
+                setPosition();
+            }
+        });
+
+        // Set initial cursor
+        container.style.cursor = 'grab';
+
+
         // Progress
         audio.addEventListener('timeupdate', () => {
             const percent = (audio.currentTime / audio.duration) * 100;

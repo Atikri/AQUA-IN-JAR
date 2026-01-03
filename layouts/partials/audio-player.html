@@ -228,6 +228,11 @@
             xOffset = parseInt(savedX);
             yOffset = parseInt(savedY);
             setPosition();
+        } else {
+            // Get the player's current rendered position on first drag
+            const rect = container.getBoundingClientRect();
+            xOffset = rect.left;
+            yOffset = rect.top;
         }
 
         function setPosition() {

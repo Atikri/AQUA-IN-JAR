@@ -157,7 +157,23 @@
     </main>
 
     {{ partial "footer.html" . }}
-    <script src="{{ " js/home-scripts.js" | relURL }}"></script>
+
+    <!-- Swup Loading Animation -->
+    <div id="swup-loader">
+        <div class="loader-jar">
+            <div class="jar-neck"></div>
+            <div class="jar-body">
+                <div class="jar-liquid">
+                    <div class="bubble b1"></div>
+                    <div class="bubble b2"></div>
+                    <div class="bubble b3"></div>
+                </div>
+            </div>
+        </div>
+        <p class="loader-text">Loading...</p>
+    </div>
+
+    <script src="{{ "js/home-scripts.js" | relURL }}"></script>
     <script src="https://unpkg.com/swup@4"></script>
     <script>
         const swup = new Swup({

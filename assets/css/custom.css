@@ -3546,3 +3546,208 @@ html.is-animating .transition-fade {
   overflow: hidden;
   /* Contain floats/content */
 }
+
+/* =========================================
+   Cute Swup Loader (Aqua Jar)
+   ========================================= */
+#swup-loader {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  /* Semi-transparent white overlay */
+  backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  /* Delay showing loader by 300ms to prevent flashing on fast loads */
+  transition-delay: 0.2s;
+}
+
+.dark-mode-on #swup-loader {
+  background: rgba(20, 20, 23, 0.85);
+}
+
+/* Show loader when Swup is changing content */
+html.is-changing #swup-loader {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition-delay: 0s;
+  /* Show immediately once threshold is crossed? No, keep delay or usage logic. */
+}
+
+/* Actually, Swup adds is-changing immediately. 
+   If we want a delay, we keep transition-delay on the visible state?
+   No, usually we want delay on APPEARance, instant DISAPPEARance.
+   
+   State: Hidden (default) -> Visible (is-changing)
+   We want delay on adding 'opacity: 1'.
+*/
+html.is-changing #swup-loader {
+  transition: opacity 0.3s ease 0.2s, visibility 0s 0.2s;
+  /* 0.2s delay before showing */
+}
+
+/* Remove delay when hiding so it feels snappy */
+#swup-loader {
+  transition: opacity 0.2s ease 0s, visibility 0s 0.2s;
+}
+
+/* Jar Styling */
+.loader-jar {
+  position: relative;
+  width: 60px;
+  height: 80px;
+  margin-bottom: 16px;
+  animation: jarFloat 3s ease-in-out infinite;
+}
+
+.jar-neck {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 10px;
+  border: 4px solid var(--text-color);
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  z-index: 2;
+}
+
+.jar-body {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px solid var(--text-color);
+  border-radius: 12px 12px 24px 24px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.jar-liquid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: #93c5fd;
+  /* Soft Blue */
+  opacity: 0.8;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  animation: liquidWobble 4s ease-in-out infinite;
+}
+
+.dark-mode-on .jar-neck,
+.dark-mode-on .jar-body {
+  border-color: #e0e0e0;
+}
+
+.dark-mode-on .jar-liquid {
+  background: #5090d0;
+}
+
+/* Bubbles */
+.bubble {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  bottom: -10%;
+}
+
+.b1 {
+  width: 8px;
+  height: 8px;
+  left: 20%;
+  animation: bubbleRise 2s infinite ease-in;
+}
+
+.b2 {
+  width: 6px;
+  height: 6px;
+  left: 50%;
+  animation: bubbleRise 2.5s infinite ease-in 0.4s;
+}
+
+.b3 {
+  width: 10px;
+  height: 10px;
+  left: 70%;
+  animation: bubbleRise 2.2s infinite ease-in 0.8s;
+}
+
+/* Text */
+.loader-text {
+  font-family: monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  animation: pulseText 1.5s ease-in-out infinite;
+  text-transform: uppercase;
+}
+
+/* Animations */
+@keyframes jarFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes liquidWobble {
+
+  0%,
+  100% {
+    transform: skew(0deg);
+  }
+
+  25% {
+    transform: skew(2deg);
+  }
+
+  75% {
+    transform: skew(-2deg);
+  }
+}
+
+@keyframes bubbleRise {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-50px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes pulseText {
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

@@ -21,14 +21,14 @@
     <div class="home-card__icon">🐣</div>
     <h3 class="home-card__title">Latest Journal</h3>
     <p class="home-card__desc">前往查阅最新期刊 AQUA #0</p>
-    <a href="https://tikri.site/notification-jar/AQUA-%230/" class="home-card__link">Read Now →</a>
+    <a href="/notification-jar/AQUA-%230/" class="home-card__link">Read Now →</a>
   </div>
 
   <div class="home-card">
     <div class="home-card__icon">🎧</div>
     <h3 class="home-card__title">Latest Podcast</h3>
     <p class="home-card__desc">瓶中水podcast1: 什么是自源性?声音的重要性</p>
-    <a href="https://tikri.site/podcast-music/episode-1/" class="home-card__link">Listen Now →</a>
+    <a href="/podcast-music/episode-1/" class="home-card__link">Listen Now →</a>
   </div>
 </div>
 

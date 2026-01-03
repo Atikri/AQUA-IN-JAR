@@ -173,7 +173,7 @@
         <p class="loader-text">Loading...</p>
     </div>
 
-    <script src="{{ "js/home-scripts.js" | relURL }}"></script>
+    <script src="{{ " js/home-scripts.js" | relURL }}?v={{ now.Unix }}"></script>
     <script src="https://unpkg.com/swup@4"></script>
     <script>
         const swup = new Swup({
@@ -181,7 +181,17 @@
         });
 
         function initScripts() {
-            // Re-attach TOC events
+            // Re-initialize Theme & Display Settings (darkmode.js)
+            if (window.initAll) {
+                window.initAll();
+            }
+
+            // Re-initialize Search (search.js)
+            if (window.initSearch) {
+                window.initSearch();
+            }
+
+            // Re-attach TOC events (Legacy backup)
             const tocOverlay = document.getElementById('tocOverlay');
             if (tocOverlay) {
                 const links = tocOverlay.querySelectorAll('a');
@@ -199,10 +209,7 @@
             }
         }
 
-        // Run on initial load
-        document.addEventListener('DOMContentLoaded', initScripts);
-
-        // Run on Swup replace (v4)
+        // Initialize scripts only on Swup replace (First load handled by scripts themselves)
         swup.hooks.on('content:replace', initScripts);
 
         // Backup listener

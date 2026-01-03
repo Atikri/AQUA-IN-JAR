@@ -4,6 +4,9 @@
  */
 
 // Global Quote Interactions
+// Store reference to the current quote content to sync duplicates
+let currentQuoteContent = "";
+
 window.openQuoteModal = function (element) {
     const modal = document.getElementById('quoteModal');
     const modalText = document.getElementById('modalQuoteText');
@@ -15,21 +18,59 @@ window.openQuoteModal = function (element) {
 
     const quote = element.getAttribute('data-quote');
     const author = element.getAttribute('data-author');
+    currentQuoteContent = quote; // Store for syncing
 
     if (modalText) modalText.textContent = quote;
     if (modalAuthor) modalAuthor.textContent = author;
 
-    // Reset like button state
+    // 1. Mark as Viewed (Visual Feedback)
+    markCardsAs(quote, 'viewed');
+
+    // 2. Check if already liked check UI state
+    // (Simple check: does the card already have 'liked' class?)
+    const isLiked = element.classList.contains('liked');
+
     if (modalLikeBtn) {
-        modalLikeBtn.classList.remove('liked');
+        modalLikeBtn.classList.toggle('liked', isLiked);
         const heart = modalLikeBtn.querySelector('.heart-icon');
-        if (heart) heart.textContent = '🤍';
+        if (heart) heart.textContent = isLiked ? '❤️' : '🤍';
     }
 
     modal.classList.add('show');
     document.body.style.overflow = 'hidden';
     marqueeTracks.forEach(track => track.style.animationPlayState = 'paused');
 };
+
+window.toggleModalLike = function () {
+    const modalLikeBtn = document.getElementById('modalLikeBtn');
+    if (!modalLikeBtn) return;
+
+    // Toggle Button State
+    const isLikedNow = !modalLikeBtn.classList.contains('liked');
+    modalLikeBtn.classList.toggle('liked', isLikedNow);
+
+    const heart = modalLikeBtn.querySelector('.heart-icon');
+    if (heart) {
+        heart.textContent = isLikedNow ? '❤️' : '🤍';
+    }
+
+    // Toggle Card State (Sync all duplicates)
+    markCardsAs(currentQuoteContent, 'liked', isLikedNow);
+};
+
+// Helper to find all cards with specific text (handle horizontal scroll duplicates)
+function markCardsAs(quoteContent, className, forceState = true) {
+    const allCards = document.querySelectorAll('.quote-card-compact');
+    allCards.forEach(card => {
+        if (card.getAttribute('data-quote') === quoteContent) {
+            if (className === 'liked') {
+                card.classList.toggle('liked', forceState);
+            } else {
+                card.classList.add(className);
+            }
+        }
+    });
+}
 
 window.closeQuoteModal = function () {
     const modal = document.getElementById('quoteModal');
@@ -38,21 +79,6 @@ window.closeQuoteModal = function () {
     if (modal) modal.classList.remove('show');
     document.body.style.overflow = '';
     marqueeTracks.forEach(track => track.style.animationPlayState = 'running');
-};
-
-window.toggleModalLike = function () {
-    const modalLikeBtn = document.getElementById('modalLikeBtn');
-    if (!modalLikeBtn) return;
-
-    modalLikeBtn.classList.toggle('liked');
-    const heart = modalLikeBtn.querySelector('.heart-icon');
-    if (heart) {
-        if (modalLikeBtn.classList.contains('liked')) {
-            heart.textContent = '❤️';
-        } else {
-            heart.textContent = '🤍';
-        }
-    }
 };
 
 // Global escape handler (stable reference)
@@ -108,3 +134,10 @@ window.initRandomArticle = function () {
     // So __randomArticles might disappear or not update.
     // Safe bet: Move the data generation to a data attribute on a hidden element.
 };
+
+// Auto-initialize on first load (if not handled by Swup immediately)
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', window.initQuotes);
+} else {
+    window.initQuotes();
+}

@@ -4045,9 +4045,10 @@ html.is-changing #swup-loader {
 
 .toc-guide-container {
   position: absolute;
-  top: -25px;
-  /* Moved down closer to button */
-  left: -40px;
+  top: -15px;
+  /* Moved closer */
+  left: -10px;
+  /* Shifted right to avoid logo overlap */
   display: flex;
   flex-direction: column;
   align-items: center;

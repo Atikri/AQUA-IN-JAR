@@ -1,6 +1,6 @@
 ---
 date: "2025-12-02"
-title: "HOW TO REMEMBER EVERYTHING YOU READ(CHECKLIST)"
+title: "How To Remember Everything You Read(CHECKLIST)"
 ---
 
 [具体内容请见这篇文章](http://tikri.site/aquas-field/reading-notes/HOW-TO-REMEMBER-EVERYTHING-YOU-READ/)

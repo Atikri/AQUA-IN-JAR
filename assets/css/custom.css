@@ -703,89 +703,107 @@ table th {
 
 /* Jelly Checkbox styles (default) - globalize to all article checkboxes */
 /* 强化选择器，确保覆盖所有文章里的 checkbox（包括未包裹特定容器的情况） */
+/* Premium Pure CSS Checkbox Design (No JS Dependency) */
+/* Remove default list bullets for task lists */
+ul.task-list,
+li.task-list-item {
+  list-style: none !important;
+  margin-left: 0;
+}
+
+/* Fallback if task-list class isn't present (using :has selector) */
+li:has(> input[type="checkbox"]) {
+  list-style: none !important;
+}
+
 article input[type="checkbox"],
 .content-container input[type="checkbox"],
 .content-wrapper input[type="checkbox"],
 main input[type="checkbox"],
 li input[type="checkbox"],
 .checklist-score input[type="checkbox"] {
-  appearance: none;
   -webkit-appearance: none;
-  width: 1.15em;
-  height: 1.15em;
-  margin: 0 8px 0 0;
-  border: 2px solid var(--border-color, rgba(0, 0, 0, 0.35)) !important;
+  appearance: none;
+  width: 1.35em;
+  /* Slightly larger container */
+  height: 1.35em;
+  border: 1.5px solid var(--border-color, rgba(0, 0, 0, 0.25));
   border-radius: 6px;
-  position: relative;
-  display: inline-grid;
-  place-content: center;
-  background: transparent;
-  /* Enable transitions for smooth effect */
-  transition: background 0.1s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color, #fff);
   cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+  /* More spacing on the right */
+  outline: none;
 }
 
-.dark-mode-on article input[type="checkbox"],
-.dark-mode-on .content-container input[type="checkbox"],
-.dark-mode-on .content-wrapper input[type="checkbox"],
-.dark-mode-on main input[type="checkbox"],
-.dark-mode-on li input[type="checkbox"],
-.dark-mode-on .checklist-score input[type="checkbox"] {
-  border-color: rgba(255, 255, 255, 0.55);
+/* Hover State */
+article input[type="checkbox"]:hover,
+.content-container input[type="checkbox"]:hover {
+  border-color: var(--primary-color, #6871f1);
+  background-color: rgba(104, 113, 241, 0.05);
 }
 
-article input[type="checkbox"]::before,
-.content-container input[type="checkbox"]::before,
-.content-wrapper input[type="checkbox"]::before,
-main input[type="checkbox"]::before,
-li input[type="checkbox"]::before,
-.checklist-score input[type="checkbox"]::before {
-  display: none;
+/* Checked State */
+article input[type="checkbox"]:checked,
+.content-container input[type="checkbox"]:checked,
+div input[type="checkbox"]:checked,
+li input[type="checkbox"]:checked {
+  border-color: transparent !important;
+  background-color: #6871f1 !important;
+  transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(104, 113, 241, 0.3);
 }
 
-article input[type="checkbox"]:active,
-.content-container input[type="checkbox"]:active,
-.content-wrapper input[type="checkbox"]:active,
-main input[type="checkbox"]:active,
-li input[type="checkbox"]:active,
-.checklist-score input[type="checkbox"]:active {
-  transform: none;
-}
-
-/* 通用 √ 形可视标记 */
+/* Checkmark Icon (SVG Background) */
 article input[type="checkbox"]::after,
 .content-container input[type="checkbox"]::after,
-.content-wrapper input[type="checkbox"]::after,
-main input[type="checkbox"]::after,
-li input[type="checkbox"]::after,
-.checklist-score input[type="checkbox"]::after {
+li input[type="checkbox"]::after {
   content: "";
-  position: absolute;
-  width: 0.24em;
-  height: 0.48em;
-  border: 0.14em solid #fff;
-  /* 更细的 √ */
-  border-top: 0;
-  border-left: 0;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -60%) rotate(45deg) scale(0);
-  /* Start scaled down */
+  width: 85%;
+  /* INCREASED from 60% */
+  height: 85%;
+  /* INCREASED from 60% */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   opacity: 0;
-  transition: all 0.3s ease;
-  /* Animate pop in */
-  transition-delay: 0.15s;
+  transform: scale(0.5);
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -42.5%;
+  /* Half of height to center */
+  margin-left: -42.5%;
+  /* Half of width to center */
+  border: none !important;
+  /* Reset legacy borders */
 }
 
+/* Checked Checkmark */
 article input[type="checkbox"]:checked::after,
 .content-container input[type="checkbox"]:checked::after,
-.content-wrapper input[type="checkbox"]:checked::after,
-main input[type="checkbox"]:checked::after,
-li input[type="checkbox"]:checked::after,
-.checklist-score input[type="checkbox"]:checked::after {
+li input[type="checkbox"]:checked::after {
   opacity: 1;
-  transform: translate(-50%, -60%) rotate(45deg) scale(1);
-  /* Scale up to normal */
+  transform: scale(1);
+}
+
+/* Dark Mode Tweaks */
+.dark-mode-on input[type="checkbox"] {
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode-on input[type="checkbox"]:checked {
+  background-color: #6871f1;
+  border-color: transparent;
 }
 
 /* Jelly animation */
@@ -892,63 +910,12 @@ li input[type="checkbox"]:checked {
   }
 }
 
-/* === Jelly module (global utility) — copy of provided CSS adapted for Markdown === */
-.cbx {
-  position: relative;
-  top: 1px;
-  width: 17px;
-  height: 17px;
-  border: 1px solid #c8ccd4;
-  border-radius: 3px;
-  vertical-align: middle;
-  transition: background 0.1s ease;
-  cursor: pointer;
-  display: inline-block;
-}
-
-.cbx:after {
-  content: '';
-  position: absolute;
-  top: 1px;
-  left: 5px;
-  width: 5px;
-  height: 11px;
-  opacity: 0;
-  transform: rotate(45deg) scale(0);
-  border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  transition: all 0.3s ease;
-  transition-delay: 0.15s;
-}
-
-.lbl {
-  margin-left: 5px;
-  vertical-align: middle;
-  cursor: pointer;
-}
-
-/* Use class .jelly on input to avoid id-specific selector */
+/* Legacy Jelly module removed in favor of Pure CSS design */
 input.jelly {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 17px;
-  height: 17px;
-  margin: 0 8px 0 0;
-  position: relative;
-  z-index: 1;
-  opacity: 0;
+  display: none !important;
 }
 
-input.jelly:checked+.cbx {
-  border-color: transparent;
-  background: #6871f1;
-  animation: jelly 0.6s ease;
-}
-
-input.jelly:checked+.cbx:after {
-  opacity: 1;
-  transform: rotate(45deg) scale(1);
-}
+/* Safety cleanup */
 
 /* Slim variant */
 .checklist-score.jelly-slim input[type="checkbox"] {
@@ -4098,7 +4065,9 @@ html.is-changing #swup-loader {
 .dark-mode-on .explore-more-section ul li a {
   color: #e6d5b8 !important;
   /* Elegant Gold/Beige */
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background 0.1s ease, transform 0.2s ease;
+  /* Enable smooth transitions for better UX */
+  cursor: pointer;
 }
 
 .dark-mode-on .explore-more-section ul li a:hover {

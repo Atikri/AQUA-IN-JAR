@@ -1,0 +1,2 @@
+<input type="checkbox" id="{{ .Attributes.id }}" class="task-list-item-checkbox" {{- if .Checked }} checked{{ end -}}
+    {{- with .Attributes.style }} style="{{ . | safeCSS }}" {{ end -}}>

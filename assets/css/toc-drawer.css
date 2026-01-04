@@ -1,124 +1,299 @@
-/* TOC Drawer Styles */
+/* ========================================
+   Premium TOC Drawer Styles
+   Sophisticated, modern outline design
+   ======================================== */
+
 .toc-drawer {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+/* ========================================
+   Drawer Item Container
+   ======================================== */
 .drawer-item {
-    margin-bottom: 8px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 4px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.drawer-item:hover {
+    border-color: rgba(104, 113, 241, 0.15);
+    background: linear-gradient(135deg, rgba(104, 113, 241, 0.03) 0%, rgba(104, 113, 241, 0) 100%);
+    box-shadow: 0 2px 8px rgba(104, 113, 241, 0.06);
+    transform: translateX(2px);
 }
 
 .drawer-item:last-child {
-    border-bottom: none;
+    margin-bottom: 0;
 }
 
+/* ========================================
+   Summary Header
+   ======================================== */
 .drawer-item details summary {
     cursor: pointer;
     list-style: none;
-    /* Hide default marker */
-    padding: 10px 4px;
-    font-weight: 500;
+    padding: 12px 16px;
+    font-weight: 600;
     font-size: 0.95rem;
     color: var(--text-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: color 0.2s ease, background-color 0.2s ease;
-    border-radius: 6px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    user-select: none;
 }
 
-.drawer-item details summary::-webkit-details-marker {
+.drawer-item details summary::-webkit-details-marker,
+.drawer-item details summary::marker {
     display: none;
-    /* Hide default marker in WebKit */
 }
 
+/* Gradient accent on hover */
 .drawer-item details summary:hover {
-    color: var(--primary-color, #007bff);
-    background-color: rgba(0, 0, 0, 0.02);
+    color: #6871f1;
+    background: linear-gradient(90deg, rgba(104, 113, 241, 0.08) 0%, transparent 100%);
+    padding-left: 20px;
 }
 
-/* Custom Arrow using Pseudo-element */
-/* Custom Arrow using Pseudo-element */
+/* Active state (when open) */
+.drawer-item details[open] summary {
+    color: #6871f1;
+    background: linear-gradient(90deg, rgba(104, 113, 241, 0.1) 0%, transparent 100%);
+    border-bottom: 1px solid rgba(104, 113, 241, 0.1);
+    font-weight: 700;
+}
+
+/* ========================================
+   Custom Arrow Icon
+   Modern chevron design
+   ======================================== */
 .drawer-item details summary::after {
     content: '';
     display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-right: 2px solid #8c7b75;
-    /* Warmer color */
-    border-bottom: 2px solid #8c7b75;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
     transform: rotate(-45deg);
-    /* Point right */
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    margin-right: 6px;
-    opacity: 0.8;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 0.6;
+    flex-shrink: 0;
 }
 
-/* Rotating arrow when open */
+.drawer-item details summary:hover::after {
+    opacity: 1;
+    transform: rotate(-45deg) translateX(2px);
+}
+
+/* Rotating arrow when expanded */
 .drawer-item details[open] summary::after {
     transform: rotate(45deg);
-    /* Point down */
     opacity: 1;
+    color: #6871f1;
 }
 
-/* Drawer Content Animation */
+/* ========================================
+   Drawer Content (Links)
+   Elegant nested list styling
+   ======================================== */
 .drawer-item details ul {
     list-style: none;
-    padding: 8px 0 12px 16px;
+    padding: 8px 16px 16px 24px;
     margin: 0;
-    animation: slideDown 0.3s ease-out forwards;
+    background: linear-gradient(180deg, rgba(104, 113, 241, 0.02) 0%, transparent 100%);
+    border-left: 2px solid rgba(104, 113, 241, 0.15);
+    margin-left: 16px;
+    animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .drawer-item details ul li {
     margin-bottom: 6px;
+    position: relative;
+    padding-left: 12px;
 }
 
+/* Decorative bullet */
+.drawer-item details ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #6871f1;
+    opacity: 0.4;
+    font-weight: bold;
+}
+
+.drawer-item details ul li:hover::before {
+    opacity: 1;
+    transform: scale(1.3);
+    transition: all 0.2s ease;
+}
+
+/* Link styling */
 .drawer-item details ul li a {
     text-decoration: none;
     color: var(--text-color);
-    opacity: 0.8;
-    font-size: 0.9rem;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0.75;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     display: block;
+    line-height: 1.6;
 }
 
 .drawer-item details ul li a:hover {
     opacity: 1;
-    color: var(--primary-color, #007bff);
+    color: #6871f1;
     transform: translateX(4px);
+    text-shadow: 0 0 12px rgba(104, 113, 241, 0.2);
 }
 
-/* Special styling for "View all" link */
+/* ========================================
+   "View All" Special Link
+   Premium badge-style design
+   ======================================== */
 .drawer-item details ul li a.section-link {
-    font-weight: 600;
-    font-size: 0.85rem;
+    font-weight: 700;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--primary-color, #007bff);
-    margin-bottom: 8px;
+    letter-spacing: 0.08em;
+    color: #6871f1;
+    margin-bottom: 10px;
+    margin-top: 4px;
     display: inline-block;
-    opacity: 0.9;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, rgba(104, 113, 241, 0.15) 0%, rgba(104, 113, 241, 0.05) 100%);
+    border-radius: 6px;
+    border: 1px solid rgba(104, 113, 241, 0.2);
+    opacity: 1;
+    transition: all 0.25s ease;
 }
 
+.drawer-item details ul li a.section-link:hover {
+    background: linear-gradient(135deg, rgba(104, 113, 241, 0.25) 0%, rgba(104, 113, 241, 0.1) 100%);
+    border-color: rgba(104, 113, 241, 0.4);
+    box-shadow: 0 4px 12px rgba(104, 113, 241, 0.2);
+    transform: translateY(-2px) translateX(0);
+}
+
+/* ========================================
+   Animations
+   ======================================== */
 @keyframes slideDown {
     from {
         opacity: 0;
-        transform: translateY(-8px);
+        transform: translateY(-12px);
+        max-height: 0;
     }
 
     to {
         opacity: 1;
         transform: translateY(0);
+        max-height: 500px;
     }
 }
 
-/* Dark Mode Adjustments */
+/* Subtle pulse on drawer item when opening */
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(104, 113, 241, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px rgba(104, 113, 241, 0);
+    }
+}
+
+.drawer-item details[open] {
+    animation: pulse 0.6s ease-out;
+}
+
+/* ========================================
+   Dark Mode Enhancements
+   Premium dark theme adjustments
+   ======================================== */
 .dark-mode-on .drawer-item {
-    border-bottom-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.08);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.dark-mode-on .drawer-item:hover {
+    border-color: rgba(104, 113, 241, 0.3);
+    background: linear-gradient(135deg, rgba(104, 113, 241, 0.08) 0%, rgba(104, 113, 241, 0) 100%);
+    box-shadow: 0 4px 16px rgba(104, 113, 241, 0.15);
 }
 
 .dark-mode-on .drawer-item details summary:hover {
-    background-color: rgba(255, 255, 255, 0.04);
+    background: linear-gradient(90deg, rgba(104, 113, 241, 0.15) 0%, transparent 100%);
+}
+
+.dark-mode-on .drawer-item details[open] summary {
+    background: linear-gradient(90deg, rgba(104, 113, 241, 0.18) 0%, transparent 100%);
+    border-bottom-color: rgba(104, 113, 241, 0.2);
+}
+
+.dark-mode-on .drawer-item details ul {
+    background: linear-gradient(180deg, rgba(104, 113, 241, 0.05) 0%, transparent 100%);
+    border-left-color: rgba(104, 113, 241, 0.25);
+}
+
+.dark-mode-on .drawer-item details ul li a {
+    opacity: 0.8;
+}
+
+.dark-mode-on .drawer-item details ul li a:hover {
+    opacity: 1;
+    text-shadow: 0 0 16px rgba(104, 113, 241, 0.4);
+}
+
+.dark-mode-on .drawer-item details ul li a.section-link {
+    background: linear-gradient(135deg, rgba(104, 113, 241, 0.2) 0%, rgba(104, 113, 241, 0.08) 100%);
+    border-color: rgba(104, 113, 241, 0.3);
+}
+
+.dark-mode-on .drawer-item details ul li a.section-link:hover {
+    background: linear-gradient(135deg, rgba(104, 113, 241, 0.35) 0%, rgba(104, 113, 241, 0.15) 100%);
+    border-color: rgba(104, 113, 241, 0.5);
+    box-shadow: 0 6px 20px rgba(104, 113, 241, 0.3);
+}
+
+/* ========================================
+   Accessibility & Focus States
+   ======================================== */
+.drawer-item details summary:focus-visible {
+    outline: 2px solid #6871f1;
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
+.drawer-item details ul li a:focus-visible {
+    outline: 2px solid #6871f1;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* ========================================
+   Responsive Adjustments
+   ======================================== */
+@media (max-width: 768px) {
+    .drawer-item details summary {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .drawer-item details ul {
+        padding: 6px 12px 12px 16px;
+    }
+
+    .drawer-item details ul li a {
+        font-size: 0.85rem;
+    }
 }

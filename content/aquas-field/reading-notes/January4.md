@@ -1,6 +1,6 @@
 ---
-title: "January"
-date: "2026-01-01"
+title: "January 4: It is already within you"
+date: "2026-01-04"
 hiddenFromList: false
 featured: false
 ---
@@ -49,10 +49,14 @@ featured: false
 </ul>  
 
 
-## 一月份：人生使命——为精通埋下种子
-一月份的主题是“人生使命” (Your Life’s Task)，其核心在于发现你被赋予的==独特性==并将其转化为==职业目标==。  
+## 它已在你心中
 
-- 独特性与“种子”：Greene认为每个人在出生时都带有一颗“种子”，即独特的基因组成。这种独特性在童年时期会通过某些原始倾向表现出来，这些倾向通常是无法用言语表达的力量，吸引我们走向某些体验。  
-- Greene的个人故事：Greene分享了他作为“流浪者”的经历。他曾从事过约60种不同的工作，从建筑工人到侦探代理，直到36岁才在一次偶然的机会中向出版商提出了《权力的48条法则》的构思。他意识到，正是由于他对自己“作家使命”的坚持，才让他从多年的迷茫中解脱。  
+> Sooner or later something seems to call us onto a particular path. You may remember this something as a signal calling in childhood when an urge out of nowhere, a fascination, a peculiar turn of events struck like an annunciation: This is what I must do, this is what I’ve got to have. This is who I am.
+—JAMES HILLMAN  
 
-探索人生使命就像是在杂草丛生的荒野中寻找被掩埋的泉眼。引言是你决定走出舒适区的宣言，而一月份的内容则是教你如何根据童年记忆中那点滴的湿润感（原始倾向），掘开社会的泥土，找回那股独属于你、永不干涸的生命源泉。
+James Hillman曾指出，迟早会有某种东西召唤我们走上一条特定的道路。你可能记得这种信号，像是童年时突然涌现的冲动、一种迷恋、或是一个特殊的转折，如同神谕般降临：这就是我必须做的，这就是我必须拥有的。这就是我。  
+Greene认为，随着你变得越发“老练”（sophisticated），你往往会与这些来自原始核心的信号失去联系。 它们被你后来学习的各种知识和学科所掩埋。 然而，你的力量和未来取决于能否重新连接这个核心并回归原点。 你必须寻找这些倾向的痕迹：对某些==简单事物的本能反应==、==想要不断重复某项活动的欲望==、==激起异常好奇心的学科==、或是在特定行动中感受到的==力量感==。  
+这一切已经存在于你心中，你==无需创造任何新东西==，只需挖掘并精炼那些早已深埋在内的东西。 无论你在什么年纪重新连接这个核心，那种原始的吸引力都会重新点燃，指引你走向最终的人生使命。  
+
+> 今日法则：向记得你童年的人询问，他们还记得你当时对什么感兴趣。重新找回那些早期的激情。
+> Daily Law: Ask someone who recalls your childhood what they remember about your interests. Get reacquainted with those early passions.

@@ -73,10 +73,10 @@ function initTheme() {
    FONT SIZE MANAGEMENT
    ========================================= */
 
-const DEFAULT_FONT_SIZE = 18;
+const DEFAULT_FONT_SIZE = 16;
 const FONT_STEP = 2;
-const MIN_FONT = 16;
-const MAX_FONT = 24;
+const MIN_FONT = 14;
+const MAX_FONT = 22;
 // Levels: 16, 18 (default), 20, 22, 24 (5 levels maps nicely to 5 dots)
 
 function setFontSize(size) {

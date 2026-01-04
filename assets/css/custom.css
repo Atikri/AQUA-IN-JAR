@@ -720,8 +720,9 @@ li input[type="checkbox"],
   display: inline-grid;
   place-content: center;
   background: transparent;
-  /* 即时切换，无动画延迟 */
-  transition: none;
+  /* Enable transitions for smooth effect */
+  transition: background 0.1s ease;
+  cursor: pointer;
 }
 
 .dark-mode-on article input[type="checkbox"],
@@ -768,10 +769,12 @@ li input[type="checkbox"]::after,
   border-left: 0;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -60%) rotate(45deg);
+  transform: translate(-50%, -60%) rotate(45deg) scale(0);
+  /* Start scaled down */
   opacity: 0;
-  transition: none;
-  /* 勾选即时出现 */
+  transition: all 0.3s ease;
+  /* Animate pop in */
+  transition-delay: 0.15s;
 }
 
 article input[type="checkbox"]:checked::after,
@@ -781,17 +784,22 @@ main input[type="checkbox"]:checked::after,
 li input[type="checkbox"]:checked::after,
 .checklist-score input[type="checkbox"]:checked::after {
   opacity: 1;
+  transform: translate(-50%, -60%) rotate(45deg) scale(1);
+  /* Scale up to normal */
 }
 
 /* Jelly animation */
-/* 去除果冻动画，瞬时切换 */
 .content-container input[type="checkbox"]:checked,
 .content-wrapper input[type="checkbox"]:checked,
 article input[type="checkbox"]:checked,
 main input[type="checkbox"]:checked,
 li input[type="checkbox"]:checked {
-  border-color: #6f79ff;
-  background: linear-gradient(180deg, #7784ff 0%, #5d6bff 100%);
+  border-color: transparent;
+  /* Hide border when filled */
+  background: #6871f1;
+  /* Solid color for jelly effect */
+  animation: jelly 0.6s ease;
+  /* Trigger animation */
 }
 
 /* Override inside checklist-score to match provided module exactly */

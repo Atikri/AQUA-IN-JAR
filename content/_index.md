@@ -5,9 +5,7 @@
 
 [订阅我的RSS Feed](index.xml) 
 
-:sparkles: 下面是今天瓶口外的天气小卡片：  
 
-{{< weather-widget >}}
 
 <div class="home-section-grid">
   <div class="home-card">

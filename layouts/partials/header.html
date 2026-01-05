@@ -12,10 +12,11 @@
         <div class="header-controls">
             <!-- Custom Coffee-style TOC Toggle with Guide -->
             <div class="toc-toggle-wrapper">
+                {{ if .IsHome }}
                 <div class="toc-guide-container">
-
                     <span class="toc-guide-text">click here</span>
                 </div>
+                {{ end }}
                 <button class="toc-toggle coffee-toggle" aria-label="Toggle table of contents" title="Outline">
                     <div class="coffee-line line-1"></div>
                     <div class="coffee-line line-2"></div>

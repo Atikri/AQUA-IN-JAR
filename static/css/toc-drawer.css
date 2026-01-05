@@ -1,4 +1,4 @@
-/* ========================================
+﻿/* ========================================
    Premium TOC Drawer Styles
    Sophisticated, modern outline design
    ======================================== */
@@ -121,7 +121,7 @@
 
 /* Decorative bullet */
 .drawer-item details ul li::before {
-    content: '•';
+    content: '鈥?;
     position: absolute;
     left: 0;
     color: #6871f1;
@@ -195,7 +195,7 @@
     to {
         opacity: 1;
         transform: translateY(0);
-        max-height: 500px;
+        max-height: 3000px;
     }
 }
 

@@ -1,9 +1,10 @@
 ---
-title: "January 3: The Voice"
-date: "2026-01-03"
+title: "January 5: Know What You’re Drawn to and Immerse Yourself in It"
+date: 2026-01-05
+tags: ["reading-notes"]
 ---
 
-[The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)  
+[The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
 
 <ul class='toc-drawer'>
   <li class='drawer-item'>
@@ -46,14 +47,12 @@ date: "2026-01-03"
   </li>
 </ul>  
 
-1月3号主题为：“心灵之声”  
+## 了解你的兴趣所在并沉浸其中
 
-> The way to recover the meaning of life and the worthwhileness of life is to recover the power of experience, to have **impulse voices** from within, and to be able to hear these impulse voices
-from within.     —ABRAHAM MASLOW  
+当代人类学家兼语言学家Daniel Everett在加利福尼亚与墨西哥边境的一个牛仔小镇长大。从很小的时候起，他就发现自己被周围的墨西哥文化所吸引。那里的一切都让他着迷——移民工人们说话的声音、食物，以及那些与英国裔世界截然不同的礼仪。他尽可能地让自己==沉浸==在他们的语言和文化中。这种早期的==沉浸==最终转化为一种终身的志趣，即对“他者”（the Other）的研究——探索地球上文化的==多样性==以及这对人类进化的意义。  
 
-Abraham Maslow认为，找回生命意义与价值的方法，在于重新获得体验的力量，去拥有并能够倾听内在的“冲动之声”（impulse voices）。  
-Greene回忆起自己四年级时的一次经历：老师给出单词“carpenter”（木匠），要求学生利用其中的字母拼出尽可能多的新单词，如“ant”（蚂蚁）、“pet”（宠物）、“car”（汽车）等。格林当时被这种文字重组的奥秘深深吸引了。  
-这些童年时期的吸引力往往难以言表。Maslow注意到，孩子们从很小的时候就清楚地知道自己喜欢什么、讨厌什么。识别这些早期倾向的重要性在于，它们是未被他人欲望“污染”的纯粹吸引力。它们不是父母强加给你的（那种联系往往是表面且有意识的），而是来自更深处，是你独特生理化学性质的反映。  
+我觉得或许这才是旅游的真正意义，很多人旅游可能就是一两天的短期旅游，节奏好像太快了。我们只有沉浸于当地的文化环境，充分感受两者之间的融合交流，或许会给自己的未来带来意想不到的启发。  
+因此如果前面几天的练习都没有办法给到你一些灵感，也不用操之过急，多去用心去探索，说不定哪一天某一景象某一事件触发了你对自我的探索回忆。今天的法则因为时间比较紧急，就在今天，你可以先选择当下你最被吸引的事物，深入探索一下~🧐  
 
-> 今日法则：今天去做一件你小时候爱做的事。尝试重新连接你的“冲动之声”。  
-> Daily Law: Do something today that you used to love doing as a kid. Try to reconnect with your impulse voices.
+> 今日法则：有什么是你一直感到被其吸引的吗？今天就深入探索它。  
+> Daily Law: What’s something you’ve always felt a pull toward? Dive deep into it today.

@@ -3,9 +3,16 @@
         <h1 class="site-brand">
             <a href="{{ .Site.BaseURL }}">
                 <span class="site-title">{{ .Site.Title }}</span>
-                <img class="site-inline-logo site-logo-light" src="/images/logo.png" alt="{{ .Site.Title }} logo light"
-                    loading="eager" />
-                <img class="site-inline-logo site-logo-dark" src="/images/logo-right.png"
+                {{- $logo := resources.Get "images/logo.png" -}}
+                {{- if $logo }}{{ $logo = $logo.Resize "300x webp" }}{{ end -}}
+                <img class="site-inline-logo site-logo-light"
+                    src="{{ if $logo }}{{ $logo.RelPermalink }}{{ else }}/images/logo.png{{ end }}"
+                    alt="{{ .Site.Title }} logo light" loading="eager" />
+
+                {{- $logoDark := resources.Get "images/logo-right.png" -}}
+                {{- if $logoDark }}{{ $logoDark = $logoDark.Resize "300x webp" }}{{ end -}}
+                <img class="site-inline-logo site-logo-dark"
+                    src="{{ if $logoDark }}{{ $logoDark.RelPermalink }}{{ else }}/images/logo-right.png{{ end }}"
                     alt="{{ .Site.Title }} logo dark" loading="eager" />
             </a>
         </h1>

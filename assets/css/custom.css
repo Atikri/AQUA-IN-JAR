@@ -4210,3 +4210,13 @@ mark {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
   border: 1px solid rgba(100, 149, 237, 0.3);
 }
+
+/* Fix Spotify CLS */
+.spotify-container {
+  min-height: 152px;
+  height: 152px;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  margin: 2rem 0;
+}

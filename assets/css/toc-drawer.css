@@ -121,7 +121,8 @@
 
 /* Decorative bullet */
 .drawer-item details ul li::before {
-    content: '鈥?;
+    content: '\2022';
+    /* 这是一个标准的圆点 • */
     position: absolute;
     left: 0;
     color: #6871f1;

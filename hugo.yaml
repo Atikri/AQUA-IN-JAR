@@ -2,7 +2,7 @@ baseURL: http://localhost:1313/
 languageCode: en-us 
 title: AQUA IN JAR 
 theme: dario
-copyright: "© 2025 AQUA IN JAR"
+copyright: "© 2026 AQUA IN JAR"
 params:
   colorScheme: toggle
   # Google Analytics 4

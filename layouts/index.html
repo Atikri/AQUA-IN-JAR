@@ -89,7 +89,7 @@
 
 <!-- Calendar Section -->
 <section id="calendar-section" class="calendar-section" style="margin-bottom: 40px;">
-    <h2>{{ "Calendar :calendar:" | emojify }}</h2>
+    <h2 id="calendar-heading">{{ "Calendar :calendar:" | emojify }}</h2>
     {{ partial "calendar-widget.html" . }}
 </section>
 若无法加载请刷新试试看~
@@ -134,8 +134,8 @@
         <div class="explore-column">
             <h3>更多 | MORE</h3>
             <ul>
-                <li><a href="#calendar-section">Calendar</a></li>
-                <li><a href="javascript:void(0)" onclick="toggleSearch()">Search</a></li>
+                <li><a href="/#calendar-section">Calendar</a></li>
+                <li><a href="#headerSearchPanel" onclick="toggleSearch(); return false;">Search</a></li>
             </ul>
         </div>
         <div class="explore-column">

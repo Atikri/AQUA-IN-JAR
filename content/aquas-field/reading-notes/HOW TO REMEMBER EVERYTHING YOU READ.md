@@ -1,6 +1,6 @@
 ---
 date: "2025-12-02"
-title: "HOW TO REMEMBER EVERYTHING YOU READ"
+title: "How to Remember Everything You Read"
 ---
 
 之前在substack上看到过一篇文章，讲的是如何记住所有你读过的内容。其实这一点一直困扰着我，我虽然平时会阅读一些文章，但是读完之后几乎没法记住细节，就只是单单知道读过，实际收获输出很低。  

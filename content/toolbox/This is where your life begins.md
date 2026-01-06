@@ -165,6 +165,7 @@ summary: "Annual review toolbox by Mel Robbins (Chinese Version)."
 A short, practical reset for your mornings that calms anxiety, builds confidence, and sets your mindset for the day.  
 
 ## [How to Get Things Done, Stay Focused, & Be More Productive (Ep. 322)](https://www.melrobbins.com/episode/episode-322/)
+[BLOG'S HERE📃](http://tikri.site/aquas-field/reading-notes/How-to-Get-Things-Done/)  
 Mel and Dr. Cal Newport break down the science of focus and attention, and give you concrete ways to stop procrastinating and protect your time.  
 
 ## [1 Neurosurgeon: How to Manifest Anything You Want & Unlock the Unlimited Power of Your Mind (Ep. 312)](https://www.melrobbins.com/episode/episode-312/)

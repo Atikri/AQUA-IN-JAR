@@ -22,13 +22,22 @@
   {{- end }}
 
   {{- if not .Site.Params.disableFontPreload }}
-  <link rel="preload" href="{{ "fonts/Newsreader.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ "fonts/Newsreader-italic.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  {{ $fontNewsreader := "fonts/Newsreader.woff2" }}
+  <link rel="preload" href="{{ $fontNewsreader | relURL }}" as="font" type="font/woff2" crossorigin>
+  {{ $fontNewsreaderItalic := "fonts/Newsreader-italic.woff2" }}
+  <link rel="preload" href="{{ $fontNewsreaderItalic | relURL }}" as="font" type="font/woff2" crossorigin>
   {{- end }}
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+
   {{- /* Preload Critical Resources */ -}}
-  <link rel="preload" href="{{ "css/lazy-loading.css" | relURL }}" as="style">
-  <link rel="preload" href="{{ "js/lazy-loading.js" | relURL }}" as="script">
+  {{ $cssLazyPreload := "css/lazy-loading.css" }}
+  <link rel="preload" href="{{ $cssLazyPreload | relURL }}" as="style">
+  {{ $jsLazyPreload := "js/lazy-loading.js" }}
+  <link rel="preload" href="{{ $jsLazyPreload | relURL }}" as="script">
 
   {{- /* Asset Pipeline CSS */ -}}
   {{- $defaultCSS := resources.Get "css/default.css" | minify | fingerprint }}
@@ -39,8 +48,10 @@
   {{- end }}
   {{- end }}
 
-  <link rel="icon" type="image/x-icon" href="{{ "favicon.ico?v=2" | relURL }}">
-  <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png?v=2" | relURL }}">
+  {{ $favicon := "favicon.ico?v=2" }}
+  <link rel="icon" type="image/x-icon" href="{{ $favicon | relURL }}">
+  {{ $appleTouch := "apple-touch-icon.png?v=2" }}
+  <link rel="apple-touch-icon" href="{{ $appleTouch | relURL }}">
 
   {{- if or (not .Site.Params.colorScheme) (eq .Site.Params.colorScheme "toggle") }}
   {{- $darkmodeJS := resources.Get "js/darkmode.js" | minify | fingerprint }}
@@ -55,13 +66,19 @@
   <script src="{{ $searchJS.RelPermalink }}" integrity="{{ $searchJS.Data.Integrity }}" defer></script>
 
   {{- /* Static CSS/JS resources */ -}}
-  <link rel="stylesheet" href="{{ "css/lazy-loading.css" | relURL }}">
-  <link rel="stylesheet" href="{{ "css/toc-drawer.css?v=4" | relURL }}">
-  <script src="{{ "js/lazy-loading.js" | relURL }}" defer></script>
+  {{ $lazyCss := "css/lazy-loading.css" }}
+  <link rel="stylesheet" href="{{ $lazyCss | relURL }}">
+
+  {{ $tocCss := "css/toc-drawer.css?v=4" }}
+  <link rel="stylesheet" href="{{ $tocCss | relURL }}">
+
+  {{ $lazyJs := "js/lazy-loading.js" }}
+  <script src="{{ $lazyJs | relURL }}" defer></script>
 
   {{- /* Interactions */ -}}
   {{- if eq .Kind "page" }}
-  <script src="{{ "js/like-config.js" | relURL }}"></script>
+  {{ $jsLikeConfig := "js/like-config.js" }}
+  <script src="{{ $jsLikeConfig | relURL }}"></script>
   <script>
     (function () {
       try {
@@ -82,12 +99,15 @@
       } catch (e) { }
     })();
   </script>
-  <script src="{{ "js/interactions.js" | relURL }}" defer></script>
+  {{ $jsInteractions := "js/interactions.js" }}
+  <script src="{{ $jsInteractions | relURL }}" defer></script>
   {{- end }}
 
   {{- /* Checklist Scripts (Style Fixer included) */ -}}
-  <script src="{{ "js/checklist-score.js" | relURL }}" defer></script>
-  <script src="{{ "js/fix-checklist-styles.js" | relURL }}" defer></script>
+  {{ $jsChecklistScore := "js/checklist-score.js" }}
+  <script src="{{ $jsChecklistScore | relURL }}" defer></script>
+  {{ $jsFixChecklist := "js/fix-checklist-styles.js" }}
+  <script src="{{ $jsFixChecklist | relURL }}" defer></script>
 
   {{- if templates.Exists "partials/nonstdmeta.html" }}
   {{ partial "nonstdmeta.html" . }}

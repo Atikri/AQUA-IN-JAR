@@ -3,7 +3,7 @@
 
 在这里你可以翻阅我日常发过的一些blog，收集一些AQUA:droplet: （露水灵感），说不定会对你有帮助，那就太好啦!:partying_face:  
 
-[订阅我的RSS Feed](index.xml) 
+[订阅我的RSS Feed📈](index.xml) 
 
 
 

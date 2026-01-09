@@ -1,4 +1,15 @@
-﻿/* Quote Card Compact (Marquee) */
+﻿/* Home Page Intro - Zen Maru Gothic Font */
+.kind-home .content-container>section:first-of-type,
+.kind-home .content-container>section:first-of-type h2,
+.kind-home .content-container>section:first-of-type p,
+.kind-home #hi-im-tikri,
+.kind-home #hi-im-tikri+p,
+.kind-home #hi-im-tikri+p+p,
+.kind-home #hi-im-tikri+p+p+p {
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+/* Quote Card Compact (Marquee) */
 .quote-card-compact {
   display: inline-flex;
   align-items: center;

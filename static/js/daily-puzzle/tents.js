@@ -52,8 +52,10 @@ class DailyTents {
         let board = Array(N).fill().map(() => Array(N).fill(0));
         let attempts = 0;
         let tentsPlaced = 0;
-        let targetTents = Math.floor(N * 1.5) + this.rng.nextInt(-1, 2); // Roughly 15-20% density? 8x8=64. 8-12 tents.
-        targetTents = Math.max(5, Math.min(targetTents, 12));
+        // Increasing density for Hard Mode
+        let targetTents = Math.floor(N * 1.6) + this.rng.nextInt(0, 2);
+        // Cap based on size: 6->10, 8->14, 10->20
+        targetTents = Math.max(5, Math.min(targetTents, N * 2));
 
         // 1. Place Tents
         // Attempt to place tents such that no two touch (including diagonal)

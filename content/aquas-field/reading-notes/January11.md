@@ -1,7 +1,7 @@
 ﻿---
 title: "January 11: What Makes You Feel More Alive?"
 date: "2026-01-11"
-hiddenFromList: true
+hiddenFromList: false
 featured: false
 draft: true
 ---

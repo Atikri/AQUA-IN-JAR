@@ -17,7 +17,7 @@ draft: false
         <li><a href='https://tikri.site/aquas-field/reading-notes/January2-Reconnect-with-Your-Childhood-Obsession/'>January 2:Reconnect with Your Childhood Obsession</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January3/'>January 3: The Voice</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January4/'>January 4:It is already within you</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January5/'>January 5: Know What You鈥檙e Drawn to and Immerse Yourself in It</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January5/'>January 5: Know What You're Drawn to and Immerse Yourself in It</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January6/'>January 6: Change Is the Law</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January7/'>January 7</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January8/'>January 8</a></li>
@@ -55,9 +55,10 @@ draft: false
 > 今日法则：今天去做一件让你感到处于生命巅峰状态（Peak of your being）的事。  
 > Daily Law: Do something that makes you feel at the peak of your being today.  
 
---------------------------------------------------------------------------------
-2. 核心分析 (Analysis)
-• 识别“体感信号”：发现天职的线索往往伴随着一种**“高度力量感”**。 这不是大脑逻辑分析的结果，而是一种身体上的本能反应。  
+---  
+
+• 识别“体感信号”：发现天职的线索往往伴随着一种“**高度力量感**”。 这不是大脑逻辑分析的结果，而是一种身体上的本能反应。   
+
 • 补偿机制与独特性：Graham之所以被舞蹈吸引，是因为她发现言语无法满足她的表达需求。 Greene认为，==当一个人的某种表达路径（如言语）受阻时，往往会导向另一种更契合其本性的原始倾向==。  
 • 天职的本质是表达：发现天职的过程就是找到那个能让你“**感受到生命力且能充分自我表达**”的过程。 这种感觉是如此强烈，以至于它能让人立刻意识到这就是自己一生注定要完成的使命（Life’s Task）。  
 

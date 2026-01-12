@@ -23,4 +23,4 @@ layout: "single"
 
 This **Money Toolbox** runs entirely in your browser using IndexedDB. No data is sent to any server. 
 *   **Privacy:** Your financial data belongs to you. Backup anytime via the settings.
-*   **Regular Export:** You can regularly click the export button to export your financial data for easy viewing and analysis.
+*   **Regular Export:** You can regularly click the export button to export your financial data for easy viewing and analysis.!

@@ -1,7 +1,6 @@
 ---
 title: "Recipe Genie"
 date: "2025-12-14"
-description: "Recipe Genie - The Future of Recipe Generation"
 hiddenFromList: false
 featured: false
 ---

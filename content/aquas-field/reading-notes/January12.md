@@ -1,9 +1,9 @@
 ﻿---
 title: "January 12: The Obstacle Is the Way"
 date: "2026-01-12"
-hiddenFromList: true
+hiddenFromList: false
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)

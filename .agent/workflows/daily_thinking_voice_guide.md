@@ -17,7 +17,8 @@ This workflow simulates a "Guide Agent" that creates a comprehensive daily guide
      - Essential **Skills** (Practice)
      - Deep **Understanding** (Philosophy/Strategy)
      - A practical **MVP** (Minimum Viable Product) or exercise for the day.
-     - *Ensure you collect direct URLs to specific articles or resources.*
+     - *CRITICAL: You must provide DIRECT links to the specific article, video, or press release. Do NOT provide links to a company's homepage.*
+     - *If a direct text link is not available, look for a YouTube video covering the topic and link that.*
 
 ## 2. Generate the Guide
 

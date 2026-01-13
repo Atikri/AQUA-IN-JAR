@@ -19,7 +19,8 @@ Can you help me find 10 cutting-edge and diverse pieces of information from the 
     - **Emotional Regulation via Sound**
 
     *Please ensure the selection is diverse (not just all AI news).*
-    *Ensure you collect direct URLs to specific articles/studies, not just the homepage of the source.*
+    *CRITICAL: You must provide DIRECT links to the specific article, video, or press release. Do NOT provide links to a company's homepage (e.g., DO NOT use samsung.com, use samsung.com/news/article-123).*
+    *If a direct text link is not available, look for a YouTube video covering the topic and link that.*
 
 ## 2. Compile the "Secret Chamber" Report
 

@@ -2226,6 +2226,12 @@ body.bottle-open .bottle-bg-layer {
   transition: all 0.2s ease;
 }
 
+.header-icon-btn svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
 .header-icon-btn:hover,
 .display-settings-container.active .header-icon-btn {
   background-color: var(--footnote-bg-color);
@@ -4230,4 +4236,67 @@ mark {
   display: block;
   overflow: hidden;
   margin: 2rem 0;
+}
+
+/* Header Search Styles - Restored/Fixed */
+.header-search-panel {
+  position: absolute;
+  top: 60px;
+  /* Adjust based on header height */
+  right: 20px;
+  width: 320px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  z-index: 1000;
+  display: none;
+  /* Toggled via JS */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.header-search-panel.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header-search-container {
+  width: 100%;
+}
+
+.header-search-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.03);
+  font-size: 16px;
+  color: var(--text-color);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.header-search-input:focus {
+  background: var(--bg-color);
+  border-color: #5da9e9;
+  box-shadow: 0 0 0 3px rgba(93, 169, 233, 0.1);
+}
+
+.header-search-hint {
+  font-size: 12px;
+  color: var(--text-color);
+  opacity: 0.6;
+  margin-top: 8px;
+}
+
+.dark-mode-on .header-search-input {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode-on .header-search-input:focus {
+  background: var(--bg-color);
 }

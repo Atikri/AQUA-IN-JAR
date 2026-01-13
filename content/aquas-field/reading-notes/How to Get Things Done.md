@@ -2,7 +2,7 @@
 title: "慢生产力Slow Productivity"
 date: "2026-01-06"
 hiddenFromList: false
-featured: false
+featured: true
 ---
 
 大家有没有每天早上起来先试着用[8 things to tell yourself every morning](https://tikri.site/aquas-field/daily/8-things-to-tell-yourself-every-morning/)里面的话语激励自己呢？我每天早上会用其中我最喜欢的几句来对自己激励，可能用时一分钟都不到，但长期的积极心态会慢慢帮助我实现我想要的改变。  

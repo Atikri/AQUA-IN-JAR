@@ -1,4 +1,10 @@
-﻿/* Home Page Intro - Zen Maru Gothic Font */
+﻿/* Global Font - Zen Maru Gothic Font */
+body,
+html {
+  font-family: 'Zen Maru Gothic', sans-serif !important;
+}
+
+/* Home Page Intro - Zen Maru Gothic Font (Redundant now, but keeping for specificity if needed) */
 .kind-home .content-container>section:first-of-type,
 .kind-home .content-container>section:first-of-type h2,
 .kind-home .content-container>section:first-of-type p,

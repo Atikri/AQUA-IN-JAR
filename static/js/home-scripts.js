@@ -137,7 +137,91 @@ window.initRandomArticle = function () {
 
 // Auto-initialize on first load (if not handled by Swup immediately)
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', window.initQuotes);
+    document.addEventListener('DOMContentLoaded', () => {
+        window.initQuotes();
+        window.checkLockStatus();
+    });
 } else {
     window.initQuotes();
+    window.checkLockStatus();
+}
+
+// Global Password Gate Logic (Moved from password-gate.html)
+window.checkPassword = function () {
+    console.log("Attempting to unlock...");
+    try {
+        const input = document.getElementById('password-input');
+        const error = document.getElementById('password-error');
+        const content = document.getElementById('protected-content');
+        const overlay = document.getElementById('password-overlay');
+
+        if (!content || !overlay) {
+            console.error("Error: Protected content elements not found.");
+            return;
+        }
+
+        // Get the valid code from data attribute
+        const validCode = overlay.getAttribute('data-password');
+        console.log("Configured code:", validCode);
+
+        // Check for exact match or numeric equivalence
+        if (input.value === validCode || (validCode && !isNaN(validCode) && Number(input.value) === Number(validCode))) {
+            console.log("Password correct. Unlocking.");
+            overlay.style.opacity = '0';
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                content.style.display = 'block';
+                // Save specific to the code
+                sessionStorage.setItem('unlocked_code_' + validCode, 'true');
+                // Trigger event
+                document.dispatchEvent(new Event('content-unlocked'));
+            }, 500);
+        } else {
+            console.log("Password incorrect.");
+            error.style.display = 'block';
+            input.classList.add('shake');
+            setTimeout(() => input.classList.remove('shake'), 500);
+        }
+    } catch (e) {
+        console.error("Error in checkPassword:", e);
+        alert("System Error: " + e.message);
+    }
+};
+
+window.handleEnter = function (e) {
+    if (e.key === 'Enter') {
+        window.checkPassword();
+    }
+};
+
+window.checkLockStatus = function () {
+    const overlay = document.getElementById('password-overlay');
+    const content = document.getElementById('protected-content');
+
+    // Only proceed if elements exist
+    if (!overlay || !content) return;
+
+    const validCode = overlay.getAttribute('data-password');
+    const lockKey = 'unlocked_code_' + validCode;
+    console.log("Checking lock status for key:", lockKey);
+
+    if (sessionStorage.getItem(lockKey) === 'true') {
+        console.log("Content already unlocked for this code.");
+        overlay.style.display = 'none';
+        content.style.display = 'block';
+    } else {
+        console.log("Content locked.");
+        // Ensure overlay is visible if locked (in case of page revisit)
+        overlay.style.display = 'flex';
+        content.style.display = 'none';
+    }
+};
+
+// Re-check lock status on Swup navigation
+if (typeof swup !== 'undefined') {
+    swup.hooks.on('content:replace', window.checkLockStatus);
+} else {
+    document.addEventListener('swup:contentReplaced', function () {
+        setTimeout(window.checkLockStatus, 10);
+    });
 }

@@ -1,0 +1,17 @@
+<div class="code-block-container">
+    <div class="code-block-header">
+        <span class="code-language-label">{{ .Get "lang" | default "text" }}</span>
+        <button class="code-copy-btn" aria-label="Copy to clipboard">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="margin-right:4px;">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            Copy
+        </button>
+    </div>
+    <div class="code-block-content">
+        {{ highlight (trim .Inner "\n\r") (.Get "lang" | default "text") "" }}
+    </div>
+</div>

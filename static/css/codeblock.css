@@ -1,0 +1,77 @@
+/* Code Block Container - "Card" Style */
+.code-block-container {
+    background-color: #1e1e1e;
+    /* Dark background for the code area */
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #333;
+    font-family: 'Fira Code', monospace;
+    /* Or system monospace */
+}
+
+/* Header with Language and Copy Button */
+.code-block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #2d2d2d;
+    /* Slightly lighter header */
+    border-bottom: 1px solid #333;
+    color: #a0a0a0;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.code-language-label {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Copy Button Styling */
+.code-copy-btn {
+    background: transparent;
+    border: 1px solid #4a4a4a;
+    color: #a0a0a0;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.code-copy-btn:hover {
+    background-color: #4a4a4a;
+    color: #fff;
+}
+
+.code-copy-btn.copied {
+    border-color: #4caf50;
+    color: #4caf50;
+}
+
+/* Content Area */
+.code-block-content {
+    padding: 0;
+    /* Highlight shortcode usually adds its own pre/code padding, wait and see */
+    overflow-x: auto;
+}
+
+/* Hugo Highlight Overrides ensure it fits */
+.code-block-content .highlight {
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+.code-block-content pre {
+    margin: 0 !important;
+    padding: 1rem !important;
+    background-color: transparent !important;
+    /* Let container bg show */
+    border: none !important;
+}

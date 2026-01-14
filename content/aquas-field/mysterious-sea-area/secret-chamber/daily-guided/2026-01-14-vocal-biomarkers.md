@@ -43,17 +43,17 @@ Understanding these markers isn't just for doctors; for sound designers and voic
     *   **Jitter Analysis**: Look at the distance between each peak. Are they *exactly* the same distance apart?
     *   **Shimmer Analysis**: Look at the height of each peak. Are they *exactly* the same height?
 *   **Code Concept**:
-    ```python
-    import parselmouth
-    from parselmouth.praat import call
+```python
+import parselmouth
+from parselmouth.praat import call
 
-    sound = parselmouth.Sound("my_voice_ahhh.wav")
-    pointProcess = call(sound, "To PointProcess (periodic, cc)", 75, 500)
+sound = parselmouth.Sound("my_voice_ahhh.wav")
+pointProcess = call(sound, "To PointProcess (periodic, cc)", 75, 500)
     
-    # Get Jitter (local)
-    jitter = call(pointProcess, "Get jitter (local)", 0, 0, 0.0001, 0.02, 1.3)
-    print(f"Jitter: {jitter * 100:.2f}%") # Normal is < 1.04%
-    ```
+# Get Jitter (local)
+jitter = call(pointProcess, "Get jitter (local)", 0, 0, 0.0001, 0.02, 1.3)
+print(f"Jitter: {jitter * 100:.2f}%") # Normal is < 1.04%
+```
 
 **Step 3: Review & Refine (15 mins)**
 *   **Listen Back**: Listen to your "Ahhh."

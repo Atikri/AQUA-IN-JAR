@@ -65,6 +65,8 @@
   {{- $searchJS := resources.Get "js/search.js" | minify | fingerprint }}
   <script src="{{ $searchJS.RelPermalink }}" integrity="{{ $searchJS.Data.Integrity }}" defer></script>
 
+
+
   {{- /* Static CSS/JS resources */ -}}
   {{ $lazyCss := "css/lazy-loading.css" }}
   <link rel="stylesheet" href="{{ $lazyCss | relURL }}">

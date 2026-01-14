@@ -1,0 +1,319 @@
+{{/*
+Flipbook Shortcode (Issuu Style with Zoom & Fixes)
+Usage: {{< flipbook folder="images/my-flipbook" width="550" height="750">}}
+    */}}
+
+    {{ $folder := .Get "folder" }}
+    {{ $width := .Get "width" | default "550" }}
+    {{ $height := .Get "height" | default "750" }}
+    {{ $uid := substr (md5 $folder) 0 8 }}
+
+    <!-- Main UI Container -->
+    <div class="issuu-container" id="container-{{ $uid }}">
+        <!-- Viewport -->
+        <div class="issuu-viewport">
+            <!-- Scale Wrapper -->
+            <div class="flipbook-scale-wrapper" id="scale-wrapper-{{ $uid }}">
+
+                <!-- Book container: visibility hidden so it takes up space but doesn't flash ugly content -->
+                <div id="flipbook-{{ $uid }}" class="flipbook" style="visibility: hidden;">
+                    {{ $fsPath := print "static/" $folder }}
+                    {{ if (fileExists $fsPath) }}
+                    {{ $files := readDir $fsPath }}
+                    {{ $hasImages := false }}
+                    {{ range $files }}
+                    {{ if or (strings.HasSuffix .Name ".jpg") (strings.HasSuffix .Name ".jpeg") (strings.HasSuffix .Name
+                    ".png") (strings.HasSuffix .Name ".webp") }}
+                    {{ $hasImages = true }}
+                    <div class="page">
+                        <div class="page-content">
+                            <img src="/{{ $folder }}/{{ .Name }}" alt="Page" />
+                        </div>
+                    </div>
+                    {{ end }}
+                    {{ end }}
+
+                    {{ if not $hasImages }}
+                    <div style="color:white;">No images found in folder ({{ $folder }})</div>
+                    {{ end }}
+                    {{ else }}
+                    <div style="color: white; padding: 20px;">Error: Folder "/{{ $folder }}" not found.</div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="issuu-controls">
+            <button id="zoom-out-{{ $uid }}" class="control-btn" title="Zoom Out">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+            </button>
+            <button id="zoom-in-{{ $uid }}" class="control-btn" title="Zoom In">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+            </button>
+
+            <div class="separator"></div>
+
+            <button id="prev-{{ $uid }}" class="control-btn" title="Previous Page">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18L9 12L15 6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <span class="page-count" id="page-count-{{ $uid }}">Initializing...</span>
+
+            <button id="next-{{ $uid }}" class="control-btn" title="Next Page">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18L15 12L9 6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js"></script>
+    <script>
+        (function () {
+            const uid = "{{ $uid }}";
+
+            // Initialization Logic
+            function initFlipbook() {
+                const el = document.getElementById("flipbook-" + uid);
+                const scaleWrapper = document.getElementById("scale-wrapper-" + uid);
+                const prevBtn = document.getElementById("prev-" + uid);
+                const nextBtn = document.getElementById("next-" + uid);
+                const zoomInBtn = document.getElementById("zoom-in-" + uid);
+                const zoomOutBtn = document.getElementById("zoom-out-" + uid);
+                const countSpan = document.getElementById("page-count-" + uid);
+
+                // Avoid double init
+                if (el && el.dataset.initialized === "true") return;
+
+                if (!el) {
+                    console.warn("Flipbook element not found during init.");
+                    return;
+                }
+
+                // Check Library
+                if (typeof St === 'undefined') {
+                    countSpan.textContent = "Loading Lib...";
+                    // Poll for library
+                    let attempts = 0;
+                    const interval = setInterval(() => {
+                        attempts++;
+                        if (typeof St !== 'undefined') {
+                            clearInterval(interval);
+                            startFlip(St);
+                        } else if (attempts > 50) { // 5 seconds timeout
+                            clearInterval(interval);
+                            countSpan.textContent = "Lib Failed";
+                        }
+                    }, 100);
+                } else {
+                    startFlip(St);
+                }
+
+                function startFlip(StLib) {
+                    try {
+                        const pages = el.querySelectorAll(".page");
+                        if (pages.length === 0) {
+                            countSpan.textContent = "0 Pages";
+                            el.style.visibility = "visible";
+                            return;
+                        }
+
+                        const pageFlip = new StLib.PageFlip(el, {
+                            width: {{ $width }},
+                    height: { { $height } },
+                    size: "stretch",
+                        minWidth: 300,
+                            maxWidth: 1000,
+                                minHeight: 400,
+                                    maxHeight: 1200,
+                                        maxShadowOpacity: 0.5,
+                                            showCover: true,
+                                                mobileScrollSupport: false,
+                                                    usePortrait: false,
+                                                        startPage: 0
+                });
+
+                pageFlip.loadFromHTML(pages);
+
+                // Update UI
+                pageFlip.on("flip", (e) => updatePageCount(pageFlip));
+
+                // Show Content
+                setTimeout(() => {
+                    el.style.visibility = "visible";
+                    updatePageCount(pageFlip);
+
+                    // Mark initialized
+                    el.dataset.initialized = "true";
+                }, 300);
+
+                // Buttons
+                if (prevBtn) prevBtn.onclick = () => pageFlip.flipPrev();
+                if (nextBtn) nextBtn.onclick = () => pageFlip.flipNext();
+
+                let currentScale = 1;
+                if (zoomInBtn) zoomInBtn.onclick = () => {
+                    currentScale = Math.min(currentScale + 0.2, 3.0);
+                    applyZoom(currentScale);
+                };
+                if (zoomOutBtn) zoomOutBtn.onclick = () => {
+                    currentScale = Math.max(currentScale - 0.2, 0.5);
+                    applyZoom(currentScale);
+                };
+
+                function applyZoom(scale) {
+                    scaleWrapper.style.transform = `scale(${scale})`;
+                    const viewport = document.querySelector("#container-" + uid + " .issuu-viewport");
+                    viewport.style.overflow = scale > 1 ? "auto" : "hidden";
+                }
+
+                function updatePageCount(flipInstance) {
+                    if (countSpan) {
+                        let current = flipInstance.getCurrentPageIndex() + 1;
+                        let total = flipInstance.getPageCount();
+                        countSpan.textContent = `${current} / ${total}`;
+                    }
+                }
+
+            } catch (err) {
+                console.error("Flipbook error:", err);
+                countSpan.textContent = "Init Err";
+                el.innerHTML += "<p style='color:red;'>" + err.message + "</p>";
+                el.style.visibility = "visible";
+            }
+        }
+        }
+
+        // Trigger logic
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initFlipbook);
+        } else {
+            initFlipbook();
+        }
+        
+    }) ();
+    </script>
+
+    <style>
+        /* Main Container */
+        .issuu-container {
+            position: relative;
+            background: #2a2a2a;
+            padding: 40px 20px 80px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin: 40px 0;
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .issuu-viewport {
+            width: 100%;
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .flipbook-scale-wrapper {
+            transition: transform 0.3s ease-out;
+            transform-origin: center center;
+            display: inline-block;
+        }
+
+        .flipbook {
+            margin: 0 auto;
+        }
+
+        .flipbook .page {
+            background-color: #fff;
+            display: none;
+        }
+
+        .flipbook .stf__item {
+            display: block !important;
+        }
+
+        .flipbook .page-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .flipbook .page img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            user-select: none;
+        }
+
+        /* Controls */
+        .issuu-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 30px;
+            color: white;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            white-space: nowrap;
+        }
+
+        .separator {
+            width: 1px;
+            height: 18px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .control-btn {
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.9);
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .page-count {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            font-size: 0.85rem;
+            min-width: 50px;
+            text-align: center;
+            font-weight: 500;
+        }
+    </style>

@@ -5,7 +5,7 @@ description: "Daily in-depth guide on Vocal Biomarkers and detecting health sign
 tags: ["daily-guide", "thinking-voice", "education", "VocalBiomarkers", "Health"]
 ---
 
-# 🎓 Daily Guide: Vocal Biomarkers
+## 🎓 Daily Guide: Vocal Biomarkers
 
 > "The voice is the barometer of the soul—and the body."
 

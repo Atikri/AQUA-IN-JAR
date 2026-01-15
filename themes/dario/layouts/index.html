@@ -108,7 +108,9 @@
         {{- end }}
         {{- else }}
         {{- range where .Site.RegularPages "Section" .Section }}
+        {{- if not (in .File.Dir "secret-chamber") }}
         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{- end }}
         {{- end }}
         {{- end }}
     </ul>

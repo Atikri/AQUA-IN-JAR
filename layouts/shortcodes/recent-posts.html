@@ -1,22 +1,29 @@
 {{/*
-  Shortcode: recent-posts
-  Usage: {{< recent-posts count=4 >}}
+Shortcode: recent-posts
+Usage: {{< recent-posts count=4>}}
   Renders a list of latest posts by date (desc), default 4 items.
-*/}}
+  */}}
 
-{{- $count := .Get "count" | default 4 -}}
-{{- $all := site.RegularPages -}}
-{{- $published := where $all "Draft" "ne" true -}}
-{{- $sorted := sort $published "Date" "desc" -}}
-{{- $items := first $count $sorted -}}
+  {{- $count := .Get "count" | default 4 -}}
+  {{- $all := site.RegularPages -}}
+  {{- $published := where $all "Draft" "ne" true -}}
 
-<div class="recent-posts-grid">
-  {{- range $items }}
+  {{/* Filter out secret-chamber content */}}
+  {{- $filtered := slice -}}
+  {{- range $published -}}
+  {{- if not (in .File.Dir "secret-chamber") -}}
+  {{- $filtered = $filtered | append . -}}
+  {{- end -}}
+  {{- end -}}
+
+  {{- $sorted := sort $filtered "Date" "desc" -}}
+  {{- $items := first $count $sorted -}}
+
+  <div class="recent-posts-grid">
+    {{- range $items }}
     <a href="{{ .Permalink }}" class="post-card">
       <div class="post-card__title">{{ .Title }}</div>
       <div class="post-card__date">{{ .Date.Format "2006-01-02" }}</div>
     </a>
-  {{- end }}
-</div>
-
-
+    {{- end }}
+  </div>

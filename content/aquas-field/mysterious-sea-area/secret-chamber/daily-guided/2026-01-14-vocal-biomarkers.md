@@ -5,7 +5,7 @@ description: "Daily in-depth guide on Vocal Biomarker Analysis."
 tags: ["daily-guide", "thinking-voice", "education", "VoiceScience"]
 ---
 
-# 🎓 Daily Guide: Vocal Biomarker Analysis
+## 🎓 Daily Guide: Vocal Biomarker Analysis
 
 > "To understand sound is to understand the movement of the soul."
 

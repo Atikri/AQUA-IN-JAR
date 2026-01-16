@@ -16,28 +16,40 @@ function initSearch() {
         // Remove existing listeners to avoid duplicates if re-initialized? 
         // A bit hard without named functions, but standard DOM cleanup usually handles page refreshes.
 
-        headerSearchBtn.onclick = function (e) {
+        // Use addEventListener instead of onclick
+        headerSearchBtn.addEventListener('click', function (e) {
             e.stopPropagation();
-            console.log('Search toggle clicked');
+            console.log('Search toggle clicked via addEventListener');
             headerSearchPanel.classList.toggle('active');
             if (headerSearchPanel.classList.contains('active') && searchInput) {
                 searchInput.focus();
             }
-        };
+        });
 
-        headerSearchPanel.onclick = function (e) {
+        // Prevent panel clicks from closing it
+        headerSearchPanel.addEventListener('click', function (e) {
             e.stopPropagation();
-        };
+        });
     } else {
         console.error('Header search elements MISSING');
     }
 
     // Close header panel if clicking outside
+    // Close header panel if clicking outside
     document.addEventListener('click', function (e) {
-        if (headerSearchPanel && headerSearchBtn &&
-            !headerSearchPanel.contains(e.target) &&
-            !headerSearchBtn.contains(e.target)) {
-            headerSearchPanel.classList.remove('active');
+        // Double check: if the click target IS the button or inside it, do nothing (let the button handler toggle it)
+        if (headerSearchBtn && headerSearchBtn.contains(e.target)) return;
+        if (headerSearchBtn && e.target.closest('#headerSearchBtn')) return; // Handle SVG children
+
+        // Use composedPath() to detect clicks inside elements properly
+        const path = e.composedPath ? e.composedPath() : [];
+        const clickedInsidePanel = headerSearchPanel.contains(e.target) || path.includes(headerSearchPanel);
+
+        if (headerSearchPanel && !clickedInsidePanel) {
+            if (headerSearchPanel.classList.contains('active')) {
+                // console.log('Closing search panel (click outside detected)');
+                headerSearchPanel.classList.remove('active');
+            }
         }
     });
 

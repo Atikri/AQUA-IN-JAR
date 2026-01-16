@@ -219,7 +219,12 @@ window.checkLockStatus = function () {
 
 // Re-check lock status on Swup navigation
 if (typeof swup !== 'undefined') {
-    swup.hooks.on('content:replace', window.checkLockStatus);
+    if (swup.hooks && swup.hooks.on) {
+        swup.hooks.on('content:replace', window.checkLockStatus);
+    } else if (typeof swup.on === 'function') {
+        // Fallback for Swup v3 or different API
+        swup.on('contentReplaced', window.checkLockStatus);
+    }
 } else {
     document.addEventListener('swup:contentReplaced', function () {
         setTimeout(window.checkLockStatus, 10);

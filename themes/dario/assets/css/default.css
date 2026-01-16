@@ -1720,7 +1720,8 @@ footer {
 
 .header-search-panel.active {
   display: block;
-  animation: slideDown 0.2s ease-out;
+  opacity: 1;
+  animation: slideDown 0.2s ease-out forwards;
 }
 
 .header-search-input {

@@ -47,7 +47,10 @@ tags: ["thinking-voice", "sound-tech", "music-therapy", "innovation"]
 
 ### 1. [Title of Item]
 * **Tag**: #[TopicTag] (e.g., #MusicTherapy, #AIAudio)
-* **Summary**: Brief summary of the innovation or news. Why is it important?
+* **Summary**:
+    - **What it is**: Concise explanation.
+    - **Key Points**: Bullet points of specific details/features.
+    - **Future Potential**: Where this technology could go next.
 * **Source**: [Link to specific article (NOT the homepage)](URL)
 * **Insight**: A one-sentence "agent" comment on why this matters for the "Thinking Voice" project.
 

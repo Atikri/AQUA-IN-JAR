@@ -12,7 +12,11 @@
     {{ with .OutputFormats.Get "RSS" }}
         {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
-    {{ range .Pages }}
+    {{ $pages := .Pages }}
+    {{ if .IsHome }}
+      {{ $pages = .Site.RegularPages }}
+    {{ end }}
+    {{ range $pages }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}{{ if in .Permalink "?" }}&amp;{{ else }}?{{ end }}utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=rss_subscription</link>

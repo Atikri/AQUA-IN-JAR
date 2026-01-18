@@ -6,6 +6,11 @@
 #
 # Examples:
 
+- title: "Moonseed - Honey [piano_study music]"
+  artist: "lofi girl"
+  url: "/audio/lofi-music/Moonseed - Honey [piano_study music].opus"
+  cover: "/images/lofi.png"
+
 - title: "rainy day lofi"
   artist: "local"
   # This only works if you actually have a file at static/audio/mysong.mp3
@@ -21,3 +26,4 @@
   artist: "lofi girl"
   url: "/audio/lofi-music/winter-lofi-mix-relaxing-music-to-chill.opus"
   cover: "/images/lofi.png"
+

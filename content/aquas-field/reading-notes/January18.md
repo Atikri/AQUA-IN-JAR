@@ -3,7 +3,7 @@ title: "January 18: Stop Being So Nice"
 date: "2026-01-18"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -17,7 +17,7 @@ draft: true
         <li><a href='https://tikri.site/aquas-field/reading-notes/January2-Reconnect-with-Your-Childhood-Obsession/'>January 2:Reconnect with Your Childhood Obsession</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January3/'>January 3: The Voice</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January4/'>January 4:It is already within you</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January5/'>January 5: Know What You鈥檙e Drawn to and Immerse Yourself in It</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January5/'>January 5: Know What You're Drawn to and Immerse Yourself in It</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January6/'>January 6: Change Is the Law</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January7/'>January 7</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January8/'>January 8</a></li>
@@ -48,4 +48,27 @@ draft: true
     </details>
   </li>
 </ul>  
+
+## 停止做“老好人”
+
+> Everyone carries a shadow, and the less it is embodied in the individual’s conscious life, the blacker and denser it is.  
+> ——CARL JUNG  
+> “每个人都有阴影，它在个体的意识生活中体现得越少，就会变得越黑暗、越浓密。”  
+> ——卡尔·荣格  
+
+你因为过于友善和顺从而付出的代价，远比你有意识地展示自己的“**阴影**”（Shadow）要大得多。要走上展示阴影的道路，你必须：  
+1. 更==尊重自己的观点==，少在意他人的看法，特别是在你的专业领域内。要相信你的天赋和你想出的点子。  
+2. 在日常生活中养成==多主张、少妥协==的习惯。要在受控的状态下，在适当的时机这样做。  
+3. 少去在意别人怎么看你。你会感到一种巨大的解放感。  
+4. 意识到在某些时刻，你必须冒犯甚至伤害那些阻碍你道路、拥有丑陋价值观或无端指责你的人。利用这种明显不公正的时刻，自豪地展示你的阴影。  
+5. 随心所欲地扮演那个无礼、任性的孩子，去嘲笑他人的愚蠢和伪善。  
+6. 最后，蔑视那些别人小心翼翼遵守的传统惯例。  
+
+> Daily Law: Keep in mind that power lies in asserting your uniqueness, even if that offends some people along the way. Study your Shadow side today.  
+> 今日法则：请记住，力量在于坚持你的独特性，即使这一路会冒犯某些人。今天就去研究你的阴影面。  
+
+---  
+
+这里的“阴影”概念源自荣格心理学，指我们人格中被压抑、不被社会规范所接受的部分（如野心、攻击性、傲慢等）。但阴影并非邪恶，而是**未被利用的能量**。如果你有意识地整合并释放它，它就能转化为创造力、决断力和领袖气质。如果一直**压抑**，它反而会变成破坏性的情绪爆发。  
+
 

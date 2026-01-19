@@ -31,7 +31,7 @@ draft: false
         <li><a href='https://tikri.site/aquas-field/reading-notes/January16/'>January 16: There Are No Superior Callings</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January17/'>January 17</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January18/'>January 18</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January19/'>January 19</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January19/'>January 19: Listen to Your Inner Authority</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January20/'>January 20</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January21/'>January 21</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January22/'>January 22</a></li>

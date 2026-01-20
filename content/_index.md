@@ -1,7 +1,7 @@
-## Hi! I'm **Tikri**~  
-我亲爱的<span style="color: #5da9e9;">小瓶子</span>们~ 欢迎来我瓶中作客~:smiling_face_with_three_hearts:  
+## <span style="color: #4C6475;">Hi! I'm **Tikri**~  
+我亲爱的<span style="color: #4C6475;">小瓶子们~</span> 欢迎来我瓶中作客~:smiling_face_with_three_hearts:  
 
-在这里你可以翻阅我日常的一些blog，收集一些AQUA:droplet: （露水灵感），说不定会对你有帮助，那就太好啦!:partying_face:  
+在这里你可以翻阅我日常的一些blog，收集一些<span style="color: #4C6475;">AQUA:droplet: （露水灵感）</span>，说不定会对你有帮助，那就太好啦!:partying_face:  
 
 [订阅我的RSS Feed📈](index.xml) 
 

@@ -24,7 +24,7 @@
 }
 
 .toc-drawer>li:not(.drawer-item) a:hover {
-    color: #6871f1;
+    color: #4C6475;
 }
 
 /* ========================================
@@ -71,7 +71,7 @@
     padding: 16px 20px !important;
     font-weight: 700 !important;
     font-size: 1rem !important;
-    color: #6871f1 !important;
+    color: #4C6475 !important;
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
@@ -111,7 +111,7 @@
 
 /* Active state (when open) */
 .drawer-item details[open]>summary {
-    color: #6871f1 !important;
+    color: #4C6475 !important;
     padding-bottom: 12px !important;
 }
 
@@ -123,8 +123,8 @@
     display: inline-block !important;
     width: 10px !important;
     height: 10px !important;
-    border-right: 2.5px solid #6871f1 !important;
-    border-bottom: 2.5px solid #6871f1 !important;
+    border-right: 2.5px solid #4C6475 !important;
+    border-bottom: 2.5px solid #4C6475 !important;
     border-top: none !important;
     border-left: none !important;
     transform: rotate(-45deg) !important;
@@ -189,7 +189,7 @@
 }
 
 .drawer-item details>ul>li a:hover {
-    color: #6871f1 !important;
+    color: #4C6475 !important;
 }
 
 /* ========================================
@@ -204,7 +204,7 @@
     font-size: 0.8rem !important;
     text-transform: uppercase !important;
     letter-spacing: 0.1em !important;
-    color: #6871f1 !important;
+    color: #4C6475 !important;
     display: inline-block !important;
     padding: 10px 20px !important;
     background: linear-gradient(135deg, rgba(104, 113, 241, 0.12) 0%, rgba(104, 113, 241, 0.06) 100%) !important;
@@ -289,13 +289,13 @@
    Accessibility & Focus States
    ======================================== */
 .drawer-item details>summary:focus-visible {
-    outline: 2px solid #6871f1 !important;
+    outline: 2px solid #4C6475 !important;
     outline-offset: 2px !important;
     border-radius: 8px !important;
 }
 
 .drawer-item details>ul>li a:focus-visible {
-    outline: 2px solid #6871f1 !important;
+    outline: 2px solid #4C6475 !important;
     outline-offset: 2px !important;
     border-radius: 4px !important;
 }

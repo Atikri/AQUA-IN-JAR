@@ -5,10 +5,8 @@
 
 [订阅我的RSS Feed📈](index.xml) 
 
-
-
 <div class="home-section-grid">
-  <div class="home-card">
+  <div class="home-card" style="position: relative; overflow: visible;"><iframe src="/qr-effect.html" style="position: absolute; right: 10px; top: 10px; width: 140px; height: 140px; border: none; z-index: 10; pointer-events: auto;" scrolling="no"></iframe>
     <div class="home-card__icon">📬</div>
     <h3 class="home-card__title">Contact Me</h3>
     <p class="home-card__desc">遇到任何问题或想合作咨询，欢迎敲一下我的瓶子。</p>

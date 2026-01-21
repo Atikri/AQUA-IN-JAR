@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AudioRitual QR Morph</title>
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- QR Code Generator Lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        canvas {
+            cursor: pointer;
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="qrCanvas"></canvas>
+
+    <script>
+        // --- CONFIGURATION ---
+        // REPLACE THIS STRING WITH YOUR ACTUAL WECHAT LINK/ID
+        const QR_DATA = "mailto:aqutikri@gmail.com\nWechat:c99799705\n(Please state the purpose of your visit.)";
+
+        const canvas = document.getElementById('qrCanvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let dots = [];
+        let isQR = false;
+
+        // Dynamic Settings
+        let BOTTLE_SCALE = 1;
+        let QR_SCALE = 1;
+        let DOT_SIZE = 2;
+
+        // --- High DPI Handling ---
+        function resize() {
+            const dpr = window.devicePixelRatio || 1;
+            width = window.innerWidth || 140;
+            height = window.innerHeight || 140;
+            if (width < 20) width = 140; if (height < 20) height = 140;
+
+            canvas.width = width * dpr;
+            canvas.height = height * dpr;
+            canvas.style.width = width + 'px';
+            canvas.style.height = height + 'px';
+            ctx.scale(dpr, dpr);
+
+            const minDim = Math.min(width, height);
+
+            // Sizes
+            BOTTLE_SCALE = minDim * 0.35; // Size of the bottle
+            QR_SCALE = minDim * 0.85;     // Size of the QR code
+
+            // Auto-adjust dot size based on container to avoid clustering
+            // We'll calculate exact size in init based on module count
+
+            init();
+        }
+
+        function init() {
+            dots = [];
+
+            // 1. Generate Real QR Data
+            // Type 0 = Auto detect version, 'L' = Low error correction (fewer dots, cleaner)
+            const qr = qrcode(0, 'L');
+            qr.addData(QR_DATA);
+            qr.make();
+            const count = qr.getModuleCount();
+
+            // Calculate Dot Size to fit container
+            const cellSize = QR_SCALE / count;
+            DOT_SIZE = Math.max(1, cellSize * 0.45); // Radius is roughly half cell size
+
+            // 2. Create Dots
+            const moduleList = [];
+            for (let r = 0; r < count; r++) {
+                for (let c = 0; c < count; c++) {
+                    if (qr.isDark(r, c)) {
+                        moduleList.push({ r: r, c: c });
+                    }
+                }
+            }
+
+            const totalDots = moduleList.length;
+
+            for (let i = 0; i < totalDots; i++) {
+                // --- TARGET: QR STATE ---
+                const mod = moduleList[i];
+                // Center the QR grid
+                const qx = (mod.c - count / 2) * cellSize;
+                const qy = (mod.r - count / 2) * cellSize;
+
+                // --- INITIAL: BOTTLE SHAPE (Aquarius Jar) ---
+                // Parametric distribution
+                // v goes from 0 (bottom) to 1 (top)
+                const v = i / totalDots;
+
+                // Bottle Profile
+                const bHeight = BOTTLE_SCALE * 2.5;
+                const bRadiusMax = BOTTLE_SCALE * 0.8;
+
+                let r, yRel;
+
+                if (v < 0.1) {
+                    // Rounded Bottom
+                    const subV = v / 0.1; // 0 to 1
+                    r = bRadiusMax * Math.sin(subV * Math.PI / 2);
+                    yRel = v * bHeight; // 0 to 0.1 Height
+                } else if (v < 0.6) {
+                    // Main Body (Slightly tapered up)
+                    r = bRadiusMax * (1 - (v - 0.1) * 0.1);
+                    yRel = v * bHeight;
+                } else if (v < 0.8) {
+                    // Shoulder (Curving in)
+                    const subV = (v - 0.6) / 0.2; // 0 to 1
+                    r = bRadiusMax * 0.9 * Math.cos(subV * Math.PI / 2.5);
+                    yRel = v * bHeight;
+                } else if (v < 0.9) {
+                    // Neck (Narrow)
+                    r = bRadiusMax * 0.3;
+                    yRel = v * bHeight;
+                } else {
+                    // Rim (Flare)
+                    r = bRadiusMax * 0.4;
+                    yRel = v * bHeight;
+                }
+
+                // Golden Angle spiral for even surface coverage
+                const theta = i * 2.39996;
+
+                const bx = r * Math.cos(theta);
+                const bz = r * Math.sin(theta);
+                const by = yRel - (bHeight * 0.4); // Center vertically (roughly)
+
+                const dot = {
+                    x: bx + width / 2,
+                    y: by + height / 2,
+                    z: bz, // Start at bottle Z
+                    scale: 1,
+                    alpha: 1,
+
+                    // Store states
+                    bottle: { x: bx, y: by, z: bz },
+                    qr: { x: qx, y: qy, z: 0 },
+                };
+
+                dots.push(dot);
+            }
+
+            // Animate Entry
+            if (window.gsap) {
+                dots.forEach(d => {
+                    gsap.from(d, { scale: 0, duration: 1, ease: "back.out(1.7)", delay: Math.random() * 0.5 });
+                });
+            }
+
+            // Loop
+            if (!window.loopRunning) {
+                window.loopRunning = true;
+                requestAnimationFrame(tick);
+            }
+        }
+
+        // --- Animation Loop ---
+        let time = 0;
+        function tick() {
+            time += 0.005;
+            ctx.clearRect(0, 0, width, height);
+
+            const cx = width / 2;
+            const cy = height / 2;
+
+            if (dots.length > 0) dots.sort((a, b) => (isQR ? 0 : a.z - b.z));
+
+            const fl = width * 2;
+
+            dots.forEach(d => {
+                let curX, curY, scale, alpha;
+                const isTweening = window.gsap && gsap.isTweening(d);
+
+                if (!isQR && !isTweening) {
+                    // Rotate Bottle
+                    const rx = d.bottle.x * Math.cos(time) - d.bottle.z * Math.sin(time);
+                    const rz = d.bottle.x * Math.sin(time) + d.bottle.z * Math.cos(time);
+                    const ry = d.bottle.y;
+
+                    const persp = fl / (fl + rz);
+                    curX = cx + rx * persp;
+                    curY = cy + ry * persp;
+                    scale = persp * Math.max(0.1, (rz + BOTTLE_SCALE * 2) / (BOTTLE_SCALE * 4));
+                    alpha = (rz + BOTTLE_SCALE) / (BOTTLE_SCALE * 2) * 0.7 + 0.3;
+
+                    d.x = curX;
+                    d.y = curY;
+                    d.scale = scale;
+                    d.alpha = alpha;
+                }
+
+                ctx.save();
+                ctx.translate(d.x, d.y);
+                ctx.scale(d.scale, d.scale);
+
+                ctx.beginPath();
+                ctx.arc(0, 0, DOT_SIZE, 0, Math.PI * 2);
+                ctx.globalAlpha = d.alpha;
+                ctx.fillStyle = "#62b6cb";
+                ctx.fill();
+                ctx.restore();
+            });
+            requestAnimationFrame(tick);
+        }
+
+        // --- Interaction ---
+        function toggleMode() {
+            if (!window.gsap) return;
+            isQR = !isQR;
+            const cx = width / 2;
+            const cy = height / 2;
+
+            if (isQR) {
+                // Morph to QR
+                dots.forEach((d, i) => {
+                    gsap.to(d, {
+                        x: cx + d.qr.x,
+                        y: cy + d.qr.y,
+                        scale: 1,
+                        alpha: 1,
+                        duration: 1.5,
+                        ease: "elastic.out(1, 0.5)",
+                        delay: Math.random() * 0.2 + (d.qr.y + d.qr.x) * 0.001,
+                    });
+                });
+            } else {
+                // Morph to Bottle
+                const fl = width * 2;
+                dots.forEach((d, i) => {
+                    // Approx rotation position
+                    const rx = d.bottle.x * Math.cos(time + 1.5) - d.bottle.z * Math.sin(time + 1.5);
+                    const rz = d.bottle.x * Math.sin(time + 1.5) + d.bottle.z * Math.cos(time + 1.5);
+                    const persp = fl / (fl + rz);
+
+                    gsap.to(d, {
+                        x: cx + rx * persp,
+                        y: cy + d.bottle.y * persp,
+                        scale: 0.5, // approximate
+                        duration: 1.2,
+                        ease: "power2.inOut",
+                        delay: Math.random() * 0.2
+                    });
+                });
+            }
+        }
+
+        canvas.addEventListener('click', toggleMode);
+        window.addEventListener('resize', resize);
+        resize(); // Init
+
+    </script>
+</body>
+
+</html>

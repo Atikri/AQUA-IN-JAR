@@ -28,7 +28,7 @@ featured: false
         <li><a href='https://tikri.site/aquas-field/reading-notes/January13/'>January 13: Master the Small Things</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January14/'>January 14: Avoid the False Path</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January15/'>January 15: Let a Sense of Purpose Guide You</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January16/'>January 16: </a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January16/'>January 16: There Are No Superior Callings</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January17/'>January 17</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January18/'>January 18</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January19/'>January 19</a></li>

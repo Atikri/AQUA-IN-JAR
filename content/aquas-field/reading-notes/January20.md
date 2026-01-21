@@ -6,8 +6,6 @@ featured: false
 draft: false
 ---
 
-
-
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
 
 <ul class='toc-drawer'>

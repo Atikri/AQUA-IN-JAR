@@ -1,7 +1,7 @@
 ---
 title: "Shanghai Map Poster"
 date: 2026-01-21T13:30:00+08:00
-draft: false
+draft: true
 tags: ["shanghai", "maps", "python", "maptoposter"]
 ---
 

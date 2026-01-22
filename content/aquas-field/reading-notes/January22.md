@@ -3,7 +3,7 @@ title: "January 22: Use Resistance and Negative Spurs"
 date: "2026-01-22"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)

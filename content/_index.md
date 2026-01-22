@@ -13,7 +13,7 @@
     <a href="mailto:aqutikri@gmail.com" class="home-card__link">aqutikri@gmail.com →</a>
   </div>
 
-  <div class="home-card" style="position: relative; overflow: visible;"><iframe src="/journal-effect.html" style="position: absolute; right: 10px; top: 10px; width: 140px; height: 140px; border: none; z-index: 10; pointer-events: auto;" scrolling="no"></iframe>
+  <div class="home-card">
     <div class="home-card__icon">🐣</div>
     <h3 class="home-card__title">Latest Journal</h3>
     <p class="home-card__desc">前往查阅最新期刊 AQUA #0</p>

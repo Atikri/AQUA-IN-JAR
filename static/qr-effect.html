@@ -73,23 +73,38 @@
         function init() {
             dots = [];
 
-            // 1. Generate Real QR Data
-            // Type 0 = Auto detect version, 'L' = Low error correction (fewer dots, cleaner)
-            const qr = qrcode(0, 'L');
-            qr.addData(QR_DATA);
-            qr.make();
-            const count = qr.getModuleCount();
+            // 1. Generate QR Data (with Fallback)
+            let moduleList = [];
+            let count = 0;
+            let cellSize = 0;
 
-            // Calculate Dot Size to fit container
-            const cellSize = QR_SCALE / count;
-            DOT_SIZE = Math.max(1, cellSize * 0.45); // Radius is roughly half cell size
+            try {
+                if (typeof qrcode === 'undefined') throw new Error("QR Lib missing");
 
-            // 2. Create Dots
-            const moduleList = [];
-            for (let r = 0; r < count; r++) {
-                for (let c = 0; c < count; c++) {
-                    if (qr.isDark(r, c)) {
-                        moduleList.push({ r: r, c: c });
+                const qr = qrcode(0, 'L');
+                qr.addData(QR_DATA);
+                qr.make();
+                count = qr.getModuleCount();
+
+                cellSize = QR_SCALE / count;
+                DOT_SIZE = Math.max(1, cellSize * 0.45);
+
+                for (let r = 0; r < count; r++) {
+                    for (let c = 0; c < count; c++) {
+                        if (qr.isDark(r, c)) {
+                            moduleList.push({ r: r, c: c });
+                        }
+                    }
+                }
+            } catch (e) {
+                console.warn("QR Code Gen failed, using fallback grid", e);
+                // Fallback: Simple 10x10 Grid
+                count = 15;
+                cellSize = QR_SCALE / count;
+                DOT_SIZE = Math.max(1, cellSize * 0.45);
+                for (let r = 0; r < count; r++) {
+                    for (let c = 0; c < count; c++) {
+                        if (Math.random() > 0.5) moduleList.push({ r, c });
                     }
                 }
             }
@@ -148,8 +163,8 @@
                 const dot = {
                     x: bx + width / 2,
                     y: by + height / 2,
-                    z: bz, // Start at bottle Z
-                    scale: 1,
+                    z: bz,
+                    scale: 1, // Default visible
                     alpha: 1,
 
                     // Store states
@@ -160,10 +175,18 @@
                 dots.push(dot);
             }
 
-            // Animate Entry
+            // Animate Entry (Optional polish)
             if (window.gsap) {
+                // Set to 0 only if we can animate it up
+                dots.forEach(d => d.scale = 0);
+
                 dots.forEach(d => {
-                    gsap.from(d, { scale: 0, duration: 1, ease: "back.out(1.7)", delay: Math.random() * 0.5 });
+                    gsap.to(d, {
+                        scale: 1,
+                        duration: 1,
+                        ease: "back.out(1.7)",
+                        delay: Math.random() * 0.5
+                    });
                 });
             }
 

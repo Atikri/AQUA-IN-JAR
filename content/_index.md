@@ -3,6 +3,8 @@
 
 在这里你可以翻阅我日常的一些blog，收集一些<span style="color: #4C6475;">AQUA:droplet: （露水灵感）</span>，说不定会对你有帮助，那就太好啦!:partying_face:  
 
+> 最近更新书籍，建议从这边开启：[The Daily Laws](https://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
+
 [订阅我的RSS Feed📈](index.xml) 
 
 <div class="home-section-grid">

@@ -9,12 +9,15 @@ featured: false
 
 Robert Greene在引言中指出，人类大脑的进化初衷是为了让我们对环境保持高度敏锐，以便在危险的自然界中生存。然而在现代社会，由于物理威胁减少，我们的大脑开始转向内在，沉溺于幻想和天真之中。
 
-引言的核心观点包括：  
+## 引言的核心观点包括：  
 - 破除文化幻象：现代文化向我们灌输了许多错误的观念，例如认为成功的关键在于名校背景或人脉、工作应该总是充满乐趣、或者创意是天生的才能。
 - 激进的现实主义者：本书旨在逆转这些有毒的模式，通过二十五年关于权力、说服、战略和人类本性的研究，将读者转变为一名“激进的现实主义者” (radical realist)。
 - 书籍结构：全书按月划分主题。前三个月旨在帮助你摆脱外部杂音，连接内心真实的职业召唤；接下来的月份则依次涵盖职场政治、说服技巧、战略思维以及人类本性的底层动机。
-- 阅读建议：作者建议从头到尾完整阅读，并养成==随手记笔记==、将法则==应用于实践==的习惯。他将这本书比作一部“教养小说” (bildungsroman)，记录了一个天真的人在现实世界的教育下，剥离幻想并最终获得智慧的过程。
 
+## 阅读建议
+作者建议从头到尾完整阅读，并养成==随手记笔记==、将法则==应用于实践==的习惯。他将这本书比作一部“教养小说” (bildungsroman)，记录了一个天真的人在现实世界的教育下，剥离幻想并最终获得智慧的过程。
+
+### January
 <ul class='toc-drawer'>
   <li class='drawer-item'>
     <details>
@@ -52,7 +55,10 @@ Robert Greene在引言中指出，人类大脑的进化初衷是为了让我们�
         <li><a href='https://tikri.site/aquas-field/reading-notes/January30/'>January 30: Trust the Process</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January31/'>January 31: The Source of All Power</a></li>
       </ul>
-    </details>
+    </details>  
+  </li>  
+
+### February
   </li>
   <li class='drawer-item'>
     <details>
@@ -89,6 +95,9 @@ Robert Greene在引言中指出，人类大脑的进化初衷是为了让我们�
         <li>February 29</li>
       </ul>
     </details>
+  </li>
+
+### March
   </li>
   <li class='drawer-item'>
     <details>
@@ -128,6 +137,9 @@ Robert Greene在引言中指出，人类大脑的进化初衷是为了让我们�
       </ul>
     </details>
   </li>
+
+### April
+  </li>
   <li class='drawer-item'>
     <details>
       <summary style='cursor: pointer; font-weight: bold; margin: 10px 0;'>April</summary>
@@ -164,6 +176,9 @@ Robert Greene在引言中指出，人类大脑的进化初衷是为了让我们�
         <li>April 30</li>
       </ul>
     </details>
+  </li>
+
+### May
   </li>
   <li class='drawer-item'>
     <details>
@@ -203,6 +218,9 @@ Robert Greene在引言中指出，人类大脑的进化初衷是为了让我们�
       </ul>
     </details>
   </li>
+
+### June
+  </li>
   <li class='drawer-item'>
     <details>
       <summary style='cursor: pointer; font-weight: bold; margin: 10px 0;'>June</summary>
@@ -239,6 +257,9 @@ Robert Greene在引言中指出，人类大脑的进化初衷是为了让我们�
         <li>June 30</li>
       </ul>
     </details>
+  </li>
+
+### July
   </li>
   <li class='drawer-item'>
     <details>
@@ -277,6 +298,9 @@ Robert Greene在引言中指出，人类大脑的进化初衷是为了让我们�
         <li>July 31</li>
       </ul>
     </details>
+  </li>
+
+### August
   </li>
   <li class='drawer-item'>
     <details>

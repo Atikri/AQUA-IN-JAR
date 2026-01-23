@@ -7,3 +7,9 @@ weight: 5
 我们开进了未知的领域！这里是神秘海域，里面有什么东西？天知道！ :scream: 
 
 
+
+### 🗺️ Expeditions
+- [**🧬 Voice Science Master Learning Path**](voice-science-study-log/)
+- [Secret Chamber]({{< ref "secret-chamber" >}})  
+
+---  

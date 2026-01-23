@@ -29,21 +29,21 @@ featured: false
         <li><a href='https://tikri.site/aquas-field/reading-notes/January14/'>January 14: Avoid the False Path</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January15/'>January 15: Let a Sense of Purpose Guide You</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/January16/'>January 16: There Are No Superior Callings</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January17/'>January 17</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January18/'>January 18</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January19/'>January 19</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January20/'>January 20</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January21/'>January 21</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January22/'>January 22</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January23/'>January 23</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January24/'>January 24</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January25/'>January 25</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January26/'>January 26</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January27/'>January 27</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January28/'>January 28</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January29/'>January 29</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January30/'>January 30</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/January31/'>January 31</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January17/'>January 17: The True Source of Creativity</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January18/'>January 18: Stop Being So Nice</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January19/'>January 19: Listen to Your Inner Authority</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January20/'>January 20: See Mastery as Salvation</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January21/'>January 21: Depending on Others Is Misery</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January22/'>January 22: Use Resistance and Negative Spurs</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January23/'>January 23: Create a Ladder of Descending Goals</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January24/'>January 24: Combine Your Fascinations</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January25/'>January 25: Change Yourself from Within, Little by Little</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January26/'>January 26: Avoid the Counterforces to Mastery</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January27/'>January 27: The Real Secret</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January28/'>January 28: The Path Is Not Linear</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January29/'>January 29: Become Who You Are</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January30/'>January 30: Trust the Process</a></li>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/January31/'>January 31: The Source of All Power</a></li>
       </ul>
     </details>
   </li>

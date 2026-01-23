@@ -1,10 +1,132 @@
-﻿/* Global Font - Zen Maru Gothic Font */
-body,
-html {
-  font-family: 'Zen Maru Gothic', sans-serif !important;
+﻿/* Global Font - SNPro */
+@font-face {
+  font-family: 'SNPro';
+  src: url('/fonts/SNPro-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* Home Page Intro - Zen Maru Gothic Font (Redundant now, but keeping for specificity if needed) */
+@font-face {
+  font-family: 'SNPro';
+  src: url('/fonts/SNPro-ThinItalic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SNPro';
+  src: url('/fonts/SNPro-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SNPro';
+  src: url('/fonts/SNPro-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SNPro';
+  src: url('/fonts/SNPro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SNPro';
+  src: url('/fonts/SNPro-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SNPro';
+  src: url('/fonts/SNPro-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SNPro';
+  src: url('/fonts/SNPro-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SNPro';
+  src: url('/fonts/SNPro-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SNPro';
+  src: url('/fonts/SNPro-SemiboldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SNPro';
+  src: url('/fonts/SNPro-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SNPro';
+  src: url('/fonts/SNPro-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SNPro';
+  src: url('/fonts/SNPro-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SNPro';
+  src: url('/fonts/SNPro-BlackItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+body,
+html {
+  font-family: 'SNPro', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'SNPro', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* Home Page Intro - SNPro Font */
 .kind-home .content-container>section:first-of-type,
 .kind-home .content-container>section:first-of-type h2,
 .kind-home .content-container>section:first-of-type p,
@@ -12,8 +134,9 @@ html {
 .kind-home #hi-im-tikri+p,
 .kind-home #hi-im-tikri+p+p,
 .kind-home #hi-im-tikri+p+p+p {
-  font-family: 'Zen Maru Gothic', sans-serif;
+  font-family: 'SNPro', sans-serif;
 }
+
 
 /* Quote Card Compact (Marquee) */
 .quote-card-compact {

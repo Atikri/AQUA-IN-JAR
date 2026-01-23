@@ -1,6 +1,3 @@
-/* Import Source Sans Pro font */
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:600&display=swap");
-
 /* Todo List App Styles */
 #todo-app {
   max-width: 600px;
@@ -118,7 +115,7 @@
   opacity: 0.6;
 }
 
-.todo-item > input[type="checkbox"] {
+.todo-item>input[type="checkbox"] {
   flex-shrink: 0;
   margin: 0;
 }
@@ -205,6 +202,7 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -232,4 +230,3 @@
     align-items: flex-start;
   }
 }
-

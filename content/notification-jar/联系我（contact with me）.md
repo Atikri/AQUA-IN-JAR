@@ -13,6 +13,4 @@ aqutikri@gmail.com
 
 
 ## 💌Another Email: 
-(如果你只是要发文字不发档案的话也推荐发送到这个邮箱呦~)
-
-MoBVQWoavPQklyM_@mg.supernotes.app
+？？？

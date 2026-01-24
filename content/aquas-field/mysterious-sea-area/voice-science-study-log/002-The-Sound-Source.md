@@ -41,21 +41,22 @@ The vocal folds do not "clap" together like hands. They vibrate in the airstream
 
 ---
 
-### 📝 Session 2 Quiz
+### 📝 Session 2 Quiz (Completed)
 
 #### Q1: The Controllers
 **If I want to start singing, which group of muscles must activate first?**
-*(Hint: I need to turn breath into sound. What must the vocal folds do?)*
 
-> [Write your answer here]
+> **Answer: Adductors (LCA & IA)**
+> Used to close the glottis so air pressure can build up.
 
 #### Q2: The High Note
 **To hit a high C, I need to stretch the vocal folds tight. Which muscle is the primary "Stretcher"?**
-*(Hint: It connects the Ring and the Shield)*
 
-> [Write your answer here]
+> **Answer: CT (Cricothyroid)**
+> It tilts the thyroid cartilage forward like a visor, physically stretching the vocal folds longer and thinner.
 
 #### Q3: The Safety Valve
 **There is only ONE muscle that opens the airway for breathing. If this muscle is paralyzed, we cannot breathe. What is it?**
 
-> [Write your answer here]
+> **Answer: PCA (Posterior Cricoarytenoid)**
+> The life-saver muscle. It pulls the arytenoids open to let air in.

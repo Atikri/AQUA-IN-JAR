@@ -1,7 +1,7 @@
 ---
 date: "2025-11-27"
 title: "Episode1: 什么是自源性?声音的重要性?"
-featured: true
+featured: false
 slug: "episode-1"
 ---
 

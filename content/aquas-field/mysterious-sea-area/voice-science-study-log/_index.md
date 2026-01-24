@@ -14,8 +14,8 @@ This is the central hub for the **Voice Science Master Learning Path**. Below ar
 - **Phase 1: The Biological Hardware**
     - [x] [Module 1: The Chassis & Power Source (Respiration)]({{< ref "001-The-Biological-Hardware.md" >}})
     - [x] [Module 2: The Sound Source (Phonation)]({{< ref "002-The-Sound-Source.md" >}})
-    - [ ] Module 3: The Filter (Resonation / Articulation)
-    - [ ] Module 4: The Neural Control
+    - [x] [Module 3: The Filter (Resonation / Articulation)]({{< ref "003-The-Filter.md" >}})
+    - [x] [Module 4: The Neural Control]({{< ref "004-The-Neural-Control.md" >}})
 - **Phase 2: The Physics (Acoustics)**
 - **Phase 3: Technical Frameworks (CVT/Estill)**
 - **Phase 4: The Vocal Athlete**
@@ -23,3 +23,4 @@ This is the central hub for the **Voice Science Master Learning Path**. Below ar
 
 ## 📂 Study Logs
 (New files will appear here automatically)
+- [**📖 The Voice Dictionary (Glossary)**]({{< ref "Glossary.md" >}})

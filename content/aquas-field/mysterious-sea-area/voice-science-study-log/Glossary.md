@@ -160,3 +160,36 @@ A living document for decoding the "Alien Language" of Voice Science.
 *   **RLN (Recurrent Laryngeal Nerve)** `/rɪˈkʌrənt ləˈrɪndʒiəl nɜːrv/`
     *   🇨🇳 **喉返神经**
     *   Controls all Opening/Closing muscles. Loops under the heart. Damage = Paralysis.
+
+---
+
+## 🎹 7. Acoustics & Physics (Modules 5-6) / 声学与物理
+*   **Frequency** `/ˈfriːkwənsi/`
+    *   🇨🇳 **频率**
+    *   The speed of vibration. Measured in Hertz (Hz).
+    *   *Perception*: Pitch (High/Low).
+*   **Amplitude** `/ˈæmplɪtjuːd/`
+    *   🇨🇳 **振幅**
+    *   The size/displacement of the wave. Measured in Decibels (dB).
+    *   *Perception*: Loudness (Loud/Soft).
+*   **Fundamental Frequency (F0)** `/ˌfʌndəˈmɛntəl ˈfriːkwənsi/`
+    *   🇨🇳 **基频**
+    *   The lowest frequency in a complex tone. This defines the "Pitch" we hear.
+    *   *Ex*: A4 = 440Hz.
+*   **Harmonics (Overtones)** `/hɑːrˈmɒnɪks/`
+    *   🇨🇳 **泛音 / 谐波**
+    *   Whole number multiples of the F0 (H1, H2, H3...). They determine the "Timbre" or color of the sound.
+*   **Spectrogram** `/spɛkˈtrɒɡræm/`
+    *   🇨🇳 **声谱图**
+    *   A visual graph of sound over time. Shows Pitch (Y-axis), Time (X-axis), and Loudness (Darkness).
+*   **Formant 1 (F1)** `/ˈfɔːrmənt wʌn/`
+    *   🇨🇳 **第一共振峰**
+    *   Controlled by **Jaw/Throat opening**.
+    *   *Rule*: Open mouth = High F1. Closed mouth = Low F1.
+*   **Formant 2 (F2)** `/ˈfɔːrmənt tuː/`
+    *   🇨🇳 **第二共振峰**
+    *   Controlled by **Tongue Front/Back position**.
+    *   *Rule*: Front Tongue (EE) = High F2. Back Tongue (OO) = Low F2.
+*   **Formant Tuning** `/ˈfɔːrmənt ˈtuːnɪŋ/`
+    *   🇨🇳 **共振峰调谐**
+    *   The technique of adjusting the vowel shape (opening mouth) to match the resonance to the pitch. Crucial for singing high notes powerfully.

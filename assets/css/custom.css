@@ -1,4 +1,12 @@
-﻿/* Global Font - SNPro */
+﻿@font-face {
+  font-family: 'Vujahday Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/VujahdayScript-Regular.ttf') format('truetype');
+}
+
+/* Global Font - SNPro */
 @font-face {
   font-family: 'SNPro';
   src: url('/fonts/SNPro-Thin.woff2') format('woff2');

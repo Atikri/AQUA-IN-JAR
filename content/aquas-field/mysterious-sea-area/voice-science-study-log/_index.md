@@ -2,6 +2,7 @@
 title: "Voice Science Study Log"
 date: "2026-01-23"
 view: list
+featured: true
 ---
 
 ## 🧬 Voice Science Mastery: The Index

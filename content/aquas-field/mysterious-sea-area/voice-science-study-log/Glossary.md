@@ -193,3 +193,98 @@ A living document for decoding the "Alien Language" of Voice Science.
 *   **Formant Tuning** `/ˈfɔːrmənt ˈtuːnɪŋ/`
     *   🇨🇳 **共振峰调谐**
     *   The technique of adjusting the vowel shape (opening mouth) to match the resonance to the pitch. Crucial for singing high notes powerfully.
+
+---
+
+## 🛠️ 8. Technical Frameworks (Estill & CVT) / 技术的框架 (Modules 7-8)
+### Estill Voice Training
+*   **Attractor State** `/əˈtræktər steɪt/`
+    *   🇨🇳 **吸引状态 / 惯性状态**
+    *   The body's default, habitual muscle pattern (e.g., tightening the throat when singing high). The goal of Estill is to deconstruct this.
+*   **Retraction** `/rɪˈtrækʃən/`
+    *   🇨🇳 **假声带回缩**
+    *   Actively pulling the False Vocal Folds apart (using the "Silent Laugh") to prevent constriction.
+*   **Thyroid Tilt** `/ˈθaɪrɔɪd tɪlt/`
+    *   🇨🇳 **甲状软骨倾斜**
+    *   Rocking the thyroid cartilage forward to stretch the vocal folds (CT muscle). Key for sweetening the tone and high notes.
+
+### Complete Vocal Technique (CVT)
+*   **Neutral** `/ˈnuːtrəl/`
+    *   🇨🇳 **中性模式**
+    *   Soft, non-metallic mode. Can be breathy. (Ex: Lullaby).
+*   **Curbing** `/ˈkɜːrbɪŋ/`
+    *   🇨🇳 **抑制模式**
+    *   Half-metallic, "held back" quality. Emotional. Restricted vowels (UH, OH). (Ex: R&B).
+*   **Overdrive** `/ˈoʊvərdraɪv/`
+    *   🇨🇳 **过载模式**
+    *   Full-metallic, shouting quality. Loud. Restricted vowels (EH, OH). (Ex: Rock).
+*   **Edge** `/ɛdʒ/`
+    *   🇨🇳 **边缘模式**
+    *   Full-metallic + Extreme Twang. Sharp, screaming quality. (Ex: Belting).
+*   **Necessary Twang** `/ˈnɛsəsɛri twæŋ/`
+    *   🇨🇳 **必要之Twang**
+    *   The rule that *every* safe sound requires a slight narrowing of the epiglottic funnel to protect the cords.
+
+---
+
+## 🏃 9. The Vocal Athlete (Health & Load) / 嗓音运动医学 (Module 9)
+*   **Vocal Load** `/ˈvoʊkəl loʊd/`
+    *   🇨🇳 **嗓音负荷**
+    *   The total "cost" placed on the vocal folds. Calculated as: *Time × Intensity × Frequency*.
+    *   *Sign*: Vocal fatigue or loss of high notes.
+*   **Edema** `/ɪˈdiːmə/`
+    *   🇨🇳 **水肿**
+    *   Swelling of the vocal fold tissue caused by collision trauma (excessive singing/talking).
+    *   *Symptoms*: Voice feels "thick," "heavy," or lower in pitch.
+*   **Systemic Hydration** `/sɪˈstɛmɪk haɪˈdreɪʃən/`
+    *   🇨🇳 **全身补水**
+    *   Drinking water. It takes **4 hours** to reach the vocal mucosa.
+*   **Topical Hydration** `/ˈtɒpɪkəl haɪˈdreɪʃən/`
+    *   🇨🇳 **局部补水**
+    *   Direct steam inhalation (Nebulizer). Hits the cords instantly but lasts briefly.
+*   **Phonation Threshold Pressure (PTP)** `/foʊˈneɪʃən ˈθrɛʃhoʊld ˈprɛʃər/`
+    *   🇨🇳 **起声阈压**
+    *   The minimum amount of air pressure required to start vibration. If your cords are swollen (Edema), PTP goes UP (it's harder to start singing).
+*   **Warm-Down / Cool-Down** `/kuːl daʊn/`
+    *   🇨🇳 **嗓音冷却 / 放松**
+    *   Gentle exercises (humming, gliding) done *after* performance to flush out lactic acid and reduce inflammation.
+
+---
+
+## 🏥 10. Pathology & Therapy / 嗓音病理学 (Module 10)
+*   **Vocal Nodules** `/ˈvoʊkəl ˈnɒdjuːlz/`
+    *   🇨🇳 **声带小结**
+    *   Hard calluses on *both* sides (bilateral) caused by chronic abuse. The "Singer's Callus."
+*   **Vocal Polyp** `/ˈvoʊkəl ˈpɒlɪp/`
+    *   🇨🇳 **声带息肉**
+    *   Fluid-filled blister on *one* side (unilateral), often caused by a single traumatic scream.
+*   **Vocal Hemorrhage** `/ˈvoʊkəl ˈhɛmərɪdʒ/`
+    *   🇨🇳 **声带出血**
+    *   Burst blood vessel. Requires immediate and complete silence.
+*   **SOVT Exercises (Semi-Occluded Vocal Tract)**
+    *   🇨🇳 **半阻塞声道练习**
+    *   Therapeutic exercises (Straw Phonation, Lip Trills) that create back-pressure to massage the cords from the inside out.
+*   **Laryngologist** `/ˌlærɪŋˈɡɒlədʒɪst/`
+    *   🇨🇳 **喉科医生**
+    *   An ENT doctor who specializes *specifically* in the voice. Regular ENTs may miss subtle vocal injuries.
+
+---
+
+## 🌪️ 11. Respiration Deep Dive (Modules 103-104)
+*   **Vital Capacity (VC)** `/ˈvaɪtəl kəˈpæsɪti/`
+    *   🇨🇳 **肺活量**
+    *   The total usable air for speech. *VC = IRV + TV + ERV*.
+*   **Residual Volume (RV)** `/reˈzɪdjuəl ˈvɒljuːm/`
+    *   🇨🇳 **残气量**
+    *   The air left in lungs after max exhale. Cannot be emptied.
+*   **Checking Action** `/ˈtʃɛkɪŋ ˈækʃən/`
+    *   🇨🇳 **制衡作用**
+    *   Using inhalation muscles to hold back recoil during exhalation, ensuring steady pressure.
+*   **Atlas (C1) & Axis (C2)**
+    *   🇨🇳 **寰椎 (C1) & 枢椎 (C2)**
+    *   The top two vertebrae. Tension here directly affects laryngeal freedom.
+*   **Pectoral Girdle** `/ˈpɛktərəl ˈɡɜːrdəl/`
+    *   🇨🇳 **胸带 (肩带)**
+    *   Clavicle + Scapula. The upper anchor for breathing muscles.
+
+

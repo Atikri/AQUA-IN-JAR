@@ -11,7 +11,7 @@ Usage: {{< recent-posts count=4>}}
   {{/* Filter out secret-chamber content */}}
   {{- $filtered := slice -}}
   {{- range $published -}}
-  {{- if not (in .File.Dir "secret-chamber") -}}
+  {{- if not (or (in .File.Dir "secret-chamber") (in .File.Dir "mysterious-sea-area")) -}}
   {{- $filtered = $filtered | append . -}}
   {{- end -}}
   {{- end -}}

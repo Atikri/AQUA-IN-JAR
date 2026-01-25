@@ -108,7 +108,7 @@
         {{- end }}
         {{- else }}
         {{- range where .Site.RegularPages "Section" .Section }}
-        {{- if not (in .File.Dir "secret-chamber") }}
+        {{- if not (or (in .File.Dir "secret-chamber") (in .File.Dir "mysterious-sea-area")) }}
         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
         {{- end }}
         {{- end }}

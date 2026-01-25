@@ -42,20 +42,22 @@ Opera singers and Belters use this strategy.
 
 ---
 
-### 📝 Session 6 Quiz
+### 📝 Session 6 Quiz (Completed)
 
 #### Q1: See the Sound
 **If I look at a Spectrogram, I see horizontal "bands" of darkness where the sound is loudest. What are those dark bands called?**
 
-> [Write your answer here]
+> **Answer: Formants.**
+> These dark bands are the "Open Doors" where harmonics are being boosted by the throat shape.
 
 #### Q2: The Jaw Rule
 **I am singing the vowel "EE" (Closed). Does this vowel have a naturally Low F1 or High F1?**
 
-> [Write your answer here]
+> **Answer: Low F1.**
+> Closed mouth/jaw = Low Formant 1 frequency.
 
 #### Q3: The Modification
 **Why do singers "drop their jaw" when they sing high notes? (In terms of physics)**
-*(Hint: What are they trying to do to F1?)*
 
-> [Write your answer here]
+> **Answer: To raise F1 (and boost loudness).**
+> As the pitch (F0) rises, the singer must raise the filter (F1) to "catch" the pitch. If they kept the jaw closed (Low F1), the high pitch would hit a "wall" and get dampened. Dropping the jaw aligns the "Open Door" (Formant) with the Note (Harmonic).

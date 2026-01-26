@@ -1,7 +1,7 @@
 ﻿---
 title: "January 14: Avoid the False Path"
 date: "2026-01-14"
-hiddenFromList: false
+hiddenFromList: true
 featured: false
 draft: false
 ---

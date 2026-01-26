@@ -1,7 +1,7 @@
 ﻿---
 title: "January 9: Find Inspiration from Your Heroes"
 date: "2026-01-09"
-hiddenFromList: false
+hiddenFromList: true
 featured: false
 draft: false
 ---

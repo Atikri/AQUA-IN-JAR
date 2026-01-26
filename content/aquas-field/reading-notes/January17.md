@@ -1,7 +1,7 @@
 ﻿---
 title: "January 17: The True Source of Creativity"
 date: "2026-01-17"
-hiddenFromList: false
+hiddenFromList: true
 featured: false
 draft: false
 ---

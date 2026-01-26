@@ -1,7 +1,7 @@
 ﻿---
 title: "January 15: Let a Sense of Purpose Guide You"
 date: "2026-01-15"
-hiddenFromList: false
+hiddenFromList: true
 featured: false
 draft: false
 ---

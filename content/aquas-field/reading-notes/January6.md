@@ -1,7 +1,7 @@
 ---
 title: "January 6: Change Is the Law"
 date: "2026-01-06"
-hiddenFromList: false
+hiddenFromList: true
 featured: false
 ---
 

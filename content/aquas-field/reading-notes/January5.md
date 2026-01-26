@@ -1,6 +1,9 @@
 ---
 title: "January 5: Know What You’re Drawn to and Immerse Yourself in It"
 date: 2026-01-05
+hiddenFromList: true
+featured: false
+draft: false
 tags: ["reading-notes"]
 ---
 

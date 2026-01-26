@@ -1,7 +1,7 @@
 ---
 title: "January2: Reconnect with Your Childhood Obsession"
 date: "2026-01-02"
-hiddenFromList: false
+hiddenFromList: true
 featured: false
 ---
 

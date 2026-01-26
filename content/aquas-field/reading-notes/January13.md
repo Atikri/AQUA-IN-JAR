@@ -1,7 +1,7 @@
 ﻿---
 title: "January 13: Master the Small Things"
 date: "2026-01-13"
-hiddenFromList: false
+hiddenFromList: true
 featured: false
 draft: false
 ---

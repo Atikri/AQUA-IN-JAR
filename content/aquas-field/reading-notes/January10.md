@@ -1,7 +1,7 @@
 ﻿---
 title: "January 10: Embrace Your Weirdness"
 date: "2026-01-10"
-hiddenFromList: false
+hiddenFromList: true
 featured: false
 draft: false
 ---

@@ -1,7 +1,7 @@
 ---
 title: "January 8: Occupy Your Own Niche"
 date: "2026-01-08"
-hiddenFromList: false
+hiddenFromList: true
 featured: false
 ---
 

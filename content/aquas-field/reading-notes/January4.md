@@ -1,7 +1,7 @@
 ---
 title: "January 4: It is already within you"
 date: "2026-01-04"
-hiddenFromList: false
+hiddenFromList: true
 featured: false
 ---
 

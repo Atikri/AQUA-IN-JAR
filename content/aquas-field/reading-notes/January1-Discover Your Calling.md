@@ -1,7 +1,7 @@
 ---
 title: "January 1:Discover Your Calling"
 date: "2026-01-01"
-hiddenFromList: false
+hiddenFromList: true
 featured: false
 ---
 

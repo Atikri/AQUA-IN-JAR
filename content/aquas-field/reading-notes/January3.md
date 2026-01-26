@@ -1,6 +1,10 @@
 ---
 title: "January 3: The Voice"
 date: "2026-01-03"
+hiddenFromList: true
+featured: false
+draft: false
+tags: ["reading-notes"]
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)  

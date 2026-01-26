@@ -1,7 +1,7 @@
 ﻿---
 title: "January 16: There Are No Superior Callings"
 date: "2026-01-16"
-hiddenFromList: false
+hiddenFromList: true
 featured: false
 draft: false
 ---

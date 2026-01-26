@@ -1,7 +1,7 @@
 ---
 title: "January 7: Money and Success"
 date: "2026-01-07"
-hiddenFromList: false
+hiddenFromList: true
 draft: false
 featured: false
 ---

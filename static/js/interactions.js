@@ -60,7 +60,12 @@
     async function loadLikeStats() {
         try {
             const url = `${CONFIG.supabaseUrl}/rest/v1/post_likes?post_id=eq.${encodeURIComponent(postId)}&select=like_count`;
-            const res = await fetch(url, { headers: { 'apikey': CONFIG.supabaseKey } });
+            const res = await fetch(url, {
+                headers: {
+                    'apikey': CONFIG.supabaseKey,
+                    'Authorization': `Bearer ${CONFIG.supabaseKey}`
+                }
+            });
             if (res.ok) {
                 const data = await res.json();
                 const count = data[0]?.like_count || 0;
@@ -107,7 +112,12 @@
         try {
             // 1. Check exist
             const chkUrl = `${CONFIG.supabaseUrl}/rest/v1/post_likes?post_id=eq.${encodeURIComponent(postId)}&select=like_count`;
-            const checkRes = await fetch(chkUrl, { headers: { 'apikey': CONFIG.supabaseKey } });
+            const checkRes = await fetch(chkUrl, {
+                headers: {
+                    'apikey': CONFIG.supabaseKey,
+                    'Authorization': `Bearer ${CONFIG.supabaseKey}`
+                }
+            });
             const existing = await checkRes.json();
 
             if (existing && existing.length > 0) {

@@ -2,7 +2,7 @@
 title: "Voice Science Study Log"
 date: "2026-01-23"
 view: list
-featured: true
+featured: false
 ---
 
 ## 🧬 Voice Science Mastery: The Index
@@ -36,3 +36,6 @@ This is the central hub for the **Voice Science Master Learning Path**. Below ar
 - [**🧠 Deep Dive 2: Neuro-Voice (Cranial Nerves)**]({{< ref "102-Neuro-Voice-Connection.md" >}})
 - [**🌪️ Deep Dive 3: Respiration (Skeleton)**]({{< ref "103-Respiration-The-Skeleton.md" >}})
 - [**🌪️ Deep Dive 4: Respiration (Physiology)**]({{< ref "104-Respiration-Physiology.md" >}})
+- [**🎻 Deep Dive 5: Phonation (Anatomy - Cartilage)**]({{< ref "105-Phonation-The-Cartilages.md" >}})
+- [**🎻 Deep Dive 6: Phonation (Anatomy - Muscles)**]({{< ref "106-Phonation-The-Muscles.md" >}})
+- [**🎻 Deep Dive 7: Phonation (Physiology)**]({{< ref "107-Phonation-Physiology.md" >}})

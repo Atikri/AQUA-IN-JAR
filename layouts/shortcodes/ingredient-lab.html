@@ -1,0 +1,208 @@
+<div class="ingredient-lab-container">
+    <style>
+        .ingredient-lab {
+            font-family: 'Inter', sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            border: 2px solid #DACBB4;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            background: #fff;
+        }
+
+        .category-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .category-btn {
+            padding: 8px 16px;
+            border: 2px solid #DACBB4;
+            border-radius: 20px;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        .category-btn.active {
+            background: #4C6475;
+            color: #fff;
+            border-color: #4C6475;
+        }
+
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .ingredient-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            border: 1px solid #eee;
+        }
+
+        .ingredient-card h3 {
+            margin: 0 0 8px 0;
+            color: #4C6475;
+        }
+
+        .ingredient-card .category {
+            display: inline-block;
+            background: #DACBB4;
+            color: #4C6475;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .ingredient-card .details {
+            display: none;
+            margin-top: 15px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        .ingredient-card.expanded .details {
+            display: block;
+        }
+    </style>
+
+    <div class="ingredient-lab">
+        <div class="stats-bar" style="margin-bottom: 20px; padding: 10px; background: #eee; border-radius: 8px;">
+            <span>🥗 <strong id="countDisplay">0</strong> Items</span>
+            <span id="filterStatus" style="float: right;">All</span>
+        </div>
+
+        <input type="text" class="search-box" id="searchInput" placeholder="Search ingredients...">
+
+        <div class="category-filters" id="categoryFilters">
+            <button class="category-btn active" data-category="all">All</button>
+        </div>
+
+        <div class="ingredients-grid" id="ingredientsGrid"></div>
+    </div>
+</div>
+
+<script>
+    (function () {
+        var allIngredients = [];
+        var currentCategory = 'all';
+
+        function init() {
+            console.log(' initializing ingredient lab...');
+            fetch('/data/ingredients.json?v=' + new Date().getTime())
+                .then(function (res) {
+                    if (!res.ok) throw new Error('HTTP ' + res.status);
+                    return res.json();
+                })
+                .then(function (data) {
+                    console.log('Data loaded:', data.length);
+                    allIngredients = data;
+                    setupFilters();
+                    render(allIngredients);
+                })
+                .catch(function (err) {
+                    console.error(err);
+                    document.getElementById('ingredientsGrid').innerHTML = '<p style="color:red">Error: ' + err.message + '</p>';
+                });
+
+            document.getElementById('searchInput').addEventListener('input', applyFilters);
+            document.querySelector('[data-category="all"]').addEventListener('click', function () { filterByCategory('all'); });
+        }
+
+        function setupFilters() {
+            var categories = [];
+            allIngredients.forEach(function (item) {
+                if (item.category && !categories.includes(item.category)) {
+                    categories.push(item.category);
+                }
+            });
+            categories.sort();
+
+            var container = document.getElementById('categoryFilters');
+            categories.forEach(function (cat) {
+                var btn = document.createElement('button');
+                btn.className = 'category-btn';
+                btn.textContent = cat;
+                btn.dataset.category = cat;
+                btn.addEventListener('click', function () { filterByCategory(cat); });
+                container.appendChild(btn);
+            });
+        }
+
+        function render(items) {
+            var grid = document.getElementById('ingredientsGrid');
+            grid.innerHTML = '';
+            document.getElementById('countDisplay').textContent = items.length;
+
+            if (items.length === 0) {
+                grid.innerHTML = '<p>No results found.</p>';
+                return;
+            }
+
+            items.forEach(function (item) {
+                var card = document.createElement('div');
+                card.className = 'ingredient-card';
+
+                var name = item.name || 'Unknown';
+                var cat = item.category || 'General';
+                var ben = item.benefit || '';
+                var use = item.usage || '';
+                var note = item.note || '';
+
+                card.innerHTML = '<h3>' + name + '</h3>' +
+                    '<span class="category">' + cat + '</span>' +
+                    '<p>' + ben + '</p>' +
+                    '<div class="details">' +
+                    '<h4>Usage</h4><p>' + use + '</p>' +
+                    '<h4>Note</h4><p>' + note + '</p>' +
+                    '</div>';
+
+                card.addEventListener('click', function () {
+                    this.classList.toggle('expanded');
+                });
+
+                grid.appendChild(card);
+            });
+        }
+
+        function filterByCategory(cat) {
+            currentCategory = cat;
+            var btns = document.querySelectorAll('.category-btn');
+            btns.forEach(function (b) {
+                if (b.dataset.category === cat) b.classList.add('active');
+                else b.classList.remove('active');
+            });
+            applyFilters();
+        }
+
+        function applyFilters() {
+            var term = document.getElementById('searchInput').value.toLowerCase();
+            var filtered = allIngredients.filter(function (item) {
+                var matchCat = (currentCategory === 'all') || (item.category === currentCategory);
+                var matchSearch = !term || (item.name + item.benefit).toLowerCase().includes(term);
+                return matchCat && matchSearch;
+            });
+            render(filtered);
+        }
+
+        // Run
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })();
+</script>

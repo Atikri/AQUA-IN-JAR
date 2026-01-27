@@ -3,6 +3,7 @@ title: "101: Anatomy Deep Dive - Basic Elements"
 date: "2026-01-25"
 weight: 101
 mermaid: true
+featured: true
 ---
 
 [← Back to Master Map](../)

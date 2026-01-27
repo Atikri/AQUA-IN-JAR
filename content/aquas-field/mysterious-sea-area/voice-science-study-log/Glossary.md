@@ -287,4 +287,147 @@ A living document for decoding the "Alien Language" of Voice Science.
     *   🇨🇳 **胸带 (肩带)**
     *   Clavicle + Scapula. The upper anchor for breathing muscles.
 
+---
 
+## 🎻 12. Phonation Deep Dive (Modules 105-107)
+*   **Hyoid Bone** `/ˈhaɪɔɪd boʊn/`
+    *   🇨🇳 **舌骨**
+    *   The U-shaped floating bone. The larynx hangs from it; the tongue sits on it.
+*   **Cricoid Cartilage** `/ˈkraɪkɔɪd/`
+    *   🇨🇳 **环状软骨**
+    *   The "Signet Ring" at the base of the larynx.
+*   **Arytenoid Cartilage** `/ærɪˈtiːnɔɪd/`
+    *   🇨🇳 **杓状软骨**
+    *   The paired pyramids that move the vocal folds.
+*   **PCA (Posterior Cricoarytenoid)**
+    *   🇨🇳 **环杓后肌**
+    *   The ONLY Abductor (Opener). Life-sustaining muscle.
+*   **LCA (Lateral Cricoarytenoid)**
+    *   🇨🇳 **环杓侧肌**
+    *   Main Adductor (Closer). Rotates processes inward.
+*   **Bernoulli Effect** `/bərˈnuːli/`
+    *   🇨🇳 **伯努利效应**
+    *   Physics principle: As velocity of air increases (at the glottis), pressure decreases (sucking cords shuts).
+
+
+
+
+
+---
+
+## 📥 Imported Vocabulary (Google Sheet)
+*   **Anatomy** /əˈnætəmi/
+    *   🇨🇳 **解剖学**
+    *   The study of the structure of organisms and their parts.
+    *   *Ex*: "The textbook covers the anatomy of the breathing apparatus."
+    *   *Note*: 侧重“硬件”结构。
+*   **Physiology** /ˌfɪziˈɒlədʒi/
+    *   🇨🇳 **生理学**
+    *   The way in which a living organism or bodily part functions.
+    *   *Ex*: "...understanding the physiology of speech production."
+    *   *Note*: 侧重“软件”功能、运作。
+*   **Superior** /suːˈpɪəriər/
+    *   🇨🇳 **上方/上侧**
+    *   Situated above or higher than another part.
+    *   *Ex*: "The head is superior to the neck."
+    *   *Note*: 医学方位词，不可用 above 代替。
+*   **Inferior** /ɪnˈfɪəriər/
+    *   🇨🇳 **下方/下侧**
+    *   Situated below or further from the head.
+    *   *Ex*: "The larynx is inferior to the pharynx."
+    *   *Note*: 与 Superior 相对。
+*   **Anterior** /ænˈtɪəriər/
+    *   🇨🇳 **前面/前侧**
+    *   Nearer the front, especially situated in the front of the body.
+    *   *Ex*: "The trachea is anterior to the esophagus."
+    *   *Note*: 常用在描述器官前后叠放关系。
+*   **Posterior** /pɒˈstɪəriər/
+    *   🇨🇳 **后面/后侧**
+    *   Further back in position; of or nearer the rear or hind end.
+    *   *Ex*: "The esophagus is posterior to the trachea."
+    *   *Note*: 与 Anterior 相对。
+*   **Mechanism** /ˈmekənɪzəm/
+    *   🇨🇳 **机制/构造**
+    *   A system of parts working together in a machine or organism.
+    *   *Ex*: "...the complex mechanism of voice production."
+    *   *Note*: 学术高频词，指代一整套运行系统。
+*   **Apparatus** /ˌæpəˈreɪtəs/
+    *   🇨🇳 **器械/器官装置**
+    *   The complex structure of a particular organ or system.
+    *   *Ex*: "...the skeletal framework of the breathing apparatus."
+    *   *Note*: 泛指执行某种功能的整套解剖结构。
+*   **Vertebrae** /ˈvɜːrtɪbriː/
+    *   🇨🇳 **椎骨**
+    *   Each of the series of small bones forming the backbone.
+    *   *Ex*: "The vertebral column consists of 34 vertebrae."
+    *   *Note*: 单数是 vertebra，注意复数结尾读音。
+*   **Thoracic** /θəˈræsɪk/
+    *   🇨🇳 **胸腔的/胸部的**
+    *   Relating to the thorax (the chest).
+    *   *Ex*: "There are twelve thoracic vertebrae."
+    *   *Note*: SLP 核心词，呼吸系统的主战场。
+*   **Cervical** /ˈsɜːvɪkl/
+    *   🇨🇳 **颈部的**
+    *   Relating to the neck.
+    *   *Ex*: "The cervical vertebrae support the head."
+    *   *Note*: 容易误读，注意重音在第一个音节。
+*   **Lumbar** /ˈlʌmbər/
+    *   🇨🇳 **腰部的**
+    *   Relating to the lower back.
+    *   *Ex*: "The lumbar vertebrae are the largest."
+    *   *Note*: 生活中常说的“腰肌劳损”也是这个词。
+*   **Cartilage** /ˈkɑːrtɪlɪdʒ/
+    *   🇨🇳 **软骨**
+    *   Firm, flexible connective tissue.
+    *   *Ex*: "Ribs are connected to the sternum by cartilage."
+    *   *Note*: 声带所在的发声器官（喉）大部分由软骨构成。
+*   **Lateral** /ˈlætərəl/
+    *   🇨🇳 **侧面的/外侧的**
+    *   Of, at, from, or toward the side or sides.
+    *   *Ex*: "The lungs are lateral to the heart."
+    *   *Note*: 方位词，指远离身体中线。
+*   **Medial** /ˈmiːdiəl/
+    *   🇨🇳 **中间的/内侧的**
+    *   Situated in the middle.
+    *   *Ex*: "The heart is medial to the lungs."
+    *   *Note*: 指靠近身体中线。
+*   **Skeletal** /ˈskelɪtl/
+    *   🇨🇳 **骨骼的**
+    *   Relating to or functioning as a skeleton.
+    *   *Ex*: "...the skeletal framework of the breathing apparatus."
+    *   *Note*: 这里的 framework 指“框架”。
+*   **Sternum** /ˈstɜːnəm/
+    *   🇨🇳 **胸骨**
+    *   A long flat bone located in the center of the chest.
+    *   *Ex*: "The ribs are attached to the sternum anteriorly."
+    *   *Note*: 俗称 breastbone。
+*   **Vertebral** /ˈvɜːrtɪbrəl/
+    *   🇨🇳 **椎骨的/脊柱的**
+    *   Relating to the vertebrae or the spinal column.
+    *   *Ex*: "The vertebral column supports the trunk."
+    *   *Note*: 注意重音在第一个音节。
+*   **Sacrum** /ˈseɪkrəm/
+    *   🇨🇳 **骶骨**
+    *   A triangular bone in the lower back between the hip bones.
+    *   *Ex*: "The sacrum is inferior to the lumbar vertebrae."
+    *   *Note*: 脊柱五大部分之一。
+*   **Coccyx** /ˈkɒksɪks/
+    *   🇨🇳 **尾骨**
+    *   A small, triangular bone at the base of the spinal column.
+    *   *Ex*: "The coccyx is the terminal part of the vertebral column."
+    *   *Note*: 也就是人类退化的“尾巴”。
+*   **Bernoulli Effect** /bərˈnuːli ɪˈfekt/
+    *   🇨🇳 **伯努利效应**
+    *   Pressure decrease as fluid velocity increases.
+    *   *Ex*: "The Bernoulli effect helps pull the vocal folds together."
+    *   *Note*: 声带振动的关键物理原理。
+*   **Pneumothorax** /ˌnjuːməʊˈθɔːræks/
+    *   🇨🇳 **气胸**
+    *   A collapsed lung caused by air in the pleural cavity.
+    *   *Ex*: "He had a surgical history of pneumothorax."
+    *   *Note*: 你个人背景相关的核心医学词汇。
+*   **Membrane** /ˈmembreɪn/
+    *   🇨🇳 **膜**
+    *   A thin pliable sheet of material forming a boundary.
+    *   *Ex*: "The pleura is a double-layered membrane."
+    *   *Note*: 呼吸力学中极重要的组织。

@@ -64,7 +64,8 @@
                 headers: {
                     'apikey': CONFIG.supabaseKey,
                     'Authorization': `Bearer ${CONFIG.supabaseKey}`
-                }
+                },
+                cache: 'no-store'
             });
             if (res.ok) {
                 const data = await res.json();
@@ -116,7 +117,8 @@
                 headers: {
                     'apikey': CONFIG.supabaseKey,
                     'Authorization': `Bearer ${CONFIG.supabaseKey}`
-                }
+                },
+                cache: 'no-store'
             });
             const existing = await checkRes.json();
 

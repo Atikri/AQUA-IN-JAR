@@ -3,7 +3,7 @@ title: "January 29: Become Who You Are"
 date: "2026-01-29"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,3 +48,5 @@ draft: true
     </details>
   </li>
 </ul>  
+
+## 成为你自己

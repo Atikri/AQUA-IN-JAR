@@ -42,7 +42,7 @@ title: 'AQUA IN JAR活动报名'
 
 ## 📝 活动报名
 
-如果你想参与 AQUA IN JAR 活动，请填写下面的报名表单。我会尽快通过您提供的联系方式与您联系！
+如果你想参与 AQUA IN JAR 活动，请填写下面的报名表单。我会尽快通过你提供的联系方式与你联系！
 
 [👉 点击这里填写报名表单](https://docs.google.com/forms/d/e/1FAIpQLSefyhOjVgbp54SY43MORS9OVfKMSvpkgmvZPMwOK3ylFT3cRQ/viewform?embedded=true)
 

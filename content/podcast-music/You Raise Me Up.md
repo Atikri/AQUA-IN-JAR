@@ -12,5 +12,5 @@ title: "you raise me up"
 
 <video width="100%" controls>
     <source src="/videos/youraisemeup-720p.mp4" type="video/mp4">
-    您的浏览器不支持 Video 标签。
+    你的浏览器不支持 Video 标签。
 </video>

@@ -41,7 +41,7 @@
 ```html
 <video controls preload="metadata" style="width:100%;max-width:800px">
   <source src="/videos/video.mp4" type="video/mp4">
-  您的浏览器不支持视频播放。
+  你的浏览器不支持视频播放。
 </video>
 ```
 
@@ -160,4 +160,4 @@ A: 考虑进一步压缩图片和视频文件大小
 
 ---
 
-通过实施延迟加载，您的网站加载速度将显著提升，用户体验也会得到明显改善！
+通过实施延迟加载，你的网站加载速度将显著提升，用户体验也会得到明显改善！

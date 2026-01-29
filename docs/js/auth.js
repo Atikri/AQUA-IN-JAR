@@ -128,7 +128,7 @@
                     msg.textContent = '错误: ' + error.message;
                     msg.style.color = 'red';
                 } else {
-                    msg.textContent = '✅ 登录链接已发送到您的邮箱，请查收！';
+                    msg.textContent = '✅ 登录链接已发送到你的邮箱，请查收！';
                     msg.style.color = 'green';
                 }
             } else {

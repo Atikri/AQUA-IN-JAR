@@ -17,9 +17,9 @@ layout: "single"
 
 ### About this Tool
 
-这款**记账工具**完全在您的浏览器中运行，使用 IndexedDB 技术。所有数据都不会发送到任何服务器。
-*   **隐私保护：**您的财务数据完全属于您自己。您可以随时通过设置进行备份。
-*   **定期导出：**可以定期点击导出按钮导出您的财务数据，方便查看和分析。
+这款**记账工具**完全在你的浏览器中运行，使用 IndexedDB 技术。所有数据都不会发送到任何服务器。
+*   **隐私保护：**你的财务数据完全属于你自己。你可以随时通过设置进行备份。
+*   **定期导出：**可以定期点击导出按钮导出你的财务数据，方便查看和分析。
 
 This **Money Toolbox** runs entirely in your browser using IndexedDB. No data is sent to any server. 
 *   **Privacy:** Your financial data belongs to you. Backup anytime via the settings.

@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>延迟加载测试</title>
     <link rel="stylesheet" href="static/css/lazy-loading.css">
 </head>
+
 <body>
     <h1>延迟加载测试页面</h1>
-    
+
     <h2>测试图片延迟加载</h2>
     <div class="lazy-image-container">
-        <img data-src="/images/posts/wedding1.jpg" alt="测试图片1" class="lazy-loading" style="width: 100%; border-radius: 8px;">
+        <img data-src="/images/posts/wedding1.jpg" alt="测试图片1" class="lazy-loading"
+            style="width: 100%; border-radius: 8px;">
     </div>
-    
+
     <div class="lazy-image-container">
-        <img data-src="/images/posts/wedding2.jpg" alt="测试图片2" class="lazy-loading" style="width: 100%; border-radius: 8px;">
+        <img data-src="/images/posts/wedding2.jpg" alt="测试图片2" class="lazy-loading"
+            style="width: 100%; border-radius: 8px;">
     </div>
-    
+
     <h2>测试视频延迟加载</h2>
     <div class="lazy-video-container">
-        <video data-src="/videos/wedding1.mp4" class="lazy-loading" controls muted playsinline style="width: 100%; border-radius: 8px;">
-            您的浏览器不支持视频播放。
+        <video data-src="/videos/wedding1.mp4" class="lazy-loading" controls muted playsinline
+            style="width: 100%; border-radius: 8px;">
+            你的浏览器不支持视频播放。
         </video>
     </div>
-    
+
     <div class="lazy-video-container">
-        <video data-src="/videos/wedding2.mp4" class="lazy-loading" controls muted playsinline style="width: 100%; border-radius: 8px;">
-            您的浏览器不支持视频播放。
+        <video data-src="/videos/wedding2.mp4" class="lazy-loading" controls muted playsinline
+            style="width: 100%; border-radius: 8px;">
+            你的浏览器不支持视频播放。
         </video>
     </div>
-    
+
     <script src="static/js/lazy-loading.js"></script>
 </body>
+
 </html>

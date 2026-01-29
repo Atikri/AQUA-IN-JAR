@@ -26,7 +26,7 @@
     <div class="home-card__icon">🎧</div>
     <h3 class="home-card__title">Latest Podcast</h3>
     <p class="home-card__desc">瓶中水podcast2: 释放你的天然嗓音：1.脊柱的练习</p>
-    <a href="/podcast-music/episode2/" class="home-card__link">Listen Now →</a>
+    <a href="/podcast-music/podcast2/" class="home-card__link">Listen Now →</a>
   </div>
 </div>
 

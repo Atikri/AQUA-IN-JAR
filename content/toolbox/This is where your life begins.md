@@ -169,7 +169,7 @@ A short, practical reset for your mornings that calms anxiety, builds confidence
 Mel and Dr. Cal Newport break down the science of focus and attention, and give you concrete ways to stop procrastinating and protect your time.  
 
 ## [1 Neurosurgeon: How to Manifest Anything You Want & Unlock the Unlimited Power of Your Mind (Ep. 312)](https://www.melrobbins.com/episode/episode-312/)  
-[BLOG'S HERE📃](http://tikri.site/aquas-field/reading-notes/How-to-Get-Things-Done/)  
+[BLOG'S HERE📃](http://tikri.site/aquas-field/reading-notes/How-to-Manifest-Anything-You-Want/)  
 Dr. Jim Doty explains the neuroscience behind manifestation and gives a clear process for turning intention into reality.  
 
 ## [How to Get Motivated Even When You Don’t Feel Like It (Ep. 208)](https://www.melrobbins.com/episode/episode-208/)

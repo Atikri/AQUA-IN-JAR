@@ -6,8 +6,8 @@ featured: false
 draft: false
 ---
 
-Podcast URL 🔗:[#1 Neurosurgeon: How to Manifest Anything You Want & Unlock the Unlimited Power of Your Mind](https://www.melrobbins.com/episode/episode-312/)  
-
+Podcast URL 🔗:[#1 Neurosurgeon: How to Manifest Anything You Want & Unlock the Unlimited Power of Your Mind](https://www.melrobbins.com/episode/episode-312/)    
+我的随笔笔记 📃：[How to Manifest Anything You Want](/file/How-to-manifest-anything-you-want.pdf)    
 这期播客是 Mel Robbins 采访 **斯坦福大学神经外科医生、神经科学家 James Doty 博士**  
 
 这一集的核心主题是：**如何利用神经科学（而非迷信或魔法）来“显化”（Manifest）你想要的生活，并重塑你的大脑。**  

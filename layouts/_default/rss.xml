@@ -10,8 +10,8 @@
       {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
     {{/* The logic here is key: directly force the crawling of all main content articles on the entire site */}}
-    {{- $pages := .Site.RegularPages -}}
-    {{- range first 20 $pages -}}
+    {{- $pages := .Site.RegularPages.ByDate.Reverse -}}
+    {{- range first 50 $pages -}}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>

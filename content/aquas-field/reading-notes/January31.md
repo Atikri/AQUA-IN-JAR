@@ -52,8 +52,8 @@ draft: false
 ## 力量的源泉
 不要试图绕过发现你“人生使命”（Life’s Task）的艰苦工作，也不要幻想它会自然而然地降临。虽然对少数人来说，它可能在生命早期或通过某个灵光一现的时刻出现，但对大多数人而言，这需要==持续的内省和努力==。  
 去尝试与你的个性及倾向相关的技能和选项，这不仅是建立崇高目标感和获得精通的最关键一步，这也许还是人生中最重要的一步。  
-> 今日法则：深刻地了解你是谁、你的独特性，将使你更容易避开人生中所有其他的陷阱。  
-> 
+> 今日法则：深刻地了解你是谁、你的独特性，将使你更容易避开人生中所有其他的陷阱。   
+> Daily Law: Knowing in a deep way who you are, your uniqueness, will make it that much easier to avoid all of life’s other pitfalls.  
 
 ---  
 

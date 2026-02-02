@@ -48,7 +48,8 @@ draft: false
 
 ## 臣服于现实：学徒阶段
 > We receive three educations, one from our parents, one from our school masters, and one from the world. The third contradicts all that the first two teach us.[^1]  
-> —BARON DE MONTESQUIEU[^2]  
+> —BARON DE MONTESQUIEU[^2]   
+
 在完成正式教育后，你进入了生命中最关键的阶段——一种被称为“**学徒期**”（The Apprenticeship）的实践教育。每当你转换职业或习得新技能时，你都会重新进入这个生命阶段。学徒期的目标不是为了赚钱，不是为了成名、获得关注，也不是为了得到一个头衔好听的安逸职位；相反，它的目标是==从本质上改变你自己==。  
 你进入学徒期时本质上是天真且缺乏技能的，而且可能还有些缺乏耐心。但最终，你将转变为一个技艺精湛、现实且富有耐心的人，一个理解人类政治本性并掌握行业规则的人。这涉及对现实的彻底臣服——即你的领域中数百年来建立的规则、程序和惯例。你必须让自己沉浸在这种现实中，这样你最终才能成为那个**重写规则**的人，就像所有大师所做的那样。    
 

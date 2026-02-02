@@ -3,7 +3,7 @@ title: "February 2: What the Mentor Needs"
 date: "2026-02-02"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -47,17 +47,22 @@ draft: true
 </ul>
 
 ## 导师的需求
-在寻求导师时，很多人只关注自己能从导师那里得到什么。然而，真正的导师关系是双向的。你需要理解导师的思维方式、他们的需求以及他们对工作的期望。
+导师与学徒的关系是一种非常互惠的关系。当你处于较低的位置并寻求权势人物的帮助时，你必须走出自我，去思考他们的需求。显然，导师有很多东西可以教你，但更重要的是，你必须有东西可以回报他们。  
 
 以 Ryan Holiday 为例。他在 2006 年成为 Robert Greene 的研究助理。Holiday 之所以脱颖而出，是因为他深入研究了 Greene 的作品，甚至在见面之前就理解了 Greene 的逻辑和对故事的偏好。他提供的内容正是导师所需要的。
 
-> 今日法则：在寻找导师之前，先沉浸在他们的作品和思维模式中。
-> Daily Law: Before meeting a mentor, immerse yourself in their work and thought patterns.
+> Daily Law: Find a master to apprentice under, but instead of thinking about how much they can give you, think about how you can help them with their work. [^1]
+
 
 ---
 
-## 主动观察
-导师最看重的是能理解他们意图的学生。如果你能预判导师的需求，并且表现出对该领域底层逻辑的尊重，导师会更愿意分享他们的核心智慧。
+## 走出“自我中心主义”
+大多数年轻人在寻找导师时，心态是“乞求”或“索取”，只关注自己的成长需求。这在权力的现实世界中是行不通的。要赢得大师的关注，你必须具备“**用户思维**”——即大师现在面临什么痛苦？我如何能为他节省最宝贵的资源：时间？
 
-## 建立连接
-不要只是做一个执行者，要做一个理解者。通过细致的观察和深度的准备，缩短你与导师之间的思维距离。
+## 准备工作的“反向工程”
+Ryan 的关键在于==深度准备==。他不是带着问题去问 Greene，而是通过 Greene 的著作去研究 Greene 的思维结构。这种“反向工程”让他能像 Greene 一样思考，从而使他的辅助工作具备了极高的精准度。这种准备程度本身就是对导师最大的尊重。
+
+## 技能的等价交换
+学徒期并非慈善。Ryan 利用 Greene 缺失的技能（互联网技术）来交换 Greene 拥有的高级技能（研究与写作架构）。这展示了学徒如何在维持较低地位的同时，通过提供互补性价值来建立稳固的关系。
+
+[^1]: 今日法则：寻找一位大师在其门下学习，但与其思考他们能给你什么，不如思考你能如何帮助他们的工作。  

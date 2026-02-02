@@ -106,7 +106,7 @@
 
 /* Hover effect */
 .drawer-item details>summary:hover {
-    color: #5560e0 !important;
+    color: #212D5D !important;
 }
 
 /* Active state (when open) */

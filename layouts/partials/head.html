@@ -74,33 +74,7 @@
   {{ $lazyJs := "js/lazy-loading.js" }}
   <script src="{{ $lazyJs | relURL }}" defer></script>
 
-  {{- /* Interactions */ -}}
-  {{- if eq .Kind "page" }}
-  {{ $jsLikeConfig := "js/like-config.js" }}
-  <script src="{{ $jsLikeConfig | relURL }}"></script>
-  <script>
-    (function () {
-      try {
-        var cfg = window.LIKE_CONFIG;
-        if (!cfg || !cfg.supabaseUrl) return;
-        var a = document.createElement('a');
-        a.href = cfg.supabaseUrl;
-        var origin = a.protocol + '//' + a.host;
-        var link1 = document.createElement('link');
-        link1.rel = 'preconnect';
-        link1.href = origin;
-        link1.crossOrigin = '';
-        document.head.appendChild(link1);
-        var link2 = document.createElement('link');
-        link2.rel = 'dns-prefetch';
-        link2.href = origin;
-        document.head.appendChild(link2);
-      } catch (e) { }
-    })();
-  </script>
-  {{ $jsInteractions := "js/interactions.js" }}
-  <script src="{{ $jsInteractions | relURL }}" defer></script>
-  {{- end }}
+
 
   {{- /* Checklist Scripts (Style Fixer included) */ -}}
   {{ $jsChecklistScore := "js/checklist-score.js" }}

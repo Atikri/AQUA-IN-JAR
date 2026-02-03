@@ -52,7 +52,7 @@ draft: false
 
 这个原则很简单，必须深深刻在你的脑海里：学徒期的目标不是金钱、好的职位、头衔或文凭，而是==思想和性格的转变==——这是通往精通之路的==第一次[转变](https://tikri.site/aquas-field/reading-notes/%E8%BD%AC%E5%8F%98%E4%B9%8B%E4%B9%A6/)==。你必须选择那些能提供最大学习可能性的工作场所和职位。==实践知识==是终极商品，它将在未来的几十年里为你带来红利——远超你在一些看似有利可图但学习机会较少的职位上获得的微薄加薪。这意味着你要投身于那些==能磨炼和提升你的挑战==，在那里你能获得关于自己表现和进步的最客观反馈。不要选择那些看起来轻松舒适的学徒期。  
 
-> Daily Law: Practical knowledge is the ultimate commodity. Evaluate opportunities using one criterion: the greatest possibility for learning.  
+> Daily Law: Practical knowledge is the ultimate commodity. Evaluate opportunities using one criterion: the greatest possibility for learning.[^2]   
 
 ---
 

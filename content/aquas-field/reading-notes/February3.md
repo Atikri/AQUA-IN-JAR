@@ -3,7 +3,7 @@ title: "February 3: You Have One Goal"
 date: "2026-02-03"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -46,18 +46,26 @@ draft: true
   </li>
 </ul>
 
-## 你只有一个目标：自我转变
-学徒期最核心的原则是：智慧并非学校教育的产物，而是终身追求知识的结果。学徒阶段的目标不是财务收益、一个好的职位、头衔或文凭。相反，它是你思维和性格的彻底转变，这是通往精通的第一步。
+## 你只有一个目标
+> Wisdom is not a product of schooling but of the lifelong attempt to acquire it.   
+> —ALBERT EINSTEIN[^1]  
 
-因此，在选择工作场所和职位时，应优先考虑那些能提供最大个人与智力成长机会的机会。
+这个原则很简单，必须深深刻在你的脑海里：学徒期的目标不是金钱、好的职位、头衔或文凭，而是==思想和性格的转变==——这是通往精通之路的==第一次[转变](https://tikri.site/aquas-field/reading-notes/%E8%BD%AC%E5%8F%98%E4%B9%8B%E4%B9%A6/)==。你必须选择那些能提供最大学习可能性的工作场所和职位。==实践知识==是终极商品，它将在未来的几十年里为你带来红利——远超你在一些看似有利可图但学习机会较少的职位上获得的微薄加薪。这意味着你要投身于那些==能磨炼和提升你的挑战==，在那里你能获得关于自己表现和进步的最客观反馈。不要选择那些看起来轻松舒适的学徒期。  
 
-> 今日法则：选择能让你成长最多的环境，而非薪水最高的环境。
-> Daily Law: Choose work environments that offer the greatest opportunities for growth, not the highest salary.
+> Daily Law: Practical knowledge is the ultimate commodity. Evaluate opportunities using one criterion: the greatest possibility for learning.  
 
 ---
 
-## 关注长期价值
-在 20 多岁或职业生涯初期，你的首要任务是建立强大的技能基础。这种基础在未来几十年里产生的复利将远超初期的薪水差异。
+## 重新定义“红利”
+在学徒期阶段，大多数人会被“起薪”或“名企头衔”诱惑。但Greene认为这是一种能在未来几十年持续产生收益的资产，而初期的加薪在长远来看是微不足道的。
 
-## 性格的磨炼
-在挑战性的环境中工作，不仅能学到技术，更能磨炼你的韧性、耐心和应对复杂局势的能力。这些性格特质才是真正的“精通之金”。
+## 转变重于获取
+学徒期不只是为了“学到东西”，而是为了“**变成另一个人**”。这种从天真、浮躁转变为成熟、耐心的过程，是通往精通不可逾越的生理和心理门槛。
+
+## 反馈的重要性
+选择环境的标准不应该是==舒适度==，而应该是==反馈的质量==。一个能提供“客观反馈”的环境可能意味着严厉的批评或艰巨的任务，但这正是修正行为和提升技能的唯一途径。
+
+
+[^1]: “智慧不是学校教育的产物，而是终生获取它的尝试。” ——阿尔伯特·爱因斯坦
+[^2]: 今日法则：实践知识是终极商品。用一个标准来评估机会：最大的学习可能性。
+

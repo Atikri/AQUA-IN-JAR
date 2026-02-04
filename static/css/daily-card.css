@@ -1,0 +1,194 @@
+/* Daily Card Component */
+.daily-card {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: #4C6475;
+    /* Fallback */
+    color: #DACBB4;
+    font-family: 'SNPro', sans-serif;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+
+/* Background Image Layer */
+.daily-card-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 60%;
+    /* Covers top half */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+/* Overlay/Body Layer to create the Folder Shape */
+.daily-card-body {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background-color: transparent;
+    pointer-events: none;
+    /* Let clicks pass through if needed, though mostly container */
+}
+
+/* The "Tab" part (Top Left) */
+.daily-card-tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55%;
+    /* Tab Width */
+    height: 120px;
+    background-color: #4C6475;
+    border-bottom-right-radius: 20px;
+    /* Preliminary curve */
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+/* Connector */
+.daily-card-connector {
+    position: absolute;
+    top: 119px;
+    /* Just overlapping the tab height - 1px */
+    left: 55%;
+    /* Match tab width */
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    box-shadow: -20px 20px 0 #4C6475;
+    /* The inverse rounded corner */
+    border-bottom-left-radius: 50%;
+    z-index: 2;
+}
+
+/* The "Main" part (Bottom) */
+.daily-card-main {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65%;
+    /* Body Height */
+    background-color: #4C6475;
+    z-index: 2;
+    border-top-right-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Space between content and footer */
+    padding: 20px 30px 30px 30px;
+    /* Adjusted padding */
+    box-sizing: border-box;
+    pointer-events: auto;
+    /* Re-enable pointer events for content */
+}
+
+/* Inner Content Area */
+.daily-card-inner-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    color: #DACBB4;
+    font-size: 0.9rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(218, 203, 180, 0.3) transparent;
+}
+
+/* Scrollbar styling for Webkit */
+.daily-card-inner-content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.daily-card-inner-content::-webkit-scrollbar-thumb {
+    background-color: rgba(218, 203, 180, 0.3);
+    border-radius: 4px;
+}
+
+.daily-card-inner-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.daily-card-inner-content li {
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(218, 203, 180, 0.2);
+    padding-bottom: 4px;
+}
+
+.daily-card-inner-content li:last-child {
+    border-bottom: none;
+}
+
+.daily-card-inner-content a {
+    color: #DACBB4;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    /* Make the whole link area clickable/blocky */
+    transition: color 0.2s;
+}
+
+.daily-card-inner-content a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* Footer/Stats */
+.daily-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #DACBB4;
+    margin: 0;
+}
+
+.daily-card-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    color: #DACBB4;
+    margin-top: 5px;
+}
+
+.daily-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.daily-card-count-big {
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+}
+
+.daily-card-count-label {
+    font-size: 1rem;
+    margin-left: 5px;
+    color: #DACBB4;
+}
+
+.daily-card-total {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.daily-card-total span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #DACBB4;
+    margin-left: 5px;
+}

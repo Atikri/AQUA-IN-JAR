@@ -1,0 +1,48 @@
+{{/*
+Daily Card Shortcode
+Usage:
+{{< daily_card title="Daily memo" ...>}}
+    - List item 1
+    - List item 2
+    {{< /daily_card>}}
+        */}}
+
+        {{ $title := .Get "title" | default "Daily memo" }}
+        {{ $subtitle := .Get "subtitle" | default "Notes & Journaling" }}
+        {{ $docCount := .Get "docCount" | default "05" }}
+        {{ $noteCount := .Get "noteCount" | default "1270" }}
+        {{ $image := .Get "image" | default
+        "https://images.unsplash.com/photo-1555580399-4d6d634cb796?q=80&w=1000&auto=format&fit=crop" }}
+
+        <div class="daily-card">
+            <!-- Image Layer -->
+            <div class="daily-card-image" style="background-image: url('{{ $image }}');"></div>
+
+            <!-- Body Content -->
+            <div class="daily-card-body">
+                <!-- Top Left Tab -->
+                <div class="daily-card-tab">
+                    <h3 class="daily-card-title">{{ $title }}</h3>
+                    <p class="daily-card-subtitle">{{ $subtitle }}</p>
+                </div>
+
+                <!-- Connector Curve -->
+                <div class="daily-card-connector"></div>
+
+                <!-- Main Bottom Area -->
+                <div class="daily-card-main">
+                    <div class="daily-card-inner-content">
+                        {{ .Inner | markdownify }}
+                    </div>
+                    <div class="daily-card-footer">
+                        <div class="daily-card-count-main">
+                            <span class="daily-card-count-big">{{ $docCount }}</span>
+                            <span class="daily-card-count-label">Doc</span>
+                        </div>
+                        <div class="daily-card-total">
+                            {{ $noteCount }} <span>Notes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

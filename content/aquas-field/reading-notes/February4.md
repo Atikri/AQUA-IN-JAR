@@ -3,7 +3,7 @@ title: "February 4: Value Learning above Everything Else"
 date: "2026-02-04"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -46,8 +46,17 @@ draft: true
   </li>
 </ul>
 
-## 学习高于一切
-在学徒期，你必须有一种“即便没钱也要学习”的态度。这种态度会让你在面对诱惑时保持清醒。
+## 将学习价值置于一切之上
+随着你的人生不断前进，你会变得沉溺于丰厚的薪水，它将决定你的去向、你的思考方式以及你的所作所为。最终，那些没有花在学习技能上的时间会让你付出代价，而那样的坠落将是痛苦的。相反，你必须==将学习的价值置于一切之上==。这将引导你做出所有正确的选择。你会选择那些能提供最大学习机会的环境，尤其是那些需要动手实践的工作。你会选择一个拥有能够启发并教导你的导师和同伴的地方。   
+一份薪水普通的工作还有一个额外的好处：它能训练你==如何用更少的资源生存==——这是一项宝贵的生活技能。你绝不能蔑视没有报酬的学徒期。事实上，找到完美的导师并主动提供免费助理服务，往往是智慧的巅峰。导师们会乐于利用你廉价而渴望的热情，往往因此泄露比平常更多的行业秘密。最终，通过将学习置于首位，你将为自己的创造性扩张奠定基础，金钱很快就会随之而来。  
 
-> 今日法则：将学习视为你唯一的报酬，其他一切都是附属品。
-> Daily Law: Treat learning as your only reward; everything else is secondary.
+> Daily Law: Get one good piece of advice or guidance today from a master of your profession or of life.[^1]
+
+## 作为投资的“贫穷” (Frugality as Strategy)
+一份低薪工作能迫使你学会**“精益生存”**。 这种生活方式不仅减少了你对雇主的依赖，更让你能够长期忍受为了“人生使命”而进行的艰苦磨炼，这本身就是一种核心竞争力。
+
+## 免费工作的战略价值 (The Power of Free)
+在权力的博弈中，免费是最贵的入场券。 通过免费提供服务，你消除了潜在导师的顾虑，让他们感到“占了便宜”。 这种心态会放松他们的警惕，使他们更愿意传授那些通常秘不宣传的“行业潜规则”和核心逻辑。
+
+
+[^1]: 今日法则：今天向你专业领域或生活中的大师寻求一条好的建议或指导。

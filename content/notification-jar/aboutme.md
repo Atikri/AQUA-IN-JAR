@@ -20,5 +20,8 @@ Hi!我是tikri~
 ### Podcast:
 - [The Speaking Club: Mastering the Art of Public Speaking](https://thespeakingclub.libsyn.com/) 
 
+### 书籍：
+- [Improving Speech Intelligibility in Adults: Client Application of Evidence-Based Strategies](https://www.pluralpublishing.com/publications/improving-speech-intelligibility-in-adults-clinical-application-of-evidence-based-strategies)
+
 
 

@@ -3,7 +3,7 @@ title: "February 5: Accumulate Skills"
 date: "2026-02-05"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -46,8 +46,14 @@ draft: true
   </li>
 </ul>
 
-## 真正的知识是无价的
-真正的知识是指那些能让你直接影响现实、产生结果的能力。在这个信息爆炸的时代，区分“噪音”和“本质知识”是至关重要的。
+## 积累技能
+> There is much to be known, life is short, and life is not life without knowledge. —BALTASAR GRACIÁN[^1]  
 
-> 今日法则：真正的知识是无价的。选择那些能让你获得这种能力的机会。
-> Daily Law: Accumulate Skills. Choose opportunities that help you grow the most.
+你在学徒阶段的主要目标必须是学习并积累尽可能多的==现实生活技能==，特别是那些能让你个人感到兴奋和受激发的领域。如果在之后的生活中，你的职业道路发生了变化，或者你原有的技能不再那么重要了，你也将懂得如何去**适应**——通过调整你已有的技能并知道如何学习更多新知识。  
+精通（Mastery）曾经是一个艰巨且漫长的过程，因为获取技能所需的必要信息**并不是共享的**。如果你过去对科学感兴趣，唯一的希望就是处于特定的社会阶层，从而能进入那几所培养科学家的大学。如今，随着互联网的发展，这些围绕信息的围墙已经被粉碎。你必须充分利用互联网目前提供的各种在线资源，抓住积累技能的绝佳机会。  
+> Daily Law: Acquiring a set of skills is the key to navigating a turbulent work world. The ability to later combine these skills is the best path to mastery.[^2]  
+
+
+
+[^1]: “有太多的东西需要去了解，生命苦短，而没有知识的生命称不上是生命。” ——巴尔塔沙·格拉西安 
+[^2]: 今日法则：获取一系列技能是应对动荡职场的关键。日后将这些技能进行组合的能力，是通往精通的最佳路径。

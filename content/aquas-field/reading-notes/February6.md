@@ -3,7 +3,7 @@ title: "February 6: Consider Yourself a Builder"
 date: "2026-02-06"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -46,8 +46,9 @@ draft: true
   </li>
 </ul>
 
-## 将自己视为一名建造者
-无论你从事什么行业，你本质上都是在建造某种东西。从零开始理解建造的过程，是通往精通的关键。
+## 视自己为建筑师
+无论你处于哪个领域，你都必须将自己视为一名建筑师，使用实际的材料和构思。你在工作中产出的是某种==切实可见的东西==，以直接、具体的方式影响着他人。为了建好任何东西——无论是房屋、政治组织、企业还是电影——你必须理解建造的过程并具备必要的技能。为此，你必须经历一个谨慎的学徒期。除非你首先==发展并转化了自己==，否则你无法在这个世界上做出任何有价值的事情。  
 
-> 今日法则：将自己视为一名建筑师，每一块砖、每一行代码都是你学徒期的见证。
-> Daily Law: Consider yourself a builder; every small task is a brick in your foundation.
+> Daily Law: Like a builder, develop the highest standards, and the patience for the step-by-step process.[^1]  
+
+[^1]: 今日法则：像建筑师一样，建立最高标准，并对循序渐进的过程保持耐心。

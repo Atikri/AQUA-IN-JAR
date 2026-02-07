@@ -23,5 +23,10 @@ Hi!我是tikri~
 ### 书籍：
 - [Improving Speech Intelligibility in Adults: Client Application of Evidence-Based Strategies](https://www.pluralpublishing.com/publications/improving-speech-intelligibility-in-adults-clinical-application-of-evidence-based-strategies)
 
+- [The Singing Athlete: Brain-Based Training for Your Voice](https://thesingingathlete.com/)
+
+### Website:
+- [Z-Health Performance](https://zhealtheducation.com/)
+
 
 

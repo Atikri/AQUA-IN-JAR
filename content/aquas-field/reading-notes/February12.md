@@ -3,7 +3,7 @@ title: "February 12: Learn by Doing"
 date: "2026-02-12"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -47,7 +47,19 @@ draft: true
 </ul>
 
 ## 在实践中学习
-大脑的学习能力在实践和不断重复中最为强大。不要只是阅读，要去操作。
+正式教育的问题在于它向我们灌输了一种**被动的学习方式**。我们读书、参加考试，或者写写论文，整个过程的大部分都涉及吸收信息。但在现实世界中，你==通过“做”学得最好==，通过积极地亲自尝试任务来学习。  
+伟大的寿司大师市村英治（Eiji Ichimura）大约在42年前开始在餐厅担任洗碗工。他的愿望是成为一名寿司厨师，但没有人告诉他该怎么做，也没有人给他直接的指导——那是被严密守护的秘密。他必须通过仔细观察，然后一遍又一遍地练习同样的技术来发展自己的技能。他会在非工作时间练习，反复琢磨最复杂的刀工。通过这种无止境的劳动，他把自己变成了一位大师级厨师。
 
-> 今日法则：通过实践而非仅仅通过阅读来建立你的技能。
-> Daily Law: Learn by doing; practice is the only path to true skill.
+> Daily Law: The brain is designed to learn through constant repetition and active, hands-on involvement. Through such practice and persistence, any skill can be mastered. Pick a skill to acquire and begin to practice.[^1]  
+
+---  
+
+## 打破被动性的陷阱
+传统的学校教育让我们习惯了做一名“信息的消费者”，这会导致我们在面对现实挑战时产生一种软弱的依赖感。而理想的学徒期要求我们转变为“技能的生产者”。  
+
+## 观察作为主动攻击
+市村英治的例子展示了==在没有导师主动教导的情况下该如何学习==。他将观察视为一种“主动”的行为，通过这种高强度的注意力，他不仅看到了表面的动作，还“反向工程”出了背后的逻辑。  
+
+
+
+[^1]今日法则：大脑的设计初衷是通过不断的重复和积极的动手参与来学习。通过这种练习和坚持，任何技能都可以被精通。选择一项要习得的技能并开始练习。

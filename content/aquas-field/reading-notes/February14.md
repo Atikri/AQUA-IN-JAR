@@ -3,7 +3,7 @@ title: "February 14: Move Toward Resistance"
 date: "2026-02-14"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -46,8 +46,20 @@ draft: true
   </li>
 </ul>
 
-## 向着阻力前进
-不要逃避你的弱点。相反，你应该主动寻找那些让你感到不舒服、具有挑战性的任务。
+## 向阻力迈进
+天性使然，人类会退缩于任何看起来可能痛苦或极其困难的事物。在练习任何技能时，我们都会带入这种自然倾向。一旦我们擅长了某项技能的某个方面——通常是那些对我们来说更容易的部分——我们便倾向于一遍又一遍地练习这部分。由于逃避弱点，我们的技能变得畸形。这是业余者的道路。  
+为了达到精通（Mastery），你必须采用我们称之为“**阻力练习**”（Resistance Practice）的方法。原理很简单：==在练习时，你要朝着与你所有自然倾向相反的方向前进==。首先，抵制对自己“仁慈”的诱惑。成为你自己**最严厉的批评者**；像通过他人的眼睛一样审视你的工作。==识别你的弱点==，即那些你不擅长的部分，并在练习中给予它们**优先权**。你会发现在克服这些痛苦的过程中蕴含着一种==反直觉的快感==（perverse pleasure）。其次，==抵制放松注意力的诱惑==。训练自己在练习中保持双倍的专注强度，仿佛那是双倍强度的实战。在设计自己的训练程序时，要尽可能==发挥创意==。通过这种方式，你建立了追求卓越的个人标准，通常这些标准高于他人。很快你就会看到这种练习的结果，而他人会惊叹于你完成任务时所表现出的那种轻而易举。  
+> Daily Law: Invent exercises that work upon your weaknesses. Give yourself arbitrary deadlines to meet certain standards, constantly pushing yourself past perceived limits.[^1]
 
-> 今日法则：寻找阻力，因为它是成长的指路明灯。
-> Daily Law: Move toward resistance; your weaknesses are where your greatest growth lies.
+---  
+
+## “业余”与“精通”的分水岭
+普通人（业余者）的练习是==情感驱动==的——因为喜欢舒适感而重复强项。而大师的练习是==战略驱动==的——他们利用“阻力练习”来纠正技能的畸形，确保能力的全面性。
+
+## 自我批评的客观化
+“阻力练习”的第一步是==分裂自我==。你要从“执行者”的角色中抽离出来，变成一个“观察者”或“批评者”。通过他人的视角看自己，你才能精准地定位那些被自我虚荣心掩盖的弱点。
+
+## 强度的模拟（实战的2倍）
+精通源于在大脑中建立极其坚固的神经回路。通过在练习中投入“==双倍强度==”，你实际上是在为现实世界中的各种变数和压力预留“带宽”。
+
+[^1]: 今日法则：发明针对你弱点的练习。为自己设定最后期限以达到某些标准，不断推向并超越你感知的极限。

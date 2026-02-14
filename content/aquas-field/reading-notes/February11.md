@@ -48,7 +48,8 @@ draft: false
 
 ## 进入加速回报循环
 > That which we persist in doing becomes easier to do, not that the nature of the thing has changed but that our power to do has increased.
-—RALPH WALDO EMERSON[^1]  
+—RALPH WALDO EMERSON[^1]    
+
 在像骑自行车这样的活动中，我们都知道，观察他人并跟随他们的引导，比听从或阅读指令要容易得多。我们做得越多，它就变得越容易。即使是主要属于脑力劳动的技能，如计算机编程或学习外语，情况依然如此——我们==通过练习和重复学习得最好，这是自然的学习过程==。我们学习外语是通过尽可能多地去说，而不是通过阅读书籍和吸收理论。我们说得越多、练习得越多，就会变得越流利。  
 一旦你将这种练习推进到足够深，你就会进入一个**加速回报的循环**（cycle of accelerated returns）：练习变得更简单、更有趣，这使你能够练习更长的时间，从而提高了你的技能水平，反过来又让练习变得更有趣。达到这个循环就是==你必须为自己设定的目标==。  
 

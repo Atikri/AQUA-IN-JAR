@@ -3,7 +3,7 @@ title: "February 15: Concentrated Practice Cannot Fail."
 date: "2026-02-15"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -46,8 +46,16 @@ draft: true
   </li>
 </ul>
 
-## 将每一次努力都视为学习经历
-无论结果是成功还是失败，最重要的回报是你从中学到了什么。
+## 专注练习必将成功
+> For the things we have to learn before we can do them, we learn by doing them. . . . Men become builders by building and lyreplayers by playing the lyre.  
+> —ARISTOTLE[^1]    
 
-> 今日法则：不问成败，只问所得。
-> Daily Law: Concentrated Practice Cannot Fail..
+尽管掌握必要技能并达到专家水平所需的时间似乎取决于领域和个人天赋，但研究这一课题的人反复得出的数字是 ==10,000 小时==。这似乎是一个人达到高技能水平所需的高质量练习时间，它适用于作曲家、棋手、作家和运动员等。这个数字具有一种近乎魔幻或神秘的共鸣。这意味着如此大量的练习时间——无论何人或何种领域——都会导致人类大脑产生质的变化。大脑已经学会了如何组织和结构化海量的信息。凭借这些**默会知识**（tacit knowledge），大脑现在可以开始对其进行创造性和游戏性的发挥。虽然小时数看起来很高，但通常加起来相当于 7 到 10 年持续、坚实的练习——这大致相当于传统学徒期的长度。换句话说，==随时间积累的专注练习绝不会失败，它必然产生结果==。  
+
+> Daily Law: Put in an hour of concentrated practice today, and tomorrow, and the next day, and the day after that.[^2]
+
+---
+
+[^1]:  “对于那些在学会之后才能做的事情，我们通过亲手去做来学习……人们通过建造成为建筑师，通过演奏里拉琴成为琴手。” ——亚里士多德
+[^2]:  今日法则：今天投入一小时的专注练习，明天、后天、大后天也同样如此。
+

@@ -54,7 +54,6 @@ draft: false
 
 > Daily Law: Put in an hour of concentrated practice today, and tomorrow, and the next day, and the day after that.[^2]
 
----
 
 [^1]:  “对于那些在学会之后才能做的事情，我们通过亲手去做来学习……人们通过建造成为建筑师，通过演奏里拉琴成为琴手。” ——亚里士多德
 [^2]:  今日法则：今天投入一小时的专注练习，明天、后天、大后天也同样如此。

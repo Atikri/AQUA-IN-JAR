@@ -3,7 +3,7 @@ title: "February 17: The Painful Truth"
 date: "2026-02-17"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -47,7 +47,15 @@ draft: true
 </ul>
 
 ## 痛苦的真相
-学徒阶段无法跳过。寻找捷径的想法本身就证明了你还没准备好精通。
+> It’s like chopping down a huge tree of immense girth. You won’t accomplish it with one swing of your axe. If you keep chopping away at it, though, and do not let up, eventually, whether it
+wants to or not, it will suddenly topple down.   
+> —ZEN MASTER HAKUIN EKAKU[^1]  
 
-> 今日法则：扼杀寻找捷径的念头；它是平庸的根源。
-> Daily Law: Kill the desire for shortcuts; there is no shortcut to mastery.
+爱因斯坦从16岁开始进行严肃的思想实验。十年后，他提出了革命性的相对论。虽然无法精确量化他在那十年里磨炼理论技巧的具体时间，但不难想象他每天在这一特定问题上工作三小时，十年后累计将超过10,000小时。  
+学徒期阶段没有捷径，也无法绕过。 人类大脑的本性决定了它==需要长期暴露在某个领域中，这才能让复杂的技能深深扎根，并让思想从中解放出来，进行真正的创造性活动==。 寻找捷径的欲望本身，就使你完全不适合任何形式的精通（Mastery）。 这一过程没有任何逆转的可能。  
+
+> Daily Law: There’s no bypassing the Apprenticeship Phase. Rid yourself of the desire to find shortcuts.[^2]  
+
+[^1]: “这就像砍伐一棵围度巨大的参天大树。你无法仅凭一挥斧头就大功告成。但如果你不停地砍下去，永不松懈，最终，无论它愿不愿意，它都会轰然倒下。” ——白隐慧鹤（ZEN MASTER HAKUIN EKAKU）
+[^2]: 今日法则：学徒期无法逾越。消除寻找捷径的欲望。
+

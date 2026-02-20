@@ -18,7 +18,7 @@ draft: false
 
 🔗[What I Wish I knew in My 20s](https://www.melrobbins.com/episode/episode-315/)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2wSrcr91JYA?si=ZXK6HNVrZ_2NC6gC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/2wSrcr91JYA?si=ZXK6HNVrZ_2NC6gC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 很多人会告诉你：“20多岁是你一生中最美好的时光。”但事实上，从实证角度看，这通常是==成年期最艰难、最不确定的十年==。在这个阶段，你面临着职场、恋爱、财务以及自我认知的多重初试（Firsts）与挫折（Worsts）。  
 临床心理学家 Dr. Meg Jay 认为，20多岁绝非可以挥霍的“青春期延长版”，而是“**定义性十年**”。

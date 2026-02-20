@@ -18,7 +18,11 @@ Hi!我是tikri~
 
 ## 我喜欢的一些频道：
 ### Podcast:
-- [The Speaking Club: Mastering the Art of Public Speaking](https://thespeakingclub.libsyn.com/) 
+- [The Speaking Club: Mastering the Art of Public Speaking](https://thespeakingclub.libsyn.com/)   
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/70jXD22Km38em2qGI9psMA?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>  
+
+- [VocalFri Podcast](https://www.vocalfri.com/)   
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/1z9AuIAXGlRK0x2FRvweLL?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>  
 
 ### 书籍：
 - [Improving Speech Intelligibility in Adults: Client Application of Evidence-Based Strategies](https://www.pluralpublishing.com/publications/improving-speech-intelligibility-in-adults-clinical-application-of-evidence-based-strategies)

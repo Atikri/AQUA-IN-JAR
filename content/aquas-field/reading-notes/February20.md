@@ -3,7 +3,7 @@ title: "February 20: Understand How the Brain Works"
 date: "2026-02-20"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -46,8 +46,9 @@ draft: true
   </li>
 </ul>
 
-## 理解大脑的运作方式
-刻意练习能够重塑大脑的神经网络。理解这一点，会让你在面对漫长的枯燥时更有动力。
+## 理解大脑的工作原理
+如果我们相信可以跳过步骤、规避过程，通过政治关系或简单的公式奇迹般地获得权力，或者依赖天生的才华，我们就在违背自然规律，反转了我们的自然力量。我们会沦为时间的奴隶——随着时间流逝，我们会变得越来越虚弱，能力越来越差，被困在毫无前途的职业中。我们的头脑不再让我们与现实连接，而是变得与现实脱节，锁在一个狭窄的思想密室里。曾经依赖专注力生存的人类，现在变成了==分心的“扫描动物”，无法深度思考，也无法依赖直觉==。认为在你短暂的几十年生命中，可以通过技术和一厢情愿的想法来重新连线大脑，克服六百万年进化的影响，这是极其愚蠢的。违背规律或许能带来暂时的消遣，但时间会无情地暴露你的虚弱和不耐烦。  
 
-> 今日法则：利用大脑的可塑性，通过刻意重复来建立直觉。
-> Daily Law: Understand how the brain works—repetition rewires your mind for mastery.
+> Daily Law: Put your faith in learning, not technology.[^1]
+
+[^1]: 今日法则：寄希望于学习，而非技术。

@@ -55,5 +55,10 @@ Make people depend on you. More is to be gained from such dependence than courte
 
 > Daily Law: Strive to be the only one who can do what you do and make the fate of those who hire you so entwined with yours that they cannot possibly get rid of you.[^2]
 
+---
+
+## 今日反思
+如果我明天消失，我的公司或团队会面临瘫痪，还是只需一个星期的交接就能恢复如常？ 如果是后者，你需要开始寻找你的“独特价值点”，并学习如何让雇主的成功高度依赖于你的存在。
+
 [^1]: “让人们依赖你。从这种依赖中获得的利益，比从礼貌中获得的更多。口渴止住的人，会立刻背对着井走开，因为不再需要它了。” ——巴尔塔沙·格拉西安（Baltasar Gracián）
 [^2]: 努力成为唯一能做你所做之事的人，让雇主的命运与你的命运紧密交织，使他们根本无法摆脱你。

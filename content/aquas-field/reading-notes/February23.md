@@ -3,7 +3,7 @@ title: "February 23: Never Enough Knowledge"
 date: "2026-02-23"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -47,7 +47,16 @@ draft: true
 </ul>
 
 ## 知识永无止境
-大师知道自己永远是一个学徒。保持饥饿感，保持探索新领域的欲望。
+孩提时代的拿破仑·波拿巴（Napoleon Bonaparte）就发现自己沉迷于策略游戏和展现领导力实例的书籍。 进入军校后，他的目标并非仅仅是谋求一份军职或融入体制，而是有一种强迫性的需求去学习军事艺术的每一个方面。 他博览群书，其知识储备的广度令他的上级大为惊叹。 在很年轻的时候，他就被赋予了异乎寻常的重任。 他迅速学会了如何保持冷静，从经验中吸取正确的教训，并从错误中恢复。  
+当他在战场上被委以更大的重任时，他所经历的学徒期强度已经是同龄人的两到三倍。 拿破仑如此年轻、野心勃勃且蔑视权威，当他获得领导权后，他着手进行了军事史上最伟大的革命，改变了军队的规模和形态，凭借一己之力将“机动性”引入战斗。 在他发展的巅峰时期，他对战斗和战役的整体形态拥有了一种非凡的感觉。 这被称为他著名的“一瞥洞察力”（coup d'oeil）——即一眼就能评估局势的能力。 这让他的副官和对手甚至怀疑他拥有某种超自然的力量。  
 
-> 今日法则：永远不要觉得你已经学够了。
-> Daily Law: There is never enough knowledge; remain an apprentice for life.
+> Daily Law: Find the deepest pleasure in absorbing knowledge and information. Feel like you never have enough.[^1]
+
+---  
+
+## 实践建议
+今天，审视你正在处理的一个问题。 不要只寻找一个“够用”的答案，尝试像拿破仑一样，去挖掘这个领域背景下三个相关的案例或理论。 当你感觉到这种“永远不够”的焦虑并将其转化为寻找知识的动力时，你就开启了通往大师境界的加速器。
+
+---
+
+[^1]: 今日法则：在吸收知识和信息中寻找最深层的快乐。 永远感觉自己学得不够。

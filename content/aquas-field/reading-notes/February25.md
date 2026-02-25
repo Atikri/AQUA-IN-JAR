@@ -3,7 +3,7 @@ title: "February 25: Keep Expanding Your Horizons"
 date: "2026-02-25"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -47,7 +47,19 @@ draft: true
 </ul>
 
 ## 持续扩大视野
-精通不是为了 narrowing 你的视野，而是为了让你能从更高的维度看世界。
+学徒期阶段的现实是，没有人会真正帮助你或为你指明方向。 事实上，成功几率往往对你不利。 如果你渴望一段学徒期，如果你想学习并为通往精通（Mastery）做好准备，你必须==靠自己去完成==，并投入巨大的精力。  
+当你进入这个阶段时，通常处于最低的位置。 你的地位限制了你接触知识和接触他人的机会。 如果你不小心，你就会接受这种身份并被其定义，特别是如果你出身于弱势背景。 相反，你必须==反抗任何限制==，并不断致力于扩展你的视野。（在每种学习情境中你都要臣服于现实，但这种现实并不意味着你必须停留在原地）。  
+阅读那些超出要求的书籍和资料总是一个好的起点。 接触到大千世界的思想，你会对越来越多的知识产生渴求；你会发现自己很难满足于任何狭小的角落，而这正是重点所在。 你所在领域的人、你直系圈子里的同僚，本身就像是一个个独立的世界——他们的故事和观点会自然地扩展你的视野并提升你的社交技巧。 ==尽可能与各种不同类型的人交往==。 你的圈子会慢慢扩大。 任何形式的**校外学习**都会增加这种动力。  
 
-> 今日法则：即便在成为专家后，也要保持对外界的开放。
-> Daily Law: Keep expanding your horizons.
+
+> Daily Law: Be relentless in your pursuit for expansion. Whenever you feel like you are settling into some circle, force yourself to shake things up and look for new challenges.  
+
+---  
+
+## 操作建议
+今天，请跳出你工作手册要求的范围。  
+1. 去读一本与你当前任务完全无关但属于同领域的高阶著作。  
+2. 主动与一个你平时不常沟通、且背景与你迥异的人交谈。 不要等别人来带你，要像一个饥渴的入侵者一样去抢夺知识和视野。  
+
+
+[^1]: 今日法则：在追求扩张的过程中永不松懈。每当你觉得自己在某个圈子安顿下来时，强迫自己打破现状，寻找新的挑战。

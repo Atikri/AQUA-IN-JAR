@@ -3,7 +3,7 @@ title: "February 26: Venture Outside Your Comfort Zone"
 date: "2026-02-26"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -46,8 +46,25 @@ draft: true
   </li>
 </ul>
 
-## 避免舒适陷阱
-当你开始变得熟练时，最大的危险就是陷入舒适区。主动打破你的常规，挑战更高难度的任务。
 
-> 今日法则：舒适是平庸的温床；主动寻找挑战。
-> Daily Law: Venture Outside Your Comfort Zone; keep pushing your boundaries.
+## 走出你的舒适区
+
+> Our vanity, our passions, our spirit of imitation, our abstract intelligence, our habits have long been at work, and it is the task of art to undo this work of theirs, making us travel back in the direction from which we have come to the depths where what has really existed lies unknown
+within us.   
+> —MARCEL PROUST[^1]  
+
+随着列奥纳多·达·芬奇在韦罗基奥（Verrocchio）工作室的学业进阶，他开始进行实验并坚持展现自己的风格。令他惊讶的是，他的师长对他的创造力印象深刻。对列奥纳多而言，这标志着他的学徒期即将结束。  
+大多数人往往因为恐惧而在这个步骤上等待太久。学习规则并留在舒适区内总是更容易的。通常，==你必须在自己认为准备好之前，强迫自己启动这类行动或实验==。你正在测试自己的性格，跨越恐惧，并培养一种对作品的“**抽离感**”（detachment）——即通过他人的眼睛来审视你的工作。你正在提前适应下一个阶段，因为在那时，你产出的成果将处于不断的严密审查之下。  
+
+---  
+
+> Daily Law: Try the thing you don’t think you’re quite ready for.[^2]
+
+---  
+
+## 操作建议
+今天，在你的工作中找出一个你认为“以后再试”或“等我有把握再说”的高难度环节。不要等待那个完美的时刻，今天就进行一次小规模的、哪怕注定会失败的实验。 这种主动制造的不适感，正是你学徒期即将圆满结束、向大师进化的信号。  
+
+
+[^1]:  “我们的虚荣心、激情、模仿精神、抽象智慧和习惯已经工作了很久，而艺术的任务就是撤销它们的工作，让我们沿着来时的路回到深处，在那里，真正存在过的东西正不为人知地躺在我们的内心深处。” —— 马塞尔·普鲁斯特 (MARCEL PROUST)  
+[^2]: 今日法则：尝试那件你认为还没完全准备好的事。

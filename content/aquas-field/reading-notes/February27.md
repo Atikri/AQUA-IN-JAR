@@ -3,7 +3,7 @@ title: "February 27: Establish Your Own Style"
 date: "2026-02-27"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -47,7 +47,16 @@ draft: true
 </ul>
 
 ## 建立你自己的风格
-在吸收了导师的知识后，最后一步是把它们内化，并根据你自己的个性和倾向，创造出属于你的独特风格。
+你与前任（导师或前辈）之间建立的距离通常需要一些**象征意义**，一种公开展示差异的方式。例如，路易十四拒绝了法国国王的传统宫殿，转而建造了自己的凡尔赛宫，以此创造了这种象征。西班牙国王菲利普二世也做了同样的事，在当时荒无人烟的地方建造了他的权力中心——埃斯科里亚尔宫。  
+但路易十四将这场博弈玩得更深：他不会像他的父亲或更早的祖先那样当国王。他不戴王冠，不拿权杖，也不坐宝座。他用自己的一套符号和仪式建立了一种全新的、令人敬畏的权威。路易让祖先的仪式变成了过时的笑柄。请效仿他的做法：==永远不要让自己被看作是在追随前任的道路==。如果你这样做，你将永远无法超越他。你必须==通过确立一种令你脱颖而出的风格和象征，来从物质/物理层面展示你的不同==。  
 
-> 今日法则：将所学知识内化，并赋予其你个人的印记。
-> Daily Law: Internalize what you’ve learned and establish your own style.
+> Daily Law: Follow the master’s example, not his path. Demonstrate your difference. Establish your own style.[^1]
+
+---  
+
+## 操作建议
+
+今天，请审视你在领域内的定位。你是否在潜意识里模仿某位成功人士的言行或策略？ 尝试找出一个属于你个人的“符号”——可以是一个独特的工作方法、一种标志性的表达方式，或者是一个大胆的新项目。 记住：如果你看起来像个模仿者，你就会被像对待仿制品一样被对待。只有当你确立了独特的符号，你才真正拥有了权力。  
+
+
+[^1]: 今日法则：效仿大师的榜样，而非他的路径。展示你的差异。确立你自己的风格。

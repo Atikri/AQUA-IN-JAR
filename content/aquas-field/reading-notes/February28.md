@@ -3,7 +3,7 @@ title: "February 28: To The Master Goes The Knife"
 date: "2026-02-28"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -46,8 +46,21 @@ draft: true
   </li>
 </ul>
 
-## 完全转变
-当你完成了学徒期，你已经不再是原来的那个你。你已经经历了一场深刻的思想和能力的转变，准备好开启“大师”的新篇章。
+## 向大师挥刀
+> One repays a teacher badly if one remains only a pupil. 
+> —FRIEDRICH NIETZSCHE[^1]
 
-> 今日法则：接受并拥抱你的完全转变。
-> Daily Law: Complete your apprenticeship; embrace your To The Master Goes The Knife.
+西班牙语中有一句谚语：al maestro cuchillada——“向大师挥刀”。 这是一个击剑术语，指的是年轻敏捷的弟子变得足够娴熟，可以刺中师长的时刻。 但这也指代了大多数导师必然经历的命运：他们的门徒终将反叛，这种反叛如同剑伤一般。 在我们的文化中，我们倾向于崇拜那些表现出叛逆姿态的人。 但如果反叛没有一个“坚实且真实”的对象作为基础，那么反叛就毫无意义和力量。 导师或父辈形象恰恰提供了这样一个标准，你可以从中偏离并建立自己的身份认同。 你内化他们知识中重要且相关的部分，而对其余与你生活无关的部分“挥刀”剔除。 这是代际更替的动力学，有时必须“杀死”父辈形象，才能为子辈发现自我留出空间。 在通往精通的道路上，你可能会有几位导师，他们就像阶梯石。 在人生的每个阶段，你必须找到合适的老师，从中获取你想要的，然后离开，并对此无需感到羞愧。 这是你自己的导师可能走过的路，也是世界的运作方式。
+
+> Daily Law: Internalize the important and relevant parts of the Master’s knowledge. Apply the knife to everything else.[^2]
+
+---
+
+## 实践建议
+审视你现在的导师或你所崇拜的榜样。问自己：
+- 哪些知识是核心且对我现在极其有用的？（内化它）
+- 哪些观点是属于导师那个时代的局限，或者是与我的天性相悖的？（对其挥刀） 不要害怕这种“背离”。当你开始敢于修正、剔除甚至否定导师的某些部分时，那才意味着你已经真正“毕业”了。
+
+
+[^1]: “如果一个人始终只做学生，那他对他老师的回报就很差。” ——弗里德里希·尼采
+[^2]: 今日法则：内化大师知识中重要且相关的部分。对其余一切应用“挥刀”策略。

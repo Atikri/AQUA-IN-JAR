@@ -9,8 +9,14 @@
     {{ with .OutputFormats.Get "RSS" }}
       {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
-    {{/* The logic here is key: directly force the crawling of all main content articles on the entire site */}}
-    {{- $pages := .Site.RegularPages.ByDate.Reverse -}}
+    {{/* Exclude Mysterious Sea Area from RSS */}}
+    {{- $allPages := .Site.RegularPages.ByDate.Reverse -}}
+    {{- $pages := slice -}}
+    {{- range $allPages -}}
+      {{- if not (hasPrefix .RelPermalink "/aquas-field/mysterious-sea-area/") -}}
+        {{- $pages = $pages | append . -}}
+      {{- end -}}
+    {{- end -}}
     {{- range first 50 $pages -}}
     <item>
       <title>{{ .Title }}</title>

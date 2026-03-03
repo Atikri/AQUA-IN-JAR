@@ -401,7 +401,7 @@ def generate(unit_num: int) -> str:
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(md)
 
-    print(f"[Merriam] ✅ 已生成: {os.path.relpath(out_path, REPO_ROOT)}")
+    print(f"[Merriam] OK: {os.path.relpath(out_path, REPO_ROOT)}")
     return out_path
 
 
@@ -425,17 +425,21 @@ def main():
         if unit_num < 1 or unit_num > TOTAL_UNITS:
             unit_num = 1
 
-        generate(unit_num)
-
-        # 更新进度
-        generated = state.get("generated", [])
-        if unit_num not in generated:
-            generated.append(unit_num)
-        next_unit = unit_num + 1 if unit_num < TOTAL_UNITS else 1
-        state["next_unit"] = next_unit
-        state["generated"] = generated
-        save_state(state)
-        print(f"[Merriam] 进度已更新，下次将生成 Unit {next_unit}")
+        try:
+            generate(unit_num)
+            
+            # 更新进度
+            generated = state.get("generated", [])
+            if unit_num not in generated:
+                generated.append(unit_num)
+            next_unit = unit_num + 1 if unit_num < TOTAL_UNITS else 1
+            state["next_unit"] = next_unit
+            state["generated"] = generated
+            save_state(state)
+            print(f"[Merriam] 进度已更新，下次将生成 Unit {next_unit}")
+        except Exception as e:
+            print(f"[Merriam] ERROR during generation: {e}")
+            sys.exit(1)
 
 
 if __name__ == "__main__":

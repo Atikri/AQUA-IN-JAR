@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">只有我這樣嘛？</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">這是我的「BlogBlog 同樂會 - 2026 年 2 月」的投稿文章。本月主題是「只有我這樣嗎？」，由 Wiwi 主持。如果你有自己的部落格，歡迎一起來參加！ 其實仔細發現探索一下自己有什麼獨到、與眾不同的地方，不僅僅是有趣還真的蠻重要的。 可能一下子想不到自己有什麼特殊之處，或者很多地方會以為 …</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

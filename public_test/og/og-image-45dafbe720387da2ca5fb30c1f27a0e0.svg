@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">让体液流起来outline</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">这篇post列出了《让体液流起来》这本书的概要信息，以及目录定位栏~ 这本书其实很适合想运动想健康，但很畏惧那种暴汗；或者是自身原因没有时间或者没有能力的人。里面提到的很多运动实践真的就是所谓的“微动体操”，很方便，而且很轻松。 我是一边读一边记的笔记，所以有些当时就理解的内容便没有记下来。整体笔记 …</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

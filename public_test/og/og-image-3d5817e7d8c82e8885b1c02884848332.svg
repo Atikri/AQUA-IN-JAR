@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">未来更新 &amp; 修复显示&#34;瓶&#34;</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">这里整理当前website所遇到待被解决的问题以及未来的更新条目 当然各位小瓶子们提出的问题我也会一并列在里面 更新 &amp; 修复 具体内容 当前状态 修复 图片视频加载问题 修复中 更新 RSS 订阅源 已添加 更新 收藏功能 正在测试中 更新 用户登录系统 考虑中</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Physics Audio Waveform</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        canvas {
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        * {
+            user-select: none;
+            -webkit-user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+
+        // --- PHYSICS CONFIG ---
+        // Equation: a = -k*(y - target) - c*v
+        const K = 0.05;    // Spring Stiffness
+        const C = 0.08;    // Damping (Drag)
+        const COUPLING = 0.15; // Neighbor Link Pull
+
+        // Visuals
+        const BAR_COLOR = "#62b6cb";
+        let BAR_COUNT = 40;
+        let BAR_WIDTH = 4;
+        let BAR_GAP = 2;
+        let MAX_HEIGHT = 80;
+
+        // State
+        let bars = [];
+        let time = 0;
+
+        function resize() {
+            const dpr = window.devicePixelRatio || 1;
+            width = window.innerWidth || 140; height = window.innerHeight || 140;
+            if (width < 10) width = 140; if (height < 10) height = 140;
+
+            canvas.width = width * dpr;
+            canvas.height = height * dpr;
+            canvas.style.width = width + 'px';
+            canvas.style.height = height + 'px';
+            ctx.scale(dpr, dpr);
+
+            // Calc Density
+            const minDim = Math.min(width, height);
+            if (minDim < 200) {
+                BAR_COUNT = 30; // Fewer for small
+                BAR_WIDTH = Math.max(2, (width * 0.9) / BAR_COUNT - 1.5);
+                BAR_GAP = 1.5;
+            } else {
+                BAR_COUNT = 50;
+                BAR_WIDTH = 5;
+                BAR_GAP = 3;
+            }
+
+            initBars();
+        }
+
+        function initBars() {
+            bars = [];
+            for (let i = 0; i < BAR_COUNT; i++) {
+                bars.push({
+                    y: 0,        // Displacement from center (starts at 0)
+                    v: 0,        // Velocity
+                    target: 0    // Target Y (driven by ambient noise)
+                });
+            }
+        }
+
+        function updatePhysics() {
+            time += 0.05;
+
+            // 1. Update Targets (Ambient Idle "Breathing")
+            // Perlin-like
+            for (let i = 0; i < BAR_COUNT; i++) {
+                const normX = i / (BAR_COUNT - 1); // 0 to 1
+                // Window function: Hanning/Sine (Bars at ends are quiet)
+                const window = Math.sin(normX * Math.PI);
+
+                // Multi-octave noise
+                const noise = Math.sin(time + i * 0.2) * 5 + Math.sin(time * 0.5 + i * 0.5) * 2;
+                bars[i].target = noise * window;
+            }
+
+            // 2. Physics Step
+            // We compute accelerations first, then update velocities/positions
+            const newAcc = new Float32Array(BAR_COUNT);
+
+            for (let i = 0; i < BAR_COUNT; i++) {
+                const b = bars[i];
+
+                // Spring Force
+                const displacement = b.y - b.target;
+                const springForce = -K * displacement;
+
+                // Damping Force
+                const dampingForce = -C * b.v;
+
+                let acc = springForce + dampingForce;
+
+                // Coupling (Neighbor Links)
+                // Pulls towards neighbors
+                if (i > 0) {
+                    const leftY = bars[i - 1].y;
+                    acc += (leftY - b.y) * COUPLING;
+                }
+                if (i < BAR_COUNT - 1) {
+                    const rightY = bars[i + 1].y;
+                    acc += (rightY - b.y) * COUPLING;
+                }
+
+                newAcc[i] = acc;
+            }
+
+            // Integrate
+            for (let i = 0; i < BAR_COUNT; i++) {
+                bars[i].v += newAcc[i];
+                bars[i].y += bars[i].v;
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, width, height);
+
+            const cx = width / 2;
+            const cy = height / 2;
+
+            // Background deco (Rings)
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = "rgba(98, 182, 203, 0.1)";
+            for (let r = 1; r <= 3; r++) {
+                ctx.beginPath();
+                ctx.arc(cx, cy, width * 0.1 * r, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            const totalW = BAR_COUNT * (BAR_WIDTH + BAR_GAP) - BAR_GAP;
+            const startX = (width - totalW) / 2;
+
+            for (let i = 0; i < BAR_COUNT; i++) {
+                const b = bars[i];
+                const x = startX + i * (BAR_WIDTH + BAR_GAP);
+
+                let h = 10 + Math.abs(b.y) * 4;
+                h = Math.min(height * 0.8, h);
+                const rectY = cy - h / 2;
+
+                // Opacity mapping
+                const energy = h / (height * 0.8);
+                const alpha = 0.5 + energy * 0.5;
+
+                // Gradient
+                const grad = ctx.createLinearGradient(x, cy - height / 2, x, cy + height / 2);
+                grad.addColorStop(0, "rgba(98, 182, 203, 0)");
+                grad.addColorStop(0.3, "rgba(98, 182, 203, " + alpha + ")");
+                grad.addColorStop(0.7, "rgba(98, 182, 203, " + alpha + ")");
+                grad.addColorStop(1, "rgba(98, 182, 203, 0)");
+
+                ctx.fillStyle = grad;
+
+                if (ctx.roundRect) {
+                    ctx.beginPath();
+                    ctx.roundRect(x, rectY, BAR_WIDTH, h, BAR_WIDTH / 2);
+                    ctx.fill();
+                } else {
+                    ctx.fillRect(x, rectY, BAR_WIDTH, h);
+                }
+            }
+
+            // Pilot Light
+            ctx.fillStyle = "rgba(255,255,255,0.8)";
+            ctx.beginPath();
+            ctx.arc(cx, cy, 2, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        function loop() {
+            updatePhysics();
+            draw();
+            requestAnimationFrame(loop);
+        }
+
+        // Interaction: Instant Impulse
+        canvas.addEventListener('mousedown', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const clickX = (e.clientX - rect.left) * (width / rect.width);
+
+            // Trigger Range
+            // Map clickX to closest bars
+            const totalW = BAR_COUNT * (BAR_WIDTH + BAR_GAP) - BAR_GAP;
+            const startX = (width - totalW) / 2;
+
+            for (let i = 0; i < BAR_COUNT; i++) {
+                const barX = startX + i * (BAR_WIDTH + BAR_GAP) + BAR_WIDTH / 2;
+                const dist = Math.abs(clickX - barX);
+
+                if (dist < width * 0.3) {
+                    const force = 40 * (1 - dist / (width * 0.3));
+                    bars[i].v += force;
+                }
+            }
+        });
+
+        window.addEventListener('resize', resize);
+        resize();
+        loop();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">心理健康交流大会</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">今天和朋友一起去参加了第三届关爱儿童青少年心理健康交流大会暨成果展示活动~ 上午大会主要听了一些报告，讲了不同年龄阶段的孩子可能正在面临的一些挑战，存在的心理健康的问题以及一些心理健康教育的建议。 我简单记了一些感同身受的笔记 📃内容点击这里 印象最深刻的是有一点说到：一些孩子过早思考人生意义，或者 …</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

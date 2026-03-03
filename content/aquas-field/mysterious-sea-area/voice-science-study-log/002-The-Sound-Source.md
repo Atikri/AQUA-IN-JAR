@@ -18,8 +18,6 @@ The larynx is a tube of cartilage sitting on top of the trachea (windpipe). It i
 *   **The Shield**: The **Thyroid Cartilage**. The large, V-shaped shield that protects the front. The "Adam's Apple" is the notch of this shield. It rocks forward and backward on the Cricoid.
 *   **The Controllers**: The **Arytenoid Cartilages**. Two tiny pyramids sitting on the back rim of the Cricoid. **Crucial**: The vocal folds are attached to these. When the Arytenoids move, the vocal folds move.
 
-![Larynx Anatomy Diagram](/images/larynx-anatomy.png "The Biological Engine: Thyroid Shield sitting on Cricoid Ring")
-
 ### 2. The Intrinsice Muscles (The Crew)
 These muscles are inside the larynx and control the vocal folds directly. We categorize them by *function*:
 

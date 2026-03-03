@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">扔扔扔！</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">各位平安夜快乐呀！🎄🎄🎄 一年也马上要过去了，最近就会刷到很多帖子都在讲如何开启新的一年，都会说新的一年要怎么建立习惯呀，如何更加成长呀等等。 不过，我觉得最近给我很有启发的关键词是：“扔”。大家可能想的都是在新的一年如何增加，我们不妨乘着新的一年还没有到来，先来递减一些~ 大家可以参考老高与小茉的 …</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

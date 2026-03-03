@@ -3,7 +3,7 @@ title: "March 3: Cultivate the Craftsman Ethic"
 date: "2026-03-03"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,4 +48,17 @@ draft: true
     </details>
   </li>
 </ul>
+
+## 培养工匠伦理 (Cultivate the Craftsman Ethic)
+伟大的大师们，包括当代的大师，都设法保留了工匠精神。激励他们的不是金钱、名声或高位，而是创作出完美的作品、设计出最好的建筑、发现新的科学规律、以及精通他们的手艺。这有助于他们不被职业生涯中的起伏所困扰。==唯有工作本身才是最重要的==。 最终，这些大师通过培养这种精神，反而赚到了更多的钱，获得了更大的名声。  
+史蒂夫·乔布斯（Steve Jobs）就是这种工匠伦理的化身。他从父亲那里继承了这一点，他的父亲是一个热爱亲手造物的人；那种对完美的追求、以及让每件事都“恰到好处”的态度，被乔布斯转化到了苹果产品的设计中。这就是大师的目标：==把事情做好，并为此感到自豪==。  
+
+> Daily Law: Retain the craftsman spirit. Keep in mind: the work is the only thing that matters. [^1] 
+
+## 操作建议
+今天，请审视你正在处理的某项具体任务。暂时忘掉截止日期、KPI或他人的评价。 问自己：“如果这是我留给世界的唯一作品，我现在的处理方式是否能让我感到自豪？” 哪怕只是一个Excel表格或一封邮件，尝试以“大师”的标准去打磨它的每一个细节。当你把注意力完全锚定在“把事情做对”上时，你就在那一个瞬间进入了大师境界。
+
+
+[^1]: 今日法则：保留工匠精神。请记住：工作本身是唯一重要的事情。
+
 

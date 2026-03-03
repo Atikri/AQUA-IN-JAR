@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">给拉丁美洲小朋友们上课</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">2025年7月，我和poly一起去给拉丁美洲小朋友上课了 我准备的内容是教给他们如何掌握一门外语的一些技巧，因为最近也刚好听到一些相关学习语言的咨询，就想以这个为切入点，教小朋友们一起学中文。 大家真的超级热情，问一个问题一大堆人举手，translator笑着说，你下去选妃吧😂 有一些同学还会因为没 …</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

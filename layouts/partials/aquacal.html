@@ -1,0 +1,29 @@
+{{/*
+Partial: premium-calendar
+Usage: {{ partial "premium-calendar.html" (dict "section" "aquas-field") }}
+*/}}
+
+{{- $section := .section | default "" -}}
+
+<link rel="stylesheet" href="/css/aquacal.css">
+
+<div class="premium-calendar-container" data-section="{{ $section }}">
+    <div class="calendar-header-glass">
+        <h2 id="month-title" class="calendar-title-glass">LOADING...</h2>
+        <div class="calendar-controls-glass">
+            <button id="prev-month" class="glass-btn" title="Previous Month">←</button>
+            <button id="go-today" class="glass-btn">TODAY</button>
+            <button id="next-month" class="glass-btn" title="Next Month">→</button>
+        </div>
+    </div>
+
+    <div id="premium-calendar-body" class="calendar-grid-premium">
+        <!-- JS will populate this -->
+    </div>
+
+    <div id="article-preview-area" class="premium-article-preview">
+        <!-- Selected day's articles will show here -->
+    </div>
+</div>
+
+<script src="/js/aquacal.js"></script>

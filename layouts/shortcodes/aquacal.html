@@ -1,0 +1,8 @@
+{{/*
+Shortcode: premium-calendar
+Usage: {{< premium-calendar section="aquas-field">}}
+    Displays a high-end glassmorphic calendar widget.
+    */}}
+
+    {{- $section := .Get "section" | default "" -}}
+    {{ partial "aquacal.html" (dict "section" $section) }}

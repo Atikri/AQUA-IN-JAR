@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">骨盆歪斜会阻碍循环</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">让体液流起来outline 骨盆形似漏斗，一旦歪斜，通过==大腿根部(漏斗)== 的血管或淋巴管的体液就会变得不顺畅。 大腿根部是==髋关节==的一部分。 关节是指👉互有关联的骨节，它是连接身体各部位的衔合处，也是体液流动时会经过的关卡。 这个关卡周围聚集有动脉，静脉和淋巴的出入口。体液不通过这个关 …</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">我们都被忘了翻唱</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">2025年6月2号，参加了万达的公演活动，没记错的话应该这是我第一次参加公演，晚上有点飘雨，有点冷，当然一部分原因也是因为我还蛮紧张的。 唱了三首歌： 风的形状——岑宁儿 我们都被忘了——谢安琪 相信一切都是最好的安排——陈蕾 朋友帮忙录了《我们都被忘了》，不过画质不太好，而且后面屏幕好闪，所以看上 …</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

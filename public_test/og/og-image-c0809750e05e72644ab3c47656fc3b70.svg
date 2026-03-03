@@ -1,0 +1,26 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+        <style>
+            svg {
+              background-color: #f0efea;
+            }
+            @font-face {
+              font-family: 'Newsreader';
+              src: url('/fonts/Newsreader.woff2') format('woff2');
+            }
+            .title, .description {
+              font-family: 'Newsreader', serif;
+              fill: #141413;
+              text-anchor: start;
+              line-height: 1.1;
+            }
+        </style>
+        <rect width="1200" height="630" fill="#f0efea" />
+        <foreignObject x="80" y="200" width="840" height="300">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <div style="font-family: Newsreader, serif; font-size: 78px; font-weight: 600; margin-bottom: 20px; word-wrap: break-word;">同学留言本</div>
+                <div style="font-family: Newsreader, serif; font-size: 70px; font-weight: 400; word-wrap: break-word;">小学那时候我们毕业很多人都会买一些留言本，然后互赠，填写一些寄语啊什么的。 这个留言本我一直珍藏到现在，今天打扫的时候又翻到，挑选一些拍照记录下来了，毕竟真的随着时间流逝，很多东西不能一直以实体的形式保存🤧 同学的名字做了处理（已经记在心里面了🥰 ）</div>
+            </div>
+        </foreignObject>
+    </svg>
+    

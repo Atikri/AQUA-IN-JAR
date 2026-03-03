@@ -5,6 +5,7 @@ beautifulsoup4>=4.12.2
 lxml>=5.2.1
 python-dateutil>=2.9.0.post0
 pytz>=2024.1
+PyPDF2>=3.0.1
 
 # Optional AI providers (enable if you set provider in data/news_sources.yaml)
 openai>=1.40.0

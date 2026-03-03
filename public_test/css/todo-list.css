@@ -1,0 +1,232 @@
+/* Todo List App Styles */
+#todo-app {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 24px;
+  background: var(--bg-color);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dark-mode-on #todo-app {
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.05);
+}
+
+.todo-header {
+  margin-bottom: 24px;
+}
+
+.todo-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+
+.todo-input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-family: var(--font-family-base), serif;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: border-color 0.2s ease;
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: #6f79ff;
+}
+
+.todo-add-btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #6f79ff 0%, #5d6bff 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.todo-add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(111, 121, 255, 0.3);
+}
+
+.todo-add-btn:active {
+  transform: translateY(0);
+}
+
+.todo-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 14px;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  animation: slideIn 0.3s ease;
+}
+
+.dark-mode-on .todo-item {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.todo-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode-on .todo-item:hover {
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+}
+
+.todo-item>input[type="checkbox"] {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.todo-item .cbx {
+  margin-left: -5px;
+  flex-shrink: 0;
+}
+
+.todo-item .lbl {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.4;
+}
+
+.todo-item.completed .lbl {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode-on .todo-item.completed .lbl {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.todo-delete-btn {
+  padding: 6px 12px;
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.todo-delete-btn:hover {
+  opacity: 1;
+  background: rgba(255, 99, 99, 0.1);
+  border-color: rgba(255, 99, 99, 0.3);
+  color: #ff6363;
+}
+
+.todo-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.todo-clear-btn {
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.todo-clear-btn:hover {
+  background: rgba(255, 99, 99, 0.1);
+  border-color: rgba(255, 99, 99, 0.3);
+  color: #ff6363;
+}
+
+.todo-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-color);
+  opacity: 0.5;
+  font-style: italic;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  #todo-app {
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .todo-input-container {
+    flex-direction: column;
+  }
+
+  .todo-add-btn {
+    width: 100%;
+  }
+
+  .todo-stats {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+}

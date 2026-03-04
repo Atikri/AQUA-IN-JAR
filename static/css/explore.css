@@ -1,0 +1,108 @@
+/* Explore More Section - Premium Nav Grid */
+.explore-more-section {
+    margin-top: 80px;
+    padding: 60px 40px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 40px 40px 0 0;
+}
+
+.dark-mode-on .explore-more-section {
+    background: rgba(30, 31, 34, 0.3);
+    border-top-color: rgba(255, 255, 255, 0.05);
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.explore-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.explore-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    opacity: 0.6;
+    color: var(--text-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.explore-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background: var(--text-color);
+    opacity: 0.2;
+}
+
+.explore-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.explore-links li {
+    margin-bottom: 14px;
+}
+
+.explore-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
+
+.explore-links a:hover {
+    opacity: 1;
+    transform: translateX(8px);
+    color: #3b82f6;
+    /* Accent color */
+}
+
+.explore-links a::before {
+    content: '→';
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.explore-links a:hover::before {
+    opacity: 1;
+    left: -22px;
+}
+
+/* Tablet & Mobile */
+@media (max-width: 768px) {
+    .explore-more-section {
+        padding: 40px 20px;
+        margin-top: 40px;
+    }
+
+    .explore-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .explore-grid {
+        grid-template-columns: 1fr;
+    }
+}

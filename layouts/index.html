@@ -93,16 +93,134 @@
     {{ partial "calendar-widget.html" . }}
 </section>
 
-<!-- Featured Section -->
-<section id="featured-section" class="featured-section">
-    <h2>{{ "おすすめ:chipmunk:" | emojify }}</h2>
-    <ul>
-        {{- $featured := where .Site.RegularPages ".Params.featured" true -}}
-        {{- range first 8 $featured }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+<!-- Featured Section (Redesigned) -->
+<section id="featured-section" class="featured-section-premium">
+    <div class="section-header">
+        <h2>{{ "おすすめ:chipmunk:" | emojify }}</h2>
+    </div>
+
+    <div class="featured-slider-container">
+        <button class="slider-arrow prev" onclick="moveSlider(-1)">❮</button>
+        <div class="featured-slider-track" id="featuredSlider">
+            {{- $featured := where .Site.RegularPages ".Params.featured" true -}}
+            {{- range first 10 $featured }}
+            <a href="{{ .Permalink }}" class="featured-card-premium slider-item">
+                <div class="card-cover">
+                    {{- if .Params.image -}}
+                    <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy">
+                    {{- else -}}
+                    <div class="card-placeholder"
+                        style="background: linear-gradient(135deg, #FFD194 0%, #D1913C 100%);">
+                        <div class="placeholder-content">
+                            <span class="placeholder-emoji">📜</span>
+                            <span class="placeholder-text">FEATURED</span>
+                        </div>
+                    </div>
+                    {{- end -}}
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">{{ .Title }}</h3>
+                    <div class="card-footer">
+                        <div class="card-meta">
+                            <svg class="author-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <span class="card-author">{{ .Params.author | default "Tikri" }}</span>
+                        </div>
+                        <button class="card-like-btn" onclick="event.preventDefault(); this.classList.toggle('liked');">
+                            <svg class="heart-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </a>
+            {{- end }}
+        </div>
+        <button class="slider-arrow next" onclick="moveSlider(1)">❯</button>
+    </div>
+
+    <!-- Aesthetic Functional Pagination Dots -->
+    <div class="featured-pagination" id="sliderDots">
+        {{- range $index, $element := (first 10 $featured) }}
+        <span class="dot {{ if eq $index 0 }}active{{ end }}" onclick="jumpToSlide({{ $index }})"></span>
         {{- end }}
-    </ul>
+    </div>
 </section>
+
+<script>
+    (function () {
+        const slider = document.getElementById('featuredSlider');
+        const dots = document.querySelectorAll('#sliderDots .dot');
+        let isMoving = false;
+
+        function updateSliderEffects() {
+            if (!slider) return;
+            const items = slider.querySelectorAll('.slider-item');
+            if (items.length === 0) return;
+
+            const sliderRect = slider.getBoundingClientRect();
+            const sliderCenter = sliderRect.left + sliderRect.width / 2;
+            const itemWidth = items[0].offsetWidth;
+
+            items.forEach((item, idx) => {
+                const itemRect = item.getBoundingClientRect();
+                const itemCenter = itemRect.left + itemRect.width / 2;
+                const distFromCenter = itemCenter - sliderCenter;
+                const normalizedDist = distFromCenter / itemWidth;
+
+                // Dynamic Tilt & Scale
+                const rotateY = Math.max(Math.min(normalizedDist * -15, 20), -20);
+                const scale = 1 - Math.min(Math.abs(normalizedDist) * 0.1, 0.15);
+                const opacity = 1 - Math.min(Math.abs(normalizedDist) * 0.4, 0.5);
+
+                item.style.transform = `rotateY(${rotateY}deg) scale(${scale})`;
+                item.style.opacity = opacity;
+
+                // Sync Dots
+                if (Math.abs(normalizedDist) < 0.5) {
+                    dots.forEach((dot, dIdx) => {
+                        dot.classList.toggle('active', dIdx === idx);
+                    });
+                }
+            });
+        }
+
+        window.moveSlider = function (direction) {
+            if (!slider || isMoving) return;
+            const item = slider.querySelector('.slider-item');
+            if (!item) return;
+            const slideWidth = item.offsetWidth + 40;
+            isMoving = true;
+            slider.scrollBy({ left: direction * slideWidth, behavior: 'smooth' });
+            setTimeout(() => { isMoving = false; }, 500);
+        };
+
+        window.jumpToSlide = function (index) {
+            if (!slider || isMoving) return;
+            const item = slider.querySelector('.slider-item');
+            if (!item) return;
+            const slideWidth = item.offsetWidth + 40;
+            isMoving = true;
+            slider.scrollTo({ left: index * slideWidth, behavior: 'smooth' });
+            setTimeout(() => { isMoving = false; }, 500);
+        };
+
+        if (slider) {
+            slider.addEventListener('scroll', () => {
+                requestAnimationFrame(updateSliderEffects);
+            });
+            window.addEventListener('resize', updateSliderEffects);
+            // Initial call after a brief delay for rendering
+            setTimeout(updateSliderEffects, 500);
+        }
+    })();
+</script>
 
 
 {{/* Precompute random-article list as JSON to avoid templating inside JS */}}
@@ -117,30 +235,32 @@
 <!-- Random Article Data -->
 <div id="random-article-data" data-articles='{{ $articlesJSON }}' style="display:none;"></div>
 
-<!-- Explore More Section (Moved to Bottom) -->
+<!-- Explore More Section (Redesigned) -->
 <section id="explore-more-section" class="explore-more-section">
-    <div class="explore-container">
+    <div class="explore-grid">
         <div class="explore-column">
-            <h3>探索 | EXPLORE</h3>
-            <ul>
-                <li><a href="{{ " aquas-field/" | relURL }}">Aqua's Field</a></li>
-                <li><a href="{{ " notification-jar/" | relURL }}">Notification Jar</a></li>
-                <li><a href="{{ " podcast-music/" | relURL }}">Podcast & Music & Video</a></li>
-                <li><a href="{{ " self-generation/" | relURL }}">Self-Generation</a></li>
+            <h3 class="explore-title">探索 | EXPLORE</h3>
+            <ul class="explore-links">
+                <li><a href="/aquas-field/">Aqua's Field</a></li>
+                <li><a href="/notification-jar/">Notification Jar</a></li>
+                <li><a href="/podcast-music/">Podcast & Music & Video</a></li>
+                <li><a href="/self-generation/">Self-Generation</a></li>
             </ul>
         </div>
         <div class="explore-column">
-            <h3>更多 | MORE</h3>
-            <ul>
-                <li><a href="{{ " /#calendar-section" | relURL }}">Calendar</a></li>
-                <li><a href="#headerSearchPanel" onclick="toggleSearch(); return false;">Search</a></li>
+            <h3 class="explore-title">更多 | MORE</h3>
+            <ul class="explore-links">
+                <li><a href="/#calendar-section">Calendar</a></li>
+                <li><a href="javascript:void(0)"
+                        onclick="const btn = document.getElementById('headerSearchBtn'); if(btn) btn.click();">Search</a>
+                </li>
             </ul>
         </div>
         <div class="explore-column">
-            <h3>关于 | ABOUT</h3>
-            <ul>
-                <li><a href="{{ " notification-jar/aboutme/" | relURL }}">About Me</a></li>
-                <li><a href="{{ " notification-jar/contact/" | relURL }}">Contact</a></li>
+            <h3 class="explore-title">关于 | ABOUT</h3>
+            <ul class="explore-links">
+                <li><a href="/notification-jar/aboutme/">About Me</a></li>
+                <li><a href="/notification-jar/contact/">Contact</a></li>
             </ul>
         </div>
     </div>

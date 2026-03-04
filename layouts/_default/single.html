@@ -10,11 +10,11 @@
     <h4>{{ .Params.description }}</h4>
 
     {{- if isset .Params "date" }}
-    <p class="author-date">{{ printf `<time datetime="%s">%s</time>` (.Date.Format "2006-01-02T15:04:05Z07:00")
-        (.Date.Format "January 2, 2006") | safeHTML }}</p>
+    <p class="author-date">
+        <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        <span> · {{ .WordCount }} 字 · 预计阅读时长 {{ .ReadingTime }} 分钟</span>
+    </p>
     {{- end }}
-
-
 
     {{- /* Mobile overlay TOC is handled globally; remove inline TOC block */ -}}
 

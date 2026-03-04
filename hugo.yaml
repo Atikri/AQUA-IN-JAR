@@ -1,11 +1,14 @@
 baseURL: http://localhost:1313/
-languageCode: en-us 
+languageCode: zh-hans
 title: AQUA IN JAR 
 theme: dario
+hasCJKLanguage: true
+isCJKLanguage: true
 copyright: "© 2026 AQUA IN JAR"
 params:
   colorScheme: toggle
   # Google Analytics 4
+  readingSpeed: 200 # Optional: customize reading speed (words/characters per minute)
   googleAnalytics: "G-JLYX55NFNN"  # 你的GA4测量ID
   backToTopImage: images/navigation/top.png
 

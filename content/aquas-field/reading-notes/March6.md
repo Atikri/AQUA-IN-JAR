@@ -3,7 +3,7 @@ title: "March 6: The Gift of Our Original Mind"
 date: "2026-03-06"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -49,3 +49,19 @@ draft: true
   </li>
 </ul>
 
+## 原始思维的禀赋 (The Gift of Our Original Mind)
+我们每个人都拥有一种天生的、渴望活跃的创造力。这就是“**原始思维**”（Original Mind）赋予我们的禀赋，它揭示了我们的潜能。人类的头脑天生具有创造性，不断寻求在事物与想法之间建立关联。它渴望探索，发现世界的新面貌并进行发明。表达这种创造力是我们最强烈的愿望，而扼杀它则是我们痛苦的根源。  
+扼杀创造力的并非年龄或缺乏才华，而是我们自己的==精神状态和态度==。我们变得对自己掌握的知识过于**安逸**；我们开始害怕接纳新想法，以及随之而来的努力。灵活思考意味着风险——我们可能会失败或遭受嘲笑。我们宁愿生活在熟悉的观念和思维习惯中，但为此付出了惨重的代价：我们的头脑因缺乏挑战和新意而变得死气沉沉；我们在所属领域达到了上限，并因变得“**可替代**”（replaceable）而失去了对命运的掌控。  
+
+> Daily Law: Do what the mind wants to do—explore, entertain, and embrace new ideas.[^1]
+
+---
+
+## 实践建议
+今天，请找出一个你已经习惯化、不再思考的工作流程或固有观念。  
+- 质疑它：如果从一个完全不同的领域（比如艺术、体育或自然科学）来看待这个流程，会有什么新解法？  
+- 测试它：尝试一个你之前因为怕麻烦或怕丢脸而拒绝的小实验。  
+
+记住：当你感到头脑“不舒服”时，那正是你的“原始思维”在被重新激活的信号。
+
+[^1]: 今日法则：顺应头脑的天性——去探索、思考并拥抱新想法。

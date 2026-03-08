@@ -3,7 +3,7 @@ title: "March 8: Retain Your Sense of Wonder"
 date: "2026-03-08"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -49,3 +49,14 @@ draft: true
   </li>
 </ul>
 
+## 保持你的惊奇感 (Retain Your Sense of Wonder)
+> Youth is happy because it has the capacity to see beauty. Anyone who keeps the ability to see beauty never grows old.
+> —FRANZ KAFKA[^2]
+
+当我们度过了严格的学徒期，并开始展示自己的创造力时，我们不禁会对所学到的知识和所取得的进步感到满意。我们自然而然地开始理所当然地接受某些已经掌握并发展的观点。慢慢地，我们不再像早期那样追问同样的问题。我们觉得自己已经知道了答案，感到高人一等。然而，在不经意间，随着自满情绪潜入灵魂，思想会逐渐变窄、变紧。尽管我们可能因过去的作品赢得了公众的赞誉，但我们却扼杀了自身的创造力，且再也无法将其找回。你要尽全力对抗这种走下坡路的倾向，坚持“==主动惊奇==”（active wonder）的价值。==不断提醒自己，你真正知道的是多么微乎其微，而这个世界依然是多么地神秘==。
+
+> Daily Law: Reality is infinitely mysterious. Let it continually fill you with awe. Remind yourself of how much more you still can learn.[^1]
+
+
+[^1]: 今日法则：现实是无限神秘的。让现实不断带给你敬畏感。提醒自己，你还有很多东西需要学习。
+[^2]: “青年之所以幸福，是因为他拥有发现美的能力。任何保持发现美能力的人，永远不会变老。” ——弗兰兹·卡夫卡

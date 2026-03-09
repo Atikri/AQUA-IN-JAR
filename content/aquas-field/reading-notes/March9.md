@@ -3,7 +3,7 @@ title: "March 9: Impatience Is Your Enemy"
 date: "2026-03-09"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -49,3 +49,17 @@ draft: true
   </li>
 </ul>
 
+## 不耐烦是你的敌人 (Impatience Is Your Enemy)
+> Patience is bitter, but its fruit is sweet. —ARISTOTLE[^1]  
+
+==创造力的最大障碍是你的不耐烦==——那种几乎不可避免的、想要加速进程、表达自我并一鸣惊人的欲望。在这种情况下，你无法掌握基础知识，手中也没有真正的“词汇量”可供支配。你误以为是创意和独特的东西，很可能只是对他人的模仿，或者是毫无实际意义的个人臆语。然而，观众是很难被愚弄的,他们能感觉到作品缺乏严谨性、具有模仿性以及渴望关注的冲动，从而转身离去，或者只给予转瞬即逝的微弱赞美。 最好的路径是**为了学习本身**而热爱学习。 任何愿意花十年时间吸收、尝试、精通、探索并个性化其领域规范和传统的人，最终都不可避免地会找到自己**真实的声音**，并孕育出独特且富有表现力的作品。
+
+> Daily Law: Take the long view. By being patient and following the process, individual expression will flow out of you naturally.[^2]
+
+--- 
+
+## 实践建议
+今天，当你感到因为进步缓慢而焦虑，或急于展示尚未成熟的成果时，请对自己说：“我现在正在积累我的‘词汇量’。” 不要急着去“一鸣惊人”，把你的经历和学习看作种子，耐心地在你的大脑中培育它们，直到它们成熟并开花。记住，时间是精通的关键变量，任何试图跳过步骤的行为都是在自毁前程。
+
+[^1]: “忍耐是苦涩的，但它的果实是甜美的。” ——亚里士多德
+[^2]: 今日法则：树立长期观。通过保持耐心并遵循过程，个性的表达将自然地从你身上流淌出来。

@@ -3,7 +3,7 @@ title: "March 10: Knowledge Is Your Superior"
 date: "2026-03-10"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -54,7 +54,7 @@ draft: true
 > —MARGARET A. BODEN[^1]
 
 为了否定自我（Ego），你必须对知识采取一种谦逊的态度。 伟大的科学家迈克尔·法拉第（Michael Faraday）曾表达过这种态度：科学知识是在不断进步的。 当代最伟大的理论最终都会在未来的某个时刻被证明是错误的或被修改。 人类的心智实在是太脆弱了，无法对现实拥有清晰而完美的洞察。  
-你目前正在构思的、看起来如此新鲜、生动且真实的理念或理论，几乎肯定会在几十年或几个世纪后遭到抨击或嘲笑。 （我们倾向于嘲笑20世纪以前那些还不相信进化论、认为世界只有6000年历史的人，但想象一下，21世纪的人们所持有的那些天真的信念，会被未来的人们如何嘲笑吧！）因此，最好记住这一点，不要过分迷恋自己的想法，也不要对它们的正确性过于确信。  
+你目前正在构思的、看起来如此新鲜、生动且真实的理念或理论，几乎肯定会在几十年或几个世纪后遭到抨击或嘲笑。 （我们倾向于嘲笑20世纪以前那些还不相信进化论、认为世界只有6000年历史的人，但想象一下，21世纪的人们所持有的那些天真的信念，会被未来的人们如何嘲笑吧！）因此，最好记住这一点，==不要过分迷恋自己的想法，也不要对它们的正确性过于确信==。  
 
 > Daily Law: Knowledge is always progressing. Don’t let your ego fool you. You are always knowledge’s inferior.[^2]
 

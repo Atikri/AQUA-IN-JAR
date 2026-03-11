@@ -3,7 +3,7 @@ title: "March 11: Intensity of Focus"
 date: "2026-03-11"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -49,3 +49,15 @@ draft: true
   </li>
 </ul>
 
+## Intensity of Focus(专注的强度)
+对于许多在马塞尔·普鲁斯特（Marcel Proust）年轻时就认识他的人来说，他似乎是最不可能获得大师地位（Mastery）的人，因为从表面上看，他似乎在浪费大量宝贵的时间。他当时所做的似乎只是读书、散步、写没完没了的信件、参加聚会、白天睡觉，并发表一些浅薄的社交文章。  
+但在这些表面现象之下，是一种极高强度的注意力。他并不只是在读书——他会拆解书本，进行严密的分析，并汲取宝贵的教训应用到自己的人生中。所有的这些阅读都在他的大脑中植入了各种风格，丰富了他后来的写作风格。他也不仅仅是在社交——他极力去从核心层面理解他人，揭示他们隐藏的动机。他不仅分析自己的心理，还深入探索自己意识的不同层面，以至于他对手法记忆功能的见解预示了神经科学的许多发现。  
+他甚至利用母亲的去世来强化自己的进步。随着母亲的离去，他不得不通过写作让自己走出抑郁，并在他将要创作的作品中找到一种重现两人情感的方式。正如他后来所描述的，所有这些经历都像是种子；一旦他开始创作伟大的小说《追寻逝去的时光》，他就像是一个园丁，照料并培育着多年前就已经扎根的植物。  
+
+> Daily Law: It is not your studies that will bear fruit but the intensity of your attention.[^1]
+
+---  
+
+
+
+[^1]: 每日法则：结出果实的不是你的研究本身，而是你投入注意力的强度。

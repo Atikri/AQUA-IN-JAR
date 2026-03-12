@@ -56,8 +56,6 @@ draft: false
 
 > Daily Law: It is not your studies that will bear fruit but the intensity of your attention.[^1]
 
----  
-
 
 
 [^1]: 每日法则：结出果实的不是你的研究本身，而是你投入注意力的强度。

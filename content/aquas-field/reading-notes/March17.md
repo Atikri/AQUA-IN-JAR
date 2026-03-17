@@ -3,7 +3,7 @@ title: "March 17: These Powers Can’t Come Cheaply"
 date: "2026-03-17"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -49,3 +49,19 @@ draft: true
   </li>
 </ul>
 
+## 这些力量并非唾手可得 (These Powers Can’t Come Cheaply)
+创造有意义的艺术作品、进行科学发现或发明，需要==极大的纪律、自控力和情绪稳定性==。这要求你必须精通所属领域的各种形式。毒品和疯狂只会摧毁这些力量。不要落入文化中随处可见的关于创造力的浪漫神话和陈词滥调之中——这些神话通过提供借口或万灵药，诱导人们相信这些力量可以廉价获得。当你观察大师们那些极具创造性的作品时，绝不能忽视他们所忍受的多年练习、枯燥的常规、长时间的自我怀疑以及对障碍的顽强克服。  
+
+> Daily Law: Creative energy is the fruit of the Master’s efforts and nothing else. Do not fall for the romantic myths.[^1]
+
+---
+
+## 实践建议
+今天，请审视你对“创造力”的期待。你是否在等待一个不需要痛苦磨炼的“顿悟时刻”？  
+- 接受枯燥：意识到那些重复的、无聊的练习（Routine）正是通往高级权力的阶梯。  
+- 拒绝捷径：拒绝任何声称能让你“快速获得灵感”的外部手段。
+
+
+当你感到怀疑和疲惫时，你并没有走错路，你正在支付通往大师境界的必经成本。
+
+[^1]: 今日法则：创造性能量是大师努力的果实，别无他物。不要落入浪漫神话的陷阱。

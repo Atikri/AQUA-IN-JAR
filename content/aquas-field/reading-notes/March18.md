@@ -3,7 +3,7 @@ title: "March 18: The Power of Desire and Determination"
 date: "2026-03-18"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)

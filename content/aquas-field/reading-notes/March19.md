@@ -3,7 +3,7 @@ title: "March 19: The Deadening Dynamic"
 date: "2026-03-19"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -49,3 +49,18 @@ draft: true
   </li>
 </ul>
 
+## 僵化的动态 (The Deadening Dynamic)
+人类创造力的最大障碍或许是任何媒介或行业中随着时间推移而产生的自然衰竭。在科学或商业中，某种曾经成功的思考或行动方式会迅速变成一种范式（Paradigm），即一种**既定的程序**。随着岁月的流逝，人们忘记了这一范式的初衷，只是盲目遵循一套死气沉沉的技术。在艺术领域，有人建立了一种符合时代精神的崭新风格，它因与众不同而具有锋芒；但很快效仿者四起，它变成了某种时尚，一种必须服从的东西。这种状态可能拖上十几年，最终演变成陈词滥调（Cliché），成为没有真实情感或需求的纯粹风格。  
+文化中没有任何事物能逃脱这种死气沉沉的动力。然而，这个问题为创造型人才提供了巨大的机会。过程如下：你首先**要向内看**。你拥有某种想要表达的东西，它与你的倾向相关且独一无二。你必须确保它不是被某种趋势或时尚激发的，而是==发自内心的真实==。一旦感知到新语言或新方法的可能性，===你必须有意识地决定去对抗（Play against）那些你认为已经僵死并想要摆脱的陈规==。
+
+> Daily Law: People are dying for the new, for what expresses the spirit of the time in an original way. By creating something new you will create your own audience and attain the ultimate position of power in culture.[^1]
+
+---  
+
+## 操作建议
+今天，请检视你所在行业或专业领域中最常见的“标准操作流程（SOP）”或“流行趋势”。  
+- 剥离表象：问自己，“我们现在这样做的初衷是什么？这个初衷现在还成立吗？”  
+- 内向探索：如果完全不考虑现在的流行趋势，你的直觉会引导你如何去处理这个任务？  
+- 微小反抗：尝试在一个细节上“玩弄”规则，用一种非传统但更真实的方式去表达。记住，当所有人都在机械重复时，哪怕一点点真实性都具有引爆文化的能力。  
+
+[^1]: 今日法则：人们渴望新事物，渴望能以原创方式表达时代精神的东西。通过创造新事物，你将创造自己的受众，并获得文化的终极权力。

@@ -10,10 +10,10 @@ Hi!我是tikri~
 未来想学习心理学专业,SLP,神经科学。也会一直交叉研究声音方面的领域~
 
 ## 我的订阅服务：
-1. Supernotes：我的笔记软体，相比于Notion,Obsidian这些比较流行的笔记软体，这一款软件绝对是小众的精品，记笔记思路采取的是卡片式笔记法，app的UI设计也非常好看，可玩性极高，上手有一点点难度。不过订阅费用的确还蛮贵的😭
-2. Spotify
+1. [Supernotes](https://supernotes.app/)：我的笔记软体，相比于Notion,Obsidian这些比较流行的笔记软体，这一款软件绝对是小众的精品，记笔记思路采取的是卡片式笔记法，app的UI设计也非常好看，可玩性极高，上手有一点点难度。不过订阅费用的确还蛮贵的😭
+2. Spotify(已取消订阅)
 3. Thinking Lab：很多我分享的好文也是来源于这边，每天一篇深度阅读，内容的确很有深度，但是我现在还没有养成每天好好消化一篇文章的好习惯，导致已经堆了很多文章😭
-4. Miraa：影子跟读软件，非常好用
+4. [Miraa](https://miraa.app/)：影子跟读软件，非常好用
 5. Headspace：冥想软件。
 
 ## 我喜欢的一些频道：
@@ -23,6 +23,9 @@ Hi!我是tikri~
 
 - [VocalFri Podcast](https://www.vocalfri.com/)   
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/1z9AuIAXGlRK0x2FRvweLL?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>  
+
+- [Calm it Down](https://www.calmitdownpodcast.com/)
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/1QBP6aNv7BsdQWwhqxLcIC?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 ### 书籍：
 - [Improving Speech Intelligibility in Adults: Client Application of Evidence-Based Strategies](https://www.pluralpublishing.com/publications/improving-speech-intelligibility-in-adults-clinical-application-of-evidence-based-strategies)

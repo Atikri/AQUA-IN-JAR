@@ -25,6 +25,11 @@
     perspective: 1200px;
     /* Enable 3D perspective */
     transform-style: preserve-3d;
+    cursor: grab;
+}
+
+.featured-slider-track:active {
+    cursor: grabbing;
 }
 
 .featured-slider-track::-webkit-scrollbar {
@@ -33,7 +38,7 @@
 }
 
 .slider-item {
-    flex: 0 0 320px;
+    flex: 0 0 420px;
     scroll-snap-align: center;
     transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     will-change: transform;
@@ -114,7 +119,7 @@
 /* Card Cover */
 .card-cover {
     width: 100%;
-    height: 380px;
+    height: 220px;
     border-radius: 24px 24px 0 0;
     overflow: hidden;
     position: relative;
@@ -197,27 +202,7 @@
     font-weight: 600;
 }
 
-.card-like-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--text-color);
-    opacity: 0.5;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: flex;
-}
 
-.card-like-btn:hover {
-    opacity: 1;
-    transform: scale(1.2);
-    color: #ef4444;
-}
-
-.card-like-btn.liked {
-    color: #ef4444;
-    opacity: 1;
-    fill: currentColor;
-}
 
 /* Slider Arrows */
 .slider-arrow {

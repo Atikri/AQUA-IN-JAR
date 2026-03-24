@@ -181,32 +181,39 @@
         });
 
         function initScripts() {
-            // Re-initialize Theme & Display Settings (darkmode.js)
-            if (window.initAll) {
-                window.initAll();
-            }
+            setTimeout(() => {
+                // Re-initialize Theme & Display Settings (darkmode.js)
+                try { if (window.initAll) window.initAll(); } catch(e) { console.error('initAll error:', e); }
 
-            // Re-initialize Search (search.js)
-            if (window.initSearch) {
-                window.initSearch();
-            }
+                // Re-initialize Search (search.js)
+                try { if (window.initSearch) window.initSearch(); } catch(e) { console.error('initSearch error:', e); }
 
-            // Re-attach TOC events (Legacy backup)
-            const tocOverlay = document.getElementById('tocOverlay');
-            if (tocOverlay) {
-                const links = tocOverlay.querySelectorAll('a');
-                links.forEach(link => {
-                    link.addEventListener('click', function () {
-                        tocOverlay.classList.remove('open');
-                        document.body.classList.remove('toc-open');
-                    });
-                });
-            }
+                try {
+                    // Re-attach TOC events (Legacy backup)
+                    const tocOverlay = document.getElementById('tocOverlay');
+                    if (tocOverlay) {
+                        const links = tocOverlay.querySelectorAll('a');
+                        links.forEach(link => {
+                            link.addEventListener('click', function () {
+                                tocOverlay.classList.remove('open');
+                                document.body.classList.remove('toc-open');
+                            });
+                        });
+                    }
+                } catch(e) { console.error('toc error:', e); }
 
-            // Init Quotes (Home) Logic
-            if (window.initQuotes) {
-                window.initQuotes();
-            }
+                // Init Quotes (Home) Logic
+                try { if (window.initQuotes) window.initQuotes(); } catch(e) { console.error('initQuotes error:', e); }
+
+                // Init Featured Slider (Home)
+                try { if (window.initFeaturedSlider) window.initFeaturedSlider(); } catch(e) { console.error('initFeatured error:', e); }
+
+                // Init Calendar
+                try { if (window.initCalendarWidget) window.initCalendarWidget(); } catch(e) { console.error('initCalendar error:', e); }
+
+                // Init Notifications
+                try { if (window.initNotifications) window.initNotifications(); } catch(e) { console.error('initNotif error:', e); }
+            }, 50);
         }
 
         // Initialize scripts only on Swup replace (First load handled by scripts themselves)

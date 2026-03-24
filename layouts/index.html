@@ -129,14 +129,6 @@
                             </svg>
                             <span class="card-author">{{ .Params.author | default "Tikri" }}</span>
                         </div>
-                        <button class="card-like-btn" onclick="event.preventDefault(); this.classList.toggle('liked');">
-                            <svg class="heart-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path
-                                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
-                                </path>
-                            </svg>
-                        </button>
                     </div>
                 </div>
             </a>
@@ -154,7 +146,7 @@
 </section>
 
 <script>
-    (function () {
+    window.initFeaturedSlider = function () {
         const slider = document.getElementById('featuredSlider');
         const dots = document.querySelectorAll('#sliderDots .dot');
         let isMoving = false;
@@ -218,8 +210,63 @@
             window.addEventListener('resize', updateSliderEffects);
             // Initial call after a brief delay for rendering
             setTimeout(updateSliderEffects, 500);
+
+            // Drag to scroll logic
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            let dragged = false;
+
+            slider.addEventListener('mousedown', (e) => {
+                isDown = true;
+                dragged = false;
+                slider.style.cursor = 'grabbing';
+                startX = e.pageX - slider.offsetLeft;
+                scrollLeft = slider.scrollLeft;
+                slider.style.scrollSnapType = 'none';
+                slider.style.scrollBehavior = 'auto'; // Disable smooth scroll while dragging
+            });
+
+            slider.addEventListener('mouseleave', () => {
+                isDown = false;
+                slider.style.cursor = ''; // Revert to CSS default (grab)
+                slider.style.scrollSnapType = 'x mandatory';
+                slider.style.scrollBehavior = 'smooth';
+            });
+
+            slider.addEventListener('mouseup', () => {
+                isDown = false;
+                slider.style.cursor = ''; // Revert to CSS default (grab)
+                slider.style.scrollSnapType = 'x mandatory';
+                slider.style.scrollBehavior = 'smooth';
+            });
+
+            slider.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                dragged = true;
+                const x = e.pageX - slider.offsetLeft;
+                const walk = (x - startX) * 2; // scroll speed
+                slider.scrollLeft = scrollLeft - walk;
+            });
+
+            // Prevent link click if dragged
+            const featuredCards = slider.querySelectorAll('.featured-card-premium');
+            featuredCards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    if (dragged) {
+                        e.preventDefault();
+                    }
+                });
+            });
         }
-    })();
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', window.initFeaturedSlider);
+    } else {
+        window.initFeaturedSlider();
+    }
 </script>
 
 

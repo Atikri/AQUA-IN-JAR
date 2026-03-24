@@ -104,6 +104,8 @@
         init();
     }
 
+    window.initCalendarWidget = initCalendarWidget;
+
     // Runs on initial load
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initCalendarWidget);
@@ -111,14 +113,8 @@
         initCalendarWidget();
     }
 
-    // Runs on Swup navigation if available
-    if (window.swup) {
-        document.addEventListener('swup:contentReplaced', initCalendarWidget);
-    } else {
-        // Fallback for other potential navigation-based re-runs
-        document.addEventListener('pageshow', (e) => {
-            if (e.persisted) initCalendarWidget();
-        });
-    }
+    // Fallback for other potential navigation-based re-runs
+    window.addEventListener('pageshow', (e) => {
+        if (e.persisted) initCalendarWidget();
+    });
 })();
-

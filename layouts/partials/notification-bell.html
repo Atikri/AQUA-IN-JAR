@@ -37,12 +37,14 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    window.initNotifications = function() {
         const btn = document.getElementById('notificationBtn');
         const panel = document.getElementById('notificationPanel');
         const badge = document.getElementById('notifBadge');
         const items = document.querySelectorAll('.notif-item');
         const markAllBtn = document.getElementById('markAllRead');
+
+        if (!btn || !panel) return; // Prevent errors if missing
 
         // Check for unread
         const checkUnread = () => {
@@ -112,19 +114,32 @@
         });
 
         // Mark All as Read
-        markAllBtn.addEventListener('click', () => {
-            const ids = Array.from(items).map(i => i.getAttribute('data-id'));
-            localStorage.setItem('last_notif_seen', JSON.stringify(ids));
-            checkUnread();
-        });
+        if (markAllBtn) {
+            markAllBtn.addEventListener('click', () => {
+                const ids = Array.from(items).map(i => i.getAttribute('data-id'));
+                localStorage.setItem('last_notif_seen', JSON.stringify(ids));
+                checkUnread();
+            });
+        }
 
-        // Close on click outside
-        document.addEventListener('click', (e) => {
+        // Keep single global listener or handle carefully
+        // To avoid multiple listeners on document, we can name the function
+        const closePanelOutside = (e) => {
             if (!panel.contains(e.target) && !btn.contains(e.target)) {
                 panel.classList.remove('active');
             }
-        });
+        };
+        // Remove prior event to prevent stacking
+        document.removeEventListener('click', window._closePanelOutsideNotif || (() => {}));
+        document.addEventListener('click', closePanelOutside);
+        window._closePanelOutsideNotif = closePanelOutside;
 
         checkUnread();
-    });
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', window.initNotifications);
+    } else {
+        window.initNotifications();
+    }
 </script>

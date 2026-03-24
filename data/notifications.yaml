@@ -1,10 +1,16 @@
-- id: "2024-03-04-reading-time"
-  date: "2024-03-04"
+- id: "loading issue"
+  date: "2026-03-24"
+  title: "加载缓慢问题"
+  content: "由于部分内容没有调试好，现在有些地区或者网络环境下加载可能异常缓慢，可以多尝试刷新几次，后续会尽快解决😤"
+  important: true
+
+- id: "reading-time"
+  date: "2026-03-04"
   title: "🚀 新功能：自动阅读时长统计"
-  content: "博文现已支持自动字数统计和预计阅读时长，希望能帮你更合理地安排时间！"
+  content: "Blog现已支持自动字数统计和预计阅读时长，希望能帮你更合理地安排时间！"
   important: true
 - id: "welcome-message"
-  date: "2024-03-01"
+  date: "2026-03-01"
   title: "👋 欢迎光临"
   content: "这是 AQUA IN JAR 的新消息通知系统，我会在这里分享一些新鲜资讯。"
   link: "/notification-jar/aboutme/"

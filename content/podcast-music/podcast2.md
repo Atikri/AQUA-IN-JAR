@@ -104,6 +104,7 @@ Iris Warren的教学思想奠定了林克莱特方法的基石。其核心在于
 ## 六、 实践指南：声音旅程的开启
 ### 图片：  
 ![脊柱练习指导](/images/posts/spine-guide.png)  
+
 一些动作的参考图👉：  
 ![spine1](/images/spine1.png)
 ![spine2](/images/spine2.png)

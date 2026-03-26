@@ -173,6 +173,7 @@ Mel and Dr. Cal Newport break down the science of focus and attention, and give 
 Dr. Jim Doty explains the neuroscience behind manifestation and gives a clear process for turning intention into reality.  
 
 ## [How to Get Motivated Even When You Don’t Feel Like It (Ep. 208)](https://www.melrobbins.com/episode/episode-208/)
+[BLOG'S HERE📃](https://tikri.site/aquas-field/reading-notes/How-to-Get-Motivated-Even-When-You-Dont-Feel-Like-It-With-Dr.-K-HealthyGamerGG/)  
 This episode teaches that motivation isn’t a feeling you wait for, it’s something you create through action.  
 
 ## [3 Questions to Ask Yourself To Figure Out What You Really Want (Ep. 339)](https://www.melrobbins.com/episode/episode-339/)

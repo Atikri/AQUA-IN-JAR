@@ -5,6 +5,8 @@ draft: false
 ---
 
 ## 🔗 相关资源
+❗主要来源都是Spotify播客，因此需要科学上网才能收听。（后期也会满满整理哒！）
+
 ### The Singing Psychologist
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/5CvJk4AzpjO2VjPBymvYsb?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 

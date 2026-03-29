@@ -3,7 +3,7 @@ title: "March 29: Fuse the Intuitive with the Rational, A"
 date: "2026-03-29"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -49,3 +49,19 @@ draft: true
   </li>
 </ul>
 
+## 融合直觉与理性（上） (Fuse the Intuitive with the Rational, A)
+> Albert Einstein called the intuitive or metaphoric mind a sacred gift. He added that the rational mind was a faithful servant. It is paradoxical that in the context of modern life we have begun to worship the servant and defile the divine. 
+> —BOB SAMPLES, THE METAPHORIC MIND[^1]
+
+我们所有人都能接触到一种更高形式的智力，它能让我们看清更广阔的世界、预见趋势，并对任何情况做出快速且准确的反应。这种智力的培养需要我们深切地沉浸在某个研究领域中，并==忠于自己的倾向==，无论我们的方法在他人看来多么不合常规。  
+通过多年这种深度的沉浸，我们逐渐内化并对所属领域的复杂组成部分产生了一种直觉感（intuitive feel）。当我们这种直觉感与理性过程相融合时，我们就将心智扩展到了潜力的极限，并能够洞察生命本身的秘密核心。届时，我们将拥有近似于动物**本能的力量和速度**，同时又具备人类意识所带来的**广度**。  
+
+> 今日法则：这种力量正是我们大脑设计的初衷。如果我们能将自己的倾向发挥到极致，我们自然会被引导至这种智力境界。[^2]
+
+
+---
+
+
+
+[^1]: “爱因斯坦曾将直觉或隐喻心智称为‘神圣的礼物’。他补充说，理性心智是一个‘忠实的仆人’。矛盾的是，在现代生活的背景下，我们开始崇拜仆人，却亵渎了神圣。” —— 鲍勃·桑普尔斯（Bob Samples），《隐喻心智》
+[^2]: 

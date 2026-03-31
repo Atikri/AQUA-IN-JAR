@@ -3,7 +3,7 @@ title: "March 31: Connect to Your Destiny"
 date: "2026-03-31"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -49,3 +49,16 @@ draft: true
   </li>
 </ul>
 
+## 连接你的天命 (Connect to Your Destiny)
+
+> “不要谈论什么天赋、天生的才干！我们可以列举出各种各样几乎没有什么天赋的伟人。他们获得了伟大，成为了‘天才’……因为他们允许自己为此投入时间。” 
+> —— 弗里德里希·尼采[^1]
+
+
+正如你现在所知，精通（Mastery）并非基因或运气的问题，而是源于追随你内在倾向（natural inclinations）唯一性。  
+通过追随你的倾向并迈向精通，你正为社会做出巨大贡献，用发现和见解丰富社会，并充分利用自然界和人类社会的多样性。事实上，==仅仅消费他人创造的东西、退缩到目标有限且追求即时享乐的壳子里，是极度自私的表现==。使自己与内在倾向疏远，长此以往只会导致痛苦、失望，以及一种挥之不去的“虚度光阴感”。这种痛苦会表现为愤恨与嫉妒，而你甚至无法识别出你抑郁的真正根源。你的“真实自我”并不通过语言或陈词滥调说话。它的声音来自你的内心深处，来自你心灵的底层，来自物理性地嵌入你体内的某种东西。它源于你的唯一性，并通过那些似乎超越了你自身的感官知觉和强烈欲望进行沟通。你终究无法理解为什么自己会被某些活动或知识形式所吸引。这无法被言语化或解释，它仅仅是一个自然事实。  
+
+> 今日法则：追随这个声音，你将实现自身潜能，并满足你创造和表达唯一性的深层渴望。它的存在是为了某种目的，而将其付诸实现正是你的“天职”（Life’s Task）。[^2]
+
+[^1]: Do not talk about giftedness, inborn talents! One can name great men of all kinds who were very little gifted. They acquired greatness, became “geniuses”. . . . They allowed themselves time for it. —FRIEDRICH NIETZSCHE
+[^2]: Daily Law: In following this voice you realize your own potential and satisfy your deepest longings to create and express your uniqueness. It exists for a purpose, and it is your Life’s Task to bring it to fruition.

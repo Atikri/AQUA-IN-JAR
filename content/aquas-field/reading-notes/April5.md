@@ -44,6 +44,9 @@ draft: true
         <li><a href='https://tikri.site/aquas-field/reading-notes/April29/'>April 29: Cultivate an Air of Unpredictability</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/April30/'>April 30: Never Appear Too Perfect</a></li>
       </ul>
+    </details>
+  </li>
+</ul>
 
 ## Remake Yourself into a Character of Power
 

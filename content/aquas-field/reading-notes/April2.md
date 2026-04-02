@@ -3,7 +3,7 @@ title: "April 2: Make the Master Feel Glorious and Superior"
 date: "2026-04-02"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -47,8 +47,19 @@ draft: true
 
 ## Make the Master Feel Glorious and Superior
 
-Like all Renaissance scientists, Galileo depended on the generosity of great rulers to support his research. No matter how great the discovery, however, his patrons usually paid him with gifts, not cash. This made for a life of constant insecurity and dependence. In 1610, he hit on a new strategy when he discovered the moons of Jupiter. Galileo turned his discovery into a cosmic event honoring the Medicis’ greatness. The Medicis made Galileo their official court philosopher and mathematician, with a full salary. Scientists are not spared the vagaries of court life and patronage. They too must serve masters who hold the purse strings. And their great intellectual powers can make the master feel insecure, as if he were only there to supply the funds—an ugly, ignoble job. The producer of a great work wants to feel he is more than just the provider of the financing. He wants to appear creative and powerful, and also more important than the work produced in his name. Instead of insecurity you must give him glory. Galileo did not challenge the intellectual authority of the Medicis with his discovery or make them feel inferior in any way; by literally aligning them with the stars, he made them shine brilliantly among the courts of Italy. He did not outshine the master, he made the master outshine all others.
+正如所有文艺复兴时期的科学家一样，伽利略（Galileo）依靠权势显赫的统治者的慷慨资助来支持他的研究。然而，无论发现多么伟大，他的资助人通常只用礼物而非现金支付报酬，这导致伽利略的生活充满了不安全感和依赖性。1610年，当他发现木星的卫星时，他采取了一个全新的策略：伽利略将这一发现转化为一场纪念美第奇家族（Medicis）伟大的宇宙盛事。美第奇家族随后任命伽利略为他们的官方宫廷哲学家和数学家，并提供全额薪水。
+科学家也无法避开宫廷生活和资助关系的变幻莫测。他们也必须服务于掌握财权的“主人”。而科学家强大的智力力量往往会让上司感到不安全，仿佛上司仅仅是提供资金的人——这是一份丑陋且卑微的工作。一个伟大作品的资助者希望感觉得到，自己不仅仅是出资人，更是一个富有创造力且强大的人物，甚至比以其名义创作的作品更重要。你应该给予他荣耀，而非让他感到不安。 伽利略没有用他的发现挑战美第奇家族的智力权威，也没有让他们感到自惭形秽；通过将他们与群星联系在一起，他让他们在意大利的各个宫廷中熠熠生辉。他没有掩盖上司的光芒，而是让上司超越了所有人。   
 
-> Daily Law: Not only don’t outshine the master but make those above you shine brilliantly.
+> Daily Law: Not only don’t outshine the master but make those above you shine brilliantly.[^1]
 
-The 48 Laws of Power, Law 1: Never Outshine the Master
+---  
+
+## 实践建议
+今天，请尝试应用这种“伽利略式”的社交策略：  
+- 关联愿景：当你取得一个成就时，不要说“我是如何做到的”，而要说“这正是基于您上个月提到的那个方向”。  
+- 提供“荣耀”而非“证据”：不要在上司面前证明你比他懂得多。相反，要把你搜集到的深刻见解，以一种能够让他去向更高层“炫耀”的方式呈现给他。  
+- 情绪监测：观察你的上司。当他在你面前显得特别好胜或爱说教时，说明他感到了一丝不安。此时，请立刻引用今日法则，退后一步，通过请教或赞美来重新点亮他的“光芒”。  
+
+当你成为让上司发光的“反射镜”时，他会为了维持自己的光芒而确保你永远待在他身边。
+
+[^1]: 今日法则：不仅不要掩盖上司的光芒，还要让那些地位高于你的人闪耀。

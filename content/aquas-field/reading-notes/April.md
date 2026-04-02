@@ -3,6 +3,7 @@ title: "April(The Perfect Courtier: Playing the Game of Power)"
 date: "2026-04-01"
 hiddenFromList: false
 featured: false
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)

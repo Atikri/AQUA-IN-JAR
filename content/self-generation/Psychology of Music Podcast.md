@@ -4,19 +4,22 @@ title: "Psychology of Music Podcast"
 draft: false
 ---
 
-1. Daffern - Interdisciplinarity
-2. Stupacher - Groove
-3. Curwen - Synaesthesia
-4. Risley - Musical Theatre Wellbeing
-5. Owen - Children's emotional responses to music
-6. Tang - Cultural selfhood
-7. Gibbs & Henry
-8. Hansen - surprise and uncertainty
-9. Popescu - Language and Music
-10. Küssner - Visual Imagery
-11. Norton - Researching students
-12. Temperley - Uniform Information Density
-13. Price - Understanding audiences
-14. Onderdijk - Virtual Musicking
-15. Collins - Computational modelling of music cognition
-16. Bannister - pseudo-social music listening experiences
+| Episode Title | Speaker/Guest | Content Summary | Core Themes and Perspectives | Listening Suggestions |
+| --- | --- | --- | --- | --- |
+| Daffern - Interdisciplinarity | Professor Helena Daffern | A discussion on work at the AudioLab at the University of York regarding the intersection of physics, engineering, and music technology. | Explores the benefits and challenges of working in an interdisciplinary way within the field of music research. | Focus on the practicalities and hurdles of combining engineering and physics with music psychology. |
+| Stupacher - Groove | Dr. Jan Stupacher | An exploration of 'Groove' and why humans feel the urge to move to certain types of music. | Defines groove as a pleasurable urge to move and examines its cognitive and neural basis in the brain. | Pay attention to how 'pleasure' is linked to motor responses in the context of rhythm. |
+| Curwen - Synaesthesia | Dr. Caroline Curwen | An examination of diversity in music perception, specifically focusing on the phenomenon of synaesthesia. | Focuses on understanding individual differences in how people perceive and cognitively process music. | Consider the variety of sensory experiences that can occur when listening to music beyond just sound. |
+| Risley - Musical Theatre Wellbeing | Emma Risley | A discussion on a PhD project investigating the impact of musical theatre careers on performer wellbeing. | Analyzes the psychological toll and general wellbeing challenges faced by professional performers in the industry. | Reflect on the professional pressures of musical theatre and their impact on mental health. |
+| Owen - Children's emotional responses to music | Caroline Owen | Focuses on the development of children's subjective responses to music and harmony. | Examines how the understanding of underlying harmonies develops as a factor in emotional music perception in children. | Listen for the developmental milestones in how children interpret the 'mood' of harmonic structures. |
+| Tang - Cultural selfhood | Johnathon Tang | Research into how individual differences and cultural identity influence the musical experience. | Investigates the relationship between cultural selfhood and the way listeners engage with and process music. | Think about how your own cultural background shapes your personal music preferences. |
+| Gibbs & Henry | Hannah Gibbs & Noah Henry | A double-topic episode covering Gamelan music and the modeling of music selection in daily life. | Discusses shared flow states and physiological synchrony in Gamelan, alongside computational modeling of everyday music choices. | Compare the collective experience of performance (flow) with the individual experience of music selection. |
+| Hansen - surprise and uncertainty | Dr. Niels Chr. Hansen | Discussion of a 10-year project on retrospective surprise and prospective uncertainty in music. | Explores the cognitive roles of surprise and uncertainty in composition, improvisation, and melody cognition. | Focus on the concepts of 'retrospective' vs 'prospective' and how they apply to the listening experience. |
+| Popescu - Language and Music | Tudor Popescu | Explores the psychological and cultural foundations of music through the lens of language and engineering. | Examines the structural and cognitive similarities and differences between music and language systems. | Consider how an engineering and experimental psychology background influences his view of music. |
+| Küssner - Visual Imagery | Mats Küssner | Research on multimodal perception and mental imagery specifically related to music and emotional responses. | Investigates the internal mental images that music evokes and how these are linked to performance science. | Focus on the 'multimodal' aspect—how sound triggers visual and emotional mental states. |
+| Norton - Researching students | Dr. Naomi Norton | Discusses the ethical complexities when students serve as participants in music research. | Focuses on navigating the 'dual relationship' and ethical considerations when sample populations and students overlap. | Pay attention to the ethics of power dynamics in academic music research. |
+| Temperley - Uniform Information Density | David Temperley | Discussion on applying the concept of Uniform Information Density (UID) to musical performance. | Explores how information theory can explain the communicative choices made in music theory and performance. | Reflect on music as 'information' and how performers might manage that density for the listener. |
+| Price - Understanding audiences | Dr. Sarah Price | Exploration of current and future research into the audiences of the arts. | Shifts the focus from the performer to the psychological experience and behavior of the audience. | Consider the diverse motivations and behaviors of people attending arts events. |
+| Onderdijk - Virtual Musicking | Kelsey Onderdijk | Investigation of music-making and concert-going in virtually mediated contexts. | Examines connectedness, temporal co-presence, and parasocial interaction in virtual reality concerts. | Focus on how 'connectedness' is maintained when the physical presence of others is replaced by VR. |
+| Collins - Computational modelling of music cognition | Tom Collins | Discussion on AI in music, computational modeling, and its benefits for music psychologists. | Analyzes the use of algorithms and AI to understand and simulate human music cognition. | Listen for his discussion on the AI song contest and how AI can be a tool for psychology. |
+| Bannister - pseudo-social music listening experiences | Scott Bannister | Covers musical chills, the Cadenza project for hearing loss, and the social aspect of solo listening. | Explores how solo listening can be a 'pseudo-social' experience and ways to improve music accessibility. | Pay attention to the concept of feeling 'social' even when listening to music alone. |
+

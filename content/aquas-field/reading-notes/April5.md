@@ -2,8 +2,8 @@
 title: "April 5: Remake Yourself into a Character of Power"
 date: "2026-04-05"
 hiddenFromList: true
-featured: false
-draft: true
+featured: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,10 +48,22 @@ draft: true
   </li>
 </ul>
 
-## Remake Yourself into a Character of Power
+## 将自己重塑为权力的角色 (Remake Yourself into a Character of Power)
 
-In 1832 a publisher accepted Aurore Dupin Dudevant’s first major novel, Indiana. She had chosen to publish it under a pseudonym, “George Sand,” and all of Paris assumed this impressive new writer was male. Dudevant had sometimes worn men’s clothes before creating “George Sand”; now, as a public figure, she exaggerated the image. She added long men’s coats, gray hats, heavy boots, and dandyish cravats to her wardrobe. She smoked cigars and in conversation expressed herself like a man, unafraid to dominate the conversation or to use a saucy word. This strange “male/female” writer fascinated the public. But those who knew Sand well understood that her male persona protected her from the public’s prying eyes. Out in the world, she enjoyed playing the part to the extreme; in private she remained herself. She also realized that the character of “George Sand” could grow stale or predictable, and to avoid this she would every now and then dramatically alter the character she had created; she began meddling in politics, leading demonstrations, inspiring student rebellions. No one would dictate to her the limits of the character she had created. Long after she died, and after most people had stopped reading her novels, the larger-than-life theatricality of that character has continued to fascinate and inspire. Understand: The character you seem to have been born with is not necessarily who you are; beyond the characteristics you have inherited, your parents, your friends, and your peers have helped to shape your personality. The Promethean task of the powerful is to take control of the process, to stop allowing others that ability to limit and mold them.
+1832年，一位出版商接受了奥萝尔·杜平·杜德旺（Aurore Dupin Dudevant）的第一部主要小说《安蒂亚娜》。她选择以“乔治·桑”（George Sand）为笔名出版，全巴黎都以为这位令人印象深刻的新作家是男性。杜德旺在创造“乔治·桑”之前就偶尔穿男装；现在，作为公众人物，她夸大了这一形象。她在衣橱里增加了长款男式大衣、灰色帽子、厚靴子和花哨的领结。她抽雪茄，在交谈中表现得像男人一样，毫不畏惧主导话语权或使用粗俗的词汇。这位奇特的“男女混合”作家令公众着迷。但深知桑的人明白，她的男性人格保护她免受公众的窥探。在外部世界，她享受将这个角色演到极致；在私下里，她仍保持自我。  
+她还意识到“乔治·桑”这个角色可能会变得陈旧或可预测，为了避免这一点，她每隔一段时间就会剧烈改变自己创造的角色；她开始介入政治、领导示威、激励学生反叛。没有人能规定她所创造的角色的界限。在她去世很久之后，在那部角色中那种超越现实的戏剧性依然令人着迷且备受鼓舞。要明白：你似乎天生具备的性格不一定就是真正的你；除了继承的特征外，你的父母、朋友和平级也在帮助塑造你的个性。权势者的“普罗米修斯任务”就是掌控这一过程，不再允许他人拥有限制和塑造他们的能力。  
 
-> Daily Law: Remake yourself into a character of power. Working on yourself like clay should be one of your greatest and most pleasurable life tasks. It makes you, in essence, an artist—an artist creating yourself.
+> Daily Law: Remake yourself into a character of power. Working on yourself like clay should be one of your greatest and most pleasurable life tasks. It makes you, in essence, an artist—an artist creating yourself.[^1]
 
-The 48 Laws of Power, Law 25: Re-create Yourself
+---  
+
+### 实践建议
+
+今天，请审视你当前的公众形象：
+
+* 识别“他人塑造”的部分：有哪些性格特质是为了迎合父母或上司而强加给自己的？
+* 设计你的“标志性元素”：像乔治·桑的男装一样，为自己设计一个独特的风格、==言语习惯==或处事态度，使其既能表达力量，又能保护你的内心。
+* 练习==戏剧感==：在一次会议或社交场合中，尝试扮演一个比平时的你更自信、更有控制力的角色，观察周围人的反应。
+
+[^1]: 今日法则：将自己重塑为一个权力的角色。像揉捏粘土一样塑造自己，应当是你最伟大、最愉悦的人生任务之一。这让你在本质上成为了一名艺术家——一名创造自我的艺术家。
+

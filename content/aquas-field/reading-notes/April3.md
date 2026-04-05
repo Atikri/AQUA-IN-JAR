@@ -3,7 +3,7 @@ title: "April 3: Find Out Who Holds the Strings"
 date: "2026-04-03"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,10 +48,24 @@ draft: true
   </li>
 </ul>
 
-## Find Out Who Holds the Strings
+## 找出谁才是幕后操纵者 (Find Out Who Holds the Strings)
 
-Power always exists in concentrated forms. In any organization it is inevitable for a small group to hold the strings. And often it is not those with the titles. In the game of power, only the fool flails about without fixing his target. You must find out who controls the operations, who is the real director behind the scenes. As Richelieu discovered at the beginning of his rise to the top of the French political scene during the early seventeenth century, it was not King Louis XIII who decided things, it was the king’s mother. And so he attached himself to her, and catapulted through the ranks of the courtiers, all the way to the top. It is enough to strike oil once—your wealth and power are assured for a lifetime.
+权力总是以集中的形式存在。在任何组织中，不可避免地会由一小部分人掌握实权（hold the strings）。而且，这些人往往并非拥有显赫头衔的人。在权力的博弈中，只有愚蠢的人才会漫无目的地乱撞而不锁定目标。你必须找出谁在控制着运作，谁才是真正的幕后指挥者。正如黎塞留（Richelieu）在17世纪初期晋升法国政坛之初所发现的那样，真正做决定的不是国王路易十三，而是国王的母亲。于是，他依附于她，并在廷臣的行列中扶摇直上，直达顶峰。==只要成功钻到一口油井，就足以保证你一生的财富与权力==。
 
-> Daily Law: When looking for sources of power to elevate you, look for those who really control the operations. They are not always who you think. Once identified, attach yourself to them.
+> Daily Law: When looking for sources of power to elevate you, look for those who really control the operations. They are not always who you think. Once identified, attach yourself to them.[^1]
 
-The 48 Laws of Power, Law 23: Concentrate Your Forces
+---
+
+## 实践建议
+
+今天，请对你所在的组织进行一次“影子权力扫描”：
+
+- 追踪决策： 上次一个重大决定被通过或否决时，最后拍板或施加决定性影响的人是谁？  
+
+- 观察亲密度： 谁能随时出入最高负责人的办公室？谁的意见最能被其采纳？  
+
+- 剥离头衔： 假设所有人的头衔都消失，你认为谁在群体中说话最有分量？   
+
+不要被舞台上的演员迷惑，去寻找那个在侧幕拉动绳索的人。  
+
+[^1]: 今日法则：在寻找能提拔你的权力源泉时，要寻找那些真正控制着运作的人。他们并不总是你认为的那个人。一旦识别出他们，就依附于他们。

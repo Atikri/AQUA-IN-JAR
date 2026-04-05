@@ -3,7 +3,7 @@ title: "April 4: Know When to Take and Give Credit"
 date: "2026-04-04"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,10 +48,13 @@ draft: true
   </li>
 </ul>
 
-## Know When to Take and Give Credit
+## 明辨何时该揽功，何时该放功 (Know When to Take and Give Credit)
 
-Be sure you know when letting other people share the credit serves your purpose. It is especially important to not be greedy when you have a master above you. President Richard Nixon’s historic visit to the People’s Republic of China was originally his idea, but it might never have come off but for the deft diplomacy of Henry Kissinger. Nor would it have been as successful without Kissinger’s skills. Still, when the time came to take credit, Kissinger adroitly let Nixon take the lion’s share. Knowing that the truth would come out later, he was careful not to jeopardize his standing in the short term by hogging the limelight. Kissinger played the game expertly: He took credit for the work of those below him while graciously giving credit for his own labors to those above. That is the way to play the game.
+确保你清楚，在何时让别人分享功劳能为你的目标服务。当你头顶上有上司（Master）时，不表现得贪婪尤为重要。理查德·尼克松总统对中华人民共和国的历史性访问最初是他的主意，但如果没有亨利·基辛格灵活的外交手段，这次访问可能永远无法实现。同样，如果没有基辛格的才干，访问也不会如此成功。即便如此，当到了邀功的时候，基辛格仍老练地让尼克松占了头功。基辛格深知真相最终会大白于天下，因此他非常小心，绝不因在短期内抢风头而危及自己的地位。基辛格娴熟地玩转了这场游戏：他将下属的工作成果收为己用，同时慷慨地将自己的辛劳归功于上司。这就是玩转这场游戏的方式。  
 
-> Daily Law: Take credit from those below you. Give credit to those above. The 48 Laws of Power, Law 7: Get Others to Do the Work for You, but Always Take the
+> Daily Law: Take credit from those below you. Give credit to those above.[^1]
 
-Credit
+---
+
+
+[^1]: 今日法则：收割下属的功劳，将功劳归于上司。

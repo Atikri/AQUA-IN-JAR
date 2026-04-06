@@ -3,7 +3,7 @@ title: "April 6: Seem Dumber Than Your Mark"
 date: "2026-04-06"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,13 +48,27 @@ draft: true
   </li>
 </ul>
 
-## Seem Dumber Than Your Mark
+## 在目标面前显得比对方笨 (Seem Dumber Than Your Mark)
 
 > Know how to make use of stupidity: The wisest man plays this card at times. There are occasions when the highest wisdom consists in appearing not to know—you must not be ignorant but capable of playing it.
-> — BALTASAR GRACIÁN
+> — BALTASAR GRACIÁN[^1]
 
-If you are ambitious yet find yourself low in the hierarchy, this trick can be useful: Appearing less intelligent than you are, even a bit of a fool, is the perfect disguise. Look like a harmless pig and no one will believe you harbor dangerous ambitions. They may even promote you since you seem so likable and subservient. Intelligence is the obvious quality to downplay, but why stop there? Taste and sophistication rank close to intelligence on the vanity scale; make people feel they are more sophisticated than you are and their guard will come down. An air of complete naiveté can work wonders.
+如果你心怀抱负却身处等级制度的底层，这个技巧会非常有用：表现得不如实际那样聪明，甚至带点愚蠢，是完美的伪装。==让自己看起来像一头无害的小猪==，就没人会相信你心怀危险的野心。因为你看起来如此讨人喜欢且顺从，他们甚至可能会提拔你。  
+智力显然是最需要淡化的特质，但为何止步于此？在虚荣心的衡量标准上，品位与老练程度与智力不相上下；要让人们觉得他们比你更老练，他们的戒心就会消失。一种完全天真的神态可以创造奇迹。
 
-> Daily Law: In general, always make people believe they are smarter and more sophisticated than you are. They will keep you around because you make them feel better about themselves, and the longer you are around, the more opportunities you will have to deceive them. The 48 Laws of Power, Law 21: Play a Sucker to Catch a Sucker—Seem Dumber Than
+> Daily Law: In general, always make people believe they are smarter and more sophisticated than you are. They will keep you around because you make them feel better about themselves, and the longer you are around, the more opportunities you will have to deceive them. [^2]
 
-Your Mark
+---  
+
+这一点的确深有体会，很多时候伪装成一头无害的小猪还是非常有利的🤣
+
+## 实践建议
+
+今天，在与比你更有权势的人交流时，尝试以下练习：
+
+- 收敛洞察力：当你一眼看穿某个问题的答案时，不要立刻说出来。尝试通过提问的方式，引导对方“发现”这个答案，并对他的智慧表示赞赏。
+- 请求平庸的建议：在一些对方擅长而你并不真正需要帮助的领域（如品位、生活方式）向其请教。让他们在教导你的过程中获得极大的优越感。
+- 观察戒心变化：留意当你表现得稍微“笨拙”或“天真”时，对方的语气是否变得更放松、分享的信息是否变得更多。
+
+[^1]: “学会利用愚蠢：最聪明的人有时也会打这张牌。在某些场合，最高的智慧在于表现得一无所知——你不能是真的无知，但要能演得像。” —— 巴尔塔沙·葛拉西安 (Baltasar Gracián)
+[^2]: 今日法则：总的来说，永远让人们相信他们比你更聪明、更老练。他们会把你留在身边，因为你让他们自我感觉良好；而你留在他们身边的时间越长，你误导他们的机会就越多。

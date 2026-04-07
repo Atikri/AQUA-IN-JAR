@@ -4,9 +4,7 @@ date: "2026-04-07"
 draft: "false"
 ---
 
-# A Course in Phonetics
-
-根据您提供的来源资料，以下是与《语音学教程》（*A Course in Phonetics*）及语音学学习相关的具体网络资源及网站地址：
+以下是与《语音学教程》（*A Course in Phonetics*）及语音学学习相关的具体网络资源及网站地址：
 
 ### 1. 本书官方配套资源网站
 *   **教材主干配套网站：** [http://linguistics.berkeley.edu/acip/](http://linguistics.berkeley.edu/acip/)。该网站包含本书中提到的 X 射线电影、音频样本、交互式练习以及 Peter Ladefoged 演示的性能练习。

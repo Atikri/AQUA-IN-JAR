@@ -48,13 +48,16 @@ draft: true
   </li>
 </ul>
 
-## Master Your Emotional Responses
+## 掌控你的情绪反应 (Master Your Emotional Responses)
 
 > A sovereign should never launch an army out of anger, a leader should never start a war out of wrath.
-> — SUN TZU
+> — SUN TZU[^1]
 
-Angry people usually end up looking ridiculous, for their response seems out of proportion to what occasioned it. They have taken things too seriously, exaggerating the hurt or insult that has been done to them. They are so sensitive to slight that it becomes comical how much they take personally. More comical still is their belief that their outbursts signify power. The truth is the opposite: Petulance is not power, it is a sign of helplessness. People may temporarily be cowed by your tantrums, but in the end they lose respect for you. They also realize they can easily undermine a person with so little self-control.
+愤怒的人通常看起来很滑稽，因为他们的反应与引发反应的事由完全不成比例。他们把事情看得太重，夸大了自己受到的伤害或侮辱。他们对轻慢（slight）如此敏感，以至于那种凡事都往心里去的态度变得很可笑。更可笑的是，他们竟然相信自己的爆发代表了权力。事实恰恰相反：任性（Petulance）并非权力，而是无助的信号。人们可能暂时会被你的大发雷霆所威慑，但最终会失去对你的尊重。他们还会意识到，一个如此缺乏自控力的人很容易被削弱和摧毁。
 
-> Daily Law: Displaying anger and emotion are signs of weakness; you cannot control yourself, so how can you control anything?
+> Daily Law: Displaying anger and emotion are signs of weakness; you cannot control yourself, so how can you control anything?[^2]
 
-The 48 Laws of Power, Law 39: Stir Up Waters to Catch Fish
+
+
+[^1]: “主不可怒而兴师，将不可愠而致战。” —— 孙子
+[^2]: 今日法则：展示愤怒和情绪是软弱的表现；如果你连自己都控制不了，你还能控制什么？

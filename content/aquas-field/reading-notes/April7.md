@@ -48,7 +48,7 @@ draft: false
   </li>
 </ul>
 
-## Do Not Be the Court Cynic
+## 不要当宫廷里的愤世嫉俗者 (Do Not Be the Court Cynic)
 
 > Wax, a substance naturally hard and brittle, can be made soft by the application of a little warmth, so that it will take any shape you please. In the same way, by being polite and friendly, you can make people pliable and obliging, even though they are apt to be crabbed and malevolent. Hence politeness is to human nature what warmth is to wax.
 > — ARTHUR SCHOPENHAUER[^1]

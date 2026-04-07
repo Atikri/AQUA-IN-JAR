@@ -4,7 +4,9 @@ title: "Resource Page"
 draft: false
 ---
 
-## 🔗 相关资源
+# 🔗 相关资源
+
+## Podcast 资源
 ❗主要来源都是Spotify播客，因此需要科学上网才能收听。（后期也会满满整理哒！）
 
 ### The Singing Psychologist
@@ -113,5 +115,17 @@ draft: false
 
 ### Music Production Podcast
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/2R5hFhExyUzbI7jD7eauck/video?utm_source=generator" width="624" height="351" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+## 书本资源
+[The Singing Athlete](https://thesingingathlete.com/) —— [Andrew Byrne](https://www.andrewmbyrne.com/)
+
+[A Course in Phonetics] —— PETER LADEFOGED/KEITH JOHNSON
+
+
+## 其他网站资源
+https://toni-linke.com/
+
+
+
 
 让我们一起在自我成长的道路上探索前行！:sparkles:

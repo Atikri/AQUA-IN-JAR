@@ -3,7 +3,7 @@ title: "April 7: Do Not Be the Court Cynic"
 date: "2026-04-07"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -51,10 +51,15 @@ draft: true
 ## Do Not Be the Court Cynic
 
 > Wax, a substance naturally hard and brittle, can be made soft by the application of a little warmth, so that it will take any shape you please. In the same way, by being polite and friendly, you can make people pliable and obliging, even though they are apt to be crabbed and malevolent. Hence politeness is to human nature what warmth is to wax.
-> — ARTHUR SCHOPENHAUER
+> — ARTHUR SCHOPENHAUER[^1]
 
-Express admiration for the good work of others. If you constantly criticize your equals or subordinates, some of that criticism will rub off on you, hovering over you like a gray cloud wherever you go. People will groan at each new cynical comment, and you will irritate them. By expressing modest admiration for other people’s achievements, you paradoxically call attention to your own.
+对他人的优秀工作表达赞赏。如果你不断地批评你的平级或下属，其中一些批评会反噬到你身上，无论你走到哪里，它们都像一片阴云笼罩着你。人们会对每一个新出的愤世嫉俗的评论感到厌烦，你会激怒他们。通过对他人成就表达适度的赞赏，你反而吊诡地吸引了别人对你自身成就的关注。
 
-> Daily Law: The ability to express wonder and amazement, and seem like you mean it, is a rare and dying talent, but one still greatly valued.
+> Daily Law: The ability to express wonder and amazement, and seem like you mean it, is a rare and dying talent, but one still greatly valued.[^2]
 
-The 48 Laws of Power, Law 24: Play the Perfect Courtier
+
+
+[^1]: “蜡，这种天然坚硬且易碎的物质，只需稍微加热就能变软，从而可以被塑造成你喜欢的任何形状。同理，通过保持礼貌和友好，你可以让人们变得柔顺且乐于助人，即便他们原本可能古怪且心怀恶意。因此，礼貌之于人性，正如温暖之于蜡。” —— 亚瑟·叔本华 (Arthur Schopenhauer)
+[^2]: 今日法则：表达惊奇和赞叹的能力，并表现得像是发自内心的，这是一种稀有且正在消逝的才华，但它依然极具价值。
+
+

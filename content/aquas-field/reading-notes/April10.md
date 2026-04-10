@@ -3,7 +3,7 @@ title: "April 10: Always Say Less Than Necessary"
 date: "2026-04-10"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,13 +48,14 @@ draft: true
   </li>
 </ul>
 
-## Always Say Less Than Necessary
+## 总是言之过少 (Always Say Less Than Necessary)
 
 > Undutiful words of a subject do often take deeper root than the memory of ill deeds.
-> — SIR WALTER RALEIGH
+> — SIR WALTER RALEIGH[^1]
 
-When you are trying to impress people with words, the more you say, the more common you appear, and the less in control. Even if you are saying something banal, it will seem original if you make it vague, open-ended, and sphinxlike. Powerful people impress and intimidate by saying less. The more you say, the more likely you are to say something foolish.
+当你试图用言语给人留下深刻印象时，你说的越多，就显得越平庸，越缺乏掌控力。即便你说的只是一些平庸之谈，如果你能让它变得模糊、开放且像斯芬克斯（狮身人面像）般神秘，它也会显得很有原创性。有权势的人通过==少说话来建立威信并震慑他人==。你说的越多，就越有可能说出愚蠢的话。
 
-> Daily Law: By saying less than necessary you create the appearance of meaning and power. Also, the less you say, the less risk you run of saying something foolish, even dangerous.
+> Daily Law: By saying less than necessary you create the appearance of meaning and power. Also, the less you say, the less risk you run of saying something foolish, even dangerous.[^2]
 
-The 48 Laws of Power, Law 4: Always Say Less Than Necessary
+[^1]: “臣下不逊之言，往往比恶行之忆植根更深。” —— 沃尔特·雷利爵士 (Sir Walter Raleigh)
+[^2]: 今日法则：通过言之过少，你创造出了一种深意与权力的假象。此外，你话说的越少，说出愚蠢甚至危险的话的风险就越小。

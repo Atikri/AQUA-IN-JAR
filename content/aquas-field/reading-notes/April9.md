@@ -3,7 +3,7 @@ title: "April 9: So Much Depends on Reputation"
 date: "2026-04-09"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,10 +48,13 @@ draft: true
   </li>
 </ul>
 
-## So Much Depends on Reputation
+## 声誉决定一切 (So Much Depends on Reputation)
+在社交领域，**外表（Appearances）**是衡量我们几乎所有判断的晴雨表，你绝不能被误导而相信除此之外的其他说法。一个错误的疏忽，或是在外表上一次尴尬、突然的改变，都可能证明是灾难性的。这就是为什么建立并维护一个由你自己创造的声誉具有至高无上的重要性。这份声誉将在危险的“外表游戏”中保护你，分散他人试图窥探你真实面目的注意力，并让你在某种程度上掌控世界对你的评价——这是一个极其强大的位置。
+声誉拥有一种魔法般的力量： 轻轻挥动魔杖，它就能使你的力量倍增。它也能让人们惊慌失措地从你身边逃散。同样的行为，其效果是辉煌还是糟糕，完全取决于行为者的声誉。因此，声誉是一笔需要仔细收集和囤积的财富。特别是在你初次建立声誉时，必须严格保护它，预判所有可能受到的攻击。一旦声誉稳固，面对敌人的诽谤时不要让自己感到愤怒或表现出防御姿态——那揭示的是不安全感，而非对声誉的信心。相反，要采取高姿态，在自卫时永远不要表现出绝望。
 
-In the social realm, appearances are the barometer of almost all our judgments, and you must never be misled into believing otherwise. One false slip, one awkward or sudden change in your appearance, can prove disastrous. This is the reason for the supreme importance of making and maintaining a reputation that is of your own creation. That reputation will protect you in the dangerous game of appearances, distracting the probing eyes of others from knowing what you are really like, and giving you a degree of control over how the world judges you—a powerful position to be in. Reputation has a power like magic: With one stroke of its wand, it can double your strength. It can also send people scurrying away from you. Whether the exact same deeds appear brilliant or dreadful can depend entirely on the reputation of the doer. Reputation therefore is a treasure to be carefully collected and hoarded. Especially when you are first establishing it, you must protect it strictly, anticipating all attacks on it. Once it is solid, do not let yourself get angry or defensive at the slanderous comments of your enemies—that reveals insecurity, not confidence in your reputation. Take the high road instead, and never appear desperate in your self-defense.
+> Daily Law: Reputation is the cornerstone of power. Through reputation alone you can intimidate and win; once it slips, however, you are vulnerable, and will be attacked on all sides. Never let others define it for you.[^1]
 
-> Daily Law: Reputation is the cornerstone of power. Through reputation alone you can intimidate and win; once it slips, however, you are vulnerable, and will be attacked on all sides. Never let others define it for you.
+---
+声誉是一面镜子，如果你不去打磨它，它就会蒙尘，直到最后照出的不再是你想要的样子。
 
-The 48 Laws of Power, Law 5: So Much Depends on Reputation—Guard It with Your Life
+[^1]: 今日法则：声誉是权力的基石。仅凭声誉你就能威慑他人并取胜；然而一旦它滑落，你就会变得脆弱，并受到四面八方的攻击。绝不要让别人为你定义声誉。

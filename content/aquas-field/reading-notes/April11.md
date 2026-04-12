@@ -3,7 +3,7 @@ title: "April 11: Appeal to People’s Self-Interest"
 date: "2026-04-11"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,13 +48,15 @@ draft: true
   </li>
 </ul>
 
-## Appeal to People’s Self-Interest
+## 诉诸人们的自身利益 (Appeal to People’s Self-Interest)
 
 > The shortest and best way to make your fortune is to let people see clearly that it is in their interests to promote yours.
-> — JEAN DE LA BRUYÈRE
+> — JEAN DE LA BRUYÈRE[^1]
 
-In your quest for power, you will constantly find yourself in the position of asking for help from those more powerful than you. There is an art to asking for help, an art that depends on your ability to understand the person you are dealing with, and to not confuse your needs with theirs. Most people never succeed at this, because they are completely trapped in their own wants and desires. They start from the assumption that the people they are appealing to have a selfless interest in helping them. They talk as if their needs mattered to these people—who probably couldn’t care less. Sometimes they refer to larger issues: a great cause, or grand emotions such as love and gratitude. They go for the big picture when simple, everyday realities would have much more appeal. What they do not realize is that even the most powerful person is locked inside needs of his own, and that if you make no appeal to his self-interest, he merely sees you as desperate or, at best, a waste of time.
+在追求权力的过程中，你不可避免地需要向那些比你更有权势的人寻求帮助。请求帮助是一门艺术，它取决于你理解对方的能力，以及你不将自己的需求与对方的需求混为一谈的能力。大多数人在这方面从未成功，因为他们==完全陷入了自己的欲望和诉求中==。他们总是从一个假设出发，即他们求助的对象会出于无私的兴趣来帮助他们。他们谈论自己的需求，好像这些需求对对方很重要一样——但对方可能根本不在乎。有时，他们会提及更宏大的事物：某个伟大的事业，或是爱与感激等高尚情感。他们在追求大局，而实际上，==简单的日常现实往往更具吸引力==。他们没有意识到，即便再有权势的人也受困于自己的需求之中；如果你不诉诸他的自身利益，他只会认为你很绝望，或者更糟，认为你在浪费他的时间。
 
-> Daily Law: When asking for anything, uncover something in your request that will benefit the person you are asking, and emphasize it out of all proportion. They will respond enthusiastically when they see something to be gained for themselves. The 48 Laws of Power, Law 13: When Asking for Help, Appeal to People’s Self-Interest,
+> Daily Law: When asking for anything, uncover something in your request that will benefit the person you are asking, and emphasize it out of all proportion. They will respond enthusiastically when they see something to be gained for themselves.[^2]
 
-Never to Their Mercy or Gratitude
+
+[^1]: “致富最快、最好的方法，就是让人们清楚地看到，促进你的利益也符合他们自身的利益。” —— 让·德·拉布吕耶尔 (Jean de La Bruyère)
+[^2]: 今日法则：当你请求任何事情时，找出你的请求中能让对方受益的部分，并极力强调它。当他们看到自己能从中获利时，他们会表现得充满热情。

@@ -48,10 +48,12 @@ draft: true
   </li>
 </ul>
 
-## View the World as a Vast Interconnected Palace
+## 将世界视为一座巨大的互联宫殿 (View the World as a Vast Interconnected Palace)
 
-The world is dangerous and enemies are everywhere—everyone has to protect themselves. A fortress seems the safest. But isolation exposes you to more dangers than it protects you from—it cuts you off from valuable information, it makes you conspicuous and an easy target. Since power is a human creation, it is inevitably increased by contact with other people. Instead of falling into the fortress mentality, view the world in the following manner: It is like a vast palace of Versailles, with every room communicating with another. You need to be permeable, able to float in and out of different circles and mix with different types. That kind of mobility and social contact will protect you from plotters, who will be unable to keep secrets from you, and from your enemies, who will be unable to isolate you from your allies. Always on the move, you mix and mingle in the rooms of the palace, never sitting or settling in one place. No hunter can fix his aim on such a swift-moving creature.
+世界是危险的，敌人无处不在——每个人都必须保护自己。堡垒似乎是最安全的，但孤立（Isolation）暴露出的危险远比它能提供的保护更多——它会切断你获取宝贵信息的渠道，让你变得显眼并沦为容易攻击的目标。由于权力是人类的创造，它必然通过与他人的接触而增长。  
+与其陷入堡垒心态，不如按以下方式看待世界：它就像一座巨大的凡尔赛宫，每个房间都与其他房间相连。你需要具有渗透性，能够浮动进出不同的圈子并与不同类型的人交往。这种流动性和社交接触将保护你免受阴谋家的伤害（因为他们无法对你守住秘密），并防止敌人将你与盟友隔离。永远保持行动，在宫殿的房间中穿梭往来，绝不在一处坐以待毙或定居。没有任何猎人能瞄准这样一个快速移动的生物。  
 
-> Daily Law: Because humans are social creatures by nature, power depends on social interaction and circulation. To make yourself powerful, place yourself at the center of things, make yourself more accessible, seek out old allies and make new ones, force yourself into more and more different circles. The 48 Laws of Power, Law 18: Do Not Build Fortresses to Protect Yourself—Isolation Is
+> Daily Law: Because humans are social creatures by nature, power depends on social interaction and circulation. To make yourself powerful, place yourself at the center of things, make yourself more accessible, seek out old allies and make new ones, force yourself into more and more different circles. [^1]
 
-Dangerous
+
+[^1]: 今日法则：由于人类天生是社会性动物，权力取决于社交互动和流通。要让自己强大，请将自己置于事物的中心，让自己更容易被接触，寻找旧盟友并结交新盟友，强迫自己进入越来越多不同的圈子。

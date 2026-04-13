@@ -48,10 +48,19 @@ draft: true
   </li>
 </ul>
 
-## Better to Be Attacked Than Ignored
+## 宁可被攻击，也不要被忽视 (Better to Be Attacked Than Ignored)
 
-Burning more brightly than those around you is a skill that no one is born with. You have to learn to attract attention, “as surely as the lodestone attracts iron.” At the start of your career, you must attach your name and reputation to a quality, an image, that sets you apart from other people. This image can be something like a characteristic style of dress, or a personality quirk that amuses people and gets talked about. Once the image is established, you have an appearance, a place in the sky for your star. It is a common mistake to imagine that this peculiar appearance of yours should not be controversial, that to be attacked is somehow bad. Nothing could be further from the truth. To avoid being a flash in the pan, and having your notoriety eclipsed by another, you must not discriminate between different types of attention; in the end, every kind will work in your favor. Society craves larger-than-life figures, people who stand above the general mediocrity. Never be afraid, then, of the qualities that set you apart and draw attention to you. Court controversy, even scandal. It is better to be attacked, even slandered, than ignored. All professions are ruled by this law, and all professionals must have a bit of the showman about them.
+比周围的人表现得更耀眼是一种没有人天生就具备的技能。你必须学会吸引注意力，“就像磁石吸引铁屑一样”。在职业生涯的初期，你必须==将你的名字和声望与某种特质、某种能让你脱颖而出的形象联系起来==。这种形象可以是某种独特的穿衣风格，或者是某种能逗乐他人并引发议论的性格怪癖。一旦这种形象建立起来，你就拥有了外观，在星空中拥有了属于你这颗星的位置。  
+人们常犯的一个错误是，想象这种独特的表现不应该引起争议，认为受到攻击在某种程度上是坏事。事实恰恰相反。为了避免昙花一现，不让你的名气被他人盖过，你绝不能区分注意力的类型；最终，任何形式的关注都会对你有利。社会渴望那些超越平庸、顶天立地的人物。因此，永远不要害怕那些让你与众不同并吸引注意力的品质。去博取争议，甚至丑闻。宁可被攻击，甚至被诽谤，也不要被忽视。 所有的职业都受这条法则支配，==所有的专业人士都必须带有一点表演者的色彩==。
 
-> Daily Law: Make no distinction between kinds of attention—notoriety of any sort will bring you power. Better to be slandered and attacked than ignored.
+> Daily Law: Make no distinction between kinds of attention—notoriety of any sort will bring you power. Better to be slandered and attacked than ignored.[^1]
 
-The 48 Laws of Power, Law 6: Court Attention at All Cost
+---
+## 实践建议
+今天，请审视你在工作环境中的“辨识度”：
+- 建立个人标签：如果你在人群中，别人能一眼认出你吗？尝试在专业形象中加入一个微小但持续的、具有辨识度的元素（如某种配饰、独特的沟通风格）。  
+- 不再害怕不同意见：在会议中，如果你有一个与众不同的观点，不要因为怕被反驳而闭嘴。哪怕被抨击，只要你的观点有深度，这种“碰撞”也会让人记住你。  
+- 管理你的“争议资产”：如果你被诽谤或误解，不要第一时间陷入委屈的解释中。问问自己：“我能否利用这次曝光，向更多人展示我的某种核心能力或立场？”  
+
+
+[^1]: 今日法则：不要区分关注的种类——任何形式的声名都能为你带来权力。宁可被诽谤和攻击，也比被忽视要好。

@@ -3,7 +3,7 @@ title: "April 15: Create a Cultlike Following"
 date: "2026-04-15"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,10 +48,11 @@ draft: true
   </li>
 </ul>
 
-## Create a Cultlike Following
+## 建立像教派一样的追随群体 (Create a Cultlike Following)
+拥有庞大的追随群体可以开启各种欺骗的可能性；你的追随者不仅会崇拜你，他们还会为你抵御敌人，并自发地诱导他人加入你这个初出茅庐的“教派”。这种权力将把你提升到另一个境界：你不再需要通过挣扎或诡计来强行贯彻你的意志。你被众人爱戴，且“永远不会犯错”。  
+你可能认为建立这样的追随群体是一项艰巨的任务，但实际上它相当简单。作为人类，我们有一种迫切的信仰需求，无论信什么都行。这使我们极其容易受骗：==我们根本无法忍受长期的怀疑，或者那种由于缺乏信仰而产生的空虚感==。只要在人们面前抛出某种新的事业、灵丹妙药、暴富计划，或是最新的技术趋势、艺术运动，我们就会像鱼儿跃出水面吞食饵料一样，集体冲上去咬钩。  
 
-Having a large following opens up all sorts of possibilities for deception; not only will your followers worship you, they will defend you from your enemies and will voluntarily take on the work of enticing others to join your fledgling cult. This kind of power will lift you to another realm: You will no longer have to struggle or use subterfuge to enforce your will. You are adored and can do no wrong. You might think it’s a gargantuan task to create such a following, but in fact it is fairly simple. As humans, we have a desperate need to believe in something, anything. This makes us eminently gullible: We simply cannot endure long periods of doubt, or the emptiness that comes from a lack of something to believe in. Dangle in front of us some new cause, elixir, get-rich-quick scheme, or the latest technological trend or art movement, and we leap as one from the water to take the bait.
+> Daily Law: People have an overwhelming desire to believe in something. Become the focal point of such desire by offering them a cause, a new faith to follow. In the absence of organized religion and grand causes, your new belief system will bring you untold power.[^1]
 
-> Daily Law: People have an overwhelming desire to believe in something. Become the focal point of such desire by offering them a cause, a new faith to follow. In the absence of organized religion and grand causes, your new belief system will bring you untold power. The 48 Laws of Power, Law 27: Play on People’s Need to Believe to Create a Cultlike
 
-following
+[^1]: 今日法则：人们有着压倒一切的信仰欲望。通过为他们提供一个事业、一种可以追随的新信仰，让自己成为这种欲望的焦点。在缺乏组织化宗教和宏大事业的时代，你的新信仰体系将为你带来无可估量的权力。

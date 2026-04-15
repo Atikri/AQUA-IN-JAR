@@ -3,7 +3,7 @@ title: "April 13: Better to Be Attacked Than Ignored"
 date: "2026-04-13"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)

@@ -3,7 +3,7 @@ title: "April 14: View the World as a Vast Interconnected Palace"
 date: "2026-04-14"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)

@@ -54,5 +54,11 @@ draft: false
 
 > Daily Law: People have an overwhelming desire to believe in something. Become the focal point of such desire by offering them a cause, a new faith to follow. In the absence of organized religion and grand causes, your new belief system will bring you untold power.[^1]
 
+---
+## 实践建议
+今天，请反思你所处的行业或社交圈：
+- 识别“信仰缺口”：人们在感到迷茫或焦虑时最容易被吸引。你的团队、客户或周围的人现在最渴望什么样的信心支撑？  
+- 包装“宏大事业”：不要只谈论具体的工作任务。尝试将你的目标描述为一个“事业”或一种“愿景”，给参与者一种参与历史或改变现状的归属感。  
+- 警惕“集体咬钩”：作为个人，当你面对那些让你感到极度兴奋、承诺能瞬间解决所有问题的“新趋势”时，问问自己：我是不是因为无法忍受当下的“空虚”或“怀疑”，而正准备跃出水面去咬那个钩？  
 
 [^1]: 今日法则：人们有着压倒一切的信仰欲望。通过为他们提供一个事业、一种可以追随的新信仰，让自己成为这种欲望的焦点。在缺乏组织化宗教和宏大事业的时代，你的新信仰体系将为你带来无可估量的权力。

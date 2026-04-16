@@ -3,7 +3,7 @@ title: "April 16: Do Not Commit to Anyone"
 date: "2026-04-16"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,13 +48,15 @@ draft: true
   </li>
 </ul>
 
-## Do Not Commit to Anyone
+## 不向任何人承诺/效忠 (Do Not Commit to Anyone)
 
 > I would rather be a beggar and single than a queen and married.
-> — QUEEN ELIZABETH I
+> — QUEEN ELIZABETH I[^1]
 
-It is the fool who always rushes to take sides. Do not commit to any side or cause but yourself. By maintaining your independence, you become the master of others—playing people against one another, making them pursue you. If you allow people to feel they possess you to any degree, you lose all power over them. By not committing your affections, they will only try harder to win you over. Stay aloof and you gain the power that comes from their attention and frustrated desire.
+只有愚人才会急于选边站队。除了你自己，不要向任何一方或任何事业做出承诺。通过==保持独立==，你将成为他人的主人——让他们互相博弈，让他们追逐你。如果你在任何程度上允许他人感到他们已经“拥有”了你，你就失去了对他们的所有权力。通过==不交付你的情感==，他们只会更加努力地想要赢取你的青睐。==保持超然==，你就能从他们的关注以及因欲望受挫而产生的焦虑中获得权力。
 
-> Daily Law: Play the Virgin Queen: give them hope but never satisfaction.
+> Daily Law: Play the Virgin Queen: give them hope but never satisfaction.[^2]
 
-The 48 Laws of Power, Law 20: Do Not Commit to Anyone
+
+[^1]: “我宁愿做一个单身的乞丐，也不愿做一个已婚的皇后。” —— 伊丽莎白一世
+[^2]: 今日法则：扮演“童贞女王”：给他们希望，但绝不给他们满足感。

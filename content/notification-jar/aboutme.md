@@ -5,8 +5,13 @@ draft: false
 ---
 
 Hi!我是tikri~
-现在居住在上海。
-超级喜欢唱歌，以及一切有艺术性的东西。
+## Now
+现在居住在上海。  
+目前在国际教育机构里面当英语助教。👨‍🏫  
+最近在学习吉他中...🎸  
+
+## My Favorites 💓
+超级喜欢唱歌，芳疗，冥想，阴瑜伽，研究食谱，看书写书...以及一切有艺术性的东西。  
 未来想学习心理学专业,SLP,神经科学。也会一直交叉研究声音方面的领域~
 
 ## 我的订阅服务：
@@ -28,6 +33,9 @@ Hi!我是tikri~
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/1QBP6aNv7BsdQWwhqxLcIC?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 ### 书籍：
+- 看见 —— 柴静
+    > 这本书应该是我目前看到过最触动的一本书了  
+
 - [Improving Speech Intelligibility in Adults: Client Application of Evidence-Based Strategies](https://www.pluralpublishing.com/publications/improving-speech-intelligibility-in-adults-clinical-application-of-evidence-based-strategies)
 
 - [The Singing Athlete: Brain-Based Training for Your Voice](https://thesingingathlete.com/)

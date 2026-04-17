@@ -3,7 +3,7 @@ title: "April 17: Stay Above the Fray"
 date: "2026-04-17"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,13 +48,17 @@ draft: true
   </li>
 </ul>
 
-## Stay Above the Fray
+## 远离纷争 (Stay Above the Fray)
 
 > Regard it as more courageous not to become involved in an engagement than to win in battle, and where there is already one interfering fool, take care that there shall not be two.
-> — BALTASAR GRACIÁN
+> — BALTASAR GRACIÁN[^1]
 
-Do not let people drag you into their petty fights and squabbles. At the same time, you cannot completely stand aside, for that would cause needless offense. To play the game properly, you must seem interested in other people’s problems, even sometimes appear to take their side. But while you make outward gestures of support, you must maintain your inner energy and sanity by keeping your emotions disengaged. No matter how hard people try to pull you in, never let your interest in their affairs and petty squabbles go beyond the surface. Give them gifts, listen with a sympathetic look, even occasionally play the charmer—but inwardly keep both the friendly kings and the perfidious tyrants at arm’s length. By refusing to commit and thus maintaining your autonomy, you retain the initiative: your moves stay matters of your own choosing, not defensive reactions to the push-and-pull of those around you.
+不要让人们将你拖入他们琐碎的战斗和争吵中。与此同时，你不能完全置身事外，因为那会引起不必要的冒犯。要正确地玩转这场游戏，你必须表现得对他人的问题感兴趣，甚至有时表现出站在他们那一边的样子。但是，当你做出支持的外部姿态时，你必须通过保持## 情感上的脱离（disengaged）## 来维持内在的能量和理智。
+无论人们多么努力地想拉你下水，绝不要让你对他们事务和琐碎纠纷的兴趣超出表象。送他们礼物，以同情的眼神倾听，甚至偶尔扮演迷人的角色——但在内心深处，请将那些友好的君主和背信弃义的暴君都拒之于一臂之外。通过拒绝承诺效忠并以此保持自主权，你就保留了主动权：你的举动始终是你自己的选择，而不是对他周围人推拉扯皮的防御性反应。
 
-> Daily Law: Always try to inwardly maintain your independence and avoid entanglements not of your choosing.
+> Daily Law: Always try to inwardly maintain your independence and avoid entanglements not of your choosing.[^2]
 
-The 48 Laws of Power, Law 20: Do Not Commit to Anyone
+[^1]: “视不参与冲突为比赢得战斗更勇敢的行为；如果那里已经有一个爱管闲事的傻瓜，请务必保证不要出现第二个。” —— 巴尔塔沙·葛拉西安 (Baltasar Gracián)
+
+[^2]: 今日法则：始终尝试在内心维持你的独立性，避免陷入非你所愿的纠缠中。
+

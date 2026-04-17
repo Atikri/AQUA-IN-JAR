@@ -24,7 +24,7 @@ tags: ["vocabulary", "merriam", "english", "unit-02"]
 
 > PSYCH comes from the Greek word psyche , meaning “breath, life, soul.” Psychology is the science of mind and behavior, and a psychologist treats or studies the mental problems of individuals and groups. Psychiatry is a branch of medicine that deals with mental and emotional disorders, and a psychiatrist (like any other doctor) may prescribe drugs to treat them.
 
-### `psyche`
+### `psyche` /sˈaɪki/
 
 **释义**: Soul, personality, mind.
 
@@ -32,7 +32,7 @@ tags: ["vocabulary", "merriam", "english", "unit-02"]
 
 Sometime back in the 16th century, we borrowed the word psyche directly from Greek into English. In Greek mythology, Psyche was a beautiful princess who fell in love with Eros (Cupid), god of love, and went through terrible trials before being allowed to marry him. The story is often understood to be about the soul redeeming itself through love. (To the Greeks, psyche also meant “butterfly,” which suggests how they imagined the soul.) In English, psyche often sounds less spiritual than soul , less intellectual than mind , and more private than personality .
 
-### `psychedelic`
+### `psychedelic` /saɪkʌdˈɛɫɪk/
 
 **释义**: (1) Of or relating to a drug (such as LSD) that produces abnormal and often extreme mental effects such as hallucinations. (2) Imitating the effects of psychedelic drugs.
 
@@ -40,7 +40,7 @@ Sometime back in the 16th century, we borrowed the word psyche directly from Gre
 
 The most famous—or notorious—of the psychedelic drugs is LSD, a compound that can be obtained from various mushrooms and other fungi but is usually created in the lab. The other well-known psychedelics are psilocybin (likewise obtained from fungi) and mescaline (obtained from peyote cactus). How psychedelics produce their effects is still fairly mysterious, partly because research ceased for almost 20 years because of their reputation, but scientists are determined to find the answers and much research is now under way. Psychedelics are now used to treat anxiety in patients with cancer, and are being tested in the treatment of such serious conditions as severe depression, alcoholism, and drug addiction.
 
-### `psychosomatic`
+### `psychosomatic` /saɪkoʊsʌmˈætɪk/
 
 **释义**: Caused by mental or emotional problems rather than by physical illness.
 
@@ -48,7 +48,7 @@ The most famous—or notorious—of the psychedelic drugs is LSD, a compound tha
 
 Since the Greek word soma means “body,” psychosomatic suggests the link between mind and body. Since one's mental state may have an important effect on one's physical state, research on new medicines always involves giving some patients in the experiment a placebo (fake medicine), and some who receive the sugar pills will seem to improve. You may hear someone say of someone else's symptoms, “Oh, it's probably just psychosomatic,” implying that the physical pain or illness is imaginary—maybe just an attempt to get sympathy—and that the person could will it away if he or she wanted to. But this can be harsh and unfair, since, whatever the cause is, the pain is usually real.
 
-### `psychotherapist`
+### `psychotherapist` /saɪkʌθˈɛrʌpɪst/
 
 **释义**: One who treats mental or emotional disorder or related bodily ills by psychological means.
 
@@ -62,7 +62,7 @@ Many psychologists offer psychological counseling, and psychological counseling 
 
 > CEPT comes from the Latin verb meaning “take, seize.” Capture, which is what a captor has done to a captive, has the same meaning. Captivate once meant literally “capture,” but now means only to capture mentally through charm or appeal. But in some other English words this root produces, such as those below, its meaning is harder to find.
 
-### `reception`
+### `reception` /rɪsˈɛpʃʌn/
 
 **释义**: (1) The act of receiving. (2) A social gathering where guests are formally welcomed.
 
@@ -70,7 +70,7 @@ Many psychologists offer psychological counseling, and psychological counseling 
 
 Reception is the noun form of receive. So at a formal reception, guests are received or welcomed or “taken in.” A bad TV reception means the signal isn't being received well. When a new novel receives good reviews, we say it has met with a good critical reception. If it gets a poor reception, on the other hand, that's the same as saying that it wasn't well-received .
 
-### `intercept`
+### `intercept` /ɪntɝsˈɛpt/
 
 **释义**: To stop, seize, or interrupt (something or someone) before arrival.
 
@@ -78,7 +78,7 @@ Reception is the noun form of receive. So at a formal reception, guests are rece
 
 Since the prefix inter means “between” (see INTER ), it's not hard to see how intercept was created. Arms shipments coming to a country are sometimes intercepted, but such interceptions can sometimes be understood as acts of war. In football, soccer, and basketball, players try to intercept the ball as it's being passed by the other team. In years gone by, letters and documents being carried between officers or officials were sometimes intercepted when the carrier was caught; today, when these communications are generally electronic, an intercepted e-mail isn't actually stopped, but simply read secretly by a third party.
 
-### `perceptible`
+### `perceptible` /pɝsˈɛptʌbʌɫ/
 
 **释义**: Noticeable or able to be felt by the senses.
 
@@ -86,7 +86,7 @@ Since the prefix inter means “between” (see INTER ), it's not hard to see ho
 
 Perceptible includes the prefix per-, meaning “through,” so the word refers to whatever can be taken in through the senses. A perceptive person picks up minor changes, small clues, or hints and shades of meaning that others can't perceive , so one person's perception —a tiny sound, a slight change in the weather, a different tone of voice—often won't be perceptible to another.
 
-### `susceptible`
+### `susceptible` /sʌsˈɛptʌbʌɫ/
 
 **释义**: (1) Open to some influence; responsive. (2) Able to be submitted to an action or process.
 
@@ -100,7 +100,7 @@ With its prefix sus-, “up,” susceptible refers to something or someone that 
 
 > FIN comes from the Latin word for “end” or “boundary.” Final describes last things, and a finale or a finish is an ending. (And at the end of a French film, you may just see the word “Fin.”) But its meaning is harder to trace in some of the other English words derived from it.
 
-### `confine`
+### `confine` /kʌnfˈaɪn/
 
 **释义**: (1) To keep (someone or something) within limits. (2) To hold (someone) in a location.
 
@@ -108,7 +108,7 @@ With its prefix sus-, “up,” susceptible refers to something or someone that 
 
 Confine means basically to keep someone or something within borders. Someone confined to a bedroom or a wheelchair is too ill or disabled to be anywhere else. A person under “house arrest” is confined to his or her house by the government. At a business meeting, the discussion may be confined to a single topic. A town may keep industrial development confined to one area by means of zoning. And someone confined to the state prison for 20 years has probably committed quite a serious crime.
 
-### `definitive`
+### `definitive` /dɪfˈɪnɪtɪv/
 
 **释义**: (1) Authoritative and final. (2) Specifying perfectly or precisely.
 
@@ -116,7 +116,7 @@ Confine means basically to keep someone or something within borders. Someone con
 
 Something definitive is complete and final. A definitive example is the perfect example. A definitive answer is usually a strong yes or no. A definitive biography contains everything we'll ever need to know about someone. Ella Fitzgerald's famous 1950s recordings of American songs have even been called definitive—but no one ever wanted them to be the last.
 
-### `finite`
+### `finite` /fˈaɪnaɪt/
 
 **释义**: Having definite limits.
 
@@ -124,7 +124,7 @@ Something definitive is complete and final. A definitive example is the perfect 
 
 It has come as a shock to many of us to realize that resources such as oil—and the atmosphere's ability to absorb greenhouse gases—are finite rather than unlimited. The debate continues as to whether the universe is finite or infinite and, if it's finite, how to think about what lies beyond it. Religion has always concerned itself with the question of the finite (that is, human life on earth) versus the infinite (God, eternity, and infinity). But finite is mostly used in scientific writing, often with the meaning “definitely measurable.”
 
-### `infinitesimal`
+### `infinitesimal` /ɪnfɪnɪtˈɛsɪmʌɫ/
 
 **释义**: Extremely or immeasurably small.
 
@@ -138,7 +138,7 @@ Just as infinite describes something immeasurable (“without limit”), infinit
 
 > JECT comes from jacere, the Latin verb meaning “throw” or “hurl.” To reject something is to throw (or push) it back; to eject something is to throw (or drive) it out; and to inject something is to throw (or squirt) it into something else.
 
-### `interject`
+### `interject` /ɪntɝdʒˈɛkt/
 
 **释义**: To interrupt a conversation with a comment or remark.
 
@@ -146,7 +146,7 @@ Just as infinite describes something immeasurable (“without limit”), infinit
 
 Interjections are often humorous, and sometimes even insulting, and the best interjections are so quick that the conversation isn't even interrupted.
 
-### `conjecture`
+### `conjecture` /kʌndʒˈɛktʃɝ/
 
 **释义**: To guess.
 
@@ -154,7 +154,7 @@ Interjections are often humorous, and sometimes even insulting, and the best int
 
 Formed with the prefix con-, “together,” conjecture means literally “to throw together”—that is, to produce a theory by putting together a number of facts. So, for example, Columbus conjectured from his calculations that he would reach Asia if he sailed westward, and his later conjecture that there was a “Northwest Passage” by sea from the Atlantic to the Pacific over the North American continent was proved correct centuries later.
 
-### `projection`
+### `projection` /prʌdʒˈɛkʃʌn/
 
 **释义**: An estimate of what might happen in the future based on what is happening now.
 
@@ -162,7 +162,7 @@ Formed with the prefix con-, “together,” conjecture means literally “to th
 
 Projection has various meanings, but what they all have in common is that something is sent out or forward. A movie is projected onto a screen; a skilled actress projects her voice out into a large theater without seeming to shout; and something sticking out from a wall can be called a projection. But the meaning we focus on here is the one used by businesses and governments. Most projections of this kind are estimates of a company's sales or profits—or of the finances of a town, state, or country—sometime in the future.
 
-### `trajectory`
+### `trajectory` /trʌdʒˈɛktɝi/
 
 **释义**: The curved path that an object makes in space, or that a thrown object follows as it rises and falls to earth.
 
@@ -176,7 +176,7 @@ Formed with part of the prefix trans-, “across,” trajectory means a “hurli
 
 > TRACT comes from trahere, the Latin verb meaning “drag or draw.” Something attractive draws us toward it. Something distracting pulls your attention away. And when you extract something from behind the sofa, you drag it out.
 
-### `traction`
+### `traction` /trˈækʃʌn/
 
 **释义**: The friction that allows a moving thing to move over a surface without slipping.
 
@@ -184,7 +184,7 @@ Formed with part of the prefix trans-, “across,” trajectory means a “hurli
 
 A tractor is something that pulls something else. We usually use the word for a piece of farm machinery, but it's also the name of the part of a big truck that includes the engine and the cab. Tractors get terrific traction, because of their powerful engines and the deep ridges on their huge wheels. A cross-country skier needs traction to kick herself forward, but doesn't want it to slow her down when she's gliding, so the bottom of the skis may have a “fish-scale” surface that permits both of these at the same time.
 
-### `retract`
+### `retract` /ritrˈækt/
 
 **释义**: (1) To pull back (something) into something larger. (2) To take back (something said or written).
 
@@ -192,7 +192,7 @@ A tractor is something that pulls something else. We usually use the word for a 
 
 The prefix re- (“back”) gives retract the meaning of “draw back.” Just as a cat retracts its claws into its paws when they aren't being used, a public figure may issue a retraction in order to say that he or she no longer wants to say something that has just been said. But it's sometimes hard to know what a retraction means: Was the original statement an error or an outright lie? Sometimes a politician even has to retract something that everyone actually assumes is the truth. Thousands of citizens were forced to publicly retract their “wrong” ideas by the Soviet government in the 1930s and the Chinese government in the 1960s. Someone wrongly accused may demand a retraction from his accuser—though today it seems more likely that he'll just go ahead and sue.
 
-### `protracted`
+### `protracted` /proʊtrˈæktɪd/
 
 **释义**: Drawn out, continued, or extended.
 
@@ -200,7 +200,7 @@ The prefix re- (“back”) gives retract the meaning of “draw back.” Just a
 
 With its prefix pro- , “forward,” protracted usually applies to something drawn out forward in time. A protracted strike may cripple a company; a protracted rainy spell may rot the roots of vegetables; and a protracted lawsuit occasionally outlives the parties involved. Before the invention of the polio vaccines, polio's many victims had no choice but to suffer a protracted illness and its aftereffects.
 
-### `intractable`
+### `intractable` /ɪntrˈæktʌbʌɫ/
 
 **释义**: Not easily handled, led, taught, or controlled.
 
@@ -208,7 +208,7 @@ With its prefix pro- , “forward,” protracted usually applies to something dr
 
 Intractable simply means “untreatable,” and even comes from the same root. The word may describe both people and conditions. A cancer patient may suffer intractable pain that doctors are unable to treat. An intractable alcoholic goes back to the bottle immediately after “drying out.” Homelessness, though it hardly existed thirty years ago, is now sometimes regarded as an intractable problem.
 
-### `conducive`
+### `conducive` /kʌndˈusɪv/
 
 **释义**: Tending to promote, encourage, or assist; helpful.
 
@@ -216,7 +216,7 @@ Intractable simply means “untreatable,” and even comes from the same root. T
 
 Something conducive “leads to” a desirable result. A cozy living room may be conducive to relaxed conversation, just as a boardroom may be conducive to more intense discussions. Particular tax policies are often conducive to savings and investment, whereas others are conducive to consumer spending. Notice that conducive is almost always followed by to.
 
-### `deduction`
+### `deduction` /dɪdˈʌkʃʌn/
 
 **释义**: (1) Subtraction. (2) The reaching of a conclusion by reasoning.
 
@@ -224,7 +224,7 @@ Something conducive “leads to” a desirable result. A cozy living room may be
 
 To deduct is simply to subtract. A tax deduction is a subtraction from your taxable income allowed by the government for certain expenses, which will result in your paying lower taxes. Your insurance deductible is the amount of a medical bill that the insurance company makes you subtract before it starts to pay—in other words, the amount that will come out of your own pocket. But deduction also means “reasoning,” and particularly reasoning based on general principles to produce specific findings. Mathematical reasoning is almost always deduction, for instance, since it is based on general rules. But when Dr. Watson exclaims “Brilliant deduction, my dear Holmes!” he simply means “brilliant reasoning,” since Sherlock Holmes's solutions are based on specific details he has noticed rather than on general principles.
 
-### `induce`
+### `induce` /ɪndˈus/
 
 **释义**: (1) Persuade, influence. (2) Bring about.
 
@@ -232,7 +232,7 @@ To deduct is simply to subtract. A tax deduction is a subtraction from your taxa
 
 Inducing is usually gentle persuasion; you may, for instance, induce a friend to go to a concert, or induce a child to stop crying. An inducement is something that might lure you to do something, though inducements are occasionally a bit menacing, like the Godfather's offer that you can't refuse. Induce also sometimes means “produce”; thus, doctors must at times induce labor in a pregnant woman. Notice that induct and induction are somewhat different from induce and inducement , though they come from the identical roots.
 
-### `seduction`
+### `seduction` /sɪdˈʌkʃʌn/
 
 **释义**: (1) Temptation to sin, especially temptation to sexual intercourse. (2) Attraction or charm.
 
@@ -244,7 +244,7 @@ Inducing is usually gentle persuasion; you may, for instance, induce a friend to
 
 > SEQU comes from the Latin verb sequi, meaning “to follow.” A sequel follows the original novel, film, or television show.
 
-### `sequential`
+### `sequential` /sʌkwˈɛntʃʌɫ/
 
 **释义**: (1) Arranged in order or in a series. (2) Following in a series.
 
@@ -252,7 +252,7 @@ Inducing is usually gentle persuasion; you may, for instance, induce a friend to
 
 Things in sequence, or regular order, are arranged sequentially. Most novels and films move sequentially, but some use techniques such as flashbacks that interrupt the movement forward in time. Sequential courses in college must follow each other in the proper order, just like sequential tasks or steps.
 
-### `subsequent`
+### `subsequent` /sˈʌbsʌkwʌnt/
 
 **释义**: Following in time, order, or place; later.
 
@@ -260,7 +260,7 @@ Things in sequence, or regular order, are arranged sequentially. Most novels and
 
 The prefix sub- normally means “below,” and the sub- in subsequent seems to imply that everything after the first is somehow inferior. As the definition states, subsequent can refer to time (“All our subsequent attempts to contact her failed”), order (“The subsequent houses on the list looked even worse”), or place (“The subsequent villages on the river heading east become steadily more primitive”). But subsequently , as in “I subsequently learned the real story,” simply means “later.”
 
-### `consequential`
+### `consequential` /kɑnsʌkwˈɛntʃʌɫ/
 
 **释义**: (1) Resulting. (2) Important.
 
@@ -268,7 +268,7 @@ The prefix sub- normally means “below,” and the sub- in subsequent seems to 
 
 Something consequential follows or comes along with something else. The “resulting” meaning of consequential is usually seen in legal writing. For example, “consequential losses” are losses that supposedly resulted from some improper behavior, about which the lawyer's client is suing. But normally consequential means “significant” or “important,” and it's especially used for events that will produce large consequences , or results.
 
-### `non sequitur`
+### `non sequitur` /nˈɑnsˈɛkwɪtɝ/
 
 **释义**: A statement that does not follow logically from anything previously said.
 
@@ -276,7 +276,7 @@ Something consequential follows or comes along with something else. The “resul
 
 Non sequitur is actually a complete sentence in Latin, meaning “It does not follow”—that is, something said or written doesn't logically follow what came before it. It was Aristotle who identified the non sequitur as one of the basic fallacies of logic—that is, one of the ways in which a person's reasoning may go wrong. For Aristotle, the non sequitur is usually a conclusion that doesn't actually result from the reasoning and evidence presented. Sometime when you're listening to politicians answering questions, see how many non sequiturs you can spot.
 
-### `bacchanalian`
+### `bacchanalian` /bækʌnˈeɪɫjʌn/
 
 **释义**: Frenzied, orgiastic.
 
@@ -284,7 +284,7 @@ Non sequitur is actually a complete sentence in Latin, meaning “It does not fo
 
 The Roman god of drama, wine, and ecstasy, Bacchus was the focus of a widespread celebration, the Bacchanalia. The festivities were originally secret, and only initiated members could participate. There was wine in abundance, and participants were expected to cut loose from normal restraints and give in to all sorts of wild desires. Eventually the Bacchanalia became more public and uncontrolled, finally getting so out of hand that in 186 B.C. the Roman authorities had it banned. Much the same bacchanalian spirit fills tropical carnivals every year, including New Orleans' Mardi Gras.
 
-### `delphic`
+### `delphic` /dˈɛɫfɪk/
 
 **释义**: Unclear, ambiguous, or confusing.
 
@@ -292,7 +292,7 @@ The Roman god of drama, wine, and ecstasy, Bacchus was the focus of a widespread
 
 Delphi in Greece was the site of a temple to Apollo at which there resided an oracle, a woman through whom Apollo would speak, foretelling the future. The Greeks consulted the oracle frequently on matters both private and public. The prophecies were given in difficult poetry that had to be interpreted by priests, and even the interpretations could be hard to understand. When Croesus, king of Lydia, asked what would happen if he attacked the Persians, the oracle announced that he would destroy a great empire; what she didn't say was that the empire destroyed would be his own. Modern-day descendants of the oracle include some political commentators, who utter words of delphic complexity every week.
 
-### `jovial`
+### `jovial` /dʒˈoʊviʌɫ/
 
 **释义**: Jolly, good-natured.
 
@@ -300,7 +300,7 @@ Delphi in Greece was the site of a temple to Apollo at which there resided an or
 
 Jove , or Jupiter, was the Roman counterpart of the Greek's Zeus, and like Zeus was regarded as chief among the gods. When the Romans were naming the planets, they gave the name Jupiter to the one that, as they may have already known, was the largest of all (though only the second-brightest to the naked eye). When the practice of astrology reached the Roman empire from the East, astrologers declared that those “born under Jupiter” were destined to be merry and generous, and many centuries later this would result in the words jovial and joviality .
 
-### `mercurial`
+### `mercurial` /mɝkjˈʊriʌɫ/
 
 **释义**: Having rapid and unpredictable changes of mood.
 
@@ -308,7 +308,7 @@ Jove , or Jupiter, was the Roman counterpart of the Greek's Zeus, and like Zeus 
 
 The god Mercury, with his winged cap and sandals, was the very symbol of speed, and the planet Mercury was named for him by the Romans because it is the fastest-moving of the planets. His name was also given to the liquid silver metal that skitters around on a surface so quickly and unpredictably. And the word mercurial seems to have come from the metal, rather than directly from the god (or an astrologer's view of the planet's influence). Mercurial people are usually bright but impulsive and changeable (and sometimes a bit unstable).
 
-### `venereal`
+### `venereal` /vʌnˈɪriʌɫ/
 
 **释义**: Having to do with sexual intercourse or diseases transmitted by it.
 

@@ -1812,3 +1812,10 @@ footer {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   }
 }
+
+/* Global Image Styling for Article Content */
+article.content-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius, 8px);
+}

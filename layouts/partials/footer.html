@@ -40,3 +40,15 @@
         btn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
     })();
 </script>
+
+<!-- Medium Zoom -->
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        mediumZoom('article.content-container img:not(.nav-image img)', {
+            margin: 24,
+            background: 'var(--bg-color, #f0eee6)',
+            scrollOffset: 0
+        });
+    });
+</script>

@@ -31,9 +31,17 @@
         const btn = document.getElementById('backToTop');
         if (!btn) return;
         const showAt = 300;
+        let ticking = false;
+
         function onScroll() {
-            if (window.scrollY > showAt) btn.style.display = 'flex';
-            else btn.style.display = 'none';
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    if (window.scrollY > showAt) btn.style.display = 'flex';
+                    else btn.style.display = 'none';
+                    ticking = false;
+                });
+                ticking = true;
+            }
         }
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();

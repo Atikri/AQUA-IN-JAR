@@ -24,7 +24,7 @@ tags: ["vocabulary", "merriam", "english", "unit-05"]
 
 > CATA comes from the Greek kata, one of whose meanings was “down.” A catalogue is a list of items put down on paper, and a catapult is a weapon for hurling missiles down on one's enemies.
 
-### `cataclysm`
+### `cataclysm` /kˈætʌkɫɪsʌm/
 
 **释义**: (1) A violent and massive change of the earth's surface. (2) A momentous event that results in great upheaval and often destruction.
 
@@ -32,7 +32,7 @@ tags: ["vocabulary", "merriam", "english", "unit-05"]
 
 The -clysm part of cataclysm comes from the Greek word meaning “to wash,” so cataclysm 's original meaning was “flood, deluge,” and especially Noah's Flood itself. A cataclysm causes great and lasting changes. An earthquake or other natural disaster that changes the landscape is one kind of cataclysm, but a violent political revolution may also be a cataclysmic event. Many cataclysms could instead be called catastrophes.
 
-### `catacomb`
+### `catacomb` /kˈætʌkoʊm/
 
 **释义**: An underground cemetery of connecting passageways with recesses for tombs.
 
@@ -40,7 +40,7 @@ The -clysm part of cataclysm comes from the Greek word meaning “to wash,” so
 
 About forty Christian catacombs have been found near the roads that once led into Rome. After the decline of the Roman empire these cemeteries were forgotten, not to be rediscovered until 1578. Catacomb has come to refer to different kinds of underground chambers and passageways. The catacombs of Paris are abandoned stone quarries that were not used for burials until 1787. The catacombs built by a monastery in Palermo, Sicily, for its deceased members later began accepting bodies from outside the monastery; today you may wander through looking at hundreds of mummified corpses propped against the catacomb walls, dressed in tattered clothes that were once fashionable.
 
-### `catalyst`
+### `catalyst` /kˈætʌɫʌst/
 
 **释义**: (1) A substance that speeds up a chemical reaction or lets it take place under different conditions. (2) Someone or something that brings about or speeds significant change or action.
 
@@ -48,7 +48,7 @@ About forty Christian catacombs have been found near the roads that once led int
 
 Chemical catalysts are substances that, in very small amounts, can bring about important chemical changes in large quantities of material. The catalytic converter in your car's exhaust system, for instance, uses tiny amounts of platinum to swiftly convert the engine's dangerous gases to carbon dioxide and water vapor. And it's easy to see how the meaning of catalyst could broaden to include nonchemical situations. We can now say, for example, that the Great Depression served as the catalyst for such important social reforms as Social Security.
 
-### `catatonic`
+### `catatonic` /kætʌtˈɑnɪk/
 
 **释义**: (1) Relating to or suffering from a form of schizophrenia. (2) Showing an unusual lack of movement, activity, or expression.
 
@@ -62,7 +62,7 @@ Catatonia is primarily a form of the terrible mental disease known as schizophre
 
 > PROT/PROTO comes from Greek and has the basic meaning “first in time” or “first formed.” Protozoa are one-celled animals, such as amoebas and paramecia, that are among the most basic members of the biological kingdom. A proton is an elementary particle that, along with neutrons, can be found in all atomic nuclei. A protoplanet is a whirling mass of gas and dust that astronomers believe may someday become a planet.
 
-### `protagonist`
+### `protagonist` /proʊtˈægʌnʌst/
 
 **释义**: The main character in a literary work.
 
@@ -70,7 +70,7 @@ Catatonia is primarily a form of the terrible mental disease known as schizophre
 
 A character who opposes the hero is the antagonist, from a Greek verb that means literally “to struggle against.”
 
-### `protocol`
+### `protocol` /prˈoʊtʌkɑɫ/
 
 **释义**: (1) A code of diplomatic or military rules of behavior. (2) A set of rules for the formatting of data in an electronic communications system.
 
@@ -78,7 +78,7 @@ A character who opposes the hero is the antagonist, from a Greek verb that means
 
 The basic meaning of proto- is a little harder to follow in this word. Protocol comes from a Greek word for the first sheet of a papyrus roll. In English, protocol originally meant “a first draft or record,” and later specifically the first draft of a diplomatic document, such as a treaty. The “diplomatic” connection led eventually to its current meaning of “rules of behavior.” Someone wearing Bermuda shorts and sandals to a state dinner at the White House would not be acting “according to protocol,” and royal protocol forbids touching the queen of England except to shake her hand. But protocol is also now used for other sets of rules, such as those for doing a scientific experiment or for handling computer data.
 
-### `protoplasm`
+### `protoplasm` /proʊtʌpɫæzʌm/
 
 **释义**: The substance that makes up the living parts of cells.
 
@@ -86,7 +86,7 @@ The basic meaning of proto- is a little harder to follow in this word. Protocol 
 
 After the word protoplasm was coined in the mid-19th century for the jellylike material that is the main substance of a cell, it began to be used widely, especially by scientists and others who imagined that the first life-forms must have arisen out of a great seething protoplasmic soup. Since protoplasm includes all the cell's living material, inside and outside the nucleus, it is a less useful scientific word today than more precise terms such as cytoplasm , which refers only to the living material outside the nucleus. But many remain fascinated by the image of that soup bubbling away as the lightning flashes and the volcanoes erupt.
 
-### `prototype`
+### `prototype` /prˈoʊtʌtaɪp/
 
 **释义**: (1) An original model on which something is patterned. (2) A first, full-scale, usually working version of a new type or design.
 
@@ -94,7 +94,7 @@ After the word protoplasm was coined in the mid-19th century for the jellylike m
 
 A prototype is someone or something that serves as a model or inspiration. A successful fund-raising campaign can serve as a prototype for future campaigns, for example, and the legendary Robin Hood is the prototypical honorable outlaw, the inspiration for countless other romantic heroes. But the term is perhaps most widely used in the world of technology; every new “concept car,” for example, starts off as a unique prototype.
 
-### `antechamber`
+### `antechamber` /æntˈɛtʃˈeɪmbɝ/
 
 **释义**: An outer room that leads to another and is often used as a waiting room.
 
@@ -102,7 +102,7 @@ A prototype is someone or something that serves as a model or inspiration. A suc
 
 One expects to find an antechamber outside the private chambers of a Supreme Court Justice or leading into the great hall of a medieval castle. In the private end of the castle the lord's or lady's bedchamber would have its own antechamber, which served as a dressing room and sitting room, but could also house bodyguards if the castle came under siege. Anteroom is a less formal synonym, one that's often applied to the waiting rooms of professional offices today.
 
-### `antedate`
+### `antedate` /ˈæntidˈeɪt/
 
 **释义**: (1) To date something (such as a check) with a date earlier than that of actual writing. (2) To precede in time.
 
@@ -110,7 +110,7 @@ One expects to find an antechamber outside the private chambers of a Supreme Cou
 
 Dinosaurs antedated the first human beings by almost 65 million years, though this stubborn fact never used to stop cartoonists and screenwriters from having the two species inhabit the same story line. Dictionary editors are constantly noticing how the oral use of a word may antedate its first appearance in print by a number of years. Antedating a check or a contract isn't illegal unless it's done for the purpose of fraud (the same is true of its opposite, postdating ).
 
-### `antecedent`
+### `antecedent` /æntˈɛsʌdʌnt/
 
 **释义**: (1) A word or phrase that is referred to by a pronoun that follows it. (2) An event or cause coming before something.
 
@@ -118,7 +118,7 @@ Dinosaurs antedated the first human beings by almost 65 million years, though th
 
 A basic principle of clear writing is to keep your antecedents clear. Pronouns are often used in order not to repeat a noun (so instead of saying “Sheila turns 22 tomorrow, and Sheila is having a party,” we replace the second “Sheila” with “she”). But sloppy writers sometimes leave their antecedents unclear (for instance, “Sheila helps Kathleen out, but she doesn't appreciate it,” where it isn't clear who “she” is). Watch out for this possible problem when using not just he and she but also they, them, it, this, and that . And keep in mind that antecedent isn't just a grammar term. You may talk about the antecedents of heart disease (such as bad eating habits), the antecedents of World War II (such as the unwise Treaty of Versailles), and even your own antecedents (your mother, grandfather, etc.).
 
-### `anterior`
+### `anterior` /æntˈɪriɝ/
 
 **释义**: (1) Located before or toward the front or head. (2) Coming before in time or development.
 
@@ -132,7 +132,7 @@ Anterior generally appears in either medical or scholarly contexts. Anatomy book
 
 > ORTHO comes from orthos, the Greek word for “straight,” “right,” or “true.” Orthotics is a branch of therapy that straightens out your stance or posture by providing artificial support for weak joints or muscles. And orthograde animals, such as human beings, walk with their bodies in a “straight” or vertical position.
 
-### `orthodontics`
+### `orthodontics` /ɔrθʌdˈɑntɪks/
 
 **释义**: A branch of dentistry that deals with the treatment and correction of crooked teeth and other irregularities.
 
@@ -140,7 +140,7 @@ Anterior generally appears in either medical or scholarly contexts. Anatomy book
 
 Orthodontics has been practiced since ancient times, but the elaborate techniques familiar to us today were introduced only in recent decades. Braces, retainers, and headgear are used to fix such conditions as crowding of the teeth and overbites. According to a 1939 text, “Speech defects, psychiatric disturbances, personality changes, . . . all are correctable through orthodontic measures,” though many adolescents, having endured the embarrassment of rubber bands breaking and even of entangling their braces while kissing, might disagree.
 
-### `orthodox`
+### `orthodox` /ˈɔrθʌdɑks/
 
 **释义**: (1) Holding established beliefs, especially in religion. (2) Conforming to established rules or traditions; conventional.
 
@@ -148,7 +148,7 @@ Orthodontics has been practiced since ancient times, but the elaborate technique
 
 An orthodox religious belief or interpretation is one handed down by a church's founders or leaders. When capitalized, as in Orthodox Judaism, Orthodox refers to a branch within a larger religious organization that claims to honor the religion's original or traditional beliefs. The steadfast holding of established beliefs that is seen in religious orthodoxy is apparent also in other kinds of orthodox behavior. Orthodox medical treatment, for example, follows the established practices of mainstream medicine. Unorthodox thinking is known in business language as “thinking outside the box.”
 
-### `orthopedics`
+### `orthopedics` /ɔrθʌpˈidɪks/
 
 **释义**: The correction or prevention of deformities of the skeleton.
 
@@ -156,7 +156,7 @@ An orthodox religious belief or interpretation is one handed down by a church's 
 
 Just as an orthodontist corrects crookedness in the teeth, an orthopedist corrects crookedness in the skeleton. Orthopedics is formed in part from the Greek word for “child,” and many orthopedic patients are in fact children. But adults also often have need of orthopedic therapy, as when suffering from a joint disease like arthritis or when recovering from a broken arm or leg.
 
-### `orthography`
+### `orthography` /ɔrθˈɑgrʌfi/
 
 **释义**: The spelling of words, especially spelling according to standard usage.
 
@@ -170,7 +170,7 @@ Even as recently as the 19th century, the orthography of the English language wa
 
 > RECT comes from the Latin word rectus, which means “straight” or “right.” To correct something is to make it right. A rectangle is a four-sided figure with straight parallel sides. Rectus, short for Latin rectus musculus, may refer to any of several straight muscles, such as those of the abdomen.
 
-### `rectitude`
+### `rectitude` /rˈɛktɪtud/
 
 **释义**: Moral integrity.
 
@@ -178,7 +178,7 @@ Even as recently as the 19th century, the orthography of the English language wa
 
 We associate straightness with honesty, so if we suspect someone is lying we might ask if they're being “straight” with us, and we might call a lawbreaker crooked or label him a crook . Rectitude may sound a little old-fashioned today, but the virtue it represents never really goes out of style.
 
-### `rectify`
+### `rectify` /rˈɛktʌfaɪ/
 
 **释义**: To set right; remedy.
 
@@ -186,7 +186,7 @@ We associate straightness with honesty, so if we suspect someone is lying we mig
 
 We rectify something by straightening it out or making it right. We might rectify an injustice by seeing to it that a wrongly accused person is cleared. An error in a financial record can be rectified by replacing an incorrect number with a correct one. If the error is in our tax return, the Internal Revenue Service will be happy to rectify it for us; we might then have to rectify the impression that we were trying to cheat on our taxes.
 
-### `rectilinear`
+### `rectilinear` /rˈɛktʌɫˈɪniɝ/
 
 **释义**: (1) Moving in or forming a straight line. (2) Having many straight lines.
 
@@ -194,7 +194,7 @@ We rectify something by straightening it out or making it right. We might rectif
 
 Rectilinear patterns or constructions are those in which straight lines are strikingly obvious. In geometry, rectilinear usually means “perpendicular”; thus, a rectilinear polygon is a many-sided shape whose angles are all right angles (the footprints of most houses, with their extensions and garages, are good examples). But rectilinear is particularly used in physics. Rectilinear motion is motion in which the speed remains constant and the path is a straight line; and rectilinear rays, such as light rays, travel in a straight line.
 
-### `directive`
+### `directive` /dɝˈɛktɪv/
 
 **释义**: Something that guides or directs; especially, a general instruction from a high-level body or official.
 
@@ -208,7 +208,7 @@ As the definition states, a directive directs . A directive from a school princi
 
 > EU comes from the Greek word for “well”; in English words it can also mean “good” or “true.” A veterinarian who performs euthanasia is providing a very sick or hopelessly injured animal a “good” or easy death.
 
-### `eugenic`
+### `eugenic` /judʒˈɛnɪk/
 
 **释义**: Relating to or fitted for the production of good offspring through controlled breeding.
 
@@ -216,7 +216,7 @@ As the definition states, a directive directs . A directive from a school princi
 
 The word eugenic , like the name Eugene , includes the Greek root meaning “born” (see GEN ). Breeders of farm animals have long used eugenic methods to produce horses that run faster, for example, or pigs that provide more meat. Through eugenics, Holstein cows have become one of the world's highest producers of milk. But eugenics also has a dark side. The idea of human eugenics was taken up enthusiastically by the Nazis in the 20th century, with terrible consequences.
 
-### `euphemism`
+### `euphemism` /jˈufʌmɪzʌm/
 
 **释义**: An agreeable or inoffensive word or expression that is substituted for one that may offend or disgust.
 
@@ -224,7 +224,7 @@ The word eugenic , like the name Eugene , includes the Greek root meaning “bor
 
 The use of euphemisms is an ancient part of the English language, and perhaps of all languages, and all of us use them. Golly and gosh started out as euphemisms for God, and darn is a familiar euphemism for damn. Shoot, shucks, and sugar are all euphemistic substitutes for a well-known vulgar word. Pass away for die , misspeak for lie , downsize for fire , senior citizen for old person — the list goes on and on.
 
-### `euphoria`
+### `euphoria` /jufˈɔriʌ/
 
 **释义**: A strong feeling of well-being or happiness.
 
@@ -232,7 +232,7 @@ The use of euphemisms is an ancient part of the English language, and perhaps of
 
 Euphoria is the feeling of an intense (and usually temporary) “high.” Doctors use the word for the kind of abnormal or inappropriate high spirits that might be caused by a drug or by mental illness, but euphoria is usually natural and appropriate. When we win enough money in the lottery to buy several small Pacific islands, or even just when the home team wins the championship, we have good reason to feel euphoric.
 
-### `eulogy`
+### `eulogy` /jˈuɫʌdʒi/
 
 **释义**: (1) A formal speech or writing especially in honor of a dead person. (2) High praise.
 
@@ -246,7 +246,7 @@ With its -logy ending (see LOG ), eulogy means literally something like “good 
 
 > DYS comes from Greek, where it means “bad” or “difficult.” So dysphagia is difficult swallowing, and dyspnea is difficult or labored breathing. Dysphasia is an inability to use and understand language because of injury to or disease of the brain. Dys- is sometimes close in meaning to dis- (see DIS ), but try not to confuse the two.
 
-### `dystopia`
+### `dystopia` /dˈɪstˈoʊpiʌ/
 
 **释义**: An imaginary place where people lead dehumanized and often fearful lives.
 
@@ -254,7 +254,7 @@ With its -logy ending (see LOG ), eulogy means literally something like “good 
 
 Dystopia was created from Utopia, the name of an ideal country imagined by Sir Thomas More in 1516. For More, the suffix -topia meant “place” (see TOP ), and u- (from the Greek root ou ) meant “no,” but also perhaps “good” (see EU ). In other words, More's Utopia was too good to be true. It's probably no accident that dystopia was first used around 1950, soon after George Orwell published his famous novel Nineteen Eighty-Four and 16 years after Aldous Huxley published Brave New World. These two are still the most famous of the 20th century's many depressingly dystopian novels. And what about all those bleak futuristic films: Blade Runner, Brazil, The Matrix, and the rest? What does it mean when no one will paint a picture of a happy future?
 
-### `dyslexia`
+### `dyslexia` /dɪsɫˈɛksiʌ/
 
 **释义**: A disturbance or interference with the ability to read or to use language.
 
@@ -262,7 +262,7 @@ Dystopia was created from Utopia, the name of an ideal country imagined by Sir T
 
 Dyslexia is a neurological disorder that usually affects people of average or superior intelligence. Dyslexic individuals have an impaired ability to recognize and process words and letters. Dyslexia usually shows itself in the tendency to read and write words and letters in reversed order; sometimes similar reversals occur in the person's speech. Dyslexia has been shown to be treatable through patient instruction in proper reading techniques.
 
-### `dyspeptic`
+### `dyspeptic` /dɪspɛptɪk/
 
 **释义**: (1) Relating to or suffering from indigestion. (2) Having an irritable temperament; ill-humored.
 
@@ -270,7 +270,7 @@ Dyslexia is a neurological disorder that usually affects people of average or su
 
 Dyspepsia comes from the Greek word for “bad digestion.” Interestingly, the Greek verb pessein can mean either “to cook” or “to digest”; bad cooking has been responsible for a lot of dyspepsia. Dyspepsia can be caused by many diseases, but dyspeptic individuals are often the victims of their own habits and appetites. Worry, overeating, inadequate chewing, and excessive smoking and drinking can all bring on dyspepsia. Today we generally use dyspeptic to mean “irritable”—that is, in the kind of mood that could be produced by bad digestion.
 
-### `dysplasia`
+### `dysplasia` /dɪspɫˈeɪʒʌ/
 
 **释义**: Abnormal development of cells or organs, or an abnormal structure resulting from such growth.
 
@@ -278,7 +278,7 @@ Dyspepsia comes from the Greek word for “bad digestion.” Interestingly, the 
 
 Of the dozens of medical terms that begin with the dys- prefix, dysplasia (with the suffix -plasia , meaning “development”) is one of the more common, though not many nondoctors know it. Structural dysplasias are usually something you're born with; they often involve the hip or the kidneys. But cell dysplasia is often associated with cancer. And a dysplastic mole—a mole that changes shape in an odd way—is always something to be concerned about.
 
-### `bona fide`
+### `bona fide` /bˈoʊnʌfˈaɪd/
 
 **释义**: (1) Made in good faith, without deceit. (2) Authentic or genuine.
 
@@ -286,7 +286,7 @@ Of the dozens of medical terms that begin with the dys- prefix, dysplasia (with 
 
 Bona fide means “in good faith” in Latin. When applied to business deals and the like, it stresses the absence of fraud or deception. A bona fide sale of securities is an entirely aboveboard transaction. Outside of business and law, bona fide implies mere sincerity and earnestness. A bona fide promise is one that the person has every intention of keeping. A bona fide proposal of marriage is one made by a suitor who isn't kidding around. Bona fide also has the noun form bona fides ; when someone asks about someone else's bona fides , it usually means evidence of their qualifications or achievements.
 
-### `carpe diem`
+### `carpe diem` /kˈɑrpdim/
 
 **释义**: Enjoy the pleasures or opportunities of the moment without concern about the future.
 
@@ -294,7 +294,7 @@ Bona fide means “in good faith” in Latin. When applied to business deals and
 
 Carpe diem , a phrase that comes from the Roman poet Horace, means literally “Pluck the day,” though it's usually translated as “Seize the day.” A free translation might be “Enjoy yourself while you have the chance.” For some people, Carpe diem serves as the closest thing to a philosophy of life as they'll ever have.
 
-### `caveat emptor`
+### `caveat emptor` /kˈeɪviætˈɛmptɝ/
 
 **释义**: Let the buyer beware.
 
@@ -302,7 +302,7 @@ Carpe diem , a phrase that comes from the Roman poet Horace, means literally “
 
 In the days when buying and selling was carried on in the local marketplace, the rule was a practical one. Buyer and seller knew each other and were on equal footing. The nature of modern commerce and technology placed the buyer at a disadvantage, however, so a stack of regulations have been written by federal, state, and local agencies to protect the consumer against dangerous or defective products, fraudulent practices, and the like. But the principle that a buyer needs a warranty if he is to avoid risk remains an important legal concept. Note that a caveat is a small warning or explanation intended to avoid misinterpretation.
 
-### `corpus delicti`
+### `corpus delicti` /kˈɔrpʌsdɛɫɪkti/
 
 **释义**: (1) The substantial and basic fact or facts necessary to prove that a crime has been committed. (2) The material substance, such as the murdered body, on which a crime has been committed.
 
@@ -310,7 +310,7 @@ In the days when buying and selling was carried on in the local marketplace, the
 
 Corpus delicti literally means “body of the crime” in Latin. In its original sense, the body in question refers not to a corpse but to the body of essential facts that, taken together, prove that a crime has been committed. In popular usage, corpus delicti also refers to the actual physical object upon which a crime has been committed. In a case of arson, it would be a ruined building; in a murder case, the victim's corpse.
 
-### `curriculum vitae`
+### `curriculum vitae` /kɝˈɪkjʌɫʌmvˈaɪtʌ/
 
 **释义**: A short summary of one's career and qualifications, typically prepared by an applicant for a position; résumé.
 

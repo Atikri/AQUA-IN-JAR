@@ -23,7 +23,7 @@ tags: ["vocabulary", "merriam", "english", "unit-03"]
 
 > THERM/THERMO comes from the Greek word meaning “warm.” A thermometer measures the amount of warmth in a body, the air, or an oven. A thermostat makes sure the temperature stays at the same level. And it's easy to see why the German manufacturers of a vacuum-insulated bottle back in 1904 gave it the name Thermos.
 
-### `thermal`
+### `thermal` /θˈɝmʌɫ/
 
 **释义**: (1) Of, relating to, or caused by heat. (2) Designed to insulate in order to retain body heat.
 
@@ -31,7 +31,7 @@ tags: ["vocabulary", "merriam", "english", "unit-03"]
 
 In days gone by, much of the male population of the northern states in the cold months would wear a garment of thermal underwear covering the entire body, called a union suit. Union suits kept sodbusters, cowboys, and townsfolk alike not only warm but also itchy and a little on the smelly side (back when bathing once a week was considered the height of cleanliness). Thermal imaging is photography that captures “heat pictures”—rather than ordinary light pictures— of objects. And thermal pollution occurs when industrial water use ends up warming a river in a damaging way. Small-plane pilots use thermal as a noun for a warm updraft, often over a plowed field or desert, that lifts their wings, just as it enables hawks to soar upward without moving their wings.
 
-### `thermodynamics`
+### `thermodynamics` /θˈɝmoʊdaɪnˈæmɪks/
 
 **释义**: Physics that deals with the mechanical actions or relations of heat.
 
@@ -39,7 +39,7 @@ In days gone by, much of the male population of the northern states in the cold 
 
 Thermodynamics (see DYNAM ) is based on the fact that all forms of energy, including heat and mechanical energy, are basically the same. Thus, it deals with the ways in which one form of energy is converted into another, when one of the forms is heat. The study of thermodynamics dates from before the invention of the first practical steam engine—an engine that uses steam to produce physical power—in the 18th century. Today most of the world's electrical power is actually produced by steam engines, and the principal use of thermodynamics is in power production.
 
-### `thermonuclear`
+### `thermonuclear` /θɝmoʊnˈukɫiɝ/
 
 **释义**: Of or relating to the changes in the nucleus of atoms with low atomic weight, such as hydrogen, that require a very high temperature to begin.
 
@@ -53,7 +53,7 @@ Nuclear is the adjective for nucleus , the main central part of an atom. The ori
 
 > POLY comes from polys, the Greek word for “many.” A polytechnic institute offers instruction in many technical fields. Polygamy is marriage in which one has many spouses, or at least more than the legal limit of one. And polysyllabic words are words of many syllables—of which there are quite a few in this book.
 
-### `polyp`
+### `polyp` /pˈɑɫɪp/
 
 **释义**: (1) A sea invertebrate that has a mouth opening at one end surrounded by stinging tentacles. (2) A growth projecting from a mucous membrane, as on the colon or vocal cords.
 
@@ -61,7 +61,7 @@ Nuclear is the adjective for nucleus , the main central part of an atom. The ori
 
 This term comes from polypous , a Greek word for “octopus,” which meant literally “many-footed.” To the untrained eye, the invertebrate known as the polyp may likewise appear to be many-footed, though it never walks anywhere since its “feet” are tentacles, used for stinging tiny organisms which the polyp then devours. The types of tumor known as polyps got their name because some seem to be attached to the surface by branching “foot”-like roots, even though most do not. Polyps of the nose or vocal cords are usually only inconvenient, causing breathing difficulty or hoarseness, and can be removed easily; however, polyps in the intestines can sometimes turn cancerous.
 
-### `polyglot`
+### `polyglot` /pɑɫigɫɑt/
 
 **释义**: (1) One who can speak or write several languages. (2) Having or using several languages.
 
@@ -69,7 +69,7 @@ This term comes from polypous , a Greek word for “octopus,” which meant lite
 
 Polyglot contains the root glot, meaning “language.” It is used both as a noun and as an adjective. Thus, we could say that an international airport is bound to be polyglot , with people from all over the world speaking their native languages. One of history's more interesting polyglots was the Holy Roman Emperor Charles V, who claimed that he addressed his horse only in German, conversed with women in Italian and with men in French, but reserved Spanish (his original language) for his talks with God.
 
-### `polymer`
+### `polymer` /pˈɑɫʌmɝ/
 
 **释义**: A chemical compound formed by a reaction in which two or more molecules combine to form larger molecules with repeating structural units.
 
@@ -77,7 +77,7 @@ Polyglot contains the root glot, meaning “language.” It is used both as a no
 
 There are many natural polymers, including shellac, cellulose, and rubber. But synthetic polymers only came into being around 1870 with Celluloid, known especially for its use in photographic film. After many decades of development, the polymeric compounds now include polypropylene, used in milk crates, luggage, and hinges; polyurethane, used in paints, adhesives, molded items, rubbers, and foams; and polyvinyl chloride (PVC), used to make pipes that won't rust. And let's not forget polyester , which gave us a lot of uncool clothing in the 1970s but whose strength and resistance to corrosion have ensured that it remains an extremely useful material for all kinds of goods.
 
-### `polygraph`
+### `polygraph` /pˈɑɫigræf/
 
 **释义**: An instrument for recording changes in several bodily functions (such as blood pressure and rate of breathing) at the same time; lie detector.
 
@@ -91,7 +91,7 @@ With its graph- root (see GRAPH ), polygraph indicates that it writes out severa
 
 > PRIM comes from primus, the Latin word for “first.” Something primary is first in time, rank, or importance. Something primitive is in its first stage of development. And something primeval had its origin in the first period of world or human history.
 
-### `primal`
+### `primal` /prˈaɪmʌɫ/
 
 **释义**: Basic or primitive.
 
@@ -99,7 +99,7 @@ With its graph- root (see GRAPH ), polygraph indicates that it writes out severa
 
 Primal generally describes something powerful and almost instinctual. So when we speak of the primal innocence of youth or the primal intensity of someone's devotion, we're suggesting that the emotions or conditions being described are basic to our animal nature. Sitting around a campfire may feel like a primal experience, in which we share the emotions of our cave-dwelling ancestors. Intense fear of snakes or spiders may have primal roots, owing to the poison that some species carry. In “primal scream” therapy, popular in the 1970s, patients relive painful childhood experiences and express their frustration and anger through uncontrolled screaming and even violence.
 
-### `primer`
+### `primer` /prˈaɪmɝ/
 
 **释义**: (1) A small book for teaching children to read. (2) A small introductory book on a subject.
 
@@ -107,7 +107,7 @@ Primal generally describes something powerful and almost instinctual. So when we
 
 Primers were once a standard part of every child's education. The first primer printed in North America, The New England Primer (ca. 1690), was typical; it contained many quotations from the Bible and many moral lessons, and the text was accompanied by numerous woodcut illustrations. We no longer use the word in early education, but it's widely used in everyday speech. Notice how primer is pronounced; don't mix it up with the kind of paint that's pronounced with a long i sound.
 
-### `primate`
+### `primate` /prˈaɪmeɪt/
 
 **释义**: Any member of the group of animals that includes human beings, apes, and monkeys.
 
@@ -115,7 +115,7 @@ Primers were once a standard part of every child's education. The first primer p
 
 It was the great biologist Carolus Linnaeus who gave the primates their name, to indicate that animals of this order were the most advanced of all. Linnaeus listed human beings with the apes a hundred years before Charles Darwin would publish his famous work on evolution. When people told him that our close relationship to the apes and monkeys was impossible because it disagreed with the Bible, he responded that, from the biological evidence, he simply couldn't come to a different conclusion. Among the mammals, the primates are distinguished by their large brains, weak sense of smell, lack of claws, long pregnancies, and long childhoods, among other things. Along with the apes and monkey, the Primate order includes such interesting animals as the lemurs, tarsiers, galagos, and lorises.
 
-### `primordial`
+### `primordial` /prɪmˈɔrdiʌɫ/
 
 **释义**: (1) First created or developed. (2) Existing in or from the very beginning.
 
@@ -129,7 +129,7 @@ Primordial can be traced back to the Latin word primordium, or “origin,” and
 
 > HOM/HOMO comes from homos, the Greek word for “same,” which in English words may also mean “similar.” A homograph is a word spelled like another word but different in meaning or pronunciation, and a homosexual is a person who favors others of the same sex. (This root has nothing to do with the Latin homo , meaning “person,” as in Homo sapiens, the French homme , and the Spanish hombre .)
 
-### `homonym`
+### `homonym` /hˈɔmʌnɪm/
 
 **释义**: One of two or more words pronounced and/or spelled alike but different in meaning.
 
@@ -137,7 +137,7 @@ Primordial can be traced back to the Latin word primordium, or “origin,” and
 
 Homonym can be troublesome because it may refer to three distinct classes of words. Homonyms may be words with identical pronunciations but different spellings and meanings, such as to, too, and two . Or they may be words with both identical pronunciations and identical spellings but different meanings, such as quail (the bird) and quail (to cringe). Finally, they may be words that are spelled alike but are different in pronunciation and meaning, such as the bow of a ship and bow that shoots arrows. The first and second types are sometimes called homophones , and the second and third types are sometimes called homographs —which makes naming the second type a bit confusing. Some language scholars prefer to limit homonym to the third type.
 
-### `homogeneous`
+### `homogeneous` /hoʊmʌdʒˈiniʌs/
 
 **释义**: (1) Of the same or a similar kind. (2) Of uniform structure or composition throughout.
 
@@ -145,7 +145,7 @@ Homonym can be troublesome because it may refer to three distinct classes of wor
 
 Homogeneity is fine in a rock, though some people find it a little boring in a neighborhood (while others find it comforting). Note that many people spell this word homogenous , and pronounce it that way too.
 
-### `homologous`
+### `homologous` /hɑmˈɑɫʌgʌs/
 
 **释义**: Developing from the same or a similar part of a remote ancestor.
 
@@ -153,7 +153,7 @@ Homogeneity is fine in a rock, though some people find it a little boring in a n
 
 In his famous discussion of the panda's thumb, Stephen Jay Gould carefully explains how this thumb is not homologous to the human thumb. Although the two digits are used in much the same way (the panda's thumb is essential for stripping bamboo of its tasty leaves, the staple of the panda's diet), the panda's thumb developed from a bone in its wrist and is an addition to the five “fingers” of its paw. The tiny stirrup and anvil bones of our inner ear, however, do seem to be homologous with the bones that allow a garter snake to swallow a frog whole.
 
-### `homogenize`
+### `homogenize` /hoʊmˈɑdʒʌnaɪz/
 
 **释义**: (1) To treat (milk) so that the fat is mixed throughout instead of floating on top. (2) To change (something) so that its parts are the same or similar.
 
@@ -167,7 +167,7 @@ Homogenized milk has been around so long—about a hundred years—that many Ame
 
 > DIS comes from Latin, where it means “apart.” In English, its meanings have increased to include “opposite” or “not” (as in distaste, disagreeable ), “deprive of” ( disinfect ), or “exclude or expel from” ( disbar ). The original meaning can still be seen in a word like dissipate, which means “to break up and scatter.”
 
-### `dissuade`
+### `dissuade` /dɪswˈeɪd/
 
 **释义**: To convince (someone) not to do something.
 
@@ -175,7 +175,7 @@ Homogenized milk has been around so long—about a hundred years—that many Ame
 
 Dissuade is the opposite of persuade , though it's a less common word. The dissuading may be done by a person or by something else: A bad weather forecast may dissuade a fisherman from going out to sea that day, but a warning on a cigarette pack almost never dissuades a real smoker from having his or her next cigarette.
 
-### `disorient`
+### `disorient` /dɪsˈɔriɛnt/
 
 **释义**: To cause to be confused or lost.
 
@@ -183,7 +183,7 @@ Dissuade is the opposite of persuade , though it's a less common word. The dissu
 
 The Orient is the East (just as the Occident is the West). The verb orient comes from the traditional practice of building Christian churches so that the altar is at the building's easterly end—in other words, “orienting” the church. One reason for this practice is that the Book of Matthew says, “As the lightning comes from the East . . . so also will the Son of Man”—that is, just like the sun in the morning, Jesus in his Second Coming will appear in the East. Orienteering is participating in a cross-country race in which each person uses a map and compass to navigate the course. Orient comes from the word meaning “to rise” (like the sun), and still today it's easy for a hiker to become disoriented when an overcast sky hides the sun.
 
-### `discredit`
+### `discredit` /dɪskrˈɛdʌt/
 
 **释义**: (1) To cause (someone or something) to seem dishonest or untrue. (2) To damage the reputation of (someone).
 
@@ -191,7 +191,7 @@ The Orient is the East (just as the Occident is the West). The verb orient comes
 
 Since one meaning of credit is “trust,” discredit means basically “destroy one's trust.” A scientific study may be discredited if it turns out it was secretly written up by someone paid by a drug company. An autobiography may be discredited if someone discovers that the best parts came out of a novel. A lawyer may try to discredit testimony in a trial by revealing that the witness just got out of the slammer. Many political campaigns rely on discrediting one's opponents; desperate politicians have learned that, if they can claim that someone attacking them has been completely discredited, it might work even if it isn't true.
 
-### `dislodge`
+### `dislodge` /dɪsɫˈɑdʒ/
 
 **释义**: To force out of a place, especially a place of rest, hiding, or defense.
 
@@ -199,7 +199,7 @@ Since one meaning of credit is “trust,” discredit means basically “destroy
 
 A lodge is usually a kind of roominghouse or hotel, and the verb lodge often means staying or sleeping in such a place. Thus, dislodge means removing a person or thing from where it's been staying. So, for instance, you might use a toothpick to dislodge a seed from between your teeth, police might use tear gas to dislodge a sniper from his hiding place, and a slate tile dislodged from a roof could be dangerous to someone hanging out on the street below.
 
-### `ad hominem`
+### `ad hominem` /ˈædɑmɪnɛm/
 
 **释义**: Marked by an attack on an opponent's character rather than by an answer to the arguments made or the issues raised.
 
@@ -207,7 +207,7 @@ A lodge is usually a kind of roominghouse or hotel, and the verb lodge often mea
 
 Ad hominem in Latin means “to the man”—that is, “against the other person.” The term comes from the field of rhetoric (the art of speaking and writing). If you have a weak argument, one easy way to defend yourself has always been to attack your opponent verbally in a personal way. Since such attacks require neither truth nor logic to be effective, their popularity has never waned.
 
-### `alter ego`
+### `alter ego` /ˈɔɫtɝˈigoʊ/
 
 **释义**: (1) A trusted friend or personal representative. (2) The opposite side of a personality.
 
@@ -215,7 +215,7 @@ Ad hominem in Latin means “to the man”—that is, “against the other perso
 
 Alter ego can also refer to the second, hidden side of one's own self. In Robert Louis Stevenson's classic The Strange Case of Doctor Jekyll and Mr. Hyde, Dr. Jekyll is a good-hearted, honorable man; but after taking a potion, his alter ego, the loathsome and diabolical Mr. Hyde, takes over his personality.
 
-### `de facto`
+### `de facto` /dˈifˈæktoʊ/
 
 **释义**: Being such in practice or effect, although not formally recognized; actual.
 
@@ -223,7 +223,7 @@ Alter ego can also refer to the second, hidden side of one's own self. In Robert
 
 Literally meaning “from the fact,” de facto in English can be applied to anything that has the substance of something without its formal name. A de facto government is one that operates with all of the power of a regular government but without official recognition. De facto segregation isn't the result of laws, but can be just as real and deep-rooted as legally enforced segregation. The de facto leader of a group is just the one who all the rest seem to follow. (Compare de jure .)
 
-### `modus operandi`
+### `modus operandi` /mˈoʊdʌsɑpɝˈændi/
 
 **释义**: A usual way of doing something.
 
@@ -231,7 +231,7 @@ Literally meaning “from the fact,” de facto in English can be applied to any
 
 Modus operandi is Latin for “method of operating.” The term is often associated with police work, and it's a favorite of mystery writers. In speech and dialogue, it's often abbreviated to “m.o.” (as in “We're beginning to get a handle on the killer's m.o., but we can't go public with it yet”). But it's not only used in criminal contexts. So a frequent gambler who likes to play the horses may have a particular modus operandi for picking winners. And the familiar modus operandi of a cutthroat retailer may be to undersell competitors, drive them out of business, and then raise prices afterwards.
 
-### `modus vivendi`
+### `modus vivendi` /mˈoʊdʌsvɪvˈɛndi/
 
 **释义**: (1) A practical compromise or arrangement that is acceptable to all concerned. (2) A way of life.
 

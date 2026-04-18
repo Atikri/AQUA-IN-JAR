@@ -33,8 +33,3 @@
 :love_letter: **Latest Blog Posts**
 
 {{< recent-posts count=6 >}}
-
-<div class="spotify-container">
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/65SF59UXV4TJPbRGY0QXAQ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  <p class="spotify-fallback">无法加载播放器？<a href="https://tikri.site/podcast-music/episode-1/">点击前往收听</a></p>
-</div>

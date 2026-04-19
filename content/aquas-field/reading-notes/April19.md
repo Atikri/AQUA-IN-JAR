@@ -3,7 +3,7 @@ title: "April 19: Tailor Your Flattery"
 date: "2026-04-19"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,10 +48,12 @@ draft: true
   </li>
 </ul>
 
-## Tailor Your Flattery
+## 定制你的谄媚 (Tailor Your Flattery)
 
-Courtiers have to gain the attention of leaders and ingratiate themselves in some way. The most immediate way to do this is through flattery, since leaders inevitably have large egos and a hunger to have their high self- opinion validated. Flattery can do wonders, but it comes with risks. If it is too obvious, the flatterer looks desperate, and it is easy to see through the strategy. The best courtiers know how to tailor their flattery to the particular insecurities of the leader and to make it less direct. They focus on flattering qualities in the leader that no one else has bothered to pay attention to but that need extra validation. If everyone praises the leader’s business acumen but not his or her cultural refinement, you will want to aim at the latter. Mirroring the leader’s ideas and values, without using their exact words, can be a highly effective form of indirect flattery.
+廷臣（Courtiers）必须获得领导者的关注并以某种方式取悦他们。实现这一目标最直接的方式就是谄媚（Flattery），因为领导者不可避免地拥有巨大的自我（Egos），并渴望看到他们那高度自恋的自我评价得到印证。谄媚可以创造奇迹，但也伴随着风险。如果表现得过于露骨，谄媚者会显得饥不择食，策略也极易被识破。
+高明的廷臣懂得如何根据领导者特定的**不安全感（Insecurities）**来定制他们的谄媚，并使其显得不那么直接。他们专注于赞美领导者身上那些==尚未被他人关注、但迫切需要外界认可的品质==。如果所有人都在赞美领导者的商业头脑，而非其文化修养，你则应瞄准后者。**映射（Mirroring）**领导者的思想和价值观，而不使用其原话，是一种极度有效的间接谄媚形式。  
 
-> Daily Law: Overt flattery can be effective but has its limits; it is too direct and obvious and looks bad to other courtiers. Discreet flattery, tailored to the insecurities of your target, is much more powerful. The Laws of Human Nature, 14: Resist the Downward Pull of the Group—The Law of
+> Daily Law: Overt flattery can be effective but has its limits; it is too direct and obvious and looks bad to other courtiers. Discreet flattery, tailored to the insecurities of your target, is much more powerful. [^1]
 
-Conformity
+
+[^1]: 今日法则：公开的谄媚虽然有效但有其局限性；它太直接、太明显，且在其他廷臣眼中显得吃相难看。更强大的力量来自于谨慎的、针对目标不安全感而量身定制的谄媚。  

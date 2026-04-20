@@ -3,7 +3,7 @@ title: "April 20: Be Royal in Your Own Fashion"
 date: "2026-04-20"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,13 +48,20 @@ draft: true
   </li>
 </ul>
 
-## Be Royal in Your Own Fashion
+## 以你自己的方式展现王者风范 (Be Royal in Your Own Fashion)
 
 > With all great deceivers there is a noteworthy occurrence to which they owe their power. In the actual act of deception they are overcome by belief in themselves: it is this which then speaks so miraculously and compellingly to those around them.
-> — FRIEDRICH NIETZSCHE
+> — FRIEDRICH NIETZSCHE[^1]
 
-The way you carry yourself will often determine how you are treated: in the long run, appearing vulgar or common will make people disrespect you. For a king respects himself and inspires the same sentiment in others. It is up to you to set your own price. Ask for less and that is just what you will get. Ask for more, however, and you send a signal that you are worth a king’s ransom. Even those who turn you down respect you for your confidence, and that respect will eventually pay off in ways you cannot imagine.
+你举手投足的方式往往决定了他人对待你的态度：从长远来看，表现得庸俗或平凡会让人们轻视你。因为国王尊重自己，从而在他人心中激发起同样的敬意。定价权掌握在你自己手中。==如果你索求太少，你就只能得到那么一点==；但如果你索求更多，你就是在传递一个信号：你价值连城。即使是那些拒绝你的人，也会因为你的自信而尊重你，而这种尊重终将以你意想不到的方式带来回报。  
 
-> Daily Law: By acting regally and confident of your powers, you make yourself seem destined to wear a crown. The 48 Laws of Power, Law 34: Be Royal in Your Own Fashion: Act Like a King to Be
+> Daily Law: By acting regally and confident of your powers, you make yourself seem destined to wear a crown.[^2]
 
-Treated Like One
+---
+
+## 管理你的步态与语调
+- 刻意减缓语速，增加目光接触。你的举止决定了你的待遇。
+- 如果你不为自己戴上皇冠，没人会主动将其奉上。自尊是权力的第一道门槛。
+
+[^1]: “所有伟大的骗子都有一个值得注意的共同点，那就是他们力量的源泉：在行骗的过程中，他们被对自己坚定的信念所折服。正是这种信念，让他们对周围的人产生了一种奇迹般且极具说服力的影响力。” —— 弗里德里希·尼采 
+[^2]: 今日法则：通过展现出帝王般的气度以及对自身力量的自信，你会让自己看起来像是天生注定要戴上王冠的人。

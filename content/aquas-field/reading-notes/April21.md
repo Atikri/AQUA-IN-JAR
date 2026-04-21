@@ -3,7 +3,7 @@ title: "April 21: Be Merciless with Your Enemies"
 date: "2026-04-21"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,13 +48,18 @@ draft: true
   </li>
 </ul>
 
-## Be Merciless with Your Enemies
+## 对敌人要赶尽杀绝 (Be Merciless with Your Enemies)
 
 > The remnants of an enemy can become active like those of a disease or fire. Hence, these should be exterminated completely. One should never ignore an enemy, knowing him to be weak. He becomes dangerous in due course, like the spark of fire in a haystack.
-> — KAUTILYA, THIRD CENTURY BC.
+> — KAUTILYA, THIRD CENTURY BC.[^1]
 
-“Crush the enemy” is a key strategic tenet of Sun Tzu, the fourth-century BC author of The Art of War. The idea is simple: your enemies wish you ill. There is nothing they want more than to eliminate you. If, in your struggles with them, you stop halfway or even three-quarters of the way, out of mercy or hope of reconciliation, you only make them more determined, more embittered, and they will someday take revenge. They may act friendly for the time being, but this is only because you have defeated them. They have no choice but to bide their time. The solution: Have no mercy. Crush your enemies as totally as they would crush you. Ultimately the only peace and security you can hope for from your enemies is their disappearance. It is not, of course, a question of murder, it is a question of banishment. Sufficiently weakened and then exiled from your court forever, your enemies are rendered harmless. And if they cannot be banished, at least understand that they are plotting against you, and pay no heed to whatever friendliness they feign.
+“粉碎敌人”是公元前四世纪《孙子兵法》作者孙武的核心战略原则。这个道理很简单：你的敌人对你怀有恶意，他们最想做的就是消灭你。如果在与他们的斗争中，你出于仁慈或和解的希望而半途而废，或者只做到了四分之三，这只会让他们变得更加坚定、更加愤恨，并且总有一天会报复你。他们暂时表现得友好，仅仅是因为被你击败了，他们别无选择，只能等待时机。  
+解决方案：绝不留情。 像他们会粉碎你一样彻底地粉碎你的敌人。最终，你从敌人那里能得到的唯一和平与安全就是他们的“消失”。这当然不是指谋杀，而是指放逐（Banishment）。当敌人的力量被充分削弱，并被永久逐出你的领地后，他们就变得无害了。如果无法放逐他们，至少要明白他们在暗中对付你，不要理会他们表现出的任何伪装的友好。
 
-> Daily Law: Judge your enemies carefully, looking at their past patterns. Sometimes it is best to convert them into an ally and neutralize them. But with others it only pays to be merciless and crush them totally. The 48 Laws of Power, Law 15: Crush Your Enemy Totally—Learn to Keep People
+> Daily Law: Judge your enemies carefully, looking at their past patterns. Sometimes it is best to convert them into an ally and neutralize them. But with others it only pays to be merciless and crush them totally.[^2]
 
-Dependent on You
+---
+
+[^1]: “敌人的残余势力会像疾病或火种一样复燃。因此，必须将他们彻底铲除。决不能因为敌人软弱就忽视他；火星落在草堆里，迟早会变得极其危险。” —— 考底利耶 (Kautilya)，公元前三世纪
+
+[^2]: 今日法则：根据敌人的过往模式仔细观察他们。有时最好将他们转化为盟友并中和其威胁；但对其他人来说，只有冷酷无情并彻底粉碎他们才是值得的。

@@ -3,7 +3,7 @@ title: "April 23: Fear the Power of Infection"
 date: "2026-04-23"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,10 +48,19 @@ draft: true
   </li>
 </ul>
 
-## Fear the Power of Infection
+## 警惕“情绪感染”的力量 (Fear the Power of Infection)
 
-Those misfortunates among us who have been brought down by circumstances beyond their control deserve all the help and sympathy we can give them. But there are others who are not born to misfortune or unhappiness, but who draw it upon themselves by their destructive actions and unsettling effect on others. It would be a great thing if we could raise them up, change their patterns, but more often than not it is their patterns that end up getting inside and changing us. You can die from someone else’s misery—emotional states are as infectious as diseases. You may feel you are helping the drowning man, but you are only precipitating your own disaster. Infectors can be recognized by the misfortune they draw on themselves, their turbulent past, their long line of broken relationships, their unstable careers, and the very force of their character, which sweeps you up and makes you lose your reason. Be forewarned by these signs of an infector; learn to see the discontent in their eye. Most important of all, do not take pity. Do not enmesh yourself in trying to help. The infector will remain unchanged, but you will be unhinged.
+那些因不可控的环境因素而落难的不幸者，值得我们尽其所能给予帮助和同情。然而，还有另一类人，他们并非生而不幸或不快乐，而是通过自己的破坏性行为和对他人的不安影响，将灾祸招致自身。我们或许想拯救他们、改变他们的行为模式，但这往往是一项伟大的理想，因为结果通常是他们的模式渗入并改变了我们。你可能会死于他人的痛苦——情感状态就像疾病一样具有**传染性**。==你可能觉得自己是在拯救溺水的人，但其实你只是在加速自己的灾难==。
+你可以通过以下迹象识别“感染者”：他们不断招致自身的不幸、拥有动荡的过去、长期破裂的人际关系、不稳定的职业生涯，以及那股能将你卷入并让你丧失理智的强大性格力量。要对这些迹象保持警惕，学会识破他们眼中的不满。最重要的是：不要动怜悯之心。不要卷入其中试图提供帮助。感染者不会改变，但你会因此崩溃（unhinged）。
 
-> Daily Law: People sometimes draw misfortune on themselves; they will also draw it on you. Associate with the happy and fortunate instead.
+> Daily Law: People sometimes draw misfortune on themselves; they will also draw it on you. Associate with the happy and fortunate instead.[^1]
 
-The 48 Laws of Power, Law 10: Infection—Avoid the Unhappy and Unlucky
+---
+## 实践建议
+
+今天，请对你的社交圈进行一次“压力测试”：
+- 审计你的朋友圈： 找出那个人——那个总是抱怨命运不公、生活充满波折、且每次谈话都让你感到疲惫的人。  
+- 实施“社交隔离”： 如果他属于格林所描述的“因自身行为招致不幸”的人，请果断停止你的“救援任务”。礼貌地保持距离，拒绝介入他的最新危机。  
+- 寻找“正向宿主”： 刻意接近那些事业稳步上升、情绪稳定、有解决问题能力的人。观察他们的思维模式如何影响你的心情。
+
+[^1]: 今日法则：有些人不仅将不幸招致自身，还会将其传染给你。要与快乐和幸运的人交往。

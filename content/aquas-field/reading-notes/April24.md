@@ -3,7 +3,7 @@ title: "April 24: Avoid the False Alliance"
 date: "2026-04-24"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,10 +48,25 @@ draft: true
   </li>
 </ul>
 
-## Avoid the False Alliance
+## 避免虚假的同盟 (Avoid the False Alliance)
 
-No one can get far in life without allies. The trick, however, is to recognize the difference between false allies and real ones. A false alliance is created out of an immediate emotional need. It requires that you give up something essential about yourself and makes it impossible for you to make your own decisions. A true alliance is formed out of mutual self-interest, each side supplying what the other cannot get alone. It does not require you to fuse your own identity with that of a group or pay attention to everyone else’s emotional needs. It allows you autonomy.
+没有盟友，任何人在生活中都走不远。然而，技巧在于识别虚假盟友（False allies）和真盟友（True allies）。虚假联盟是出于==眼前的情感需求==而建立的。它要求你==放弃自我中某些本质的东西==，并让你无法独立做出决策。   
+真正的同盟是基于互惠的利益（Mutual self-interest）自主权（Autonomy）。
 
-> Daily Law: Cultivate real allies. Find those with mutual self-interests and make an alliance. The 33 Strategies of War, Strategy 27: Seem to Work for the Interests of Others while
+> Daily Law: Cultivate real allies. Find those with mutual self-interests and make an alliance.[^1]
 
-Furthering Your Own—The Alliance Strategy
+---
+## 警惕“小团体”陷阱 ( cliques )
+在等级制度中，人们常急于加入某个小圈子以寻求保护。Greene在之前的法则（如[4月16日](https://tikri.site/aquas-field/reading-notes/April16/)、[17日](https://tikri.site/aquas-field/reading-notes/April17/)）中曾警告不要轻易效忠或卷入纷争。今日法则进一步明确：那种要求你牺牲“独立性”的小团体就是虚假的同盟。一个完美的权臣应该是“连接点”而非“附庸”。  
+
+## 工具性高于情感性
+这呼应了[4月11日](https://tikri.site/aquas-field/reading-notes/April11/)的法则“诉诸人们的自身利益”。当你寻求盟友时，不要寻找那些“让你感觉舒服”的人，而要寻找那些“能帮你达成目标”的人。一个完美的权臣看重的是对方的功用性。
+
+---
+## 实践建议
+今天，请审视你的人际网络，区分哪些是“虚假同盟”，哪些是“真实同盟”：
+- 识别“粘稠度”：是否存在某些关系让你感到必须牺牲原则、或者必须在心理上保持一致才能维持？这通常是虚假同盟。  
+- 寻找“互补点”：找一个在技能或资源上与你完全互补、但并不一定属于你社交圈的人。尝试基于某个小项目与其建立纯粹的利益同盟。  
+- 保护“决策空间”：在任何合作中，明确划出你的底线——即哪些决策权是不可转让的。
+
+[^1]: 今日法则：培养真正的盟友。寻找那些具有共同利益的人并结成同盟。

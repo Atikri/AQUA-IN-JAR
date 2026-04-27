@@ -3,7 +3,7 @@ title: "April 27: Despise the Free Lunch"
 date: "2026-04-27"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,10 +48,17 @@ draft: true
   </li>
 </ul>
 
-## Despise the Free Lunch
+## 鄙视免费的午餐 (Despise the Free Lunch)
 
-The powerful never forget that what is offered for free is inevitably a trick. Friends who offer favors without asking for payment will later want something far dearer than the money you would have paid them. The bargain has hidden problems, both material and psychological. What has worth is worth paying for. By paying your own way you stay clear of gratitude, guilt, and deceit. It is also often wise to pay the full price—there is no cutting corners with excellence.
+有权势的人永远不会忘记，免费提供的任何东西必然是一个陷阱。那些提供帮助却不要求回报的朋友，日后索取的东西往往比你当初付钱购买要昂贵得多。这种看似廉价的交易背后潜伏着各种问题，既有物质上的，也有心理上的。有价值的东西就值得支付相应的代价。通过凡事自己付账，你可以避开感激之情、内疚感以及欺骗的纠缠。通常情况下，支付全价是明智之举——在追求卓越的道路上，没有任何捷径可走。  
 
-> Daily Law: Learn to pay and to pay well.
+> Daily Law: Learn to pay and to pay well.[^1]
 
-The 48 Laws of Power, Law 40: Despise the Free Lunch
+---
+
+- 审视人情请求：当有人主动提出“这只是举手之劳，不用谢”时，保持警惕。思考：如果我接受了，我未来可能需要付出什么？  
+- 练习“金钱清算”：在可能的情况下，尽量将社交互惠转化为清晰的交易。例如，坚持请客、支付咨询费，或者通过赠送价值对等的礼物来迅速抹平心理欠账。  
+- 追求质感而非廉价：在关键的工作任务或个人提升上，拒绝寻求折扣或捷径。
+
+
+[^1]: 今日法则：学会付账，并且大方地付账。

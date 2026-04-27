@@ -3,7 +3,7 @@ title: "April 26: Make Your Accomplishments Seem Effortless"
 date: "2026-04-26"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,13 +48,21 @@ draft: true
   </li>
 </ul>
 
-## Make Your Accomplishments Seem Effortless
+## 让你的成就显得毫不费力 (Make Your Accomplishments Seem Effortless)
 
 > A line [of poetry] will take us hours maybe; Yet if it does not seem a moment’s thought, Our stitching and unstitching has been naught.
-> — “ADAM’S CURSE,” WILLIAM BUTLER YEATS
+> — “ADAM’S CURSE,” WILLIAM BUTLER YEATS[^1]
 
-In The Book of the Courtier, published in 1528, Baldassare Castiglione describes the highly elaborate and codified manners of the perfect court citizen. And yet, Castiglione explains, the courtier must execute these gestures with what he calls “sprezzatura,” the capacity to make the difficult seem easy. He urges the courtier to “practice in all things a certain nonchalance which conceals all artistry and makes whatever one says or does seem uncontrived and effortless.” We all admire the achievement of some unusual feat, but if it is accomplished naturally and gracefully, our admiration increases tenfold—“whereas . . . to labor at what one is doing and . . . to make bones over it, shows an extreme lack of grace and causes everything, whatever its worth, to be discounted.” Much of the idea of sprezzatura came from the world of art. All the great Renaissance artists carefully kept their works under wraps. Only the finished masterpiece could be shown to the public. Michelangelo forbade even popes to view his work in process. A Renaissance artist was always careful to keep his studios shut to patrons and public alike, not out of fear of imitation, but because to see the making of the works would mar the magic of their effect, and their studied atmosphere of ease and natural beauty.
+在1528年出版的《廷臣论》中，巴尔达萨雷·卡斯蒂廖内（Baldassare Castiglione）描述了完美的宫廷公民那套极度复杂且规范的礼仪。卡斯蒂廖内解释道，廷臣在做出这些姿态时必须具备一种他称之为“潇洒”（sprezzatura）的能力——即化繁为简、举重若轻的能力。他敦促廷臣“在所有事情上都要练习一种掩盖技艺的洒脱感（nonchalance），让所言所行显得不假思索、毫不费力”。    
+我们都钦佩那些非凡的成就，但如果这些成就是以一种自然、优雅的方式完成的，我们的钦佩感会增加十倍——“反之，如果在做事时表现出吃力，表现出苦心经营，那就会显得极度缺乏优雅，且无论其价值几何，都会被贬低”。这种“潇洒”的概念很大程度上源于艺术界。所有伟大的文艺复兴艺术家都小心翼翼地隐藏他们的创作过程，只有完成的杰作才会呈现在公众面前。米开朗基罗甚至禁止教皇查看其创作中的作品。文艺复兴时期的艺术家总是小心地对赞助人和公众关闭工作室，这并非出于害怕被模仿，而是因为看到创作过程会破坏作品所产生的“魔法效果”，以及那种经过深思熟虑营造出的从容与自然美感。  
 
-> Daily Law: Your actions must seem natural and executed with ease. When you act, act as if you could do much more. Avoid the temptation of revealing how hard you work—it only raises questions.
+> Daily Law: Your actions must seem natural and executed with ease. When you act, act as if you could do much more. Avoid the temptation of revealing how hard you work—it only raises questions.[^2]
 
-The 48 Laws of Power, Law 30: Make Your Accomplishments Seem Effortless
+---
+## 实践建议
+- 删除“辛苦”的口头禅：在递交报告或完成任务时，不要强调你加了多少班、查了多少资料。简单地交出成果，表现得好像这只是你的日常。  
+- 隐藏工具箱：不要向别人炫耀你的各种效率工具或特殊的职场技巧。让结果说话，让方法保持神秘。  
+- 练习“第二层从容”：即使你内心感到压力巨大，也要在表情和语调上维持一种“这不算什么”的洒脱。观察当你表现得不费吹灰之力时，周围人的尊重感和敬畏感是如何上升的。  
+
+[^1]: “写一行诗或许要耗费数小时；但如果它看起来不像是一瞬间的灵思，那我们的字斟句酌便全无意义。” —— 威廉·巴特勒·叶芝，《亚当的诅咒》
+[^2]: 今日法则：你的行动必须显得自然且执行起来游刃有余。行动时，要表现得仿佛你还能做得更多。避开想要揭示你有多努力的诱惑——那只会引发质疑。

@@ -3,7 +3,7 @@ title: "April 25: Enter Action with Boldness"
 date: "2026-04-25"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,13 +48,32 @@ draft: true
   </li>
 </ul>
 
-## Enter Action with Boldness
+## 带着大胆行动 (Enter Action with Boldness)
 
 > Always set to work without misgivings on the score of imprudence.
-> — BALTASAR GRACIÁN
+> — BALTASAR GRACIÁN[^1]
 
-Most of us are timid. We want to avoid tension and conflict and we want to be liked by all. We may contemplate a bold action, but we rarely bring it to life. Although we may disguise our timidity as a concern for others, a desire not to hurt or offend them, in fact it is the opposite—we are really self- absorbed, worried about ourselves and how others perceive us. Boldness, on the other hand, is outer-directed, and often makes people feel more at ease, since it is less self-conscious and less repressed. And so we admire the bold, and prefer to be around them, because their self-confidence infects us and draws us outside our own realm of inwardness and reflection. But few are born bold. You must practice and develop your boldness. You will often find uses for it. The best place to begin is often the delicate world of negotiation, particularly those discussions in which you are asked to set your own price. How often we put ourselves down by asking for too little. Understand: If boldness is not natural, neither is timidity. It is an acquired habit, picked up out of a desire to avoid conflict. If timidity has taken hold of you, then root it out. Your fears of the consequences of a bold action are way out of proportion to reality, and in fact the consequences of timidity are worse. Your value is lowered and you create a self-fulfilling cycle of doubt and disaster.
+我们大多数人都是胆小怯懦的。我们想要避免紧张和冲突，想要被所有人喜爱。我们或许会构思一次大胆的行动，但很少能将其付诸实践。尽管我们可能将这种胆怯伪装成对他人的关怀——一种不想伤害或冒犯他们的愿望，但事实恰恰相反：我们实际上是陷入了==自我关注==（self-absorbed），担心着自己以及他人如何看待我们。  
+相比之下，**大胆（Boldness）**是==向外导向==的，通常会让人们感到**更自在**，因为它**较少自我意识且较少压抑**。因此，我们钦佩大胆的人，并更愿意待在他们身边，因为他们的自信会感染我们，并把我们带离自己那种内向与反思的领域。  
+但很少有人天生大胆。你必须练习并培养你的胆略。你经常会发现它的用武之地。最适合开始练习的地方通常是微妙的谈判世界，特别是那些要求你设定自身价格的讨论。我们是多么频繁地通过开出过低的价格来贬低自己。请理解：==如果大胆不是天生的，那么怯懦也不是==。它是一种**获得的习惯，源于逃避冲突的欲望**。如果怯懦已经控制了你，那就把它连根拔除。你对大胆行动后果的恐惧与现实完全不成比例，事实上，怯懦的后果更糟：你的价值被降低，并创造了一个怀疑与灾难的自我实现循环。
 
-> Daily Law: Timidity is dangerous: Better to enter with boldness. Any mistakes you commit through audacity are easily corrected with more audacity.
+> Daily Law: Timidity is dangerous: Better to enter with boldness. Any mistakes you commit through audacity are easily corrected with more audacity.[^2]
 
-The 48 Laws of Power, Law 28: Enter Action with Boldness
+---
+
+## 打破“好人陷阱”
+4月份的导言提到，我们生活在一个必须显得“文明、公平”的世界里，但如果真的字面意义上地遵守规则，会被那些不守规则的人压垮。大胆就是权臣在“优雅外壳”下的“铁拳”。你不能通过乞求获得尊重，只能通过展示你敢于冲突的意愿来确立边界。  
+
+## 行动的艺术性
+4月26日将提到“让成就显得毫不费力”（sprezzatura），而大胆是实现这种“游刃有余”感的前提。一个畏首畏尾的人动作必然僵硬、刻意；只有大胆的人才能做出那种具有“魔法效果”的自然动作，从而在权力游戏中占据心理优势。  
+
+## 实践建议
+- 主动发起一个“不舒服”的请求：在工作中索要一个你一直想要但不敢开口的资源，或者在购物/业务往来中尝试提出一个更具挑战性的价格。     
+- 停止“道歉式开场”：在发言或发送邮件时，删掉那些“不好意思”、“如果可以的话”之类的怯懦词汇，直接陈述你的需求或结论。    
+- 用大胆对抗失误：如果你在某件事上搞砸了，不要蜷缩起来。尝试用一个更具野心的后续行动来覆盖这个失误，展示你的不屈不挠。  
+
+在权力的舞台上，觀眾可以原谅一次鲁莽的进攻，但永远不会追随一个颤抖的灵魂。
+
+[^1]: “永远不要在对轻率的疑虑中开始工作。” —— 巴尔塔沙·葛拉西安 (Baltasar Gracián)
+[^2]: 今日法则：怯懦是危险的：最好带着大胆入场。任何因大胆而犯下的错误，都可以通过更大胆的行动轻易补救。
+

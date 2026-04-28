@@ -48,10 +48,12 @@ draft: true
   </li>
 </ul>
 
-## Cultivate an Air of Unpredictability
+## 培养不可预测的气场 (Cultivate an Air of Unpredictability)
 
-People are always trying to read the motives behind your actions and to use your predictability against you. Throw in a completely inexplicable move and you put them on the defensive. Because they do not understand you, they are unnerved, and in such a state you can easily intimidate them. Pablo Picasso once remarked, “The best calculation is the absence of calculation. Once you have attained a certain level of recognition, others generally figure that when you do something, it’s for an intelligent reason. So it’s really foolish to plot out your movements too carefully in advance. You’re better off acting capriciously.” Humans are creatures of habit with an insatiable need to see familiarity in other people’s actions. Your predictability gives them a sense of control. Turn the tables: Be deliberately unpredictable. Behavior that seems to have no consistency or purpose will keep them off-balance. Scrambling your patterns on a day-to-day basis will cause a stir around you and stimulate interest. People will talk about you, ascribe motives and explanations that have nothing to do with the truth, but that keep you constantly in their minds.
+人们总是试图通过解读你行动背后的动机，来利用你的**可预测性（predictability）**对付你。此时，抛出一个完全无法解释的举动，就能让他们陷入守势。因为他们不理解你，所以会感到不安；在这种状态下，你很容易威慑到他们。  
+毕加索曾评论道：“最好的算计就是没有算计。一旦你获得了一定的知名度，其他人通常会认为，当你做某事时，一定有一个聪明的理由。因此，提前过于仔细地筹划你的行动是很愚蠢的，你最好还是==随性而为==（acting capriciously）。”   
+人类是习惯的生物，有着一种无法抑制的需求，想要在别人的行动中看到熟悉感。你的可预测性给了他们一种掌控感。现在，请反转局面：故意变得不可预测。那些看起来没有连贯性或目的的行为会让他们失去平衡。在日常生活中打乱你的模式，会引起周围的骚动并激发他人的兴趣。人们会谈论你，推测你的动机和解释——尽管这些解释可能与事实毫不相干，但却能让你始终占据他们的脑海。  
 
-> Daily Law: In the end, the more capricious you appear, the more respect you will garner. Only the terminally subordinate act in a predictable manner. Strategically reveal your human side. The 48 Laws of Power, Law 17: Keep Others in Suspended Terror—Cultivate an Air of
+> Daily Law: In the end, the more capricious you appear, the more respect you will garner. Only the terminally subordinate act in a predictable manner. Strategically reveal your human side.[^1]
 
-Unpredictability
+[^1]: 今日法则：最终，你显得越是变幻莫测，你赢得的尊重就越多。只有注定处于从属地位的人才会以可预测的方式行事。请策略性地展现你人性化的一面。

@@ -3,7 +3,7 @@ title: "April 28: There Is No Revenge Like Oblivion"
 date: "2026-04-28"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -48,13 +48,15 @@ draft: true
   </li>
 </ul>
 
-## There Is No Revenge Like Oblivion
+## 忘却即是最好的复仇 (There Is No Revenge Like Oblivion)
 
 > There is no revenge like oblivion, for it is the entombment of the unworthy in the dust of their own nothingness.
-> — BALTASAR GRACIÁN
+> — BALTASAR GRACIÁN[^1]
 
-It is tempting to want to fix our mistakes, but it is sometimes more politic to leave them alone. In 1971, when The New York Times published the Pentagon Papers, a group of government documents about the history of U.S. involvement in Indochina, Henry Kissinger erupted into a volcanic rage. Furious about the Nixon administration’s vulnerability to this kind of damaging leak, he made recommendations that eventually led to the formation of a group called the Plumbers to plug the leaks. This was the unit that later broke into Democratic Party offices in the Watergate Hotel, setting off the chain of events that led to Nixon’s downfall. In reality the publication of the Pentagon Papers was not a serious threat to the administration, but Kissinger’s reaction made it a big deal. In trying to fix one problem, he created another: a paranoia for security that in the end was much more destructive to the government. Had he ignored the Pentagon Papers, the scandal they had created would eventually have blown over. Instead of inadvertently focusing attention on a problem, making it seem worse by publicizing how much concern and anxiety it is causing you, it is often far wiser to play the contemptuous aristocrat, not deigning to acknowledge the problem’s existence.
+修复错误固然诱人，但有时不去理会它们反而更具政治智慧。1971年，当《纽约时报》发表关于美国卷入印度支那历史的政府文件——“五角大楼文件”时，亨利·基辛格陷入了火山爆发般的愤怒。他因尼克松政府在面对这类破坏性泄密时的脆弱性而怒不可遏，随之提出了一些建议，最终导致了一个名为“水门窃听小组（Plumbers）”的组织成立，旨在堵住泄密漏洞。正是这个单位后来潜入了水门饭店的民主党办公室，引发了导致尼克松下台的系列事件。
+事实上，发表“五角大楼文件”对当时的政府并无严重威胁，但基辛格的反应使其变成了一件大事。在试图解决一个问题的过程中，他制造了另一个问题：一种对安全的偏执，最终对政府造成了更大的破坏。如果他当时无视这些文件，由此引发的丑闻最终会平息下去。与其无意中将注意力集中在某个问题上，通过公开展示它带给你的担忧和焦虑而使其显得更糟，倒不如扮演一个轻蔑的贵族，不屑于承认该问题的存在，这通常要明智得多。
 
-> Daily Law: The harder we try to fix our mistakes, the worse we often make them. The 48 Laws of Power, Law 36: Disdain Things You Cannot Have—Ignoring Them Is the
+> Daily Law: The harder we try to fix our mistakes, the worse we often make them.[^2]
 
-Best Revenge
+[^1]: “没有比忘却更好的复仇了，因为它是将不肖之徒埋葬在他们自身虚无的尘埃之中。” —— 巴尔塔沙·葛拉西安 (Baltasar Gracián)
+[^2]: 今日法则：我们越是努力去纠正错误，往往就越是弄巧成拙。

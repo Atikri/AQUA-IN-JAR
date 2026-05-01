@@ -53,7 +53,7 @@ draft: false
 > Regard it as more courageous not to become involved in an engagement than to win in battle, and where there is already one interfering fool, take care that there shall not be two.
 > — BALTASAR GRACIÁN[^1]
 
-不要让人们将你拖入他们琐碎的战斗和争吵中。与此同时，你不能完全置身事外，因为那会引起不必要的冒犯。要正确地玩转这场游戏，你必须表现得对他人的问题感兴趣，甚至有时表现出站在他们那一边的样子。但是，当你做出支持的外部姿态时，你必须通过保持## 情感上的脱离（disengaged）## 来维持内在的能量和理智。
+不要让人们将你拖入他们琐碎的战斗和争吵中。与此同时，你不能完全置身事外，因为那会引起不必要的冒犯。要正确地玩转这场游戏，你必须表现得对他人的问题感兴趣，甚至有时表现出站在他们那一边的样子。但是，当你做出支持的外部姿态时，你必须通过保持==情感上的脱离（disengaged）==来维持内在的能量和理智。
 无论人们多么努力地想拉你下水，绝不要让你对他们事务和琐碎纠纷的兴趣超出表象。送他们礼物，以同情的眼神倾听，甚至偶尔扮演迷人的角色——但在内心深处，请将那些友好的君主和背信弃义的暴君都拒之于一臂之外。通过拒绝承诺效忠并以此保持自主权，你就保留了主动权：你的举动始终是你自己的选择，而不是对他周围人推拉扯皮的防御性反应。
 
 > Daily Law: Always try to inwardly maintain your independence and avoid entanglements not of your choosing.[^2]

@@ -3,7 +3,7 @@ title: "April 29: Cultivate an Air of Unpredictability"
 date: "2026-04-29"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)

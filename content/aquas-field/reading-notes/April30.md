@@ -3,7 +3,7 @@ title: "April 30: Never Appear Too Perfect"
 date: "2026-04-30"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)

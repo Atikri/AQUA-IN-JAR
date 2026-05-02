@@ -3,7 +3,7 @@ title: "May 2: Take on the Toxic Types"
 date: "2026-05-02"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)

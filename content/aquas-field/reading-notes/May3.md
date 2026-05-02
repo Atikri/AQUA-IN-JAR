@@ -3,7 +3,7 @@ title: "May 3: Judge Individuals by Their Actions Over Time"
 date: "2026-05-03"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)

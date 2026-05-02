@@ -49,13 +49,11 @@ draft: true
   </li>
 </ul>
 
-## 应对有毒的人 (Take on the Toxic Types)
+## 对付毒性人格类型 (Take on the Toxic Types)
 
-> The world is full of people who are outwardly pleasant but inwardly toxic. They use charm and flattery to disarm you, only to manipulate and exploit your weaknesses.
-> — ROBERT GREENE
+侵略性强、嫉妒心重以及擅长操纵的人通常不会公开宣告自己的身份。他们已经学会了在最初的接触中表现得富有魅力，利用谄媚和其他手段来解除我们的武装。当他们突然展现出丑恶的行为时，我们会感到被背叛、愤怒且无助。他们会制造持续的压力，知道这样做能以其存在感压倒我们的心智，使我们加倍难以清晰思考或制定策略。  
+你对他们最大的防御就是==提前识别他们==。通过预见到他们的操纵行为，你要么可以避开他们，要么可以避免被打得措手不及，从而更好地保持情绪平衡。你将学会从心理上将他们“降级”，转而关注他们所有虚张声势背后的明显弱点和不安全感。你不会再迷信他们制造的神话，这能中和他们所依赖的威慑力。你会对他们为自私行为所做的托词和复杂解释嗤之以鼻。你==保持冷静的能力==会激怒他们，并经常迫使他们因过度扩张而犯错。
 
-生活中，我们会遇到一些看似充满魅力、极度热情甚至过分友好的人。然而，在这些光鲜亮丽的表象之下，往往隐藏着操控、嫉妒和自私。这些人是“有毒的类型”（Toxic Types）。他们擅长用迷人的外表让你放下防备，然后逐渐通过情感绑架、制造混乱或贬低你的价值来控制你。应对这类人的关键在于尽早识别出他们的模式。不要被他们最初的善意所蒙蔽，要观察他们在压力下或面对拒绝时的反应。
+> Daily Law: Come to appreciate these encounters as a chance to hone your skills of self-mastery. Outsmarting just one of these types will give you a great deal of confidence that you can handle the worst in human nature.[^1]
 
-> Daily Law: Learn to recognize toxic individuals early. Your best defense against them is awareness and the ability to maintain your distance before they ensnare you.[^1]
-
-[^1]: 今日法则：学会尽早识别有毒的人。你对付他们最好的防御手段就是保持警觉，并在他们圈套你之前保持距离。
+[^1]: 今日法则：学会欣赏这些遭遇，将其视为磨炼自我掌控（Self-mastery）技能的机会。只要战胜过其中一种类型，你就会获得极大的信心，相信自己能应付人性中最糟糕的一面。

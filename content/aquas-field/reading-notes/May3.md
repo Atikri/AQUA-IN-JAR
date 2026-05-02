@@ -49,13 +49,14 @@ draft: true
   </li>
 </ul>
 
-## 通过长期的行动来评判一个人 (Judge Individuals by Their Actions Over Time)
+## 根据行为而非言语来评判他人 (Judge Them on Their Behavior, Not on Their Words)
 
-> Men are so simple and so much inclined to obey immediate needs that a deceiver will never lack victims for his deceptions.
-> — NICCOLÒ MACHIAVELLI
+> Character is destiny. —HERACLITUS[^1]
 
-人们很擅长用言语来伪装自己。他们会向你保证自己的忠诚，宣扬自己的道德准则，并承诺未来的伟大行动。然而，言语是廉价的。要真正了解一个人，你不能听他们说了什么，而必须观察他们做了什么，尤其是随着时间的推移，他们在不同情境下的一贯行为。行动不会说谎。一个人的性格缺陷、自私或缺乏责任感，总会在长期的行为模式中暴露无遗。
+==人们很擅长用言语来伪装自己==。他们会向你保证自己的忠诚，宣扬自己的道德准则，并承诺未来的伟大行动。然而，言语是廉价的。要真正了解一个人，你不能听他们说了什么，而必须观察他们做了什么，尤其是随着时间的推移，他们在不同情境下的一贯行为。==行动不会说谎==。一个人的性格缺陷、自私或缺乏责任感，总会在长期的行为模式中暴露无遗。
 
-> Daily Law: Never judge people by their words or stated intentions. Look at their actions over time. Consistent behavior is the only reliable indicator of true character.[^1]
+> Daily Law: What you want is a picture of a person’s character over time. Restrain from the natural tendency to judge right away, and let the passage of time reveal more and more about who people are.[^2]
 
-[^1]: 今日法则：永远不要根据人们的言辞或声明的意图来评判他们。要看他们长期的行动。一致的行为是反映真实性格的唯一可靠指标。
+
+[^1]: “性格即命运。” —— 赫拉克利特 (Heraclitus)
+[^2]: 今日法则：永远不要根据人们的言辞或声明的意图来评判他们。要看他们长期的行动。一致的行为是反映真实性格的唯一可靠指标。

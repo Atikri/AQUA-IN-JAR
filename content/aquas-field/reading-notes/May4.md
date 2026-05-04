@@ -3,7 +3,7 @@ title: "May 4: The Appearance of Naiveté"
 date: "2026-05-04"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -49,13 +49,19 @@ draft: true
   </li>
 </ul>
 
-## 看似天真 (The Appearance of Naiveté)
+## 天真的假象 (The Appearance of Naiveté)
 
-> Overtly Machiavellian people are easy to spot and avoid. The truly dangerous ones are those who disguise their cunning behind a mask of innocence and naiveté.
-> — ROBERT GREENE
+> He who poses as a fool is not a fool. —BALTASAR GRACIÁN[^1]
 
-有些人似乎对世俗的争斗一无所知，他们展现出一种令人解除武装的单纯和天真。然而，你必须明白，在成人的世界里，纯粹的天真往往是一种极其有效的伪装。通过显得毫无威胁，他们能够避开他人的防备和嫉妒，同时在暗中积蓄力量或推卸责任。当他们犯错时，人们更容易原谅他们；当他们取得成就时，人们也不会感到受威胁。不要被这种“小白兔”的表象所欺骗，仔细观察他们天真行为背后的实际收益。
+那些声称自己是“非玩家”（即不参与权力斗争的人）的人可能会表现出一种天真的神态，以保护自己免受追求权力的指责。  
+然而，要警惕这种天真的假象，因为它可能是一种极其有效的欺骗手段。  
+即使是真正意义上的天真，也无法完全脱离权力的圈套。  
+孩子们在很多方面可能确实天真，但他们往往出于一种获取对周围人控制权的原始需求而采取行动。  
+孩子们因为在成人世界中感到无力而深受痛苦，他们会利用任何可用的手段来达到目的。  
+那些真正纯真的人可能依然在为权力而战，而且往往在游戏中表现得异常高效，因为他们不受自省的束缚（即他们不觉得自己是在玩手段，反而更具欺骗性）。  
 
-> Daily Law: Beware of those who consistently project an air of innocence. The appearance of naiveté is often a calculated strategy to mask true intentions and manipulate others without raising suspicion.[^1]
+> Daily Law: Those who make a show or display of innocence are often the least innocent of all.[^2]
 
-[^1]: 今日法则：警惕那些总是表现出无辜的人。看似天真往往是一种经过精心计算的策略，旨在掩盖真实意图，在不引起怀疑的情况下操纵他人。
+
+[^1]: “装傻的人并非真傻。” —— 巴尔塔沙·葛拉西安 (Baltasar Gracián)
+[^2]: 今日法则：那些刻意展示或炫耀天真无邪的人，往往是最不天真的人。

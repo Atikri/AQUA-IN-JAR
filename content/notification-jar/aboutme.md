@@ -43,5 +43,8 @@ Hi!我是tikri~
 ### Website:
 - [Z-Health Performance](https://zhealtheducation.com/)
 
+### Tools:
+- [Voice Vista: AI Speech Lab](https://www.vocevista.com/en/) - AI驱动的语音分析工具，提供深度发音、节奏和语调反馈
+
 
 

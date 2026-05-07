@@ -3,7 +3,7 @@ title: "May 6: See Through the False Front"
 date: "2026-05-06"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -49,13 +49,13 @@ draft: true
   </li>
 </ul>
 
-## 看穿虚假的表象 (See Through the False Front)
+## 看穿虚假的前线 (See Through the False Front)
 
-> Hide your intentions not by closing up (with the risk of appearing secretive, and making people suspicious) but by talking endlessly about your desires and goals—just not your real ones.
-> — ROBERT GREENE
+> “善于克敌制胜者，以变幻莫测的行动愚弄之，以虚假的情报迷惑之，通过隐匿实力令其松懈……以杂乱的指令和信号震慑其耳，以变换旗帜和徽章蒙蔽其目……以歪曲的事实使其战斗计划陷入混乱。” —— 《投笔肤谈》（Tou Bi Fu Tan）
 
-在战争和商业竞争中，“虚假表象”是一种经典的欺骗手段。这不仅仅是隐藏信息，更是主动提供扭曲的信息或制造混乱的信号。当某人过度强调他们的某项弱点，或者大张旗鼓地宣扬他们正在进行某个项目时，他们很可能是在利用这些作为烟雾弹，以掩护其背后真正且更具威胁性的行动。要学会不被眼前的喧嚣所迷惑，你需要寻找不一致的地方，并思考：如果这只是一个用来分散我注意力的诱饵，那么他们真正想隐藏的是什么？
+虚假的前线（The false front）是最古老的军事欺骗形式。最初，它涉及让敌人相信你比实际情况更弱。指挥官会假装撤退，设下陷阱让敌人冲进来，从而将其引入伏击圈。这是孙武最青睐的策略。弱小的表象往往能激发出人们侵略性的一面，使他们放弃策略和审慎，转而发起感性且暴力的攻击。  
+1805年奥斯特利茨战役（Battle of Austerlitz）前夕，当拿破仑发现自己不仅在人数上处于劣势，且战略地位极其脆弱时，他故意表现出惊慌、优柔寡断和恐惧。敌军因此放弃了他们坚固的阵地转而攻击他，结果冲进了陷阱。这是拿破仑最伟大的胜利。总的来说，正如古代中国所倡导的那样，“非玩家”们向世界展示的面孔，往往预示着与其真实计划截然相反的意图。  
 
-> Daily Law: Learn to identify when people are using a false front. Deliberate distractions and loud proclamations are often designed to blind you to their actual plans and maneuvers.[^1]
+> Daily Law: Never take appearances for reality.[^1]
 
-[^1]: 今日法则：学会识别人们何时在使用虚假的表象。刻意的分散注意力和大声的声明往往是为了让你对他们实际的计划和演习视而不见。
+[^1]: 今日法则：永远不要把外表当成现实。

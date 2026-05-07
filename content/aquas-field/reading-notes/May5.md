@@ -3,7 +3,7 @@ title: "May 5: Be Careful Whom You Offend"
 date: "2026-05-05"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -49,13 +49,11 @@ draft: true
   </li>
 </ul>
 
-## 小心你得罪的人 (Be Careful Whom You Offend)
+## 小心你冒犯的对象 (Be Careful Whom You Offend)
 
-> There are many different kinds of people in the world, and you can never assume that everyone will react to your strategies in the same way. Deceive or outmaneuver some people and they will spend the rest of their lives seeking revenge.
-> — ROBERT GREENE
+公元前五世纪，秦国（注：原书为Ch'in，历史上重耳为晋国王子）王子重耳被迫流亡。他过着简朴、有时甚至是贫困的生活，等待重返家园恢复王子身份的时机。有一次他路过郑国，那里的统治者不知道他的身份，对他非常无礼。多年后，重耳终于得以回国，境遇大为改观。他没有忘记在他贫困岁月里谁对他友好，谁对他傲慢，更没有忘记郑国统治者对他的对待。重耳抓住第一个机会集结了大军进攻郑国，夺取了八座城市，摧毁了该国，并将那名统治者也送入了流亡境地。  
+永远不要假设你正在打交道的人比你更弱小或更不重要。今天一个微不足道、资产匮乏的人，明天就可能成为权倾天下的人物。==我们在生活中会忘记很多事，但我们很少会忘记侮辱==。  
 
-在人际交往中，傲慢和轻视是极其危险的。你永远不知道今天看起来地位低下、微不足道的人，明天会处于什么样的位置。历史上充满了这样的故事：一个流亡的王子（如重耳）被其他国家的君主傲慢对待，当他最终夺回王位并强大起来后，第一件事就是消灭那些曾经羞辱过他的人。永远不要无谓地树敌，也不要因为别人暂时的弱势就随意冒犯。礼貌和尊重不仅是美德，更是最基本且成本最低的自我保护策略。
+> Daily Law: Swallow the impulse to offend, even if the other person seems weak. The satisfaction is meager compared to the danger that someday he or she will be in a position to hurt you.[^1]
 
-> Daily Law: Never assume that someone you mistreat today won't be in a position to harm you tomorrow. Avoid unnecessary offenses and treat everyone with a baseline of respect and caution.[^1]
-
-[^1]: 今日法则：永远不要假设你今天虐待的人明天不会有能力伤害你。避免不必要的冒犯，以基本的尊重和谨慎对待每个人。
+[^1]: 今日法则：抑制住冒犯他人的冲动，即便对方看起来很软弱。比起对方有朝一日能反过来伤害你的危险，那一时的心理满足感微不足道。

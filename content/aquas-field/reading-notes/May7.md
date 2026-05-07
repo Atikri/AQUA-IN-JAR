@@ -3,7 +3,7 @@ title: "May 7: The Subtle-Superiority Strategy"
 date: "2026-05-07"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -54,8 +54,9 @@ draft: true
 > Some people assert their power not through direct confrontation, but through subtle forms of passive aggression that force you to accommodate them.
 > — ROBERT GREENE
 
-有一种常见的社交操纵形式，被称为“微妙的优越感策略”。使用者通过习惯性地迟到、忘记约定、拖延截止日期，并伴随着听起来极其诚恳但充满算计的借口，来迫使周围的人不断去适应他们的节奏。这种行为表面上看起来像是无心之失或性格迷糊，但实际上是一种隐秘的权力宣言：它向别人传达“我的时间比你的更重要”或“规则对我无效”。如果你因为这些行为而生气，他们反而会指责你过于苛刻或缺乏同情心。不要陷入这种情感陷阱，要识别出这是一种控制手段。
+某个朋友、同事或员工总是习惯性迟到，但他或她总能给出一个逻辑通顺的理由，以及一份看起来极其真诚的道歉。或者，这类人会忘记会议、重要的日子和截止日期，且手头永远准备着无可挑剔的借口。如果这种行为反复发生，你的愤怒会随之增长；但如果你试图对质，他们很可能会反打一耙，让你显得古板且缺乏同情心。他们会说，这并不是他们的错——他们脑子里要考虑的事情太多了、别人在给他们施压、他们是感情丰富的艺术家所以无法兼顾这些琐碎细节、他们快被压垮了。他们甚至会指责是你增加了他们的压力。  
+你必须明白，这一切的根源在于：他们需要向自己及向你证明，他们在某种程度上是优越的（superior）。如果他们直接说出自己比你优越，会招致嘲笑和羞耻；因此，他们想让你在微妙中感受到这一点，同时还能否认自己的所作所为。让你处于从属地位（inferior position）是一种控制形式，通过这种方式，他们获得了定义这段关系的权力。你必须关注他们的行为模式（pattern），而不是那些道歉。他们并非真的感到抱歉。  
 
-> Daily Law: Recognize chronic lateness and passive-aggressive forgetfulness as power plays. They are subtle-superiority strategies designed to make you orbit around their schedule and needs.[^1]
+> Daily Law: If this is chronic behavior, you must not get angry or display overt irritation —passive aggressors thrive on getting a rise out of you. Instead, stay calm and subtly mirror their behavior, calling attention to what they are doing, and inducing some shame if possible.[^1]
 
-[^1]: 今日法则：认识到习惯性迟到和消极抵抗式的健忘是权力游戏。它们是微妙的优越感策略，旨在让你围绕着他们的日程和需求转。
+[^1]: 今日法则：如果这是长期行为，你绝不能生气或表现出明显的恼火——被动攻击者（passive aggressors）通过激怒你而获得快感。相反，要保持冷静并微妙地镜像（mirror）他们的行为，点破他们的所作所为，如果可能的话，引发出他们的羞愧感。

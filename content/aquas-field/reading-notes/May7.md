@@ -51,9 +51,6 @@ draft: false
 
 ## 微妙的优越感策略 (The Subtle-Superiority Strategy)
 
-> Some people assert their power not through direct confrontation, but through subtle forms of passive aggression that force you to accommodate them.
-> — ROBERT GREENE
-
 某个朋友、同事或员工总是习惯性迟到，但他或她总能给出一个逻辑通顺的理由，以及一份看起来极其真诚的道歉。或者，这类人会忘记会议、重要的日子和截止日期，且手头永远准备着无可挑剔的借口。如果这种行为反复发生，你的愤怒会随之增长；但如果你试图对质，他们很可能会反打一耙，让你显得古板且缺乏同情心。他们会说，这并不是他们的错——他们脑子里要考虑的事情太多了、别人在给他们施压、他们是感情丰富的艺术家所以无法兼顾这些琐碎细节、他们快被压垮了。他们甚至会指责是你增加了他们的压力。  
 你必须明白，这一切的根源在于：他们需要向自己及向你证明，他们在某种程度上是优越的（superior）。如果他们直接说出自己比你优越，会招致嘲笑和羞耻；因此，他们想让你在微妙中感受到这一点，同时还能否认自己的所作所为。让你处于从属地位（inferior position）是一种控制形式，通过这种方式，他们获得了定义这段关系的权力。你必须关注他们的行为模式（pattern），而不是那些道歉。他们并非真的感到抱歉。  
 

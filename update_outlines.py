@@ -1,19 +1,14 @@
----
-title: "May 3: Judge Them on Their Behavior, Not on Their Words"
-date: "2026-05-03"
-hiddenFromList: true
-featured: false
-draft: false
----
+import os
+import re
 
-[The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
+files_to_update = [
+    r"D:\AQUA-IN-JAR\content\aquas-field\reading-notes\The Daily Laws(outline).md",
+]
 
-<ul class='toc-drawer'>
-  <li class='drawer-item'>
-     <details>
-      <summary style='cursor: pointer; font-weight: bold; margin: 10px 0;'><a href="https://tikri.site/aquas-field/reading-notes/May/">May</a></summary>
-      <ul>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/May1/'>May 1: Everyone Is a Player in the Game</a></li>
+for i in range(1, 11):
+    files_to_update.append(rf"D:\AQUA-IN-JAR\content\aquas-field\reading-notes\May{i}.md")
+
+new_block = """        <li><a href='https://tikri.site/aquas-field/reading-notes/May1/'>May 1: Everyone Is a Player in the Game</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/May2/'>May 2: Take on the Toxic Types</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/May3/'>May 3: Judge Them on Their Behavior, Not on Their Words</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/May4/'>May 4: The Appearance of Naiveté</a></li>
@@ -43,20 +38,27 @@ draft: false
         <li><a href='https://tikri.site/aquas-field/reading-notes/May28/'>May 28: The Effective Truth</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/May29/'>May 29: Nothing Personal</a></li>
         <li><a href='https://tikri.site/aquas-field/reading-notes/May30/'>May 30: Everyone Wants More Power</a></li>
-        <li><a href='https://tikri.site/aquas-field/reading-notes/May31/'>May 31: Know Who You’re Dealing With</a></li>
-      </ul>
-    </details>
-  </li>
-</ul>
+        <li><a href='https://tikri.site/aquas-field/reading-notes/May31/'>May 31: Know Who You’re Dealing With</a></li>"""
 
-## 根据行为而非言语来评判他人 (Judge Them on Their Behavior, Not on Their Words)
-
-> Character is destiny. —HERACLITUS[^1]
-
-==人们很擅长用言语来伪装自己==。他们会向你保证自己的忠诚，宣扬自己的道德准则，并承诺未来的伟大行动。然而，言语是廉价的。要真正了解一个人，你不能听他们说了什么，而必须观察他们做了什么，尤其是随着时间的推移，他们在不同情境下的一贯行为。==行动不会说谎==。一个人的性格缺陷、自私或缺乏责任感，总会在长期的行为模式中暴露无遗。
-
-> Daily Law: What you want is a picture of a person’s character over time. Restrain from the natural tendency to judge right away, and let the passage of time reveal more and more about who people are.[^2]
-
-
-[^1]: “性格即命运。” —— 赫拉克利特 (Heraclitus)
-[^2]: 今日法则：永远不要根据人们的言辞或声明的意图来评判他们。要看他们长期的行动。一致的行为是反映真实性格的唯一可靠指标。
+for filepath in files_to_update:
+    if not os.path.exists(filepath):
+        print(f"File not found: {filepath}")
+        continue
+    
+    with open(filepath, "r", encoding="utf-8") as f:
+        content = f.read()
+    
+    # We want to replace the block starting with <li><a href='https://tikri.site/aquas-field/reading-notes/May1/'>...
+    # to <li><a href='https://tikri.site/aquas-field/reading-notes/May31/'>...</li>
+    # It might end with May31</a></li>
+    
+    pattern = re.compile(r"        <li><a href='https://tikri.site/aquas-field/reading-notes/May1/'>.*?<li><a href='https://tikri.site/aquas-field/reading-notes/May31/'>[^<]*</a></li>", re.DOTALL)
+    
+    new_content, count = pattern.subn(new_block, content)
+    
+    if count > 0:
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write(new_content)
+        print(f"Updated {filepath}")
+    else:
+        print(f"Pattern not found in {filepath}")

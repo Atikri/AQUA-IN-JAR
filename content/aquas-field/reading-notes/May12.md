@@ -3,7 +3,7 @@ title: "May 12: Be Wary of the Noble Gesture"
 date: "2026-05-12"
 hiddenFromList: true
 featured: false
-draft: false
+draft: true
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)

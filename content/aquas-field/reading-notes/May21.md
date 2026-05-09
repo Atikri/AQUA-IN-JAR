@@ -3,7 +3,7 @@ title: "May 21: The Aggressive Pleaser"
 date: "2026-05-21"
 hiddenFromList: true
 featured: false
-draft: false
+draft: true
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)

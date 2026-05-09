@@ -3,7 +3,7 @@ title: "May 13: Recognize Deep Narcissists before You Fall for Them"
 date: "2026-05-13"
 hiddenFromList: true
 featured: false
-draft: false
+draft: true
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)

@@ -3,7 +3,7 @@ title: "May 22: Determine the Strength of People’s Character"
 date: "2026-05-22"
 hiddenFromList: true
 featured: false
-draft: false
+draft: true
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)

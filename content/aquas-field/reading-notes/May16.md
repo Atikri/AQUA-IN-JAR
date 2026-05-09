@@ -3,7 +3,7 @@ title: "May 16: The Fake Traditionalist"
 date: "2026-05-16"
 hiddenFromList: true
 featured: false
-draft: false
+draft: true
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)

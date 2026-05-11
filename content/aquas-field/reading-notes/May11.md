@@ -3,7 +3,7 @@ title: "May 11: The Pattern"
 date: "2026-05-11"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -49,14 +49,14 @@ draft: true
   </li>
 </ul>
 
-## The Pattern
+## 看穿表象下的模式 (The Pattern)
 
-> 
-> — 
+霍华德·休斯（Howard Hughes）给所有与其合作的人都带来了一个难题：他精心构建了一个公众形象，掩盖了他性格中显而易见的弱点。他不表现为那个不理智的微观管理者（micromanager），而是将自己塑造成一个刚毅的个人主义者和纯粹的美国独行侠。最具有破坏性的是，他成功地将自己描绘成一位领导着数十亿商业帝国的成功商人。事实上，他从父亲那里继承了一家利润极其丰厚的工具公司。多年来，他帝国中唯一盈利的部分就是这家工具公司，以及从中剥离出来的早期休斯飞机公司。而他亲自经营的许多其他业务——包括后来的飞机部门、电影投资、拉斯维加斯的酒店和房地产——都遭受了巨额亏损，幸好由前两家公司填补了亏空。  
+事实上，休斯是一个糟糕的商人，揭示这一点的失败模式对每个人来说都是显而易见的。但这是人性中的盲点：==我们极不擅长评估所交际的人的性格==。他们的公众形象和先入为主的名声很容易让我们着迷。我们被表象所俘获。如果他们像休斯那样用某种诱人的神话包围自己，我们就会倾向于相信它。  
+我们本应去判定一个人的性格——他们与他人协作的能力、信守承诺的能力、在逆境中保持坚韧的能力——但我们却选择根据闪闪发光的简历、智力和魅力来挑选合伙人或雇员。然而，如果一个人性格软弱或存疑，即便像“智力”这样正面的特质也是毫无价值的。正因为我们的这种盲点，我们才会受困于优柔寡断的领导者、事无巨细的管理型上司和阴险狡诈的合伙人。这是历史上无数悲剧的源头，也是我们作为物种的共有模式。  
 
-> Daily Law: 
+> Daily Law: Ignore the front that people display, the myth that surrounds them, and instead plumb their depths for signs of their character. This can be seen in the patterns they reveal from their past, the quality of their decisions, how they delegate authority and work with others, and countless other signs.[^1]
 
----
 
-## 实践建议
 
+[^1]: 今日法则：忽略人们展示的外表和围绕他们的神话，转而深挖其性格的迹象。这可以从他们过去的模式、决策的质量、如何授权以及如何与他人协作等无数迹象中看出来。

@@ -3,7 +3,7 @@ title: "May 10: Don’t Mistake Extra Conviction for Truth"
 date: "2026-05-10"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -49,13 +49,11 @@ draft: true
   </li>
 </ul>
 
-## 过度的确信 (Excessive Conviction)
+## 不要把“过度的信念”误认为真理 (Don’t Mistake Extra Conviction for Truth)
 
-> A bold and confident appearance can obscure a weak and vacillating character.
-> — ROBERT GREENE
+我们人类天生就相当易受骗。我们渴望相信某些事情——比如可以不劳而获；可以通过某种新招数轻易恢复健康、重获青春，甚至欺骗死亡；或者相信大多数人本质上是好的且值得信任。这种倾向正是骗子和操纵者赖以生存的土壤。如果每个人都不那么容易受骗，对人类物种的未来将大有裨益，但我们无法改变人性。  
+相反，我们能做的最好的事情就是==学会识别欺骗企图的某些迹象==，并在审查证据时保持怀疑态度。最明显、最常见的迹象是人们==表现出格外活跃的外表==。当他们笑得很多、表现得异常友好、甚至谈吐非常风趣时，我们很难不被吸引，也很难不降低对他们影响力的抵抗力。同样，如果人们试图掩盖某事，他们往往会变得格外激烈、充满正义感且滔滔不绝。他们在利用“信念偏见”（conviction bias）——如果我带着极大的热情、摆出受害者的姿态去否认或陈述某事，别人就很难怀疑我。我们往往会误把过度的坚定信念当成真理。  
 
-当人们试图掩盖谎言、掩饰自己的不安全感，或者是推销一个有缺陷的想法时，他们通常会用极其肯定和确信的语气来表达。这种“过度的确信”本身就是一种分心战术。人类往往容易被自信所感染，当我们看到某人展现出不容置疑的态度、强烈的道德义愤或狂热的信念时，我们更容易停止批判性思考，进而选择相信他们。然而，这恰恰是你应该开始怀疑的时刻。真正的实力和事实通常不需要声嘶力竭地去证明。
+> Daily Law: When people try to explain their ideas with so much exaggerated energy, or defend themselves with an intense level of denial, that is precisely when you should raise your antennae.[^1]
 
-> Daily Law: Skepticism is key when confronted with excessive conviction; often, it masks deceit. The louder the protestation or the more intense the certainty, the deeper you should dig for the hidden truth.[^1]
-
-[^1]: 今日法则：面对过度的确信时，保持怀疑是关键；它通常掩盖着欺骗。抗议声越大或者确定性越强，你就越应该深入挖掘隐藏的真相。
+[^1]: 今日法则：当人们试图以夸张的精力解释他们的观点，或者以强烈的否认程度为自己辩护时，那正是你该提高警惕（raise your antennae）的时候。

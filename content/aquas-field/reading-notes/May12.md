@@ -3,7 +3,7 @@ title: "May 12: Be Wary of the Noble Gesture"
 date: "2026-05-12"
 hiddenFromList: true
 featured: false
-draft: true
+draft: false
 ---
 
 [The Daily Laws(outline)](http://tikri.site/aquas-field/reading-notes/The-Daily-Lawsoutline/)
@@ -49,14 +49,21 @@ draft: true
   </li>
 </ul>
 
-## Be Wary of the Noble Gesture
+## 警惕高尚的举动 (Be Wary of the Noble Gesture)
 
-> 
-> — 
+> It is a world not of angels but of angles, where men speak of moral principles but act on power principles; a world where we are always moral and our enemies always immoral.
+> —RULES FOR RADICALS, SAUL D. ALINSKY[^1]
 
-> Daily Law: 
+高尚的举动是最有效的烟幕弹之一——这也是所谓“非玩家”最青睐的手段。艺术商约瑟夫·杜维恩（Joseph Duveen）曾面临一个严峻的问题：那些花重金购买杜维恩画作的亿万富翁们，家里的墙面已经挂满了画，且随着遗产税越来越高，他们似乎不太可能继续购买了。  
+杜维恩在1937年找到了解决方案：他促成安德鲁·梅隆（Andrew Mellon）向华盛顿特区捐赠其收藏，从而协助创建了国家艺术馆（National Gallery of Art）。国家艺术馆成了杜维恩完美的幌子。通过这一举动，他的客户避开了税收，清理了墙面空间以进行新的采购，并减少了市场上流通的绘画数量，从而维持了价格的上涨压力。而与此同时，这些捐赠者在公众面前塑造了公共慈善家的形象。  
+
+> Daily Law: People want to believe apparently noble gestures are genuine, for the belief is pleasant. They rarely notice how deceptive these gestures can be.[^2]
 
 ---
 
-## 实践建议
+## 学习“借力打力”
+在处理自己的事务时，学习这种杜维恩式的智慧。与其直接追求利益，不如思考如何将利益包装成一个符合大众期待的、高尚的愿景。  
 
+
+[^1]: “这是一个充满‘心机’而非‘天使’的世界，人们口谈道德准则，实则按权力原则行事；在这个世界里，我们永远是道德的，而我们的敌人永远是不道德的。” —— 萨尔·D·阿林斯基 (Saul D. Alinsky)，《激进派守则》
+[^2]: 今日法则：人们想要相信那些表面上高尚的举动是真诚的，因为这种信念让人感到愉悦。他们很少注意到这些举动可能具有多么深重的欺骗性。
